@@ -8,15 +8,14 @@
 
 import UIKit
 
-class ChooseProgramViewController: UIViewController{
+class HomeViewController: UIViewController{
+    
 
-    @IBOutlet weak var MCbutton: CustomButton!
-
-    var program: Int = 1
+    var currentUser:String!
+    var program: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
         // Do any additional setup after loading the view.
     }
