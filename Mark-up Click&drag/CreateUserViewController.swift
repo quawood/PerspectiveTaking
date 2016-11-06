@@ -9,56 +9,57 @@
 import UIKit
 import CoreData
 import CoreGraphics
+import QuartzCore
 
-class CreateUserViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate{
+class CreateUserViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate{
     
- 
+    
+    let date = Date()
+    let calendar = NSCalendar.current
     @IBOutlet weak var nameTextLabel: UITextField!
-    @IBOutlet weak var ageTextLabel: UITextField!
-    @IBOutlet weak var chooseImage: UIImageView!
-    let imagePicker = UIImagePickerController()
     override func viewDidLoad() {
         super.viewDidLoad()
-        imagePicker.delegate = self
-        UIDevice.currentDevice().setValue(UIInterfaceOrientation.Portrait.rawValue, forKey: "orientation")
+     
+        self.nameTextLabel.delegate = self
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
 
-        // Do any additional setup after loading the view.
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(CreateUserViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
+        
     }
 
-    @IBAction func chooseImageButton(sender: AnyObject) {
-      imagePicker.allowsEditing = false
-      imagePicker.sourceType = .PhotoLibrary
-        
-       presentViewController(imagePicker, animated: true, completion: nil)
-    }
-    
-    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-        return UIInterfaceOrientationMask.Landscape
-    }
-    override func preferredInterfaceOrientationForPresentation() -> UIInterfaceOrientation {
-        return UIInterfaceOrientation.LandscapeLeft
-        
-        
-        
-        
-        
 
-    }
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            chooseImage.contentMode = .ScaleAspectFit
-            chooseImage.image = pickedImage
+   func keyboardWillShow(notification: NSNotification) {
+        
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if view.frame.origin.y == 0{
+                self.view.frame.origin.y -= keyboardSize.height
+            }
+            else {
+                
+            }
         }
         
-        dismissViewControllerAnimated(true, completion: nil)
     }
     
-    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
-        dismissViewControllerAnimated(true, completion: nil)
+    func keyboardWillHide(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if view.frame.origin.y != 0 {
+                self.view.frame.origin.y += keyboardSize.height
+            }
+            else {
+                
+            }
+        }
     }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
     
     
     //Calls this function when the tap is recognized.
@@ -66,15 +67,33 @@ class CreateUserViewController: UIViewController, UINavigationControllerDelegate
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
     }
-    
-    @IBAction func createUser(sender: AnyObject) {
-            let entity = NSEntityDescription.entityForName("User", inManagedObjectContext: managedObjectContext)
-            let user = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedObjectContext)
-        if nameTextLabel.text != nil && ageTextLabel.text != nil && chooseImage.image != nil {
-            user.setValue(nameTextLabel.text, forKey: "name")
-            user.setValue(ageTextLabel.text, forKey: "age")
-            user.setValue(chooseImage.image, forKey: "profilePic")
+   
 
+    
+    @IBAction func cancelCreatUser(_ sender: AnyObject) {
+        let alertConrtoller = UIAlertController(title: "Go back?", message: "Do you want to go back?", preferredStyle: .alert)
+        alertConrtoller.addAction(UIAlertAction(title: "No", style: .cancel, handler: { (action: UIAlertAction!) in
+            alertConrtoller.dismiss(animated: true, completion: nil)
+        }))
+        alertConrtoller.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action: UIAlertAction!) in
+            self.performSegue(withIdentifier: "backToUser", sender: self)
+        }))
+        present(alertConrtoller, animated: true, completion: nil)
+    }
+    @IBAction func createUser(sender: AnyObject) {
+
+        if (nameTextLabel.text != ""){
+            let entity = NSEntityDescription.entity(forEntityName: "User", in: managedObjectContext)
+            let user = NSManagedObject(entity: entity!, insertInto: managedObjectContext)
+            
+            let components = calendar.dateComponents([.month,.day,.year], from: date)
+            user.setValue(nameTextLabel.text, forKey: "name")
+        
+            user.setValue("\(components.month!)/\(components.day!)/\(components.year!)", forKey: "dateCreated")
+            user.setValue([0], forKey: "scores1")
+            user.setValue([0], forKey: "scores2")
+            user.setValue([0], forKey: "scores3")
+            user.setValue([0], forKey: "scores4")
             do {
                 try managedObjectContext.save()
             }
@@ -83,11 +102,15 @@ class CreateUserViewController: UIViewController, UINavigationControllerDelegate
             }
 
 
-        performSegueWithIdentifier("backToUser", sender: self)
+        self.performSegue(withIdentifier: "backToUser", sender: self)
+        
         }
         else {
-            let alertConrtoller = UIAlertController(title: "Nothing to save", message: "You have not filled everything out", preferredStyle: .Alert)
-            presentViewController(alertConrtoller, animated: true, completion: nil)
+            let alertConrtoller = UIAlertController(title: "Nothing to save", message: "You have not filled everything out", preferredStyle: .alert)
+           alertConrtoller.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { (action: UIAlertAction!) in
+                alertConrtoller.dismiss(animated: true, completion: nil)
+            }))
+            present(alertConrtoller, animated: true, completion: nil)
         }
         
         
@@ -96,30 +119,12 @@ class CreateUserViewController: UIViewController, UINavigationControllerDelegate
         
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "backToUser" {
-            let alertController = UIAlertController(title: "Saved", message:"You have created a new user!",preferredStyle: .Alert)
-            segue.destinationViewController.presentViewController(alertController, animated: true, completion: nil)
+            let vc = segue.destination as! UserViewController
+            vc.loadData()
         }
     }
     
-   /*override func viewWillDisappear(animated: Bool) {
-        let alertController = UIAlertController(title: "All changes will be lost, are you sure?", message: "New User", preferredStyle: .Alert)
-        alertController.addTextFieldWithConfigurationHandler( { (textfield:UITextField) in
-            
-        })
-        let cancelAction = UIAlertAction(title: "Cancel", style: .Default) { (action: UIAlertAction) -> Void in
-        }
-        let continueAction = UIAlertAction(title: "Continue", style: .Default) { (action: UIAlertAction) -> Void in
-            
-        }
-
-        alertController.addAction(cancelAction)
-        alertController.addAction(continueAction)
-
-        presentViewController(alertController, animated: true, completion: nil)
-    }*/
-    
-
 
 }

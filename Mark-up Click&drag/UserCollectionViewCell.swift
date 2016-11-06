@@ -16,34 +16,13 @@ class UserCollectionViewCell: UICollectionViewCell {
         }
     }
     //MARK: - Private
-    
-    @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
     func updateUI() {
         userNameLabel?.text! = user.name!
-        profileImageView.image = user.profilepic
         
     }
 }
 
-class ScoreTableViewCell: UITableViewCell {
-    
-    var score: Score! {
-        didSet {
-            updateUI()
-        }
-    }
-    
-    @IBOutlet weak var scoreValueLabel: UILabel!
-    @IBOutlet weak var programLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
-    
-    func updateUI() {
-        scoreValueLabel.text = String(score.num)
-        programLabel.text = score.program
-        dateLabel.text = score.date
-    }
-}
 
 
 

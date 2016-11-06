@@ -12,8 +12,10 @@ import AVFoundation
 import CoreData
 import Foundation
 
+
 class QuizViewController: UIViewController, UIPopoverPresentationControllerDelegate {
     
+    @IBOutlet weak var sceneView: UIView!
     @IBOutlet var labImages: [UIImageView]!
     @IBOutlet var anchors: [UIView]!
     @IBOutlet var answers: [UIView]!
@@ -26,10 +28,14 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
     @IBOutlet weak var clearAnswerBtn: UIButton!
     @IBOutlet weak var finishButton: UIButton!
     @IBOutlet weak var currentScore: UILabel!
+    @IBOutlet weak var helpButton: UIButton!
+    @IBOutlet weak var homeButton: UIButton!
     
+    var numbers = [2,3,4,5, 6, 7, 8, 9, 10]
     let date = NSDate()
-    let calendar = NSCalendar.currentCalendar()
-    
+    let calendar = NSCalendar.current
+    var counter = 0
+    var timer = Timer()
     var correct:Int = 0
     
     var starLocations:[CGPoint]!
@@ -47,93 +53,113 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
     var audioPlayer:AVAudioPlayer!
     
     // JSON Setup
-    var json: AnyObject!
+    var json: [String:AnyObject]!
     
-    var currentPlace:String! = "restaurant"
+    var currentPlace:String! = "1"
     var currentProg:String! = "my_community"
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    @IBAction func unwindToQuiz(_ segue: UIStoryboardSegue) {
+        
+    }
+    
+    //Touch controllers
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         touch = touches.first! 
         for a in answers {
-            if a.frame.contains(touch.previousLocationInView(self.view)) {
+            if a.frame.contains(touch.previousLocation(in: self.view)) {
                 currentA = a
-                deltaX = touch.locationInView(self.view).x - currentA.center.x
-                deltaY = touch.locationInView(self.view).y - currentA.center.y
-                currentA.center = CGPoint(x: touch.locationInView(self.view).x - deltaX, y: touch.locationInView(self.view).y - deltaY)
+                deltaX = touch.location(in: self.view).x - currentA.center.x
+                deltaY = touch.location(in: self.view).y - currentA.center.y
+                currentA.center = CGPoint(x: touch.location(in: self.view).x - deltaX, y: touch.location(in: self.view).y - deltaY)
                 
             }
         }
     }
     
-    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        if currentA.frame.contains(touch.previousLocationInView(self.view)) {
-            currentA.center = CGPoint(x: touch.locationInView(self.view).x-deltaX, y: touch.locationInView(self.view).y-deltaY)
+
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if currentA.frame.contains(touch.previousLocation(in: self.view)) {
+            currentA.center = CGPoint(x: touch.location(in: self.view).x-deltaX, y: touch.location(in: self.view).y-deltaY)
             
         }
     }
     
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        if currentA.frame.contains(touch.previousLocationInView(self.view)) {
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if currentA.frame.contains(touch.previousLocation(in: self.view)) {
 
             for i in 0...starLocations.count-1 {
-                let starframe = CGRect(x: starLocations[i].x + scenarioView.frame.origin.x, y: starLocations[i].y +
-                    scenarioView.frame.origin.y , width: 100 , height: 100)
-                if (starframe.contains(touch.previousLocationInView(self.view)) && viewPlace[i] == 0 && !viewPlace.contains(currentA.tag))||(viewPlace[i] == currentA.tag) {
+                let starframe = CGRect(x: starLocations[i].x + scenarioView.frame.origin.x , y: starLocations[i].y +
+                    scenarioView.frame.origin.y , width: 55 * self.view.bounds.width/414 , height: 55 * self.view.bounds.width/414)
+                if (starframe.contains(touch.previousLocation(in: self.view)) && viewPlace[i] == 0) {
                     
-                    currentA.center = starframe.origin
+                    currentA.frame.origin = CGPoint(x:starLocations[i].x + scenarioView.frame.origin.x - 15 , y: starLocations[i].y +
+                        scenarioView.frame.origin.y - 15)
+                    if viewPlace.contains(currentA.tag) {
+                        viewPlace[viewPlace.index(of: currentA.tag)!] = 0
+                    }
                     viewPlace[i] = currentA.tag
                     
                     if viewPlace.contains(0) == false {
-                        checkAnsBtn.userInteractionEnabled = true
+                        checkAnsBtn.isUserInteractionEnabled = true
                     }
                     break
                     
                 }
             }
             
-            if starLocations.contains(CGPoint(x: currentA.center.x - scenarioView.frame.origin.x, y: currentA.center.y - scenarioView.frame.origin.y)) == false{
+            if starLocations.contains(CGPoint(x: currentA.frame.origin.x - scenarioView.frame.origin.x + 15, y: currentA.frame.origin.y - scenarioView.frame.origin.y + 15)) == false{
                 currentA.frame.origin = anchors[currentA.tag-1].center
+                if viewPlace.contains(currentA.tag) {
+                    viewPlace[viewPlace.index(of: currentA.tag)!] = 0
+                    if viewPlace.contains(0) == true {
+                        checkAnsBtn.isUserInteractionEnabled = false
+                    }
+                }
             }
 
         }
     }
     
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        replaceAnswers()
-        let file = NSBundle.mainBundle().pathForResource("MCQuestions", ofType: "json")
-        let url = NSURL(fileURLWithPath: file!)
-        let data = NSData(contentsOfURL: url)
-        json = try! NSJSONSerialization.JSONObjectWithData(data! as NSData, options: [])
-        nextQuestion()
-        let tryAgain = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("try-again_test", ofType: "wav")!)
-        do {
-            let sound = try AVAudioPlayer(contentsOfURL: tryAgain as NSURL)
-            audioPlayer = sound
-        } catch {
-            //couldn't load file
-        }
+    
+    
+    //setup scene
+    func stylesScene() {
+        homeButton.layer.cornerRadius = 5
+        homeButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        helpButton.layer.cornerRadius = 5
+        helpButton.titleLabel?.font = helpButton.titleLabel?.font.withSize((homeButton.titleLabel?.font.pointSize)!)
+        checkAnsBtn.layer.cornerRadius = 5
+        checkAnsBtn.titleLabel?.adjustsFontSizeToFitWidth = true
+        
+        finishButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        nextQuestionBtn.titleLabel?.adjustsFontSizeToFitWidth = true
+        
     }
-    
-    
-
     func genStars() {
         for starLoc in starLocations {
             let star = UIImageView()
-            star.frame = CGRect(x: starLoc.x, y: starLoc.y, width: 10, height: 10)
+            star.frame = CGRect(x: starLoc.x + 12, y: starLoc.y + 12, width: 25 * self.view.bounds.width/414, height: 25 * self.view.bounds.width/414)
             star.tag = 1
             star.layer.zPosition = 9
             
             scenarioView.addSubview(star)
             star.image = UIImage(named: "smallblue.png")
-
+            
             
         }
     }
     
+    func replaceAnswers() {
+        for i in 0...answers.count-1 {
+            answers[i].frame.origin = anchors[i].center
+        }
+        viewPlace = [Int](repeating:0, count:viewPlace.count)
+        checkAnsBtn.isUserInteractionEnabled = false
+    }
+    
     func removeStars() {
-        for view in self.view.subviews {
+        for view in scenarioView.subviews {
             if let star = view as? UIImageView {
                 if star.tag == 1 {
                     star.removeFromSuperview()
@@ -142,35 +168,107 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
         }
     }
     
-    func replaceAnswers() {
-        for i in 0...answers.count-1 {
-            answers[i].frame.origin = anchors[i].center
-        }
-        viewPlace = [Int](count:viewPlace.count, repeatedValue:0)
-        checkAnsBtn.userInteractionEnabled = false
+    
+    @IBAction func gotToHome(_ sender: AnyObject) {
+        let alertConrtoller = UIAlertController(title: "Go Home", message: "Go to home and lose progress?", preferredStyle: .alert)
+        alertConrtoller.addAction(UIAlertAction(title: "No", style: .cancel, handler: { (action: UIAlertAction!) in
+            alertConrtoller.dismiss(animated: true, completion: nil)
+        }))
+        alertConrtoller.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action: UIAlertAction!) in
+            self.performSegue(withIdentifier: "backToHome", sender: self)
+        }))
+        present(alertConrtoller, animated: true, completion: nil)
     }
     
+    func disableScene() {
+        checkAnsBtn.isUserInteractionEnabled = false
+        sceneView.isUserInteractionEnabled = false
+        nextQuestionBtn.isUserInteractionEnabled = true
+        finishButton.isUserInteractionEnabled = true
+    }
+
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        scenarioView.layer.cornerRadius = 10
+        let file = Bundle.main.path(forResource: "MCQuestions", ofType: "json")
+        let url = NSURL(fileURLWithPath: file!)
+        let data = NSData(contentsOf: url as URL)
+        do {
+            json = try JSONSerialization.jsonObject(with: data! as Data, options:.allowFragments) as! [String:AnyObject]
+        } catch {
+            //couldn't load
+        }
+        
+        
+        let tryAgain = NSURL(fileURLWithPath: Bundle.main.path(forResource: "try-again_test", ofType: "wav")!)
+        do {
+            let sound = try AVAudioPlayer(contentsOf: (tryAgain as NSURL) as URL)
+            audioPlayer = sound
+        } catch {
+            //couldn't load file
+        }
+        nextQuestion()
+        if answerLabs[4].text == "" {
+            answers[4].isHidden = true
+        }
+        else {
+            answers[4].isHidden = false
+        }
+        replaceAnswers()
+        stylesScene()
+        
+    }
+    
+
+
+    //Question controllers
+
     func nextQuestion() {
+       // self.view.isUserInteractionEnabled = true
+        let urlString = "MCQuestions.json"
+        
+        let url = URL(string: urlString)
+        URLSession.shared.dataTask(with:url!, completionHandler: {(data, response, error) in
+            if error != nil {
+                print(error)
+            } else {
+                do {
+                    
+                    self.json = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [String:Any] as Dictionary<String, AnyObject>!
+                } catch let error as NSError {
+                    print(error)
+                }
+            }
+            
+        }).resume()
         starLocations = []
-            if let label = json?["questions"]??[currentProg]??[currentPlace]??[randomNum-1]["answers"] as? [String] , let stars = json?["questions"]??[currentProg]??[currentPlace]??[randomNum-1]["stars"] as? [[Int]] , let correct = json?["questions"]??[currentProg]??[currentPlace]??[randomNum-1]["correct"] as? [Int], let bubbles = json?["questions"]??[currentProg]??[currentPlace]??[randomNum-1]["bubbles"] as? [String] {
+        let questions = json["questions"] as! [String:AnyObject]
+        let currentProgram = questions[currentProg] as! [String: AnyObject]
+        let currentSpot = currentProgram[currentPlace] as! [AnyObject]
+        let numm = currentSpot[randomNum-1] as! [String:AnyObject]
+           if let label = numm["answers"] as? [String] , let stars = numm["stars"] as? [[Int]] , let correct = numm["correct"] as? [Int], let bubbles = numm["bubbles"] as? [String], let image = numm["image"] as? String {
                 for i in 0...answerLabs.count-1 {
                     answerLabs[i].text = label[i]
                     answers[i].layer.zPosition = 10
                     
                     if bubbles[i] == "s" {
-                        labImages[i].image = UIImage(named: "speacha.png")
+                        labImages[i].image = UIImage(named: "speech.png")
                     }
                     else if bubbles[i] == "t" {
-                        labImages[i].image = UIImage(named: "thoughta.png")
+                        labImages[i].image = UIImage(named: "thought.png")
+                        
                     }
                 }
                 for j in 0...stars.count-1 {
                     
-                    starLocations.append(CGPoint(x: stars[j][0] * Int(scenarioView.bounds.width) / 531, y: stars[j][1] * Int(scenarioView.bounds.height) / 458))
+                    starLocations.append(CGPoint(x: stars[j][0] * Int(scenarioView.bounds.width) / 719, y: stars[j][1] * Int(scenarioView.bounds.height) / 479))
                 }
                 correctAnss = correct
                 genStars()
-                viewPlace = [Int](count:correctAnss.count, repeatedValue:0)
+                scenarioImg.image = UIImage(named: image)
+                viewPlace = [Int](repeating:0, count:correctAnss.count)
             }
         
     }
@@ -181,14 +279,14 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
     }
     
     @IBAction func nextQuestion(sender: AnyObject) {
+        sceneView.isUserInteractionEnabled = true
         removeStars()
         turn = 1
         replaceAnswers()
         randomNum += 1
-        nextQuestionBtn.hidden = true
-        nextQuestionBtn.userInteractionEnabled = false
+        nextQuestionBtn.isHidden = true
         
-        checkAnsBtn.userInteractionEnabled = false
+        checkAnsBtn.isUserInteractionEnabled = false
         if animation != nil {
             animation.removeFromSuperview()
         }
@@ -196,103 +294,121 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
             nextQuestion()
         }
         if answerLabs[4].text == "" {
-            answerLabs[4].userInteractionEnabled = false
-            answerLabs[4].backgroundColor = UIColor.clearColor()
+            answers[4].isHidden = true
         }
         else {
-            answerLabs[4].userInteractionEnabled = true
-            answerLabs[4].backgroundColor = UIColor(red: 249, green: 252, blue: 255, alpha: 1)
+            answers[4].isHidden = false
         }
         
     }
+    
+
 
     
     @IBAction func checkAns(sender: AnyObject) {
         if viewPlace == correctAnss {
-            nextQuestionBtn.hidden = false
+            //nextQuestionBtn.isHidden = false
             if turn == 1 {
-                animation = UIImageView(image: UIImage(named: "janimation\(randomNum)"))
+                let random = numbers[Int(arc4random_uniform(UInt32(numbers.count-1)))]
+                numbers.remove(at: numbers.index(of: random)!)
+                print(numbers.count)
+                animation = UIImageView(image:UIImage.gif(name: "emoji\(random)"))
                 animation.center = CGPoint(x: view.frame.width/2, y: view.frame.height/2)
+                animation.bounds.size = CGSize(width: self.view
+                    .frame.width/2, height: self.view.frame.height/2)
                 view.addSubview(animation)
-                rewards[randomNum-1].image = UIImage(named: "janimation\(randomNum)")
+                timer.invalidate() // just in case this button is tapped multiple times
+                timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
+                rewards[randomNum-1].image = UIImage(named: "emojij\(random)")
                 correct = correct + 1
-                currentScore.text = "\(correct) / 5"
+                currentScore.text = "\(correct)"
+                disableScene()
             }
             if randomNum != 5 {
-                nextQuestionBtn.hidden = false
-                nextQuestionBtn.userInteractionEnabled = true
+                nextQuestionBtn.isHidden = false
+                nextQuestionBtn.isUserInteractionEnabled = true
             }
             else {
-                finishButton.hidden = false
-                finishButton.userInteractionEnabled = true
+                finishButton.isHidden = false
             }
         }
-        else if turn < 3 {
+        else if turn == 1 {
             audioPlayer.play()
             turn = turn + 1
             replaceAnswers()
-            viewPlace = [Int](count:viewPlace.count, repeatedValue:0)
+            viewPlace = [Int](repeating
+                :0, count:viewPlace.count)
             
         }
-        else if turn == 3 {
+        else if turn == 2 {
             replaceAnswers()
             for i in 1...answers.count {
                 if correctAnss.contains(i) {
-                    answers[i-1].center = starLocations[correctAnss.indexOf(i)!]
-                    answers[i-1].userInteractionEnabled = false
+                    answers[i-1].frame.origin =  CGPoint(x:starLocations[correctAnss.index(of: i)!].x + scenarioView.frame.origin.x , y: starLocations[correctAnss.index(of: i)!].y +
+                        scenarioView.frame.origin.y)
+                   
+                    answers[i-1].isUserInteractionEnabled = false
                 }
             }
+            disableScene()
+            //self.view.isUserInteractionEnabled = false
+            
             if randomNum != 5 {
-                nextQuestionBtn.hidden = false
-                nextQuestionBtn.userInteractionEnabled = true
+                nextQuestionBtn.isHidden = false
+                nextQuestionBtn.isUserInteractionEnabled = true
             }
             else {
-                finishButton.hidden = false
-                finishButton.userInteractionEnabled = true
+                finishButton.isHidden = false
+                finishButton.isUserInteractionEnabled = true
             }
         }
     }
     
+    func timerAction() {
+        timer.invalidate()
+        animation.removeFromSuperview()
+    }
     @IBAction func saveScore(sender: AnyObject) {
         
-        let components = calendar.components([.Month, .Day, .Year], fromDate: date)
-        let entity = NSEntityDescription.entityForName("Score", inManagedObjectContext: managedObjectContext)
-        let score = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedObjectContext)
-        
         // Populate Address
-        score.setValue("\(components.month)/\(components.day)/\(components.year)", forKey: "date")
-        score.setValue(Float(correct), forKey: "num")
-        score.setValue(currentProg, forKey: "program")
-
-        currentUs.setValue(NSSet(object: score), forKey: "scores")
+       // score.setValue("\(components.month)/\(components.day)/\(components.year)", forKey: "date")
+       // score.setValue(currentProg, forKey: "program")
+        var placeHolder = (currentUs.value(forKey: "scores\(currentProg!)") as! [Int])
+        if placeHolder.count == 5 {
+            placeHolder = placeHolder.rotate(shift: 1)
+            placeHolder[placeHolder.count-1] = correct
+        }
+        else if placeHolder.count == 1 && placeHolder[0] == 0{
+            placeHolder[0] = correct
+        }
+        else {
+          placeHolder.append(correct)
+        }
+        
+        currentUs.setValue(placeHolder, forKey: "scores\(currentProg!)")
         
         do {
             try currentUs.managedObjectContext?.save()
         } catch {
             let saveError = error as NSError
             print(saveError)
-        }  
+        }
     }
 
     
     @IBAction func menuPopover(sender: AnyObject) {
-        self.performSegueWithIdentifier("showMenu", sender: self)
+        self.performSegue(withIdentifier: "showMenu", sender: self)
     }
     
     func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showMenu" {
-            let vc = segue.destinationViewController
+            let vc = segue.destination
             vc.preferredContentSize = CGSize(width: 300, height: 300)
             let controller = vc.popoverPresentationController
             if controller != nil {
                 controller?.delegate = self
             }
         }
-    }
-    
-    @IBAction func finishedSeg(sender: AnyObject) {
-     //   scores.append(correct)
-        correct = 0
     }
     
     
