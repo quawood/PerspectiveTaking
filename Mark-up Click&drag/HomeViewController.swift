@@ -10,9 +10,11 @@ import UIKit
 var prog: String!
 class HomeViewController: UIViewController{
     
+    @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var contentView: UIView!
     var program: String!
     var place: String!
+    var placeString: String!
 
     @IBOutlet weak var goNextButton: UIButton!
     @IBOutlet weak var programLabel: UILabel!
@@ -26,6 +28,7 @@ class HomeViewController: UIViewController{
         super.viewDidLoad()
         programLabel.text = names[Int(program)!-1]
         prog = program
+        userNameLabel.text = currentUs.value(forKey: "name") as! String
 
     }
 
@@ -48,6 +51,8 @@ class HomeViewController: UIViewController{
             var destinationVC = segue.destination as! QuizViewController
             destinationVC.currentProg = program
             destinationVC.currentPlace = place
+            destinationVC.placeString = placeString
+            
         }
     }
     

@@ -14,7 +14,8 @@ import Foundation
 
 
 class QuizViewController: UIViewController, UIPopoverPresentationControllerDelegate {
-    
+    var placeString: String!
+    @IBOutlet weak var placeLabel: UILabel!
     @IBOutlet weak var sceneView: UIView!
     @IBOutlet var labImages: [UIImageView]!
     @IBOutlet var anchors: [UIView]!
@@ -31,7 +32,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
     @IBOutlet weak var helpButton: UIButton!
     @IBOutlet weak var homeButton: UIButton!
     
-    var numbers = [2,3,4,5, 6, 7, 8, 9, 10]
+    var numbers = [4,6, 8, 9, 10]
     let date = NSDate()
     let calendar = NSCalendar.current
     var counter = 0
@@ -81,10 +82,31 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
         if currentA.frame.contains(touch.previousLocation(in: self.view)) {
             currentA.center = CGPoint(x: touch.location(in: self.view).x-deltaX, y: touch.location(in: self.view).y-deltaY)
             
+            for i in 0...starLocations.count-1 {
+                let starframe = CGRect(x: starLocations[i].x + scenarioView.frame.origin.x , y: starLocations[i].y +
+                    scenarioView.frame.origin.y , width: 55 * self.view.bounds.width/414 , height: 55 * self.view.bounds.width/414)
+                if (starframe.contains(touch.previousLocation(in: self.view)) && viewPlace[i] == 0) {
+                    
+                    for view in currentA.subviews {
+                        if let img = view as? UIImageView {
+                            img.isHighlighted = true
+                        }
+                    }
+                    break
+                    
+                }
+                else {
+                    for view in currentA.subviews {
+                        if let img = view as? UIImageView {
+                            img.isHighlighted = false
+                        }
+                    }
+                }
+            }
+            
         }
     }
-    
-    
+
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         if currentA.frame.contains(touch.previousLocation(in: self.view)) {
 
@@ -153,6 +175,11 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
     func replaceAnswers() {
         for i in 0...answers.count-1 {
             answers[i].frame.origin = anchors[i].center
+            for view in answers[i].subviews as [UIView]{
+                if let img = view as? UIImageView {
+                    img.isHighlighted = false
+                }
+            }
         }
         viewPlace = [Int](repeating:0, count:viewPlace.count)
         checkAnsBtn.isUserInteractionEnabled = false
@@ -191,6 +218,8 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        placeLabel.text = placeString
+
         scenarioView.layer.cornerRadius = 10
         let file = Bundle.main.path(forResource: "MCQuestions", ofType: "json")
         let url = NSURL(fileURLWithPath: file!)
@@ -227,6 +256,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
 
     func nextQuestion() {
        // self.view.isUserInteractionEnabled = true
+        currentScore.text = String(randomNum)
         let urlString = "MCQuestions.json"
         
         let url = URL(string: urlString)
@@ -252,12 +282,20 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
                 for i in 0...answerLabs.count-1 {
                     answerLabs[i].text = label[i]
                     answers[i].layer.zPosition = 10
+                    if answerLabs[i].text == "" {
+                        answers[i].isHidden = true
+                    }
+                    else {
+                        answers[i].isHidden = false
+                    }
                     
                     if bubbles[i] == "s" {
                         labImages[i].image = UIImage(named: "speech.png")
+                        labImages[i].highlightedImage = UIImage(named: "speechr.png")
                     }
                     else if bubbles[i] == "t" {
                         labImages[i].image = UIImage(named: "thought.png")
+                        labImages[i].highlightedImage = UIImage(named: "thoughtr.png")
                         
                     }
                 }
@@ -314,14 +352,12 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
                 print(numbers.count)
                 animation = UIImageView(image:UIImage.gif(name: "emoji\(random)"))
                 animation.center = CGPoint(x: view.frame.width/2, y: view.frame.height/2)
-                animation.bounds.size = CGSize(width: self.view
-                    .frame.width/2, height: self.view.frame.height/2)
+                animation.bounds.size = CGSize(width: 200, height: 200)
                 view.addSubview(animation)
                 timer.invalidate() // just in case this button is tapped multiple times
                 timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
                 rewards[randomNum-1].image = UIImage(named: "emojij\(random)")
                 correct = correct + 1
-                currentScore.text = "\(correct)"
                 disableScene()
             }
             if randomNum != 5 {
@@ -414,4 +450,5 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
     
     
 }
+
 

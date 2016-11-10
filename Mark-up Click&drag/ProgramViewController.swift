@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+
 class ProgramViewController : UIViewController {
     
     var container: HomeViewController!
@@ -44,11 +45,14 @@ class ProgramViewController : UIViewController {
     override func viewDidLayoutSubviews(){
         super.viewDidLoad()
         for view in customView.subviews as [UIView] {
-            if let btn = view.subviews[1] as? UIButton {
-                btn.addTarget(self, action: #selector(choosePlace(_ :)), for: .touchUpInside)
-                btn.titleLabel?.adjustsFontSizeToFitWidth = true
-                btn.titleLabel?.minimumScaleFactor = 0.4
+            for view1 in view.subviews as [UIView] {
+                if let btn = view1 as? UIButton {
+                    btn.addTarget(self, action: #selector(choosePlace(_ :)), for: .touchUpInside)
+                    btn.titleLabel?.adjustsFontSizeToFitWidth = true
+                    btn.titleLabel?.minimumScaleFactor = 0.4
+                }
             }
+
         }
         
     }
@@ -57,13 +61,15 @@ class ProgramViewController : UIViewController {
          customView.removeFromSuperview()
     }
     
-    2 * 2
-    
-    func choosePlace(_ sender: AnyObject) {
+    func choosePlace(_ sender: UIButton) {
         var container = self.parent as! HomeViewController
         print("yah")
      
         container.place = String(sender.tag)
+        container.placeString = sender.titleLabel?.text
+        self.lowlightAll(viewToInspect: customView)
+       // sender.isItHighlighted = true
+        
         container.goNextButton.isHidden = false
         //container.goNextButton.center = CGPoint(x: sender.center.x, y: sender.center.y+80)
     }
@@ -73,4 +79,16 @@ class ProgramViewController : UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+}
+
+extension UIViewController {
+    func lowlightAll(viewToInspect: UIView) {
+        for view in viewToInspect.subviews as [UIView] {
+            for view1 in view.subviews as [UIView] {
+                if let btn = view1 as? UIButton {
+                    btn.isItHighlighted = false
+                }
+            }
+        }
+    }
 }
