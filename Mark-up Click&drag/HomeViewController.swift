@@ -15,6 +15,7 @@ class HomeViewController: UIViewController{
     var program: String!
     var place: String!
     var placeString: String!
+    var alert: UIAlertController!
 
     @IBOutlet weak var goNextButton: UIButton!
     @IBOutlet weak var programLabel: UILabel!
@@ -28,7 +29,9 @@ class HomeViewController: UIViewController{
         super.viewDidLoad()
         programLabel.text = names[Int(program)!-1]
         prog = program
-        userNameLabel.text = currentUs.value(forKey: "name") as! String
+        userNameLabel.text = currentUs.value(forKey: "name") as? String
+          
+        
 
     }
 
@@ -42,16 +45,29 @@ class HomeViewController: UIViewController{
     
 
     @IBAction func goNextAction(_ sender: AnyObject) {
+        alert = UIAlertController(title: nil, message: "Please wait...", preferredStyle: .alert)
+        
+        alert.view.tintColor = UIColor.black
+        let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height:50)) as UIActivityIndicatorView
+        loadingIndicator.hidesWhenStopped = true
+        loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        loadingIndicator.startAnimating();
+        
+        alert.view.addSubview(loadingIndicator)
+        present(alert, animated: true, completion: nil)
         self.performSegue(withIdentifier: "toQuiz", sender: self)
+        
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toQuiz"
         {
-            var destinationVC = segue.destination as! QuizViewController
+            
+            let destinationVC = segue.destination as! QuizViewController
             destinationVC.currentProg = program
             destinationVC.currentPlace = place
             destinationVC.placeString = placeString
+            destinationVC.source = self as? HomeViewController
             
         }
     }

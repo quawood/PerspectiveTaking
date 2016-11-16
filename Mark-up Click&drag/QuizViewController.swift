@@ -31,7 +31,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
     @IBOutlet weak var currentScore: UILabel!
     @IBOutlet weak var helpButton: UIButton!
     @IBOutlet weak var homeButton: UIButton!
-    
+    var source: HomeViewController!
     var numbers = [4,6, 8, 9, 10]
     let date = NSDate()
     let calendar = NSCalendar.current
@@ -217,7 +217,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //source.alert.dismiss(animated: true, completion: nil)
         placeLabel.text = placeString
 
         scenarioView.layer.cornerRadius = 10
@@ -231,13 +231,13 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
         }
         
         
-        let tryAgain = NSURL(fileURLWithPath: Bundle.main.path(forResource: "try-again_test", ofType: "wav")!)
+       /* let tryAgain = NSURL(fileURLWithPath: Bundle.main.path(forResource: "try-again_test", ofType: "wav")!)
         do {
             let sound = try AVAudioPlayer(contentsOf: (tryAgain as NSURL) as URL)
             audioPlayer = sound
         } catch {
             //couldn't load file
-        }
+        }*/
         nextQuestion()
         if answerLabs[4].text == "" {
             answers[4].isHidden = true
@@ -255,6 +255,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
     //Question controllers
 
     func nextQuestion() {
+        var minimumFont: CGFloat = 100
        // self.view.isUserInteractionEnabled = true
         currentScore.text = String(randomNum)
         let urlString = "MCQuestions.json"
@@ -262,7 +263,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
         let url = URL(string: urlString)
         URLSession.shared.dataTask(with:url!, completionHandler: {(data, response, error) in
             if error != nil {
-                print(error)
+                print("hello")
             } else {
                 do {
                     
@@ -281,9 +282,11 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
            if let label = numm["answers"] as? [String] , let stars = numm["stars"] as? [[Int]] , let correct = numm["correct"] as? [Int], let bubbles = numm["bubbles"] as? [String], let image = numm["image"] as? String {
                 for i in 0...answerLabs.count-1 {
                     answerLabs[i].text = label[i]
+                    
                     answers[i].layer.zPosition = 10
                     if answerLabs[i].text == "" {
                         answers[i].isHidden = true
+                        
                     }
                     else {
                         answers[i].isHidden = false
@@ -308,6 +311,15 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
                 scenarioImg.image = UIImage(named: image)
                 viewPlace = [Int](repeating:0, count:correctAnss.count)
             }
+        for lab in answerLabs {
+            if lab.minimumScaleFactor < minimumFont {
+                minimumFont = lab.minimumScaleFactor
+                print(minimumFont)
+            }
+        }
+        for lab in answerLabs {
+            lab.minimumScaleFactor = minimumFont
+        }
         
     }
     
@@ -356,7 +368,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
                 view.addSubview(animation)
                 timer.invalidate() // just in case this button is tapped multiple times
                 timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
-                rewards[randomNum-1].image = UIImage(named: "emojij\(random)")
+                //rewards[randomNum-1].image = UIImage(named: "emojij\(random)")
                 correct = correct + 1
                 disableScene()
             }
@@ -369,7 +381,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
             }
         }
         else if turn == 1 {
-            audioPlayer.play()
+           // audioPlayer.play()
             turn = turn + 1
             replaceAnswers()
             viewPlace = [Int](repeating
@@ -380,8 +392,8 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
             replaceAnswers()
             for i in 1...answers.count {
                 if correctAnss.contains(i) {
-                    answers[i-1].frame.origin =  CGPoint(x:starLocations[correctAnss.index(of: i)!].x + scenarioView.frame.origin.x , y: starLocations[correctAnss.index(of: i)!].y +
-                        scenarioView.frame.origin.y)
+                    answers[i-1].frame.origin =  CGPoint(x:starLocations[correctAnss.index(of: i)!].x + scenarioView.frame.origin.x - 15, y: starLocations[correctAnss.index(of: i)!].y +
+                        scenarioView.frame.origin.y - 15)
                    
                     answers[i-1].isUserInteractionEnabled = false
                 }

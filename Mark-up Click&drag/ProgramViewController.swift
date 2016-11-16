@@ -16,7 +16,7 @@ class ProgramViewController : UIViewController {
     var customView: UIView!
     
     override func viewWillAppear(_ animated: Bool) {
-        var container = self.parent as! HomeViewController
+        let container = self.parent as! HomeViewController
         switch container.program {
             case "1":
                 customView = Bundle.main.loadNibNamed("1", owner: self, options: nil)?.first as? UIView
@@ -62,13 +62,27 @@ class ProgramViewController : UIViewController {
     }
     
     func choosePlace(_ sender: UIButton) {
-        var container = self.parent as! HomeViewController
+        let container = self.parent as! HomeViewController
         print("yah")
      
         container.place = String(sender.tag)
         container.placeString = sender.titleLabel?.text
+        for view in customView.subviews as [UIView] {
+            for view1 in view.subviews as [UIView] {
+                if let btnImg = view1 as? UIImageView {
+                    btnImg.isHighlighted = false
+                    if btnImg.superview == sender.superview {
+                        btnImg.isHighlighted = true
+                        
+                    }
+                    
+                    
+                }
+            }
+            
+        }
         self.lowlightAll(viewToInspect: customView)
-       // sender.isItHighlighted = true
+        
         
         container.goNextButton.isHidden = false
         //container.goNextButton.center = CGPoint(x: sender.center.x, y: sender.center.y+80)

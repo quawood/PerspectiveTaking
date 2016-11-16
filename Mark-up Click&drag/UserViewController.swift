@@ -83,7 +83,7 @@ class UserViewController: UIViewController {
 }
 
 extension UserViewController : UICollectionViewDataSource, UICollectionViewDelegate {
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    private func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
@@ -95,6 +95,7 @@ extension UserViewController : UICollectionViewDataSource, UICollectionViewDeleg
         cellNum = indexPath.row
         currentUs = users[cellNum]
         currentUs.setValue(((currentUs.value(forKey: "frequency")as! Int) + 1), forKey: "frequency")
+        
         performSegue(withIdentifier: "toNext", sender: self)
         
     }

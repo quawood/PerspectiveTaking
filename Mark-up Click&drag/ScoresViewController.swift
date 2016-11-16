@@ -68,7 +68,6 @@ extension ScoresViewController:UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return (currentUs.value(forKey: "scores\(prog!)") as! [Float]).count
         
         

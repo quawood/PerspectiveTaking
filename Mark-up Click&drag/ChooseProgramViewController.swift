@@ -12,6 +12,7 @@ class ChooseProgramViewController: UIViewController {
     var buttonPressed: UIButton!
     @IBOutlet weak var programInfo: UILabel!
     @IBOutlet weak var goNextButton: UIButton!
+    var texts: [String] = ["Learn to take perspective in places around your community with this program! Learn about ", "Go through a school day and learn  ", ""]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -57,21 +58,34 @@ class ChooseProgramViewController: UIViewController {
 
 }
 
-extension UIButton {
-
+extension UIButton{
     var isItHighlighted: Bool {
         get {
             return self.isItHighlighted
         }
         set(newHighlight) {
             if newHighlight {
-                layer.borderWidth = 4
-                layer.borderColor = UIColor.red.cgColor
+                if let checker = self as? UIImageView {
+                    checker.isHighlighted = true
+                }
+                if let checker1 = self as? UIButton {
+                    checker1.layer.borderWidth = 3
+                    checker1.layer.borderColor = UIColor.red.cgColor
+                }
+                
+                
             }
             else if (!newHighlight){
-                layer.borderWidth = 0
-                layer.borderColor = UIColor.clear.cgColor
+                if let checker = self as? UIImageView {
+                    checker.isHighlighted = false
+                }
+                if let checker1 = self as? UIButton {
+                    checker1.layer.borderWidth = 3
+                    checker1.layer.borderColor = UIColor.clear.cgColor
+                }
+                
             }
         }
     }
-}
+
+    }

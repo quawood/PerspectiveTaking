@@ -90,15 +90,15 @@ class CreateUserViewController: UIViewController, UINavigationControllerDelegate
             user.setValue(nameTextLabel.text, forKey: "name")
         
             user.setValue("\(components.month!)/\(components.day!)/\(components.year!)", forKey: "dateCreated")
-            user.setValue([0], forKey: "scores1")
-            user.setValue([0], forKey: "scores2")
-            user.setValue([0], forKey: "scores3")
-            user.setValue([0], forKey: "scores4")
+            user.setValue([0] as [Float], forKey: "scores1")
+            user.setValue([0] as [Float], forKey: "scores2")
+            user.setValue([0] as [Float], forKey: "scores3")
+            user.setValue([0] as [Float], forKey: "scores4")
             do {
                 try managedObjectContext.save()
-            }
-            catch {
-                fatalError("Error in storing to Core Data")
+            } catch {
+                let saveError = error as NSError
+                print(saveError)
             }
 
 
