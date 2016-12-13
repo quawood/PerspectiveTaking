@@ -23,6 +23,26 @@ class UserCollectionViewCell: UICollectionViewCell {
     }
 }
 
+class ScoreTableViewCell: UITableViewCell {
+    //MARK: - Public API
+    var score: ScoreClass! {
+        didSet {
+            updateUI()
+        }
+    }
+    //MARK: - Private
+    
+    @IBOutlet weak var programNameLabel: UILabel!
+    @IBOutlet weak var scoreNameLabel: UILabel!
+    @IBOutlet weak var dateNameLabel: UILabel!
+    func updateUI() {
+        programNameLabel.text = score.fromProgram
+        scoreNameLabel.text = String(score.value)
+        dateNameLabel.text = score.dateCreated
+    }
+    
+}
+
 
 
 

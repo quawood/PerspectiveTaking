@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -11,21 +11,21 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ccU-8z-KZ5">
-                    <rect key="frame" x="257" y="202" width="123" height="115"/>
+                    <rect key="frame" x="276" y="185" width="138" height="182"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="speechtail.png" highlightedImage="speechred.png" translatesAutoresizingMaskIntoConstraints="NO" id="xde-6D-Z6T">
-                            <rect key="frame" x="0.0" y="1" width="120" height="114"/>
+                            <rect key="frame" x="0.0" y="0.0" width="138" height="182"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRQ-t0-QmT">
-                            <rect key="frame" x="15" y="45" width="92" height="27"/>
+                            <rect key="frame" x="17" y="72" width="102" height="42"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
                             <state key="normal" title="Phone Booth">
                                 <color key="titleColor" red="0.1544570411" green="0.37590224680000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
@@ -33,17 +33,17 @@
                     </subviews>
                 </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aw7-ii-mgX">
-                    <rect key="frame" x="126" y="276" width="123" height="115"/>
+                    <rect key="frame" x="137" y="305" width="138" height="181"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="speechtail.png" highlightedImage="speechred.png" translatesAutoresizingMaskIntoConstraints="NO" id="tsN-EB-pAh">
-                            <rect key="frame" x="0.0" y="0.0" width="123" height="115"/>
+                            <rect key="frame" x="0.0" y="0.0" width="138" height="181"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pNS-Fc-pCe">
-                            <rect key="frame" x="16" y="44" width="92" height="27"/>
+                            <rect key="frame" x="18" y="70" width="102" height="43"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
                             <state key="normal" title="Street Safety">
                                 <color key="titleColor" red="0.1544570411" green="0.37590224680000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
@@ -51,17 +51,17 @@
                     </subviews>
                 </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h0v-CJ-NNU">
-                    <rect key="frame" x="208" y="455" width="123" height="115"/>
+                    <rect key="frame" x="220" y="502" width="138" height="182"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="speechtail.png" highlightedImage="speechred.png" translatesAutoresizingMaskIntoConstraints="NO" id="39n-oW-1uS">
-                            <rect key="frame" x="0.0" y="0.0" width="123" height="115"/>
+                            <rect key="frame" x="0.0" y="0.0" width="138" height="182"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7Y-Gj-vhQ">
-                            <rect key="frame" x="15" y="44" width="92" height="27"/>
+                            <rect key="frame" x="17" y="70" width="103" height="43"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
                             <state key="normal" title="Movie Theatre">
                                 <color key="titleColor" red="0.1544570411" green="0.37590224680000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
@@ -69,17 +69,17 @@
                     </subviews>
                 </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="50y-If-HFo">
-                    <rect key="frame" x="257" y="349" width="123" height="115"/>
+                    <rect key="frame" x="276" y="349" width="138" height="181"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="speechtail.png" highlightedImage="speechred.png" translatesAutoresizingMaskIntoConstraints="NO" id="quK-Qf-uUM">
-                            <rect key="frame" x="0.0" y="1" width="120" height="114"/>
+                            <rect key="frame" x="0.0" y="0.0" width="138" height="181"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qbk-xE-SMp">
-                            <rect key="frame" x="15" y="44" width="92" height="27"/>
+                            <rect key="frame" x="17" y="70" width="102" height="43"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
                             <state key="normal" title="Doctor's Office">
                                 <color key="titleColor" red="0.1544570411" green="0.37590224680000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
@@ -87,17 +87,17 @@
                     </subviews>
                 </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zp1-2I-nGl">
-                    <rect key="frame" x="68" y="455" width="123" height="115"/>
+                    <rect key="frame" x="74" y="502" width="138" height="182"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="speechtail.png" highlightedImage="speechred.png" translatesAutoresizingMaskIntoConstraints="NO" id="mQe-J6-gl9">
-                            <rect key="frame" x="1" y="1" width="120" height="114"/>
+                            <rect key="frame" x="0.0" y="0.0" width="138" height="182"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z48-rR-vyJ">
-                            <rect key="frame" x="15" y="45" width="92" height="27"/>
+                            <rect key="frame" x="18" y="70" width="102" height="43"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
                             <state key="normal" title="Car Ride">
                                 <color key="titleColor" red="0.1544570411" green="0.37590224680000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
@@ -105,61 +105,61 @@
                     </subviews>
                 </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QL4-7P-ttN">
-                    <rect key="frame" x="0.0" y="204" width="123" height="115"/>
+                    <rect key="frame" x="0.0" y="185" width="138" height="182"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="speechtail.png" highlightedImage="speechred.png" translatesAutoresizingMaskIntoConstraints="NO" id="2nB-ii-3lR">
-                            <rect key="frame" x="0.0" y="1" width="120" height="114"/>
+                            <rect key="frame" x="0.0" y="0.0" width="138" height="182"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GP8-z2-NAE">
-                            <rect key="frame" x="15" y="44" width="92" height="27"/>
+                            <rect key="frame" x="18" y="70" width="102" height="43"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
                             <state key="normal" title="Friend's House">
                                 <color key="titleColor" red="0.1544570411" green="0.37590224680000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                         </button>
                     </subviews>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eAJ-mk-NlU">
-                    <rect key="frame" x="0.0" y="349" width="123" height="115"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="speechtail.png" highlightedImage="speechred.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZU7-x6-HcH">
-                            <rect key="frame" x="1" y="1" width="120" height="114"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                        </imageView>
-                        <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ls-JO-b9y">
-                            <rect key="frame" x="16" y="45" width="91" height="27"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
-                            <state key="normal" title="Grocery Store">
-                                <color key="titleColor" red="0.1544570411" green="0.37590224680000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
-                            </state>
-                        </button>
-                    </subviews>
-                </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="byv-h4-g9l">
-                    <rect key="frame" x="126" y="110" width="123" height="115"/>
+                    <rect key="frame" x="137" y="66" width="138" height="181"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="speechtail.png" highlightedImage="speechred.png" translatesAutoresizingMaskIntoConstraints="NO" id="nvi-Pd-SH2">
-                            <rect key="frame" x="1" y="1" width="120" height="114"/>
+                            <rect key="frame" x="0.0" y="0.0" width="138" height="181"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFS-an-lMA">
-                            <rect key="frame" x="23" y="44" width="76" height="27"/>
+                            <rect key="frame" x="18" y="69" width="102" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
                             <state key="normal" title="Restaurant">
                                 <color key="titleColor" red="0.1544570411" green="0.37590224680000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                         </button>
                     </subviews>
                 </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eAJ-mk-NlU">
+                    <rect key="frame" x="0.0" y="349" width="138" height="181"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="speechtail.png" highlightedImage="speechred.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZU7-x6-HcH">
+                            <rect key="frame" x="0.0" y="0.0" width="135" height="182"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ls-JO-b9y">
+                            <rect key="frame" x="18" y="70" width="102" height="43"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                            <state key="normal" title="Grocery Store">
+                                <color key="titleColor" red="0.1544570411" green="0.37590224680000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                    </subviews>
+                </view>
             </subviews>
-            <color key="backgroundColor" red="0.90912730109999995" green="0.36460130035417349" blue="0.33849220731245749" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.83151584199999995" green="0.31404622395833331" blue="0.35704210069444442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <point key="canvasLocation" x="82.5" y="110.5"/>
         </view>
     </objects>

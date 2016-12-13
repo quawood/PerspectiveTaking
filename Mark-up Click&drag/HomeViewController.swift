@@ -16,10 +16,11 @@ class HomeViewController: UIViewController{
     var place: String!
     var placeString: String!
     var alert: UIAlertController!
-
     @IBOutlet weak var goNextButton: UIButton!
     @IBOutlet weak var programLabel: UILabel!
+    var data: [String:AnyObject]!
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
 
     @IBAction func unwindToHome(_ segue: UIStoryboardSegue) {
@@ -48,14 +49,10 @@ class HomeViewController: UIViewController{
         alert = UIAlertController(title: nil, message: "Please wait...", preferredStyle: .alert)
         
         alert.view.tintColor = UIColor.black
-        let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height:50)) as UIActivityIndicatorView
-        loadingIndicator.hidesWhenStopped = true
-        loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
-        loadingIndicator.startAnimating();
-        
-        alert.view.addSubview(loadingIndicator)
-        present(alert, animated: true, completion: nil)
-        self.performSegue(withIdentifier: "toQuiz", sender: self)
+        activityIndicator.startAnimating()
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "toQuiz",sender: self)
+        }
         
     }
 
@@ -67,7 +64,12 @@ class HomeViewController: UIViewController{
             destinationVC.currentProg = program
             destinationVC.currentPlace = place
             destinationVC.placeString = placeString
-            destinationVC.source = self as? HomeViewController
+            destinationVC.SetHomeContent()
+            activityIndicator.stopAnimating()
+
+            
+            
+           
             
         }
     }

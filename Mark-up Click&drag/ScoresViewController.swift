@@ -12,12 +12,22 @@ import MessageUI
 class ScoresViewController: UIViewController, MFMailComposeViewControllerDelegate {
     @IBOutlet weak var scoresTableView: UITableView!
     @IBOutlet weak var scoresLabel: UILabel!
-
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var realView: UIView!
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch = touches.first!
+        if !realView.frame.contains(touch.location(in: self.view)) {
+            self.performSegue(withIdentifier: "backToHome", sender: self)
+        }
+    }
+    
     override func viewDidLoad() {
         scoresTableView.layer.borderColor = UIColor(red: 23/255, green: 57/255, blue: 100/255, alpha: 1.0).cgColor
         scoresTableView.layer.borderWidth = 2
         scoresTableView.layer.cornerRadius = 5
         scoresLabel.text = "Scores for \(names[Int(prog)!-1])"
+        containerView.layer.cornerRadius = 15
 
     }
     
@@ -46,7 +56,12 @@ class ScoresViewController: UIViewController, MFMailComposeViewControllerDelegat
         
         mailComposerVC.setToRecipients(["someone@somewhere.com"])
         mailComposerVC.setSubject("Scores for \(names[Int(prog)!-1])")
-        mailComposerVC.setMessageBody("\(currentUs.value(forKey: "scores\(prog!)"))", isHTML: false)
+        let scores = currentUs.value(forKey: "scores\(prog!)") as! [Float]
+        var valueScores: [Int] = []
+        /*for score in scores {
+            valueScores.append(score.value)
+        }*/
+        mailComposerVC.setMessageBody("\(scores)", isHTML: false)
         
         return mailComposerVC
     }
@@ -74,8 +89,9 @@ extension ScoresViewController:UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")! as UITableViewCell
-        cell.textLabel?.text = "\(Int((currentUs.value(forKey: "scores\(prog!)") as! [Float])[(currentUs.value(forKey: "scores\(prog!)") as! [Float]).count-indexPath.item-1]))"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")! as! ScoreTableViewCell
+       cell.textLabel?.text = "\(Int((currentUs.value(forKey: "scores\(prog!)") as! [Float])[(currentUs.value(forKey: "scores\(prog!)") as! [Float]).count-indexPath.item-1]))"
+        //cell.score = (value(forKey: "scores\(prog!)") as! [ScoreClass])[indexPath.item]
         return cell
     }
 }

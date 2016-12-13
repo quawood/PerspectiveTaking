@@ -15,12 +15,14 @@ class EditProfileViewController: UIViewController,UINavigationControllerDelegate
     
 
 
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var dateCreatedLabel: UILabel!
     @IBOutlet weak var nameText: UITextField!
     @IBOutlet weak var editSaveButton: UIButton!
     @IBOutlet weak var saveEditButton: UIButton!
     @IBOutlet weak var canceEditingButton: UIButton!
-    @IBOutlet weak var goBackHomeButton: UIButton!
+    //@IBOutlet weak var goBackHomeButton: UIButton!
+    @IBOutlet weak var realView: UIView!
      
     func loadData() {
         nameText.text = (currentUs.value(forKey: "name") as! String)
@@ -61,6 +63,16 @@ class EditProfileViewController: UIViewController,UINavigationControllerDelegate
         }
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch = touches.first!
+        if !realView.frame.contains(touch.location(in: self.view)) {
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    
+    
+
 
     
     func dismissKeyboard() {
@@ -77,7 +89,7 @@ class EditProfileViewController: UIViewController,UINavigationControllerDelegate
 
         //chooseImage.layer.cornerRadius = 155 ;
         // Do any additional setup after loading the view.
-        
+        containerView.layer.cornerRadius = 15
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
@@ -100,7 +112,7 @@ class EditProfileViewController: UIViewController,UINavigationControllerDelegate
         editSaveButton.isHidden = true
         saveEditButton.isHidden = false
         canceEditingButton.isHidden = false
-        goBackHomeButton.isHidden = true
+        //goBackHomeButton.isHidden = true
         nameText.isUserInteractionEnabled = true
 
     }
@@ -109,7 +121,7 @@ class EditProfileViewController: UIViewController,UINavigationControllerDelegate
 
         editSaveButton.isHidden = false
         saveEditButton.isHidden = true
-        goBackHomeButton.isHidden = false
+       // goBackHomeButton.isHidden = false
         canceEditingButton.isHidden = true
         nameText.isUserInteractionEnabled = false
         

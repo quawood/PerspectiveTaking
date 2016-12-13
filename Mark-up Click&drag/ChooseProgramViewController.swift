@@ -12,7 +12,7 @@ class ChooseProgramViewController: UIViewController {
     var buttonPressed: UIButton!
     @IBOutlet weak var programInfo: UILabel!
     @IBOutlet weak var goNextButton: UIButton!
-    var texts: [String] = ["Learn to take perspective in places around your community with this program! Learn about ", "Go through a school day and learn  ", ""]
+    var texts: [String] = ["My Community teaches children and young people appropriate social behaviors with various peers and adults within their community.", "My School Day Enhanced CD teaches appropriate interaction and social behaviors within a school setting.", "School Rules! Volume 1 teaches acceptable behaviors during structured activities related to the classroom, group work, and physical education.","School Rules! Volume 2 teaches social interpretation skills during unstructured times where social rules are most challenging"  ]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,7 +39,7 @@ class ChooseProgramViewController: UIViewController {
         self.lowlightAll(viewToInspect: self.view)
         sender.isItHighlighted = true
         goNextButton.isHidden = false
-        programInfo.text = "This program is \(names[sender.tag-1])"
+        programInfo.text = texts[sender.tag-1]
         buttonPressed = sender
         
         
@@ -69,8 +69,8 @@ extension UIButton{
                     checker.isHighlighted = true
                 }
                 if let checker1 = self as? UIButton {
-                    checker1.layer.borderWidth = 3
-                    checker1.layer.borderColor = UIColor.red.cgColor
+                    checker1.layer.borderWidth = 6
+                    checker1.layer.borderColor = UIColor.white.cgColor
                 }
                 
                 

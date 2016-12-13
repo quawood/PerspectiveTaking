@@ -7,7 +7,17 @@
 //
 
 import UIKit
-
+class ScoreClass: NSObject {
+    var dateCreated: String = ""
+    var fromProgram: String = ""
+    var value: Int = 0
+    convenience init(dateCreated: String, fromProgram: String, value: Int) {
+        self.init()
+        self.dateCreated = dateCreated
+        self.fromProgram = fromProgram
+        self.value = value
+    }
+}
 class User: NSObject {
     var name: String?
     var dateCreated: String = ""
@@ -28,7 +38,6 @@ class AllowedCharsTextField: UITextField, UITextFieldDelegate {
     
     // 2
     @IBInspectable var allowedChars: String = ""
-    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         // 3
@@ -131,5 +140,24 @@ public class LoadingOverlay{
     public func hideOverlayView() {
         activityIndicator.stopAnimating()
         overlayView.removeFromSuperview()
+    }
+}
+
+protocol LoadingViewControllerDelegate {
+    func didFinishLoading(controller: LoadingViewController)
+}
+
+class LoadingViewController: UIViewController {
+    var delegate: LoadingViewControllerDelegate? = nil
+    
+    override func viewDidLoad() {
+        // Do your spinner code here
+    }
+    
+    // Delegate function, should be fired when loading is done.
+    func finished() {
+        if self.delegate != nil {
+            self.delegate?.didFinishLoading(controller: self)
+        }
     }
 }

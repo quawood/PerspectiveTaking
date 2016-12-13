@@ -51,15 +51,21 @@ class ProgramViewController : UIViewController {
                     btn.titleLabel?.adjustsFontSizeToFitWidth = true
                     btn.titleLabel?.minimumScaleFactor = 0.4
                 }
+                if let img = view1 as? UIImageView {
+                    img.highlightedImage = UIImage(named: "speechred.png")
+                }
             }
 
         }
+        
         
     }
     
     override func viewWillDisappear(_ animated: Bool) {
          customView.removeFromSuperview()
     }
+    
+    
     
     func choosePlace(_ sender: UIButton) {
         let container = self.parent as! HomeViewController

@@ -13,7 +13,7 @@ import CoreData
 import Foundation
 
 
-class QuizViewController: UIViewController, UIPopoverPresentationControllerDelegate {
+class QuizViewController: UIViewController, UIPopoverPresentationControllerDelegate{
     var placeString: String!
     @IBOutlet weak var placeLabel: UILabel!
     @IBOutlet weak var sceneView: UIView!
@@ -32,7 +32,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
     @IBOutlet weak var helpButton: UIButton!
     @IBOutlet weak var homeButton: UIButton!
     var source: HomeViewController!
-    var numbers = [4,6, 8, 9, 10]
+    var numbers = [1,2,3,4, 5]
     let date = NSDate()
     let calendar = NSCalendar.current
     var counter = 0
@@ -55,10 +55,13 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
     
     // JSON Setup
     var json: [String:AnyObject]!
-    
     var currentPlace:String! = "1"
     var currentProg:String! = "my_community"
+    var startails: [Float]!
+    var xRat: Float!
+    var yRat: Float!
     
+
     @IBAction func unwindToQuiz(_ segue: UIStoryboardSegue) {
         
     }
@@ -85,10 +88,19 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
             for i in 0...starLocations.count-1 {
                 let starframe = CGRect(x: starLocations[i].x + scenarioView.frame.origin.x , y: starLocations[i].y +
                     scenarioView.frame.origin.y , width: 55 * self.view.bounds.width/414 , height: 55 * self.view.bounds.width/414)
-                if (starframe.contains(touch.previousLocation(in: self.view)) && viewPlace[i] == 0) {
+                if (starframe.contains(touch.previousLocation(in: self.view)) && (viewPlace[i] == 0||viewPlace[i] == currentA.tag)) {
                     
                     for view in currentA.subviews {
                         if let img = view as? UIImageView {
+                            let k = Int(startails[i])
+                            if img.tag == 0 {
+                                img.highlightedImage = UIImage(named:"speechtail\(k).png")
+                            }
+                            else {
+                                img.highlightedImage = UIImage(named: "thoughtr.png")
+                            }
+                            
+                            
                             img.isHighlighted = true
                         }
                     }
@@ -99,6 +111,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
                     for view in currentA.subviews {
                         if let img = view as? UIImageView {
                             img.isHighlighted = false
+                            
                         }
                     }
                 }
@@ -112,11 +125,11 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
 
             for i in 0...starLocations.count-1 {
                 let starframe = CGRect(x: starLocations[i].x + scenarioView.frame.origin.x , y: starLocations[i].y +
-                    scenarioView.frame.origin.y , width: 55 * self.view.bounds.width/414 , height: 55 * self.view.bounds.width/414)
-                if (starframe.contains(touch.previousLocation(in: self.view)) && viewPlace[i] == 0) {
+                    scenarioView.frame.origin.y , width: 70 * self.view.bounds.width/414 , height: 70 * self.view.bounds.width/414)
+                if (starframe.contains(touch.previousLocation(in: self.view)) && (viewPlace[i] == 0||viewPlace[i] == currentA.tag)) {
                     
-                    currentA.frame.origin = CGPoint(x:starLocations[i].x + scenarioView.frame.origin.x - 15 , y: starLocations[i].y +
-                        scenarioView.frame.origin.y - 15)
+                    currentA.frame.origin = CGPoint(x:starLocations[i].x + scenarioView.frame.origin.x , y: starLocations[i].y +
+                        scenarioView.frame.origin.y)
                     if viewPlace.contains(currentA.tag) {
                         viewPlace[viewPlace.index(of: currentA.tag)!] = 0
                     }
@@ -130,8 +143,9 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
                 }
             }
             
-            if starLocations.contains(CGPoint(x: currentA.frame.origin.x - scenarioView.frame.origin.x + 15, y: currentA.frame.origin.y - scenarioView.frame.origin.y + 15)) == false{
+            if (currentA.subviews[0] as! UIImageView).isHighlighted == false{
                 currentA.frame.origin = anchors[currentA.tag-1].center
+                (currentA.subviews[0] as! UIImageView).isHighlighted = false
                 if viewPlace.contains(currentA.tag) {
                     viewPlace[viewPlace.index(of: currentA.tag)!] = 0
                     if viewPlace.contains(0) == true {
@@ -159,9 +173,12 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
         
     }
     func genStars() {
+        var i = 0
         for starLoc in starLocations {
+            i = i + 1
             let star = UIImageView()
-            star.frame = CGRect(x: starLoc.x + 12, y: starLoc.y + 12, width: 25 * self.view.bounds.width/414, height: 25 * self.view.bounds.width/414)
+            star.frame = CGRect(x: starLoc.x+15  , y: starLoc.y+15, width: CGFloat(25 * xRat), height: CGFloat(25 * xRat))
+
             star.tag = 1
             star.layer.zPosition = 9
             
@@ -195,6 +212,11 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
         }
     }
     
+    func didFinishLoading(controller: LoadingViewController) {
+        controller.dismiss(animated: true, completion: nil)
+    }
+    
+    
     
     @IBAction func gotToHome(_ sender: AnyObject) {
         let alertConrtoller = UIAlertController(title: "Go Home", message: "Go to home and lose progress?", preferredStyle: .alert)
@@ -202,7 +224,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
             alertConrtoller.dismiss(animated: true, completion: nil)
         }))
         alertConrtoller.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action: UIAlertAction!) in
-            self.performSegue(withIdentifier: "backToHome", sender: self)
+            self.performSegue(withIdentifier: "toHomefromQuiz", sender: self)
         }))
         present(alertConrtoller, animated: true, completion: nil)
     }
@@ -214,30 +236,51 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
         finishButton.isUserInteractionEnabled = true
     }
 
+    
+    func GetHomeData(completionHandler: ((NSDictionary) -> Void)?)
+    {
+        let file = Bundle.main.path(forResource: "MCQuestions", ofType: "json")
+        let url = NSURL(fileURLWithPath: file!)
+        var request: NSURLRequest = NSURLRequest(url:url as URL)
+        let config = URLSessionConfiguration.default
+        let session = URLSession(configuration: config)
+        var jsonResult: [String : AnyObject]!
+        
+        let task : URLSessionDataTask = session.dataTask(with: request as URLRequest, completionHandler: {(data, response, error) in
+            var error: AutoreleasingUnsafeMutablePointer<NSError?>? = nil
+            do {
+                jsonResult =  try JSONSerialization.jsonObject(with: (data)!, options: .allowFragments) as! [String : AnyObject]
+            } catch {
+                print("dab")
+            }
+            
+            
+            // then on complete I call the completionHandler...
+            completionHandler?(jsonResult as NSDictionary);
+        });
+        task.resume()
+    }
+    
+    func SetHomeContent()
+    {
+        GetHomeData(completionHandler: self.resultHandler)
+    }
+    
+    func resultHandler(jsonResult:NSDictionary!)
+    {
+        json = jsonResult as! [String : AnyObject]!
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        xRat  = Float(self.view.bounds.width)/414
+        yRat =  Float(self.view.bounds.height)/414
+
+
         //source.alert.dismiss(animated: true, completion: nil)
         placeLabel.text = placeString
 
         scenarioView.layer.cornerRadius = 10
-        let file = Bundle.main.path(forResource: "MCQuestions", ofType: "json")
-        let url = NSURL(fileURLWithPath: file!)
-        let data = NSData(contentsOf: url as URL)
-        do {
-            json = try JSONSerialization.jsonObject(with: data! as Data, options:.allowFragments) as! [String:AnyObject]
-        } catch {
-            //couldn't load
-        }
-        
-        
-       /* let tryAgain = NSURL(fileURLWithPath: Bundle.main.path(forResource: "try-again_test", ofType: "wav")!)
-        do {
-            let sound = try AVAudioPlayer(contentsOf: (tryAgain as NSURL) as URL)
-            audioPlayer = sound
-        } catch {
-            //couldn't load file
-        }*/
         nextQuestion()
         if answerLabs[4].text == "" {
             answers[4].isHidden = true
@@ -255,31 +298,18 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
     //Question controllers
 
     func nextQuestion() {
+        
+        viewPlace = [0,0,0,0,0]
         var minimumFont: CGFloat = 100
        // self.view.isUserInteractionEnabled = true
         currentScore.text = String(randomNum)
-        let urlString = "MCQuestions.json"
-        
-        let url = URL(string: urlString)
-        URLSession.shared.dataTask(with:url!, completionHandler: {(data, response, error) in
-            if error != nil {
-                print("hello")
-            } else {
-                do {
-                    
-                    self.json = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [String:Any] as Dictionary<String, AnyObject>!
-                } catch let error as NSError {
-                    print(error)
-                }
-            }
-            
-        }).resume()
         starLocations = []
         let questions = json["questions"] as! [String:AnyObject]
         let currentProgram = questions[currentProg] as! [String: AnyObject]
         let currentSpot = currentProgram[currentPlace] as! [AnyObject]
         let numm = currentSpot[randomNum-1] as! [String:AnyObject]
            if let label = numm["answers"] as? [String] , let stars = numm["stars"] as? [[Int]] , let correct = numm["correct"] as? [Int], let bubbles = numm["bubbles"] as? [String], let image = numm["image"] as? String {
+             startails = numm["startails"] as? [Float]
                 for i in 0...answerLabs.count-1 {
                     answerLabs[i].text = label[i]
                     
@@ -294,12 +324,13 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
                     
                     if bubbles[i] == "s" {
                         labImages[i].image = UIImage(named: "speech.png")
-                        labImages[i].highlightedImage = UIImage(named: "speechr.png")
+                        labImages[i].tag = 0
+                        //labImages[i].highlightedImage = UIImage(named: "speechtail0")
+                        //labImages[i].highlightedImage = UIImage(named: "speechtail1")
                     }
                     else if bubbles[i] == "t" {
                         labImages[i].image = UIImage(named: "thought.png")
-                        labImages[i].highlightedImage = UIImage(named: "thoughtr.png")
-                        
+                        labImages[i].tag = 1
                     }
                 }
                 for j in 0...stars.count-1 {
@@ -335,6 +366,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
         replaceAnswers()
         randomNum += 1
         nextQuestionBtn.isHidden = true
+        viewPlace = [0,0,0,0,0]
         
         checkAnsBtn.isUserInteractionEnabled = false
         if animation != nil {
@@ -364,7 +396,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
                 print(numbers.count)
                 animation = UIImageView(image:UIImage.gif(name: "emoji\(random)"))
                 animation.center = CGPoint(x: view.frame.width/2, y: view.frame.height/2)
-                animation.bounds.size = CGSize(width: 200, height: 200)
+                animation.bounds.size = CGSize(width: 100, height: 100)
                 view.addSubview(animation)
                 timer.invalidate() // just in case this button is tapped multiple times
                 timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
@@ -392,8 +424,9 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
             replaceAnswers()
             for i in 1...answers.count {
                 if correctAnss.contains(i) {
-                    answers[i-1].frame.origin =  CGPoint(x:starLocations[correctAnss.index(of: i)!].x + scenarioView.frame.origin.x - 15, y: starLocations[correctAnss.index(of: i)!].y +
-                        scenarioView.frame.origin.y - 15)
+                    answers[i-1].frame.origin =  CGPoint(x:starLocations[correctAnss.index(of: i)!].x + scenarioView.frame.origin.x, y: starLocations[correctAnss.index(of: i)!].y +
+                        scenarioView.frame.origin.y)
+                    (answers[i-1].subviews[0] as! UIImageView).isHighlighted = true
                    
                     answers[i-1].isUserInteractionEnabled = false
                 }
@@ -417,20 +450,23 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
         animation.removeFromSuperview()
     }
     @IBAction func saveScore(sender: AnyObject) {
+        let entity = NSEntityDescription.entity(forEntityName: "User", in: managedObjectContext)
+        let user = NSManagedObject(entity: entity!, insertInto: managedObjectContext)
         
+        let components = calendar.dateComponents([.month,.day,.year], from: date as Date)
         // Populate Address
        // score.setValue("\(components.month)/\(components.day)/\(components.year)", forKey: "date")
        // score.setValue(currentProg, forKey: "program")
-        var placeHolder = (currentUs.value(forKey: "scores\(currentProg!)") as! [Int])
+        var placeHolder = (currentUs.value(forKey: "scores\(currentProg!)") as! [Float])
         if placeHolder.count == 5 {
             placeHolder = placeHolder.rotate(shift: 1)
-            placeHolder[placeHolder.count-1] = correct
+            placeHolder[placeHolder.count-1] = Float(Int(correct))
         }
         else if placeHolder.count == 1 && placeHolder[0] == 0{
-            placeHolder[0] = correct
+            placeHolder[0] = Float(Int(correct))
         }
         else {
-          placeHolder.append(correct)
+          placeHolder.append(Float(correct))
         }
         
         currentUs.setValue(placeHolder, forKey: "scores\(currentProg!)")
@@ -441,6 +477,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
             let saveError = error as NSError
             print(saveError)
         }
+        self.performSegue(withIdentifier: "toHomefromQuiz", sender: self)
     }
 
     
