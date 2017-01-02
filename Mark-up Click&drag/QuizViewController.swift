@@ -343,13 +343,13 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
                 viewPlace = [Int](repeating:0, count:correctAnss.count)
             }
         for lab in answerLabs {
-            if lab.minimumScaleFactor < minimumFont {
-                minimumFont = lab.minimumScaleFactor
+            if lab.font.pointSize < minimumFont {
+                minimumFont = lab.font.pointSize
                 print(minimumFont)
             }
         }
         for lab in answerLabs {
-            lab.minimumScaleFactor = minimumFont
+            lab.font = lab.font.withSize(minimumFont)
         }
         
     }

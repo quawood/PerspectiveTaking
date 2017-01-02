@@ -44,12 +44,11 @@ class ProgramViewController : UIViewController {
     }
     override func viewDidLayoutSubviews(){
         super.viewDidLoad()
+        var minimumFont: CGFloat = 100
         for view in customView.subviews as [UIView] {
             for view1 in view.subviews as [UIView] {
                 if let btn = view1 as? UIButton {
                     btn.addTarget(self, action: #selector(choosePlace(_ :)), for: .touchUpInside)
-                    btn.titleLabel?.adjustsFontSizeToFitWidth = true
-                    btn.titleLabel?.minimumScaleFactor = 0.4
                 }
                 if let img = view1 as? UIImageView {
                     img.highlightedImage = UIImage(named: "speechred.png")
@@ -57,7 +56,6 @@ class ProgramViewController : UIViewController {
             }
 
         }
-        
         
     }
     

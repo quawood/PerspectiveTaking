@@ -93,6 +93,7 @@
 		A5DCF8D31DC17B340082F7EA /* 4.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5DCF8D21DC17B340082F7EA /* 4.xib */; };
 		A5E43BEC1D73D6B300339C66 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E43BEB1D73D6B300339C66 /* User.swift */; };
 		A5E49A8D1DD447CB0089C65A /* thoughtr.png in Resources */ = {isa = PBXBuildFile; fileRef = A5E49A8C1DD447CB0089C65A /* thoughtr.png */; };
+		A5EFC1661E10F4A80071F4DE /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EFC1651E10F4A80071F4DE /* CustomSegue.swift */; };
 		A5F4831C1D130F8100AA4E85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F4831B1D130F8100AA4E85 /* AppDelegate.swift */; };
 		A5F483211D130F8100AA4E85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5F4831F1D130F8100AA4E85 /* Main.storyboard */; };
 		A5F483241D130F8100AA4E85 /* Mark_up_Click_drag.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A5F483221D130F8100AA4E85 /* Mark_up_Click_drag.xcdatamodeld */; };
@@ -697,6 +698,7 @@
 		A5DCF8D21DC17B340082F7EA /* 4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = 4.xib; sourceTree = "<group>"; };
 		A5E43BEB1D73D6B300339C66 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A5E49A8C1DD447CB0089C65A /* thoughtr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = thoughtr.png; path = ../../Mathematica/thoughtr.png; sourceTree = "<group>"; };
+		A5EFC1651E10F4A80071F4DE /* CustomSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSegue.swift; sourceTree = "<group>"; };
 		A5F483181D130F8100AA4E85 /* Mark-up Click&drag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mark-up Click&drag.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5F4831B1D130F8100AA4E85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5F483201D130F8100AA4E85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -1287,6 +1289,7 @@
 			children = (
 				A5E43BEB1D73D6B300339C66 /* User.swift */,
 				A5DBA2491DA4A07400C15EDE /* UIImage+Gif.swift */,
+				A5EFC1651E10F4A80071F4DE /* CustomSegue.swift */,
 			);
 			name = "Helper Files";
 			sourceTree = "<group>";
@@ -2642,6 +2645,7 @@
 				A5B4D6E61D7FB1BF0054D4C8 /* UserCollectionViewCell.swift in Sources */,
 				A5F4831C1D130F8100AA4E85 /* AppDelegate.swift in Sources */,
 				A54B09EF1D7FBACB00D82D49 /* CreateUserViewController.swift in Sources */,
+				A5EFC1661E10F4A80071F4DE /* CustomSegue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
