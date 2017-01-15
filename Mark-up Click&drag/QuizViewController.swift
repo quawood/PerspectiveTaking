@@ -241,13 +241,13 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
     {
         let file = Bundle.main.path(forResource: "MCQuestions", ofType: "json")
         let url = NSURL(fileURLWithPath: file!)
-        var request: NSURLRequest = NSURLRequest(url:url as URL)
+        let request: NSURLRequest = NSURLRequest(url:url as URL)
         let config = URLSessionConfiguration.default
         let session = URLSession(configuration: config)
         var jsonResult: [String : AnyObject]!
         
         let task : URLSessionDataTask = session.dataTask(with: request as URLRequest, completionHandler: {(data, response, error) in
-            var error: AutoreleasingUnsafeMutablePointer<NSError?>? = nil
+          //  var error: AutoreleasingUnsafeMutablePointer<NSError?>? = nil
             do {
                 jsonResult =  try JSONSerialization.jsonObject(with: (data)!, options: .allowFragments) as! [String : AnyObject]
             } catch {
@@ -450,13 +450,12 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
         animation.removeFromSuperview()
     }
     @IBAction func saveScore(sender: AnyObject) {
-        let entity = NSEntityDescription.entity(forEntityName: "User", in: managedObjectContext)
+        /*let entity = NSEntityDescription.entity(forEntityName: "User", in: managedObjectContext)
         let user = NSManagedObject(entity: entity!, insertInto: managedObjectContext)
-        
-        let components = calendar.dateComponents([.month,.day,.year], from: date as Date)
-        // Populate Address
-       // score.setValue("\(components.month)/\(components.day)/\(components.year)", forKey: "date")
-       // score.setValue(currentProg, forKey: "program")
+        /let components = calendar.dateComponents([.month,.day,.year], from: date as Date)
+        Populate Address
+       score.setValue("\(components.month)/\(components.day)/\(components.year)", forKey: "date")
+      score.setValue(currentProg, forKey: "program")*/
         var placeHolder = (currentUs.value(forKey: "scores\(currentProg!)") as! [Float])
         if placeHolder.count == 5 {
             placeHolder = placeHolder.rotate(shift: 1)

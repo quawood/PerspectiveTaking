@@ -65,24 +65,14 @@ extension UIButton{
         }
         set(newHighlight) {
             if newHighlight {
-                if let checker = self as? UIImageView {
-                    checker.isHighlighted = true
-                }
-                if let checker1 = self as? UIButton {
-                    checker1.layer.borderWidth = 6
-                    checker1.layer.borderColor = UIColor.white.cgColor
-                }
+                    self.layer.borderWidth = 5
+                    self.layer.borderColor = UIColor.white.cgColor
                 
                 
             }
             else if (!newHighlight){
-                if let checker = self as? UIImageView {
-                    checker.isHighlighted = false
-                }
-                if let checker1 = self as? UIButton {
-                    checker1.layer.borderWidth = 3
-                    checker1.layer.borderColor = UIColor.clear.cgColor
-                }
+                    self.layer.borderWidth = 3
+                    self.layer.borderColor = UIColor.clear.cgColor
                 
             }
         }

@@ -57,7 +57,6 @@ class ScoresViewController: UIViewController, MFMailComposeViewControllerDelegat
         mailComposerVC.setToRecipients(["someone@somewhere.com"])
         mailComposerVC.setSubject("Scores for \(names[Int(prog)!-1])")
         let scores = currentUs.value(forKey: "scores\(prog!)") as! [Float]
-        var valueScores: [Int] = []
         /*for score in scores {
             valueScores.append(score.value)
         }*/

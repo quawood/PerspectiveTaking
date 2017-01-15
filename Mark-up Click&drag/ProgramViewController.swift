@@ -44,18 +44,16 @@ class ProgramViewController : UIViewController {
     }
     override func viewDidLayoutSubviews(){
         super.viewDidLoad()
-        var minimumFont: CGFloat = 100
+
         for view in customView.subviews as [UIView] {
-            for view1 in view.subviews as [UIView] {
-                if let btn = view1 as? UIButton {
+                if let btn = view as? UIButton {
                     btn.addTarget(self, action: #selector(choosePlace(_ :)), for: .touchUpInside)
                 }
-                if let img = view1 as? UIImageView {
+                /*if let img = view1 as? UIImageView {
                     img.highlightedImage = UIImage(named: "speechred.png")
-                }
+                }*/
             }
 
-        }
         
     }
     
@@ -63,26 +61,40 @@ class ProgramViewController : UIViewController {
          customView.removeFromSuperview()
     }
     
-    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch = touches.first
+        for view in self.view.subviews {
+            if view.frame.contains((touch?.location(in: self.view))!) {
+                break
+            }
+            
+            for view in customView.subviews as [UIView] {
+                if let btn = view as? UIButton{
+                    btn.backgroundColor = UIColor.white
+                    container.goNextButton.isHidden = true 
+                    
+                    
+                }
+                
+                }
+
+        }
+    }
     
     func choosePlace(_ sender: UIButton) {
-        let container = self.parent as! HomeViewController
+        container = self.parent as! HomeViewController
         print("yah")
      
         container.place = String(sender.tag)
         container.placeString = sender.titleLabel?.text
-        for view in customView.subviews as [UIView] {
-            for view1 in view.subviews as [UIView] {
-                if let btnImg = view1 as? UIImageView {
-                    btnImg.isHighlighted = false
-                    if btnImg.superview == sender.superview {
-                        btnImg.isHighlighted = true
-                        
-                    }
+       for view in customView.subviews as [UIView] {
+                            if let btn = view as? UIButton{
+                    btn.backgroundColor = UIColor.white
                     
                     
-                }
+         
             }
+        sender.backgroundColor = UIColor(red:1.00, green:0.86, blue:0.52, alpha:1.0)
             
         }
         self.lowlightAll(viewToInspect: customView)

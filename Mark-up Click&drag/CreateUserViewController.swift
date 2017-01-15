@@ -64,10 +64,10 @@ class CreateUserViewController: UIViewController, UINavigationControllerDelegate
             user.setValue(nameTextLabel.text, forKey: "name")
             let score = ScoreClass(dateCreated: "", fromProgram: "", value: 0)
             user.setValue("\(components.month!)/\(components.day!)/\(components.year!)", forKey: "dateCreated")
-            user.setValue([0] as? [Float], forKey: "scores1")
-            user.setValue([0] as? [Float], forKey: "scores2")
-            user.setValue([0] as? [Float], forKey: "scores3")
-            user.setValue([0] as? [Float], forKey: "scores4")
+            user.setValue([0] as [Float], forKey: "scores1")
+            user.setValue([0] as [Float], forKey: "scores2")
+            user.setValue([0] as [Float], forKey: "scores3")
+            user.setValue([0] as [Float], forKey: "scores4")
             do {
                 try managedObjectContext.save()
             } catch {

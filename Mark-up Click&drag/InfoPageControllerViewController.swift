@@ -42,8 +42,7 @@ class InfoPageControllerViewController: UIViewController, MFMailComposeViewContr
         
         mailComposerVC.setToRecipients(["social@skillbuilder.com"])
         mailComposerVC.setSubject("")
-        let scores = currentUs.value(forKey: "scores\(prog!)") as! [Float]
-        var valueScores: [Int] = []
+        
         /*for score in scores {
          valueScores.append(score.value)
          }*/
