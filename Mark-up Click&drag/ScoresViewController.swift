@@ -59,7 +59,10 @@ class ScoresViewController: UIViewController, MFMailComposeViewControllerDelegat
         let scores = currentUs.scores
         var valueScores: [Int]! = []
         for score in scores as! Set<Score> {
-            valueScores.append(Int(score.value))
+            if score.program! == prog {
+                valueScores.append(Int(score.value))
+            }
+            
         }
         mailComposerVC.setMessageBody("Here is a report for your scores for this program: \(valueScores) ", isHTML: false)
         
