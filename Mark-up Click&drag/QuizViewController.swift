@@ -59,7 +59,6 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
     var currentProg:String! = "my_community"
     var startails: [Float]!
     var xRat: Float!
-    var yRat: Float!
     
 
     @IBAction func unwindToQuiz(_ segue: UIStoryboardSegue) {
@@ -87,7 +86,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
             
             for i in 0...starLocations.count-1 {
                 let starframe = CGRect(x: starLocations[i].x + scenarioView.frame.origin.x , y: starLocations[i].y +
-                    scenarioView.frame.origin.y , width: 55 * self.view.bounds.width/414 , height: 55 * self.view.bounds.width/414)
+                    scenarioView.frame.origin.y , width: 55 * self.view.bounds.width/469 , height: 55 * self.view.bounds.width/469)
                 if (starframe.contains(touch.previousLocation(in: self.view)) && (viewPlace[i] == 0||viewPlace[i] == currentA.tag)) {
                     
                     for view in currentA.subviews {
@@ -125,7 +124,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
 
             for i in 0...starLocations.count-1 {
                 let starframe = CGRect(x: starLocations[i].x + scenarioView.frame.origin.x , y: starLocations[i].y +
-                    scenarioView.frame.origin.y , width: 70 * self.view.bounds.width/414 , height: 70 * self.view.bounds.width/414)
+                    scenarioView.frame.origin.y , width: 70 * self.view.bounds.width/414 , height: 70 * self.view.bounds.width/469)
                 if (starframe.contains(touch.previousLocation(in: self.view)) && (viewPlace[i] == 0||viewPlace[i] == currentA.tag)) {
                     
                     currentA.frame.origin = CGPoint(x:starLocations[i].x + scenarioView.frame.origin.x , y: starLocations[i].y +
@@ -177,7 +176,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
         for starLoc in starLocations {
             i = i + 1
             let star = UIImageView()
-            star.frame = CGRect(x: starLoc.x+15  , y: starLoc.y+15, width: CGFloat(25 * xRat), height: CGFloat(25 * xRat))
+            star.frame = CGRect(x: starLoc.x+25  , y: starLoc.y+25, width: CGFloat(25 * xRat), height: CGFloat(25 * xRat))
 
             star.tag = 1
             star.layer.zPosition = 9
@@ -273,8 +272,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        xRat  = Float(self.view.bounds.width)/414
-        yRat =  Float(self.view.bounds.height)/414
+        xRat  = Float(self.view.bounds.width)/469
 
 
         //source.alert.dismiss(animated: true, completion: nil)
@@ -335,7 +333,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
                 }
                 for j in 0...stars.count-1 {
                     
-                    starLocations.append(CGPoint(x: stars[j][0] * Int(scenarioView.bounds.width) / 719, y: stars[j][1] * Int(scenarioView.bounds.height) / 479))
+                    starLocations.append(CGPoint(x: stars[j][0] * Int(scenarioView.bounds.width) / 719, y: stars[j][1] * Int(scenarioView.bounds.height) / 469))
                 }
                 correctAnss = correct
                 genStars()

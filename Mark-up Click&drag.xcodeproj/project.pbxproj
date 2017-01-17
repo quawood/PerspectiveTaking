@@ -97,6 +97,17 @@
 		A5F4833F1D130F8100AA4E85 /* Mark_up_Click_dragUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F4833E1D130F8100AA4E85 /* Mark_up_Click_dragUITests.swift */; };
 		A5F548CD1E2D9F3C007169A9 /* DatabaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F548CC1E2D9F3C007169A9 /* DatabaseController.swift */; };
 		A5F548D01E2DEA40007169A9 /* ClickDrag.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A5F548CE1E2DEA40007169A9 /* ClickDrag.xcdatamodeld */; };
+		A5F548D21E2E2E6A007169A9 /* p1010091a.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A5F548D11E2E2E6A007169A9 /* p1010091a.jpg */; };
+		A5F548D41E2E33DD007169A9 /* p1010109.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A5F548D31E2E33DD007169A9 /* p1010109.jpg */; };
+		A5F548D61E2E34BF007169A9 /* p1010014b.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A5F548D51E2E34BF007169A9 /* p1010014b.jpg */; };
+		A5F548D81E2E34F3007169A9 /* p1010057b.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A5F548D71E2E34F3007169A9 /* p1010057b.jpg */; };
+		A5F548DA1E2E35B5007169A9 /* p1010094.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A5F548D91E2E35B5007169A9 /* p1010094.jpg */; };
+		A5F548DC1E2E372C007169A9 /* p1010080.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A5F548DB1E2E372C007169A9 /* p1010080.jpg */; };
+		A5F548DE1E2E3748007169A9 /* p1010088.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A5F548DD1E2E3748007169A9 /* p1010088.jpg */; };
+		A5F548E01E2E3765007169A9 /* p1010111.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A5F548DF1E2E3765007169A9 /* p1010111.jpg */; };
+		A5F548E21E2E37A0007169A9 /* p1010079.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A5F548E11E2E37A0007169A9 /* p1010079.jpg */; };
+		A5F548E41E2E3FDE007169A9 /* p1010038a.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A5F548E31E2E3FDE007169A9 /* p1010038a.jpg */; };
+		A5F548E81E2E4CED007169A9 /* p1010026b.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A5F548E71E2E4CED007169A9 /* p1010026b.jpg */; };
 		A5FEEAF91D78FC12005017F2 /* SR1.JPG in Resources */ = {isa = PBXBuildFile; fileRef = A5FEEAF31D78FC12005017F2 /* SR1.JPG */; };
 		A5FEEAFA1D78FC12005017F2 /* MC.JPG in Resources */ = {isa = PBXBuildFile; fileRef = A5FEEAF41D78FC12005017F2 /* MC.JPG */; };
 		A5FEEAFB1D78FC12005017F2 /* SR2.JPG in Resources */ = {isa = PBXBuildFile; fileRef = A5FEEAF51D78FC12005017F2 /* SR2.JPG */; };
@@ -704,6 +715,17 @@
 		A5F483401D130F8100AA4E85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5F548CC1E2D9F3C007169A9 /* DatabaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseController.swift; sourceTree = "<group>"; };
 		A5F548CF1E2DEA40007169A9 /* ClickDrag.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ClickDrag.xcdatamodel; sourceTree = "<group>"; };
+		A5F548D11E2E2E6A007169A9 /* p1010091a.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = p1010091a.jpg; sourceTree = "<group>"; };
+		A5F548D31E2E33DD007169A9 /* p1010109.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = p1010109.jpg; path = "Mark-up Click&drag/SR/p1010109.jpg"; sourceTree = SOURCE_ROOT; };
+		A5F548D51E2E34BF007169A9 /* p1010014b.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = p1010014b.jpg; path = ../../../../Downloads/p1010014b.jpg; sourceTree = "<group>"; };
+		A5F548D71E2E34F3007169A9 /* p1010057b.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = p1010057b.jpg; path = ../../../../Downloads/p1010057b.jpg; sourceTree = "<group>"; };
+		A5F548D91E2E35B5007169A9 /* p1010094.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = p1010094.jpg; path = ../../../../Downloads/p1010094.jpg; sourceTree = "<group>"; };
+		A5F548DB1E2E372C007169A9 /* p1010080.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = p1010080.jpg; path = ../../../jpg/SR/p1010080.jpg; sourceTree = "<group>"; };
+		A5F548DD1E2E3748007169A9 /* p1010088.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = p1010088.jpg; path = "Mark-up Click&drag/SR/p1010088.jpg"; sourceTree = SOURCE_ROOT; };
+		A5F548DF1E2E3765007169A9 /* p1010111.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = p1010111.jpg; path = ../../../jpg/SR/p1010111.jpg; sourceTree = "<group>"; };
+		A5F548E11E2E37A0007169A9 /* p1010079.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = p1010079.jpg; path = "Mark-up Click&drag/SR/p1010079.jpg"; sourceTree = SOURCE_ROOT; };
+		A5F548E31E2E3FDE007169A9 /* p1010038a.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = p1010038a.jpg; path = ../../../jpg/SR/p1010038a.jpg; sourceTree = "<group>"; };
+		A5F548E71E2E4CED007169A9 /* p1010026b.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = p1010026b.jpg; path = ../../../../Downloads/p1010026b.jpg; sourceTree = "<group>"; };
 		A5FEEAF31D78FC12005017F2 /* SR1.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = SR1.JPG; path = ../../../Downloads/SR1.JPG; sourceTree = "<group>"; };
 		A5FEEAF41D78FC12005017F2 /* MC.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = MC.JPG; path = ../../../Downloads/MC.JPG; sourceTree = "<group>"; };
 		A5FEEAF51D78FC12005017F2 /* SR2.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = SR2.JPG; path = ../../../Downloads/SR2.JPG; sourceTree = "<group>"; };
@@ -1399,8 +1421,15 @@
 		A5FFA9D91DD927D3007DF3A3 /* Collection */ = {
 			isa = PBXGroup;
 			children = (
+				A5F548E31E2E3FDE007169A9 /* p1010038a.jpg */,
+				A5F548E71E2E4CED007169A9 /* p1010026b.jpg */,
+				A5F548DB1E2E372C007169A9 /* p1010080.jpg */,
+				A5F548DD1E2E3748007169A9 /* p1010088.jpg */,
+				A5F548D11E2E2E6A007169A9 /* p1010091a.jpg */,
+				A5F548DF1E2E3765007169A9 /* p1010111.jpg */,
 				A5926BBD1DF4E44500A1D6F4 /* p1010002b.jpg */,
 				A5926BBE1DF4E44500A1D6F4 /* p1010003b.jpg */,
+				A5F548E11E2E37A0007169A9 /* p1010079.jpg */,
 				A5926BBF1DF4E44500A1D6F4 /* p1010004b.jpg */,
 				A5926BC01DF4E44500A1D6F4 /* p1010016b.jpg */,
 				A5926BC11DF4E44500A1D6F4 /* p1010017b.jpg */,
@@ -1411,6 +1440,7 @@
 				A5926BC61DF4E44500A1D6F4 /* p1010059b.jpg */,
 				A5926BC71DF4E44500A1D6F4 /* p1010062b.jpg */,
 				A5926BC81DF4E44500A1D6F4 /* p1010066b.jpg */,
+				A5F548D31E2E33DD007169A9 /* p1010109.jpg */,
 				A5926BC91DF4E44500A1D6F4 /* p1010067b.jpg */,
 				A5926BCA1DF4E44500A1D6F4 /* p1010070b.jpg */,
 				A5926BCB1DF4E44500A1D6F4 /* p1010072b.jpg */,
@@ -1423,6 +1453,7 @@
 				A5A595B01DDF0A79009CCE3C /* p10100932.jpg */,
 				A5A595AE1DDF09D1009CCE3C /* p1010111.jpg */,
 				A5A595AA1DDF08F4009CCE3C /* p1010080.jpg */,
+				A5F548D51E2E34BF007169A9 /* p1010014b.jpg */,
 				A5A595A81DDF089B009CCE3C /* p1010109.jpg */,
 				A5A595A61DDF0818009CCE3C /* p1010106.jpg */,
 				A5A595A41DDF050D009CCE3C /* p1010053a.jpg */,
@@ -1432,6 +1463,8 @@
 				A5FFAE791DD9901C007DF3A3 /* P1010033a.jpg */,
 				A5FFA9DA1DD927D3007DF3A3 /* 001.jpg */,
 				A5FFA9DB1DD927D3007DF3A3 /* 003.jpg */,
+				A5F548D91E2E35B5007169A9 /* p1010094.jpg */,
+				A5F548D71E2E34F3007169A9 /* p1010057b.jpg */,
 				A5FFA9DC1DD927D3007DF3A3 /* 004.jpg */,
 				A5FFA9DD1DD927D3007DF3A3 /* 4sqoutnook.jpg */,
 				A5FFA9DE1DD927D3007DF3A3 /* 4sqoutok.jpg */,
@@ -2083,6 +2116,7 @@
 				A5FFAD4A1DD927D5007DF3A3 /* P1010065.jpg in Resources */,
 				A5926BD51DF4E44500A1D6F4 /* p1010016b.jpg in Resources */,
 				A5A595AB1DDF08F4009CCE3C /* p1010080.jpg in Resources */,
+				A5F548D61E2E34BF007169A9 /* p1010014b.jpg in Resources */,
 				A5FFADCC1DD927D5007DF3A3 /* p1010110a.jpg in Resources */,
 				A5FFAC841DD927D5007DF3A3 /* inappclass1.jpg in Resources */,
 				A5FFAC891DD927D5007DF3A3 /* inapplunch.jpg in Resources */,
@@ -2109,6 +2143,7 @@
 				A5FFAD371DD927D5007DF3A3 /* p1010055a.jpg in Resources */,
 				A5FFAD011DD927D5007DF3A3 /* p1010035a.jpg in Resources */,
 				A5FFAC2F1DD927D5007DF3A3 /* appclass2.jpg in Resources */,
+				A5F548D41E2E33DD007169A9 /* p1010109.jpg in Resources */,
 				A5FFAC3E1DD927D5007DF3A3 /* booing2.jpg in Resources */,
 				A540D6B31DC075A300876261 /* smallblue.png in Resources */,
 				A5C6D7D81DADE37700FD4B04 /* emoji4.gif in Resources */,
@@ -2176,6 +2211,7 @@
 				A5FFACBD1DD927D5007DF3A3 /* p1010003a.jpg in Resources */,
 				A5CDFFF91DC7F5250023C7E4 /* user.png in Resources */,
 				A5C6D7D91DADE37700FD4B04 /* emoji3.gif in Resources */,
+				A5F548DA1E2E35B5007169A9 /* p1010094.jpg in Resources */,
 				A5FFAC7F1DD927D5007DF3A3 /* hangingout1.jpg in Resources */,
 				A5FFAC751DD927D5007DF3A3 /* generalclass.jpg in Resources */,
 				A5FFAC8F1DD927D5007DF3A3 /* inappwait4sq.jpg in Resources */,
@@ -2192,6 +2228,7 @@
 				A5FFAE221DD927D5007DF3A3 /* P30.jpg in Resources */,
 				A5FFACAF1DD927D5007DF3A3 /* lunchlady4.jpg in Resources */,
 				A5FFAE611DD927D5007DF3A3 /* shoes2.jpg in Resources */,
+				A5F548DE1E2E3748007169A9 /* p1010088.jpg in Resources */,
 				A5FFACBE1DD927D5007DF3A3 /* P1010004.jpg in Resources */,
 				A5FFADA51DD927D5007DF3A3 /* p1010100a.jpg in Resources */,
 				A5B2544C1DDC804300E41E48 /* so.png in Resources */,
@@ -2282,6 +2319,7 @@
 				A5FFACB41DD927D5007DF3A3 /* nicebumpkick1.jpg in Resources */,
 				A5FFAD971DD927D5007DF3A3 /* P1010096.jpg in Resources */,
 				A5FFAD321DD927D5007DF3A3 /* p10100532.jpg in Resources */,
+				A5F548D81E2E34F3007169A9 /* p1010057b.jpg in Resources */,
 				A5FFAD801DD927D5007DF3A3 /* P1010089.jpg in Resources */,
 				A5FFADB21DD927D5007DF3A3 /* P10101042.jpg in Resources */,
 				A5FFADD11DD927D5007DF3A3 /* P1010113.jpg in Resources */,
@@ -2315,6 +2353,7 @@
 				A5E49A8D1DD447CB0089C65A /* thoughtr.png in Resources */,
 				A5FFAC7B1DD927D5007DF3A3 /* getmilklunchlady.jpg in Resources */,
 				A5FFACB81DD927D5007DF3A3 /* p1010001 copy.jpg in Resources */,
+				A5F548DC1E2E372C007169A9 /* p1010080.jpg in Resources */,
 				A5FFACA41DD927D5007DF3A3 /* lunch5.jpg in Resources */,
 				A5FFAD111DD927D5007DF3A3 /* p1010043a.jpg in Resources */,
 				A5FFAC2C1DD927D5007DF3A3 /* 4sqoutnook.jpg in Resources */,
@@ -2323,6 +2362,7 @@
 				A5FFACA51DD927D5007DF3A3 /* lunch6.jpg in Resources */,
 				A5FFADD21DD927D5007DF3A3 /* p1010113a.jpg in Resources */,
 				A5DCF8D31DC17B340082F7EA /* 4.xib in Resources */,
+				A5F548D21E2E2E6A007169A9 /* p1010091a.jpg in Resources */,
 				A5FFAD501DD927D5007DF3A3 /* P1010068.jpg in Resources */,
 				A5FFAC881DD927D5007DF3A3 /* inapplineup1.jpg in Resources */,
 				A5FFAC8B1DD927D5007DF3A3 /* inappseat.jpg in Resources */,
@@ -2451,6 +2491,7 @@
 				A5FFAC531DD927D5007DF3A3 /* cubby.jpg in Resources */,
 				A5FFACD51DD927D5007DF3A3 /* p1010015a.jpg in Resources */,
 				A53D85F51D6BA797007544FB /* janimation4.png in Resources */,
+				A5F548E21E2E37A0007169A9 /* p1010079.jpg in Resources */,
 				A5FFAE501DD927D5007DF3A3 /* playing.jpg in Resources */,
 				A5FFAC821DD927D5007DF3A3 /* image45.jpg in Resources */,
 				A5FFAC6F1DD927D5007DF3A3 /* DCP0014.jpg in Resources */,
@@ -2531,6 +2572,7 @@
 				A5FEEAFB1D78FC12005017F2 /* SR2.JPG in Resources */,
 				A5F483211D130F8100AA4E85 /* Main.storyboard in Resources */,
 				A59B18771DDD73ED00BE0DA5 /* speechtail1.png in Resources */,
+				A5F548E01E2E3765007169A9 /* p1010111.jpg in Resources */,
 				A5FFAE361DD927D5007DF3A3 /* PICK4general2.jpg in Resources */,
 				A5FFAD5B1DD927D5007DF3A3 /* P1010073.jpg in Resources */,
 				A5FFAC541DD927D5007DF3A3 /* cubby1.jpg in Resources */,
@@ -2545,8 +2587,10 @@
 				A5FFAE181DD927D5007DF3A3 /* P18a.jpg in Resources */,
 				A5FFAC561DD927D5007DF3A3 /* cubbyreach.jpg in Resources */,
 				A5C6D7D61DADE37700FD4B04 /* emoji5.gif in Resources */,
+				A5F548E81E2E4CED007169A9 /* p1010026b.jpg in Resources */,
 				A5FFAC311DD927D5007DF3A3 /* appline.jpg in Resources */,
 				A5FFAE6A1DD927D5007DF3A3 /* taghurt.jpg in Resources */,
+				A5F548E41E2E3FDE007169A9 /* p1010038a.jpg in Resources */,
 				A5CDFFEF1DC7EF270023C7E4 /* back.png in Resources */,
 				A5FFACC41DD927D5007DF3A3 /* P1010007.jpg in Resources */,
 				A5FFAC791DD927D5007DF3A3 /* generallunch3.jpg in Resources */,
