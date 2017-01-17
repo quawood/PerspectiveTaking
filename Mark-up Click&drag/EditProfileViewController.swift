@@ -25,12 +25,12 @@ class EditProfileViewController: UIViewController,UINavigationControllerDelegate
     @IBOutlet weak var realView: UIView!
      
     func loadData() {
-        nameText.text = (currentUs.value(forKey: "name") as! String)
-        dateCreatedLabel.text = "Created: \(currentUs.value(forKey: "dateCreated") as! String)"
+        nameText.text = currentUs.name
+        dateCreatedLabel.text = "Created: \(currentUs.dateCreated!)"
     }
     
     func saveData() {
-        currentUs.setValue(nameText.text, forKey: "name")
+        currentUs.name = nameText.text
     }
     
     func stlyeScene() {
@@ -138,12 +138,8 @@ class EditProfileViewController: UIViewController,UINavigationControllerDelegate
             alertConrtoller.dismiss(animated: true, completion: nil)
         }))
         alertConrtoller.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action: UIAlertAction!) in
-            managedObjectContext.delete(currentUs)
-            do {
-                try managedObjectContext.save()
-            } catch {
-                print("error in saving context")
-            }
+            DatabaseController.getContext().delete(currentUs)
+            DatabaseController.saveContext()
             self.performSegue(withIdentifier: "backToUser", sender: self)
         }))
         present(alertConrtoller, animated: true, completion: nil)
@@ -158,12 +154,8 @@ class EditProfileViewController: UIViewController,UINavigationControllerDelegate
                     let alertConrtoller = UIAlertController(title: "Save Changes", message: "Are you sure you want to save changes?", preferredStyle: .alert)
                     alertConrtoller.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action: UIAlertAction!) in
                         self.saveData()
-                        do {
-                            try managedObjectContext.save()
-                        }
-                        catch {
-                            fatalError("Error in storing to Core Data")
-                        }
+                        DatabaseController.saveContext()
+                        
                         self.disableEditing()
                     }))
                     alertConrtoller.addAction(UIAlertAction(title: "No", style: .cancel, handler: { (action: UIAlertAction!) in

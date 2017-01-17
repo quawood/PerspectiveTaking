@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import CoreData
 class UserCollectionViewCell: UICollectionViewCell {
     //MARK: - Public API
     var user: User! {
@@ -25,20 +25,20 @@ class UserCollectionViewCell: UICollectionViewCell {
 
 class ScoreTableViewCell: UITableViewCell {
     //MARK: - Public API
-    var score: ScoreClass! {
+    var score: Score! {
         didSet {
             updateUI()
         }
     }
     //MARK: - Private
     
-    @IBOutlet weak var programNameLabel: UILabel!
+    @IBOutlet weak var placeNameLabel: UILabel!
     @IBOutlet weak var scoreNameLabel: UILabel!
     @IBOutlet weak var dateNameLabel: UILabel!
     func updateUI() {
-        programNameLabel.text = score.fromProgram
-        scoreNameLabel.text = String(score.value)
-        dateNameLabel.text = score.dateCreated
+        placeNameLabel.text = score.place
+        scoreNameLabel.text = String(describing: score.value)
+        dateNameLabel.text = score.date
     }
     
 }

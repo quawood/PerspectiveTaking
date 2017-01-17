@@ -450,32 +450,40 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
         animation.removeFromSuperview()
     }
     @IBAction func saveScore(sender: AnyObject) {
-        /*let entity = NSEntityDescription.entity(forEntityName: "User", in: managedObjectContext)
-        let user = NSManagedObject(entity: entity!, insertInto: managedObjectContext)
-        /let components = calendar.dateComponents([.month,.day,.year], from: date as Date)
-        Populate Address
-       score.setValue("\(components.month)/\(components.day)/\(components.year)", forKey: "date")
-      score.setValue(currentProg, forKey: "program")*/
-        var placeHolder = (currentUs.value(forKey: "scores\(currentProg!)") as! [Float])
-        if placeHolder.count == 5 {
-            placeHolder = placeHolder.rotate(shift: 1)
-            placeHolder[placeHolder.count-1] = Float(Int(correct))
+        var scoresArray: [Score]! = []
+        var holderArray: [Score]! = []
+        for score in currentUs.scores! as! Set<Score> {
+            if score.program == prog {
+                scoresArray.append(score)
+            } else {
+                holderArray.append(score)
+            }
         }
-        else if placeHolder.count == 1 && placeHolder[0] == 0{
-            placeHolder[0] = Float(Int(correct))
+       
+        let components = calendar.dateComponents([.month,.day,.year], from: date as Date)
+        let score: Score = NSEntityDescription.insertNewObject(forEntityName: "Score", into: DatabaseController.getContext()) as! Score
+       score.value = Int16(correct)
+        score.date = "\(components.month!)/\(components.day!)/\(components.year!)"
+        score.program = prog
+        score.place = placeString
+        
+        if scoresArray.count == 5 {
+            scoresArray = scoresArray.rotate(shift: 1)
+            scoresArray[scoresArray.count-1] = score
+        }
+        else if scoresArray.count == 1 && Int(scoresArray[0].value) == 0{
+            scoresArray[0] = score
         }
         else {
-          placeHolder.append(Float(correct))
+            scoresArray.append(score)
         }
         
-        currentUs.setValue(placeHolder, forKey: "scores\(currentProg!)")
+        currentUs.scores = NSSet(array: (scoresArray + holderArray))
         
-        do {
-            try currentUs.managedObjectContext?.save()
-        } catch {
-            let saveError = error as NSError
-            print(saveError)
-        }
+        
+        
+        DatabaseController.saveContext()
+
         self.performSegue(withIdentifier: "toHomefromQuiz", sender: self)
     }
 

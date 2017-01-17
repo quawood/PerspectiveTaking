@@ -56,11 +56,12 @@ class ScoresViewController: UIViewController, MFMailComposeViewControllerDelegat
         
         mailComposerVC.setToRecipients(["someone@somewhere.com"])
         mailComposerVC.setSubject("Scores for \(names[Int(prog)!-1])")
-        let scores = currentUs.value(forKey: "scores\(prog!)") as! [Float]
-        /*for score in scores {
-            valueScores.append(score.value)
-        }*/
-        mailComposerVC.setMessageBody("\(scores)", isHTML: false)
+        let scores = currentUs.scores
+        var valueScores: [Int]! = []
+        for score in scores as! Set<Score> {
+            valueScores.append(Int(score.value))
+        }
+        mailComposerVC.setMessageBody("Here is a report for your scores for this program: \(valueScores) ", isHTML: false)
         
         return mailComposerVC
     }
@@ -77,20 +78,33 @@ class ScoresViewController: UIViewController, MFMailComposeViewControllerDelegat
 }
 
 extension ScoresViewController:UITableViewDataSource, UITableViewDelegate {
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (currentUs.value(forKey: "scores\(prog!)") as! [Float]).count
+        var scoresArray: [Score] = []
+        for score in currentUs.scores! as! Set<Score> {
+            if score.program! == prog {
+                scoresArray.append(score)
+            }
+        }
+        return scoresArray.count
         
         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+       
+        var scoresArray: [Score] = []
+        for score in currentUs.scores! as! Set<Score> {
+            if score.program! == prog {
+                scoresArray.append(score)
+            }
+        }
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")! as! ScoreTableViewCell
-       cell.textLabel?.text = "\(Int((currentUs.value(forKey: "scores\(prog!)") as! [Float])[(currentUs.value(forKey: "scores\(prog!)") as! [Float]).count-indexPath.item-1]))"
-        //cell.score = (value(forKey: "scores\(prog!)") as! [ScoreClass])[indexPath.item]
+        cell.score = scoresArray[scoresArray.count - indexPath.item - 1]
         return cell
     }
 }

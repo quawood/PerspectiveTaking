@@ -57,23 +57,29 @@ class CreateUserViewController: UIViewController, UINavigationControllerDelegate
     @IBAction func createUser(sender: AnyObject) {
 
         if (nameTextLabel.text != ""){
-            let entity = NSEntityDescription.entity(forEntityName: "User", in: managedObjectContext)
-            let user = NSManagedObject(entity: entity!, insertInto: managedObjectContext)
-            
             let components = calendar.dateComponents([.month,.day,.year], from: date)
-            user.setValue(nameTextLabel.text, forKey: "name")
-            let score = ScoreClass(dateCreated: "", fromProgram: "", value: 0)
-            user.setValue("\(components.month!)/\(components.day!)/\(components.year!)", forKey: "dateCreated")
-            user.setValue([0] as [Float], forKey: "scores1")
-            user.setValue([0] as [Float], forKey: "scores2")
-            user.setValue([0] as [Float], forKey: "scores3")
-            user.setValue([0] as [Float], forKey: "scores4")
-            do {
-                try managedObjectContext.save()
-            } catch {
-                let saveError = error as NSError
-                print(saveError)
+            let user: User = NSEntityDescription.insertNewObject(forEntityName: "User", into: DatabaseController.getContext()) as! User
+            
+            user.name = nameTextLabel.text
+            user.dateCreated = "\(components.month!)/\(components.day!)/\(components.year!)"
+            
+            let score1: Score = NSEntityDescription.insertNewObject(forEntityName: "Score", into: DatabaseController.getContext()) as! Score
+            score1.date = ""
+            score1.value = 0
+            score1.place = ""
+            score1.program = ""
+            for i in 1...4 {
+                let score1: Score = NSEntityDescription.insertNewObject(forEntityName: "Score", into: DatabaseController.getContext()) as! Score
+                score1.date = ""
+                score1.value = 0
+                score1.place = ""
+                score1.program = String(i)
+                user.addToScores(score1)
             }
+            
+            user.addToScores(score1)
+            
+            DatabaseController.saveContext()
 
 
         self.performSegue(withIdentifier: "backToUser", sender: self)

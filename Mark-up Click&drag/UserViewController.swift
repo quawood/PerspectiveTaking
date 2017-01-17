@@ -10,13 +10,13 @@ import UIKit
 import CoreData
 
 let reuseIdentifier = "cell"
-var managedObjectContext: NSManagedObjectContext!
-var currentUs:NSManagedObject!
-class UserViewController: UIViewController {
+
+var currentUs:User!
+class UserViewController: UIViewController{
     
     // Mark: - IBOutlets
     @IBOutlet weak var collectionView: UICollectionView!
-    var users = [NSManagedObject]()
+    var users = [User]()
     var cellNum:Int = 1
     
 
@@ -49,12 +49,10 @@ class UserViewController: UIViewController {
     
     
     func loadData() {
-        let request: NSFetchRequest<NSManagedObject> = NSFetchRequest(entityName: "User")
-        managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).managedObjectContext
+        let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
         do {
-            let results = try managedObjectContext.fetch(request)
-            users = results 
-           /* users = users.sorted(by: {($0.value(forKey: "frequency") as! Float) < ($1.value(forKey: "frequency") as! Float)})*/
+            let searchResults = try! DatabaseController.getContext().fetch(fetchRequest)
+            users = searchResults
             collectionView.reloadData()
         }
         catch {
@@ -79,6 +77,7 @@ class UserViewController: UIViewController {
         }
         
     }
+    
 
 }
 
@@ -94,7 +93,6 @@ extension UserViewController : UICollectionViewDataSource, UICollectionViewDeleg
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         cellNum = indexPath.row
         currentUs = users[cellNum]
-        currentUs.setValue(((currentUs.value(forKey: "frequency")as! Int) + 1), forKey: "frequency")
         
         performSegue(withIdentifier: "toNext", sender: self)
         
@@ -103,9 +101,7 @@ extension UserViewController : UICollectionViewDataSource, UICollectionViewDeleg
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! UserCollectionViewCell
         print(users.count)
-        _ = users[indexPath.row]
-        // cell.user = User(name:users[indexPath.row].valueForKey("name"))
-        cell.user = User(name: (users[indexPath.item].value(forKey: "name") as! String))
+        cell.user = users[indexPath.row]
         cell.layer.cornerRadius = 5
         
         

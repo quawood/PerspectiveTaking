@@ -7,30 +7,6 @@
 //
 
 import UIKit
-class ScoreClass: NSObject {
-    var dateCreated: String = ""
-    var fromProgram: String = ""
-    var value: Int = 0
-    convenience init(dateCreated: String, fromProgram: String, value: Int) {
-        self.init()
-        self.dateCreated = dateCreated
-        self.fromProgram = fromProgram
-        self.value = value
-    }
-}
-class User: NSObject {
-    var name: String?
-    var dateCreated: String = ""
-    var scores: [Int]!
-    
-    convenience init(name: String) {
-        self.init()
-        self.name = name
-    }
-    
-    
-}
-
 
 
 // 1
