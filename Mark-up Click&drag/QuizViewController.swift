@@ -96,7 +96,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
                                 img.highlightedImage = UIImage(named:"speechtail\(k).png")
                             }
                             else {
-                                img.highlightedImage = UIImage(named: "thoughtr.png")
+                                img.highlightedImage = UIImage(named: "thoughttail\(k).png")
                             }
                             
                             
@@ -394,7 +394,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
                 print(numbers.count)
                 animation = UIImageView(image:UIImage.gif(name: "emoji\(random)"))
                 animation.center = CGPoint(x: view.frame.width/2, y: view.frame.height/2)
-                animation.bounds.size = CGSize(width: 100, height: 100)
+                animation.bounds.size = CGSize(width: 200, height: 200)
                 view.addSubview(animation)
                 timer.invalidate() // just in case this button is tapped multiple times
                 timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
