@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dZG-1d-aHf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dZG-1d-aHf">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -105,8 +105,11 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="46g-9L-W8T">
-                                <rect key="frame" x="13" y="199" width="349" height="341"/>
+                                <rect key="frame" x="13" y="199" width="349" height="194"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="194" id="DoW-q1-IJI"/>
+                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="20" id="3bH-ux-q6Y">
                                     <size key="itemSize" width="137" height="76"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -115,7 +118,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="hJf-gs-zyj" customClass="UserCollectionViewCell" customModule="Mark_up_Click_drag" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="27" width="137" height="76"/>
+                                        <rect key="frame" x="20" y="73" width="137" height="76"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="137" height="76"/>
@@ -188,18 +191,25 @@
                                     <segue destination="g0H-Ld-XIc" kind="showDetail" id="hMg-f4-1ia"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ITr-2I-Ipl">
+                                <rect key="frame" x="24" y="447" width="327" height="127"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <string key="text">All scores are tracked over time. Please create a new user by clicking on the New User tab. If you have played before click on your existing username.  </string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.38545793294906616" green="0.69947212934494019" blue="0.33533519506454468" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="rOh-sS-WGN" firstAttribute="leading" secondItem="8dS-2l-l6O" secondAttribute="leadingMargin" id="9T7-i3-rjl"/>
-                            <constraint firstItem="46g-9L-W8T" firstAttribute="leading" secondItem="8dS-2l-l6O" secondAttribute="leadingMargin" constant="-3" id="Ian-p9-M3t"/>
+                            <constraint firstItem="46g-9L-W8T" firstAttribute="top" secondItem="85g-Iw-79M" secondAttribute="bottom" constant="135" id="Hl4-53-9Vq"/>
                             <constraint firstItem="0g1-jb-LIi" firstAttribute="trailing" secondItem="8dS-2l-l6O" secondAttribute="trailingMargin" id="KFF-D3-4LG"/>
-                            <constraint firstItem="46g-9L-W8T" firstAttribute="centerX" secondItem="8dS-2l-l6O" secondAttribute="centerX" id="Ojb-a1-HCe"/>
                             <constraint firstItem="rOh-sS-WGN" firstAttribute="baseline" secondItem="0g1-jb-LIi" secondAttribute="baseline" id="R5q-s9-wVv"/>
                             <constraint firstItem="xPD-Tr-wCJ" firstAttribute="top" secondItem="8dS-2l-l6O" secondAttribute="topMargin" constant="1" id="U7v-n1-AGy"/>
-                            <constraint firstItem="46g-9L-W8T" firstAttribute="top" secondItem="85g-Iw-79M" secondAttribute="bottom" constant="135" id="gbi-TS-vB6"/>
-                            <constraint firstItem="rOh-sS-WGN" firstAttribute="top" secondItem="46g-9L-W8T" secondAttribute="bottom" constant="71" id="pDj-VS-2f5"/>
+                            <constraint firstItem="46g-9L-W8T" firstAttribute="centerX" secondItem="8dS-2l-l6O" secondAttribute="centerX" id="pIo-3U-tV3"/>
                             <constraint firstAttribute="bottom" secondItem="rOh-sS-WGN" secondAttribute="bottom" constant="20" symbolic="YES" id="uwA-P1-BhN"/>
+                            <constraint firstItem="46g-9L-W8T" firstAttribute="leading" secondItem="8dS-2l-l6O" secondAttribute="leadingMargin" constant="-3" id="xHM-dc-qDb"/>
                             <constraint firstItem="xPD-Tr-wCJ" firstAttribute="leading" secondItem="8dS-2l-l6O" secondAttribute="leading" id="yeb-bB-wEI"/>
                         </constraints>
                     </view>
@@ -524,40 +534,43 @@ well. </string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7V-YL-rOe">
-                                <rect key="frame" x="144" y="571" width="87" height="39"/>
+                                <rect key="frame" x="136" y="571" width="100" height="39"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="87" id="rK9-20-CBQ"/>
+                                    <constraint firstAttribute="width" constant="100" id="7Yn-fB-xNe"/>
+                                    <constraint firstAttribute="height" constant="39" id="TUi-zs-J7N"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="29"/>
+                                <size key="titleShadowOffset" width="0.0" height="2"/>
                                 <state key="normal" title="Go!">
                                     <color key="titleColor" red="0.74811463050000004" green="0.18256561760000001" blue="0.31009104180000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <segue destination="0lz-s4-bsP" kind="unwind" unwindAction="unwindToUsers:" id="ciI-CI-mUW"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Social Skill Builder!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ltg-xY-lJl">
-                                <rect key="frame" x="20" y="245" width="334" height="177"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ltg-xY-lJl">
+                                <rect key="frame" x="20" y="69" width="334" height="475"/>
+                                <string key="text">Welcome to Social Skill Builder’s Perspective Taking App.  This unique app presents still images to which the user is asked to click and drag appropriate thoughts, feelings or sayings  to each person in the scene. This app allows users to learn and then demonstrate the understanding of non verbal language cues and take the perspective of others.</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="48"/>
                                 <color key="textColor" red="0.80187594890594482" green="0.2714095413684845" blue="0.38231143355369568" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="0.94528574486301364" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Ltg-xY-lJl" firstAttribute="top" secondItem="bmZ-kT-SS5" secondAttribute="bottom" constant="225" id="1AT-4U-2D9"/>
-                            <constraint firstItem="Ltg-xY-lJl" firstAttribute="centerX" secondItem="Y7V-YL-rOe" secondAttribute="centerX" id="6lh-CE-0rT"/>
-                            <constraint firstItem="Ltg-xY-lJl" firstAttribute="centerX" secondItem="eRI-mr-sx6" secondAttribute="centerX" id="ULh-hy-jzM"/>
-                            <constraint firstItem="cVo-aw-oNw" firstAttribute="top" secondItem="Y7V-YL-rOe" secondAttribute="bottom" constant="57" id="Xt3-y3-Qzh"/>
-                            <constraint firstItem="Ltg-xY-lJl" firstAttribute="leading" secondItem="eRI-mr-sx6" secondAttribute="leadingMargin" constant="4" id="ZWf-2J-cZ0"/>
-                            <constraint firstItem="Ltg-xY-lJl" firstAttribute="centerY" secondItem="eRI-mr-sx6" secondAttribute="centerY" id="pgG-Sp-eLb"/>
+                            <constraint firstItem="Y7V-YL-rOe" firstAttribute="leading" secondItem="eRI-mr-sx6" secondAttribute="leading" constant="136" id="4cR-Jn-wUq"/>
+                            <constraint firstItem="Ltg-xY-lJl" firstAttribute="top" secondItem="bmZ-kT-SS5" secondAttribute="bottom" constant="49" id="CcU-PP-89g"/>
+                            <constraint firstItem="cVo-aw-oNw" firstAttribute="top" secondItem="Y7V-YL-rOe" secondAttribute="bottom" constant="57" id="N6X-s5-hCt"/>
+                            <constraint firstItem="Ltg-xY-lJl" firstAttribute="centerX" secondItem="eRI-mr-sx6" secondAttribute="centerX" id="SoU-A0-iB9"/>
+                            <constraint firstItem="Y7V-YL-rOe" firstAttribute="top" secondItem="Ltg-xY-lJl" secondAttribute="bottom" constant="27" id="m18-Be-2IA"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xBo-lt-d5R" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="0lz-s4-bsP" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3249" y="-293"/>
+            <point key="canvasLocation" x="3248.8000000000002" y="-293.70314842578711"/>
         </scene>
         <!--Choose Program View Controller-->
         <scene sceneID="572-lE-ng6">
@@ -1024,18 +1037,18 @@ autism and special needs</string>
                                 </subviews>
                                 <color key="backgroundColor" red="0.33496589467005078" green="0.33496589467005078" blue="0.33496589467005078" alpha="0.94437607020547942" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose a place to learn persepctive taking!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3m-Sc-YWt">
-                                <rect key="frame" x="21" y="559" width="331" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="kLm-Gj-5lM">
                                 <rect key="frame" x="338" y="79" width="37" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="color" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please click on a location you wish you to work on your perspective taking skills.  " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3m-Sc-YWt">
+                                <rect key="frame" x="22" y="559" width="331" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -1233,6 +1246,6 @@ autism and special needs</string>
         <image name="user.png" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="iu7-YE-Rn9"/>
+        <segue reference="r12-FS-sVb"/>
     </inferredMetricsTieBreakers>
 </document>

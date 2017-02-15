@@ -12,7 +12,7 @@ class ChooseProgramViewController: UIViewController {
     var buttonPressed: UIButton!
     @IBOutlet weak var programInfo: UILabel!
     @IBOutlet weak var goNextButton: UIButton!
-    var texts: [String] = ["My Community teaches children and young people appropriate social behaviors with various peers and adults within their community.", "My School Day Enhanced CD teaches appropriate interaction and social behaviors within a school setting.", "School Rules! Volume 1 teaches acceptable behaviors during structured activities related to the classroom, group work, and physical education.","School Rules! Volume 2 teaches social interpretation skills during unstructured times where social rules are most challenging"  ]
+    var texts: [String] = ["Highlights interactions, expectations and safety precautions with various peers and adults in their community.", "Highlights interactions within a elementary school setting.", "Highlights interactions during structured activities related to middlehigh  school in the classroom, group work and physical education.","Highlights interactions during unstructured times related to middle/high school when social rules are most challenging, in the hall, cafeteria and just hanging out."  ]
     override func viewDidLoad() {
         super.viewDidLoad()
 

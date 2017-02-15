@@ -176,7 +176,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
         for starLoc in starLocations {
             i = i + 1
             let star = UIImageView()
-            star.frame = CGRect(x: starLoc.x+25  , y: starLoc.y+25, width: CGFloat(8 * xRat), height: CGFloat(8 * xRat))
+            star.frame = CGRect(x: starLoc.x+25  , y: starLoc.y+25, width: CGFloat(20 * xRat), height: CGFloat(20 * xRat))
 
             star.tag = 1
             star.layer.zPosition = 9
