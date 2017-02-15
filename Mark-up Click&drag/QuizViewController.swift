@@ -29,7 +29,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
     @IBOutlet weak var clearAnswerBtn: UIButton!
     @IBOutlet weak var finishButton: UIButton!
     @IBOutlet weak var currentScore: UILabel!
-    @IBOutlet weak var helpButton: UIButton!
+  //  @IBOutlet weak var helpButton: UIButton!
     @IBOutlet weak var homeButton: UIButton!
     var source: HomeViewController!
     var numbers = [1,2,3,4, 5]
@@ -162,8 +162,8 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
     func stylesScene() {
         homeButton.layer.cornerRadius = 5
         homeButton.titleLabel?.adjustsFontSizeToFitWidth = true
-        helpButton.layer.cornerRadius = 5
-        helpButton.titleLabel?.font = helpButton.titleLabel?.font.withSize((homeButton.titleLabel?.font.pointSize)!)
+       // helpButton.layer.cornerRadius = 5
+        //helpButton.titleLabel?.font = helpButton.titleLabel?.font.withSize((homeButton.titleLabel?.font.pointSize)!)
         checkAnsBtn.layer.cornerRadius = 5
         checkAnsBtn.titleLabel?.adjustsFontSizeToFitWidth = true
         
@@ -176,7 +176,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
         for starLoc in starLocations {
             i = i + 1
             let star = UIImageView()
-            star.frame = CGRect(x: starLoc.x+25  , y: starLoc.y+25, width: CGFloat(25 * xRat), height: CGFloat(25 * xRat))
+            star.frame = CGRect(x: starLoc.x+25  , y: starLoc.y+25, width: CGFloat(8 * xRat), height: CGFloat(8 * xRat))
 
             star.tag = 1
             star.layer.zPosition = 9
