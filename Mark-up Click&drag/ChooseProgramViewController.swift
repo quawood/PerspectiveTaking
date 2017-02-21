@@ -12,7 +12,7 @@ class ChooseProgramViewController: UIViewController {
     var buttonPressed: UIButton!
     @IBOutlet weak var programInfo: UILabel!
     @IBOutlet weak var goNextButton: UIButton!
-    var texts: [String] = ["Highlights interactions, expectations and safety precautions with various peers and adults in their community.", "Highlights interactions within a elementary school setting.", "Highlights interactions during structured activities related to middlehigh  school in the classroom, group work and physical education.","Highlights interactions during unstructured times related to middle/high school when social rules are most challenging, in the hall, cafeteria and just hanging out."  ]
+    var texts: [String] = ["Highlights interactions, expectations and safety precautions with various peers and adults in their community.", "Highlights interactions within a elementary school setting.", "Highlights interactions during structured activities related to middle/high  school in the classroom, group work and physical education.","Highlights interactions during unstructured times related to middle/high school when social rules are most challenging, in the hall, cafeteria and just hanging out."  ]
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -59,6 +59,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
     var currentProg:String! = "my_community"
     var startails: [Float]!
     var xRat: Float!
+    var stars: [UIImageView] = []
     
 
     @IBAction func unwindToQuiz(_ segue: UIStoryboardSegue) {
@@ -84,10 +85,10 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
         if currentA.frame.contains(touch.previousLocation(in: self.view)) {
             currentA.center = CGPoint(x: touch.location(in: self.view).x-deltaX, y: touch.location(in: self.view).y-deltaY)
             
-            for i in 0...starLocations.count-1 {
-                let starframe = CGRect(x: starLocations[i].x + scenarioView.frame.origin.x , y: starLocations[i].y +
-                    scenarioView.frame.origin.y , width: 55 * self.view.bounds.width/469 , height: 55 * self.view.bounds.width/469)
-                if (starframe.contains(touch.previousLocation(in: self.view)) && (viewPlace[i] == 0||viewPlace[i] == currentA.tag)) {
+            for i in 0...stars.count-1 {
+                let starframe = CGRect(x: stars[i].frame.origin.x + scenarioView.frame.origin.x - 50 , y: stars[i].frame.origin.y +
+                    scenarioView.frame.origin.y - 50, width: 100 * self.view.bounds.width/469 , height: 100 * self.view.bounds.width/469)
+                if (starframe.contains(currentA.center) && (viewPlace[i] == 0||viewPlace[i] == currentA.tag)) {
                     
                     for view in currentA.subviews {
                         if let img = view as? UIImageView {
@@ -99,7 +100,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
                                 img.highlightedImage = UIImage(named: "thoughttail\(k).png")
                             }
                             
-                            
+                            stars[i].isHidden = true
                             img.isHighlighted = true
                         }
                     }
@@ -110,6 +111,11 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
                     for view in currentA.subviews {
                         if let img = view as? UIImageView {
                             img.isHighlighted = false
+                            if viewPlace[i] == 0 {
+                                stars[i].isHidden = false
+                            }
+                            
+                            
                             
                         }
                     }
@@ -120,15 +126,15 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
     }
 
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+
         if currentA.frame.contains(touch.previousLocation(in: self.view)) {
 
-            for i in 0...starLocations.count-1 {
-                let starframe = CGRect(x: starLocations[i].x + scenarioView.frame.origin.x , y: starLocations[i].y +
-                    scenarioView.frame.origin.y , width: 70 * self.view.bounds.width/414 , height: 70 * self.view.bounds.width/469)
-                if (starframe.contains(touch.previousLocation(in: self.view)) && (viewPlace[i] == 0||viewPlace[i] == currentA.tag)) {
-                    
-                    currentA.frame.origin = CGPoint(x:starLocations[i].x + scenarioView.frame.origin.x , y: starLocations[i].y +
-                        scenarioView.frame.origin.y)
+            for i in 0...stars.count-1 {
+                
+                let starframe = CGRect(x: stars[i].frame.origin.x + scenarioView.frame.origin.x - 50, y: stars[i].frame.origin.y +
+                    scenarioView.frame.origin.y - 50 , width: 100 * self.view.bounds.width/414 , height: 100 * self.view.bounds.width/469)
+                if (starframe.contains(currentA.center) && (viewPlace[i] == 0||viewPlace[i] == currentA.tag)) {
+
                     if viewPlace.contains(currentA.tag) {
                         viewPlace[viewPlace.index(of: currentA.tag)!] = 0
                     }
@@ -140,6 +146,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
                     break
                     
                 }
+                
             }
             
             if (currentA.subviews[0] as! UIImageView).isHighlighted == false{
@@ -153,6 +160,11 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
                 }
             }
 
+        }
+        for i in 0...stars.count - 1 {
+            if viewPlace[i] == 0 {
+                stars[i].isHidden = false
+            }
         }
     }
     
@@ -176,13 +188,16 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
         for starLoc in starLocations {
             i = i + 1
             let star = UIImageView()
-            star.frame = CGRect(x: starLoc.x+25  , y: starLoc.y+25, width: CGFloat(20 * xRat), height: CGFloat(20 * xRat))
+            star.frame = CGRect(x: starLoc.x+25  , y: starLoc.y+25, width: CGFloat(19 * xRat), height: CGFloat(19 * xRat))
 
             star.tag = 1
             star.layer.zPosition = 9
-            
-            scenarioView.addSubview(star)
             star.image = UIImage(named: "smallblue.png")
+            stars.append(star)
+            scenarioView.addSubview(star)
+            
+            
+            
             
             
         }
@@ -196,6 +211,9 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
                     img.isHighlighted = false
                 }
             }
+        }
+        for star in stars {
+            star.isHidden = false
         }
         viewPlace = [Int](repeating:0, count:viewPlace.count)
         checkAnsBtn.isUserInteractionEnabled = false
@@ -250,7 +268,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
             do {
                 jsonResult =  try JSONSerialization.jsonObject(with: (data)!, options: .allowFragments) as! [String : AnyObject]
             } catch {
-                print("dab")
+                print("error")
             }
             
             
@@ -296,7 +314,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
     //Question controllers
 
     func nextQuestion() {
-        
+        stars=[]
         viewPlace = [0,0,0,0,0]
         var minimumFont: CGFloat = 100
        // self.view.isUserInteractionEnabled = true
@@ -393,7 +411,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
                 numbers.remove(at: numbers.index(of: random)!)
                 print(numbers.count)
                 animation = UIImageView(image:UIImage.gif(name: "emoji\(random)"))
-                animation.center = CGPoint(x: view.frame.width/2, y: view.frame.height/2)
+                animation.center = CGPoint(x: view.frame.width/2, y: view.frame.height/2 - 50)
                 animation.bounds.size = CGSize(width: 200, height: 200)
                 view.addSubview(animation)
                 timer.invalidate() // just in case this button is tapped multiple times
@@ -419,12 +437,19 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
             
         }
         else if turn == 2 {
+            starLocations = []
+            for i in viewPlace {
+                if i != 0 {
+                starLocations.append(answers[i-1].frame.origin)
+                }
+            }
             replaceAnswers()
+            var c = 0
             for i in 1...answers.count {
+                removeStars()
                 if correctAnss.contains(i) {
-                    answers[i-1].frame.origin =  CGPoint(x:starLocations[correctAnss.index(of: i)!].x + scenarioView.frame.origin.x, y: starLocations[correctAnss.index(of: i)!].y +
-                        scenarioView.frame.origin.y)
-                    (answers[i-1].subviews[0] as! UIImageView).isHighlighted = true
+                    c = c + 1
+                    answers[i-1].frame.origin =  CGPoint(x:starLocations[correctAnss.index(of: i)!].x , y: starLocations[correctAnss.index(of: i)!].y)
                    
                     answers[i-1].isUserInteractionEnabled = false
                 }

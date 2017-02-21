@@ -46,7 +46,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: - Core Data stack
 
-
+    func checkOrientation(viewController:UIViewController?)-> Int{
+        
+        if(viewController == nil){
+            
+            return Int(UIInterfaceOrientationMask.portrait.rawValue)//All means all orientation
+            
+        }else if (viewController is QuizViewController){
+            
+            return Int(UIInterfaceOrientationMask.portrait.rawValue)//This is sign in view controller that i only want to set this to portrait mode only
+            
+        }else{
+            
+            return checkOrientation(viewController: viewController!.presentedViewController)
+        }
+    }
 
 }
 
