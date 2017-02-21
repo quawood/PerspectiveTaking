@@ -188,7 +188,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
         for starLoc in starLocations {
             i = i + 1
             let star = UIImageView()
-            star.frame = CGRect(x: starLoc.x+25  , y: starLoc.y+25, width: CGFloat(19 * xRat), height: CGFloat(19 * xRat))
+            star.frame = CGRect(x: starLoc.x  , y: starLoc.y, width: CGFloat(19 * xRat), height: CGFloat(19 * xRat))
 
             star.tag = 1
             star.layer.zPosition = 9
@@ -407,7 +407,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
         if viewPlace == correctAnss {
             //nextQuestionBtn.isHidden = false
             if turn == 1 {
-                let random = numbers[Int(arc4random_uniform(UInt32(numbers.count-1)))]
+                let random = numbers[Int(arc4random_uniform(UInt32(numbers.count)) + 1) - 1]
                 numbers.remove(at: numbers.index(of: random)!)
                 print(numbers.count)
                 animation = UIImageView(image:UIImage.gif(name: "emoji\(random)"))
