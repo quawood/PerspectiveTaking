@@ -10,11 +10,19 @@ import UIKit
 var names: [String] = ["My Community", "My School Day", "School Rules 1", "School Rules 2"]
 class ChooseProgramViewController: UIViewController {
     var buttonPressed: UIButton!
+    @IBOutlet var buttons: [UIButton]!
+    
     @IBOutlet weak var programInfo: UILabel!
     @IBOutlet weak var goNextButton: UIButton!
     var texts: [String] = ["Highlights interactions, expectations and safety precautions with various peers and adults in their community.", "Highlights interactions within a elementary school setting.", "Highlights interactions during structured activities related to middle/high  school in the classroom, group work and physical education.","Highlights interactions during unstructured times related to middle/high school when social rules are most challenging, in the hall, cafeteria and just hanging out."  ]
     override func viewDidLoad() {
         super.viewDidLoad()
+        for button in buttons {
+            button.titleLabel?.minimumScaleFactor = 0.5
+            button.titleLabel?.numberOfLines = 0
+            button.titleLabel?.adjustsFontSizeToFitWidth = true
+            button.titleLabel?.textAlignment = .center
+        }
 
         // Do any additional setup after loading the view.
     }

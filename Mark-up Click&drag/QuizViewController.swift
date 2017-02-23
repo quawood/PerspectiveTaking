@@ -290,6 +290,8 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
 
     override func viewDidLoad() {
         super.viewDidLoad()
+       playSound(filename: "CnDInstructions")
+        
         xRat  = Float(self.view.bounds.width)/469
 
 
@@ -400,11 +402,25 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
         
     }
     
+    func playSound(filename: String) {
+        let url = Bundle.main.url(forResource: filename, withExtension: "mp3")!
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            guard let player = audioPlayer else { return }
+            
+            player.prepareToPlay()
+            player.play()
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
 
 
     
     @IBAction func checkAns(sender: AnyObject) {
         if viewPlace == correctAnss {
+            playSound(filename: "correctSound")
             //nextQuestionBtn.isHidden = false
             if turn == 1 {
                 let random = numbers[Int(arc4random_uniform(UInt32(numbers.count)) + 1) - 1]
@@ -429,7 +445,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
             }
         }
         else if turn == 1 {
-           // audioPlayer.play()
+            playSound(filename: "wrongSound")
             turn = turn + 1
             replaceAnswers()
             viewPlace = [Int](repeating
