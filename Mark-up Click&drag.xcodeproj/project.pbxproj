@@ -514,7 +514,7 @@
 		A58608BB1E606C61006DC11E /* teachlineuprecess2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A58606D31E606C60006DC11E /* teachlineuprecess2.jpg */; };
 		A58608BC1E606C61006DC11E /* timeoutshoes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A58606D41E606C60006DC11E /* timeoutshoes.jpg */; };
 		A58608BD1E606C61006DC11E /* timeoutshoes1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A58606D51E606C60006DC11E /* timeoutshoes1.jpg */; };
-		A58608BF1E606D94006DC11E /* MCQuestions.json in Resources */ = {isa = PBXBuildFile; fileRef = A58608BE1E606D94006DC11E /* MCQuestions.json */; };
+		A58608C11E606DDC006DC11E /* MCQuestions.json in Resources */ = {isa = PBXBuildFile; fileRef = A58608C01E606DDC006DC11E /* MCQuestions.json */; };
 		A58838E21D98A07500AC00E3 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = A58838E11D98A07500AC00E3 /* info.png */; };
 		A58943CA1D6FE16E005456A2 /* Menu.png in Resources */ = {isa = PBXBuildFile; fileRef = A58943C91D6FE16E005456A2 /* Menu.png */; };
 		A58943CE1D6FE8FB005456A2 /* Refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = A58943CD1D6FE8FB005456A2 /* Refresh.png */; };
@@ -1094,7 +1094,7 @@
 		A58606D31E606C60006DC11E /* teachlineuprecess2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = teachlineuprecess2.jpg; path = ../../Collection/teachlineuprecess2.jpg; sourceTree = "<group>"; };
 		A58606D41E606C60006DC11E /* timeoutshoes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = timeoutshoes.jpg; path = ../../Collection/timeoutshoes.jpg; sourceTree = "<group>"; };
 		A58606D51E606C60006DC11E /* timeoutshoes1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = timeoutshoes1.jpg; path = ../../Collection/timeoutshoes1.jpg; sourceTree = "<group>"; };
-		A58608BE1E606D94006DC11E /* MCQuestions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = MCQuestions.json; path = "../../../simple-todos/client/MCQuestions.json"; sourceTree = "<group>"; };
+		A58608C01E606DDC006DC11E /* MCQuestions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MCQuestions.json; sourceTree = "<group>"; };
 		A58838E11D98A07500AC00E3 /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = info.png; path = ../../../Downloads/info.png; sourceTree = "<group>"; };
 		A58943C91D6FE16E005456A2 /* Menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Menu.png; path = ../../../Downloads/Menu.png; sourceTree = "<group>"; };
 		A58943CD1D6FE8FB005456A2 /* Refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Refresh.png; path = ../../../Downloads/Refresh.png; sourceTree = "<group>"; };
@@ -1830,7 +1830,7 @@
 			children = (
 				A5F548CC1E2D9F3C007169A9 /* DatabaseController.swift */,
 				A5F4831B1D130F8100AA4E85 /* AppDelegate.swift */,
-				A58608BE1E606D94006DC11E /* MCQuestions.json */,
+				A58608C01E606DDC006DC11E /* MCQuestions.json */,
 				A58604ED1E606C4F006DC11E /* Images */,
 				A53D85DE1D6B9E96007544FB /* Animations */,
 				A5F4831F1D130F8100AA4E85 /* Main.storyboard */,
@@ -2486,7 +2486,7 @@
 				A58607561E606C60006DC11E /* nicebumpkick1.jpg in Resources */,
 				A58606F51E606C60006DC11E /* cubby.jpg in Resources */,
 				A586084A1E606C61006DC11E /* P1010125.jpg in Resources */,
-				A58608BF1E606D94006DC11E /* MCQuestions.json in Resources */,
+				A58608C11E606DDC006DC11E /* MCQuestions.json in Resources */,
 				A586070E1E606C60006DC11E /* DCP0013.jpg in Resources */,
 				A58607291E606C60006DC11E /* inapplineup.jpg in Resources */,
 				A58607B01E606C60006DC11E /* P1010037.jpg in Resources */,
