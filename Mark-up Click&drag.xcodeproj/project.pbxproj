@@ -514,6 +514,7 @@
 		A58608BB1E606C61006DC11E /* teachlineuprecess2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A58606D31E606C60006DC11E /* teachlineuprecess2.jpg */; };
 		A58608BC1E606C61006DC11E /* timeoutshoes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A58606D41E606C60006DC11E /* timeoutshoes.jpg */; };
 		A58608BD1E606C61006DC11E /* timeoutshoes1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A58606D51E606C60006DC11E /* timeoutshoes1.jpg */; };
+		A58608BF1E606D94006DC11E /* MCQuestions.json in Resources */ = {isa = PBXBuildFile; fileRef = A58608BE1E606D94006DC11E /* MCQuestions.json */; };
 		A58838E21D98A07500AC00E3 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = A58838E11D98A07500AC00E3 /* info.png */; };
 		A58943CA1D6FE16E005456A2 /* Menu.png in Resources */ = {isa = PBXBuildFile; fileRef = A58943C91D6FE16E005456A2 /* Menu.png */; };
 		A58943CE1D6FE8FB005456A2 /* Refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = A58943CD1D6FE8FB005456A2 /* Refresh.png */; };
@@ -524,7 +525,6 @@
 		A59DFC581DC3DF6800B1CF8D /* ScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59DFC571DC3DF6800B1CF8D /* ScoresViewController.swift */; };
 		A5A595B71DDF22DD009CCE3C /* o1.gif in Resources */ = {isa = PBXBuildFile; fileRef = A5A595B51DDF22DD009CCE3C /* o1.gif */; };
 		A5A8B6DE1D80C289009560D7 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A8B6DD1D80C289009560D7 /* EditProfileViewController.swift */; };
-		A5A8F17F1D6AD0A500F52D75 /* MCQuestions.json in Resources */ = {isa = PBXBuildFile; fileRef = A5A8F17E1D6AD0A500F52D75 /* MCQuestions.json */; };
 		A5B2544C1DDC804300E41E48 /* so.png in Resources */ = {isa = PBXBuildFile; fileRef = A5B2544B1DDC804300E41E48 /* so.png */; };
 		A5B2544E1DDC829200E41E48 /* Ideio_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = A5B2544D1DDC829200E41E48 /* Ideio_logo.png */; };
 		A5B4D6E41D7FADC90054D4C8 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B4D6E31D7FADC90054D4C8 /* UserViewController.swift */; };
@@ -1094,6 +1094,7 @@
 		A58606D31E606C60006DC11E /* teachlineuprecess2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = teachlineuprecess2.jpg; path = ../../Collection/teachlineuprecess2.jpg; sourceTree = "<group>"; };
 		A58606D41E606C60006DC11E /* timeoutshoes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = timeoutshoes.jpg; path = ../../Collection/timeoutshoes.jpg; sourceTree = "<group>"; };
 		A58606D51E606C60006DC11E /* timeoutshoes1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = timeoutshoes1.jpg; path = ../../Collection/timeoutshoes1.jpg; sourceTree = "<group>"; };
+		A58608BE1E606D94006DC11E /* MCQuestions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = MCQuestions.json; path = "../../../simple-todos/client/MCQuestions.json"; sourceTree = "<group>"; };
 		A58838E11D98A07500AC00E3 /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = info.png; path = ../../../Downloads/info.png; sourceTree = "<group>"; };
 		A58943C91D6FE16E005456A2 /* Menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Menu.png; path = ../../../Downloads/Menu.png; sourceTree = "<group>"; };
 		A58943CD1D6FE8FB005456A2 /* Refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Refresh.png; path = ../../../Downloads/Refresh.png; sourceTree = "<group>"; };
@@ -1104,7 +1105,6 @@
 		A59DFC571DC3DF6800B1CF8D /* ScoresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoresViewController.swift; sourceTree = "<group>"; };
 		A5A595B51DDF22DD009CCE3C /* o1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = o1.gif; path = ../../../Downloads/o1.gif; sourceTree = "<group>"; };
 		A5A8B6DD1D80C289009560D7 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
-		A5A8F17E1D6AD0A500F52D75 /* MCQuestions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = MCQuestions.json; path = "../../../simple-todos/client/MCQuestions.json"; sourceTree = "<group>"; };
 		A5B2544B1DDC804300E41E48 /* so.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = so.png; path = ../../so.png; sourceTree = "<group>"; };
 		A5B2544D1DDC829200E41E48 /* Ideio_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Ideio_logo.png; path = "../../../Documents/League of Legends/Ideio_logo.png"; sourceTree = "<group>"; };
 		A5B4D6E31D7FADC90054D4C8 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
@@ -1830,7 +1830,7 @@
 			children = (
 				A5F548CC1E2D9F3C007169A9 /* DatabaseController.swift */,
 				A5F4831B1D130F8100AA4E85 /* AppDelegate.swift */,
-				A5A8F17E1D6AD0A500F52D75 /* MCQuestions.json */,
+				A58608BE1E606D94006DC11E /* MCQuestions.json */,
 				A58604ED1E606C4F006DC11E /* Images */,
 				A53D85DE1D6B9E96007544FB /* Animations */,
 				A5F4831F1D130F8100AA4E85 /* Main.storyboard */,
@@ -2478,7 +2478,6 @@
 				A58606E11E606C60006DC11E /* applinerecess2.jpg in Resources */,
 				A586089E1E606C61006DC11E /* school1.jpg in Resources */,
 				A58607421E606C60006DC11E /* lunch1.jpg in Resources */,
-				A5A8F17F1D6AD0A500F52D75 /* MCQuestions.json in Resources */,
 				A58607C31E606C60006DC11E /* p1010047a.jpg in Resources */,
 				A58607EE1E606C60006DC11E /* p1010070a.jpg in Resources */,
 				A58838E21D98A07500AC00E3 /* info.png in Resources */,
@@ -2487,6 +2486,7 @@
 				A58607561E606C60006DC11E /* nicebumpkick1.jpg in Resources */,
 				A58606F51E606C60006DC11E /* cubby.jpg in Resources */,
 				A586084A1E606C61006DC11E /* P1010125.jpg in Resources */,
+				A58608BF1E606D94006DC11E /* MCQuestions.json in Resources */,
 				A586070E1E606C60006DC11E /* DCP0013.jpg in Resources */,
 				A58607291E606C60006DC11E /* inapplineup.jpg in Resources */,
 				A58607B01E606C60006DC11E /* P1010037.jpg in Resources */,
