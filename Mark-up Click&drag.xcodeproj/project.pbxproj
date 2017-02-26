@@ -515,6 +515,7 @@
 		A58608BC1E606C61006DC11E /* timeoutshoes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A58606D41E606C60006DC11E /* timeoutshoes.jpg */; };
 		A58608BD1E606C61006DC11E /* timeoutshoes1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A58606D51E606C60006DC11E /* timeoutshoes1.jpg */; };
 		A58608C11E606DDC006DC11E /* MCQuestions.json in Resources */ = {isa = PBXBuildFile; fileRef = A58608C01E606DDC006DC11E /* MCQuestions.json */; };
+		A58608C31E623DD3006DC11E /* p1010050b.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A58608C21E623DD3006DC11E /* p1010050b.jpg */; };
 		A58838E21D98A07500AC00E3 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = A58838E11D98A07500AC00E3 /* info.png */; };
 		A58943CA1D6FE16E005456A2 /* Menu.png in Resources */ = {isa = PBXBuildFile; fileRef = A58943C91D6FE16E005456A2 /* Menu.png */; };
 		A58943CE1D6FE8FB005456A2 /* Refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = A58943CD1D6FE8FB005456A2 /* Refresh.png */; };
@@ -1095,6 +1096,7 @@
 		A58606D41E606C60006DC11E /* timeoutshoes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = timeoutshoes.jpg; path = ../../Collection/timeoutshoes.jpg; sourceTree = "<group>"; };
 		A58606D51E606C60006DC11E /* timeoutshoes1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = timeoutshoes1.jpg; path = ../../Collection/timeoutshoes1.jpg; sourceTree = "<group>"; };
 		A58608C01E606DDC006DC11E /* MCQuestions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MCQuestions.json; sourceTree = "<group>"; };
+		A58608C21E623DD3006DC11E /* p1010050b.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = p1010050b.jpg; sourceTree = "<group>"; };
 		A58838E11D98A07500AC00E3 /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = info.png; path = ../../../Downloads/info.png; sourceTree = "<group>"; };
 		A58943C91D6FE16E005456A2 /* Menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Menu.png; path = ../../../Downloads/Menu.png; sourceTree = "<group>"; };
 		A58943CD1D6FE8FB005456A2 /* Refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Refresh.png; path = ../../../Downloads/Refresh.png; sourceTree = "<group>"; };
@@ -1263,6 +1265,7 @@
 				A58604EE1E606C5F006DC11E /* 001.jpg */,
 				A58604EF1E606C5F006DC11E /* 003.jpg */,
 				A58604F01E606C5F006DC11E /* 004.jpg */,
+				A58608C21E623DD3006DC11E /* p1010050b.jpg */,
 				A58604F11E606C5F006DC11E /* 4sqoutnook.jpg */,
 				A58604F21E606C5F006DC11E /* 4sqoutok.jpg */,
 				A58604F31E606C5F006DC11E /* appclass.jpg */,
@@ -2195,6 +2198,7 @@
 				A58608441E606C61006DC11E /* P1010119.jpg in Resources */,
 				A586085E1E606C61006DC11E /* P10100401.jpg in Resources */,
 				A586082C1E606C60006DC11E /* p1010104.jpg in Resources */,
+				A58608C31E623DD3006DC11E /* p1010050b.jpg in Resources */,
 				A58607DB1E606C60006DC11E /* p1010060a.jpg in Resources */,
 				A58606FD1E606C60006DC11E /* dangerarea.jpg in Resources */,
 				A58607EF1E606C60006DC11E /* P1010071.jpg in Resources */,
@@ -2707,7 +2711,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.SocialSkillBuilder.CnD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -2725,7 +2729,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

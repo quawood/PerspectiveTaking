@@ -2707,7 +2707,7 @@
                   "image": "p1010078b.jpg",
                   "answers": ["I am going to get you!",
                               "You are so nice to me.",
-                              "Dude, you are going to get detention for fighting!",
+                              "you're going to get detention for fighting!",
                               "Whoa! Don't shove me!",
                               ""
                               ],
@@ -2937,7 +2937,7 @@
                               ""
                               ],
                   "startails": [
-                                0, 0
+                                0, 0, 0
                                 ],
                   "stars": [
                             [
@@ -2947,12 +2947,17 @@
                             [
                              426,
                              96
+                             ],
+                            [
+                             630,
+                             45
                              ]
                             
                             ],
                   "correct": [
                               2,
-                              1
+                              1,
+                              4
                               ]
                   
                   
@@ -3275,7 +3280,7 @@
                               ]
                   }],
             "3": [{
-                  "image": "p1010080.jpg",
+                  "image": "p1010080a.jpg",
                   "answers": [
                               "What is that kid doing?",
                               "This is cool.  ",
@@ -3308,7 +3313,7 @@
                               3
                               ]
                   }, {
-                  "image": "p1010088.jpg",
+                  "image": "p1010088a.jpg",
                   "answers": [
                               "I have something in my nose.",
                               "Can I sit here?",
@@ -3344,7 +3349,7 @@
                   "image": "p1010111.jpg",
                   "answers": [
                               "I used to be on T.V.",
-                              "That sounds strange. . . ",
+                              "That sounds strange",
                               "Do you want some juice?  ",
                               "I can't believe it!",
                               ""
@@ -3455,7 +3460,7 @@
                               ],
                   "bubbles": [
                               "s",
-                              "s",
+                              "t",
                               "s",
                               "t",
                               ""
@@ -3525,7 +3530,7 @@
                   "bubbles": [
                               "t",
                               "s",
-                              "s",
+                              "t",
                               "",
                               ""
                               ],
