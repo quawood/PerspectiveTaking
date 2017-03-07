@@ -26,6 +26,8 @@
 		A53E7CEC1E5F178A00C2B3D5 /* wrongSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A53E7CE91E5F178A00C2B3D5 /* wrongSound.mp3 */; };
 		A54B09EF1D7FBACB00D82D49 /* CreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B09EE1D7FBACB00D82D49 /* CreateUserViewController.swift */; };
 		A557213D1DEB66550093D0C9 /* boy.png in Resources */ = {isa = PBXBuildFile; fileRef = A557213C1DEB66550093D0C9 /* boy.png */; };
+		A57F6C111E6ECBB6000C1C77 /* thoughttail.png in Resources */ = {isa = PBXBuildFile; fileRef = A57F6C101E6ECBB6000C1C77 /* thoughttail.png */; };
+		A57F6C131E6ED329000C1C77 /* MoreAppsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57F6C121E6ED329000C1C77 /* MoreAppsViewController.swift */; };
 		A58606D61E606C60006DC11E /* 001.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A58604EE1E606C5F006DC11E /* 001.jpg */; };
 		A58606D71E606C60006DC11E /* 003.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A58604EF1E606C5F006DC11E /* 003.jpg */; };
 		A58606D81E606C60006DC11E /* 004.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A58604F01E606C5F006DC11E /* 004.jpg */; };
@@ -607,6 +609,8 @@
 		A53E7CE91E5F178A00C2B3D5 /* wrongSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = wrongSound.mp3; path = ../../Sounds/wrongSound.mp3; sourceTree = "<group>"; };
 		A54B09EE1D7FBACB00D82D49 /* CreateUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUserViewController.swift; sourceTree = "<group>"; };
 		A557213C1DEB66550093D0C9 /* boy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boy.png; path = ../../../Documents/boy.png; sourceTree = "<group>"; };
+		A57F6C101E6ECBB6000C1C77 /* thoughttail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thoughttail.png; sourceTree = "<group>"; };
+		A57F6C121E6ED329000C1C77 /* MoreAppsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreAppsViewController.swift; sourceTree = "<group>"; };
 		A58604EE1E606C5F006DC11E /* 001.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 001.jpg; path = ../../Collection/001.jpg; sourceTree = "<group>"; };
 		A58604EF1E606C5F006DC11E /* 003.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 003.jpg; path = ../../Collection/003.jpg; sourceTree = "<group>"; };
 		A58604F01E606C5F006DC11E /* 004.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 004.jpg; path = ../../Collection/004.jpg; sourceTree = "<group>"; };
@@ -1205,6 +1209,7 @@
 				A59B187A1DDD7D9F00BE0DA5 /* speechtail.png */,
 				A5BA1CDA1DB6F6D400608BE8 /* thought.png */,
 				A5D8ED001E307C1900384FEA /* thoughttail0.png */,
+				A57F6C101E6ECBB6000C1C77 /* thoughttail.png */,
 				A5D8ED011E307C1900384FEA /* thoughttail1.png */,
 				A5B2544D1DDC829200E41E48 /* Ideio_logo.png */,
 				A5CDFFF21DC7F2F90023C7E4 /* records.png */,
@@ -1773,6 +1778,7 @@
 				A5B4D6E51D7FB1BF0054D4C8 /* UserCollectionViewCell.swift */,
 				A54B09EE1D7FBACB00D82D49 /* CreateUserViewController.swift */,
 				A5A8B6DD1D80C289009560D7 /* EditProfileViewController.swift */,
+				A57F6C121E6ED329000C1C77 /* MoreAppsViewController.swift */,
 			);
 			name = "User Screen";
 			sourceTree = "<group>";
@@ -2309,6 +2315,7 @@
 				A58607CA1E606C60006DC11E /* p1010051a.jpg in Resources */,
 				A58608241E606C60006DC11E /* P1010100.jpg in Resources */,
 				A586089A1E606C61006DC11E /* rider3.jpg in Resources */,
+				A57F6C111E6ECBB6000C1C77 /* thoughttail.png in Resources */,
 				A58607051E606C60006DC11E /* DCP0008.jpg in Resources */,
 				A58606F41E606C60006DC11E /* CP1010067.jpg in Resources */,
 				A58607651E606C60006DC11E /* P25.jpg in Resources */,
@@ -2556,6 +2563,7 @@
 				A5B4D6E61D7FB1BF0054D4C8 /* UserCollectionViewCell.swift in Sources */,
 				A5F4831C1D130F8100AA4E85 /* AppDelegate.swift in Sources */,
 				A54B09EF1D7FBACB00D82D49 /* CreateUserViewController.swift in Sources */,
+				A57F6C131E6ED329000C1C77 /* MoreAppsViewController.swift in Sources */,
 				A5EFC1661E10F4A80071F4DE /* CustomSegue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

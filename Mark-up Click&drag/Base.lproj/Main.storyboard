@@ -111,59 +111,39 @@
                                     <constraint firstAttribute="height" constant="194" id="DoW-q1-IJI"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="20" id="3bH-ux-q6Y">
-                                    <size key="itemSize" width="137" height="76"/>
+                                    <size key="itemSize" width="160" height="140"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="20" minY="27" maxX="20" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="hJf-gs-zyj" customClass="UserCollectionViewCell" customModule="Mark_up_Click_drag" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="72.5" width="137" height="76"/>
+                                        <rect key="frame" x="20" y="41" width="160" height="140"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="137" height="76"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="160" height="140"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <visualEffectView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4iw-xa-dMq">
-                                                    <rect key="frame" x="0.0" y="0.0" width="146" height="76"/>
-                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Dly-X7-GhK">
-                                                        <rect key="frame" x="0.0" y="0.0" width="146" height="76"/>
-                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="I love SSB" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="0yO-1O-6Ht">
-                                                                <rect key="frame" x="0.0" y="17" width="138" height="43"/>
-                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
-                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                        <constraints>
-                                                            <constraint firstItem="0yO-1O-6Ht" firstAttribute="top" secondItem="Dly-X7-GhK" secondAttribute="top" constant="17" id="hBz-aN-sQI"/>
-                                                            <constraint firstItem="0yO-1O-6Ht" firstAttribute="trailing" secondItem="Dly-X7-GhK" secondAttribute="trailingMargin" id="i1h-QB-hht"/>
-                                                            <constraint firstAttribute="trailing" secondItem="0yO-1O-6Ht" secondAttribute="trailing" id="kOW-Yv-wEn"/>
-                                                            <constraint firstItem="0yO-1O-6Ht" firstAttribute="centerY" secondItem="Dly-X7-GhK" secondAttribute="centerY" id="mgx-CZ-K5u"/>
-                                                            <constraint firstItem="0yO-1O-6Ht" firstAttribute="leading" secondItem="Dly-X7-GhK" secondAttribute="leading" id="nkZ-Gz-ifV"/>
-                                                        </constraints>
-                                                    </view>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="43" id="ktC-au-WEv"/>
-                                                    </constraints>
-                                                    <blurEffect style="extraLight"/>
-                                                </visualEffectView>
+                                                <view opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OAr-BO-TuE">
+                                                    <rect key="frame" x="0.0" y="0.0" width="160" height="140"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="thoughttail.png" translatesAutoresizingMaskIntoConstraints="NO" id="tw9-ps-gqW">
+                                                            <rect key="frame" x="0.0" y="0.0" width="160" height="140"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I love SSB" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Nxg-6s-Dsq">
+                                                            <rect key="frame" x="0.0" y="0.0" width="160" height="140"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                            <color key="tintColor" red="0.83151584199999995" green="0.56004238029999998" blue="0.82892841650000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </view>
                                             </subviews>
                                         </view>
-                                        <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="4iw-xa-dMq" secondAttribute="bottom" id="4nx-xA-ZPh"/>
-                                            <constraint firstItem="4iw-xa-dMq" firstAttribute="top" secondItem="hJf-gs-zyj" secondAttribute="top" id="QlM-gD-egG"/>
-                                            <constraint firstItem="4iw-xa-dMq" firstAttribute="leading" secondItem="hJf-gs-zyj" secondAttribute="leading" id="kDa-oy-lfU"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="4iw-xa-dMq" secondAttribute="trailing" constant="-17" id="kHm-eg-5fP"/>
-                                            <constraint firstAttribute="trailing" secondItem="4iw-xa-dMq" secondAttribute="trailing" id="mAz-CC-yDJ"/>
-                                            <constraint firstItem="4iw-xa-dMq" firstAttribute="centerY" secondItem="hJf-gs-zyj" secondAttribute="centerY" id="xPG-TG-1Rd"/>
-                                            <constraint firstAttribute="bottom" secondItem="4iw-xa-dMq" secondAttribute="bottom" id="y1H-1E-rFT"/>
-                                        </constraints>
-                                        <connections>
-                                            <outlet property="userNameLabel" destination="0yO-1O-6Ht" id="gvP-DU-UMS"/>
-                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -194,7 +174,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ITr-2I-Ipl">
                                 <rect key="frame" x="66" y="915" width="892" height="261"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <string key="text">All scores are tracked over time. Please create a new user by clicking on the New User tab. If you have played before click on your existing username.  </string>
+                                <string key="text">Please create a new user by clicking on the NEW USER tab at the bottom of the page. If you have played before, click on your existing username. To delete or edit a user,  or get more information on scores, click on info at the bottom on the page. </string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -222,7 +202,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4wn-4X-C4J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3912.8000000000002" y="-1024.1379310344828"/>
+            <point key="canvasLocation" x="3912.3046874999995" y="-1024.3045387994143"/>
         </scene>
         <!--Quiz View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -742,7 +722,7 @@ well. </string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VM9-N3-VG2">
-                                <rect key="frame" x="160" y="612" width="704" height="62"/>
+                                <rect key="frame" x="160" y="613" width="704" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.83151584199999995" green="0.31404622399999998" blue="0.35704210069999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -751,6 +731,20 @@ well. </string>
                                 </state>
                                 <connections>
                                     <action selector="faqsbtn:" destination="g0H-Ld-XIc" eventType="touchUpInside" id="JIH-JY-GjL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0B-EK-EeH">
+                                <rect key="frame" x="160" y="691" width="344" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.83151584199999995" green="0.31404622399999998" blue="0.35704210069999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Credits">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Pef-hX-fSM" kind="popoverPresentation" popoverAnchorView="D0B-EK-EeH" id="ttH-W4-7qi">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T3S-Py-bJd">
@@ -766,7 +760,7 @@ well. </string>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DrB-3K-ynW">
-                                <rect key="frame" x="387" y="713" width="247" height="188"/>
+                                <rect key="frame" x="388" y="908" width="247" height="188"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stock2.png" translatesAutoresizingMaskIntoConstraints="NO" id="66Z-IP-iWe">
@@ -827,9 +821,23 @@ autism and special needs</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="socialskillbuildercycle.png" translatesAutoresizingMaskIntoConstraints="NO" id="FVi-dC-gOa">
-                                <rect key="frame" x="388" y="963" width="248" height="188"/>
+                                <rect key="frame" x="389" y="1158" width="248" height="188"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bf0-8J-2Hy">
+                                <rect key="frame" x="519" y="691" width="345" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.83151584199999995" green="0.31404622399999998" blue="0.35704210069999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="More Apps">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="8BS-vQ-9zW" kind="popoverPresentation" identifier="popApps" popoverAnchorView="Bf0-8J-2Hy" id="lS7-QO-p5Y">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -841,6 +849,43 @@ autism and special needs</string>
                 <exit id="jgT-LB-dgF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4288.4765625" y="-286.82284040995603"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="heA-Ps-IdP">
+            <objects>
+                <viewController id="Pef-hX-fSM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="s5M-aT-kxX"/>
+                        <viewControllerLayoutGuide type="bottom" id="uBO-dQ-hrf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="z9T-TA-LBs">
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="500"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cEG-DB-OkG">
+                                <rect key="frame" x="0.0" y="0.0" width="500" height="500"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <string key="text">Produced by 
+Social Skill Builder, Inc
+PO Box 2430 
+Leesburg, VA 20175
+Socialskillbuilder.com
+
+Application Developed by: 
+Qualan Woodard</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="500" height="500"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FGy-gr-wJS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4178" y="167"/>
         </scene>
         <!--Scores View Controller-->
         <scene sceneID="jDS-j1-rur">
@@ -1230,6 +1275,94 @@ autism and special needs</string>
             </objects>
             <point key="canvasLocation" x="7221.6000000000004" y="-340.02998500749629"/>
         </scene>
+        <!--More Apps View Controller-->
+        <scene sceneID="ksh-Ja-LXL">
+            <objects>
+                <viewController id="8BS-vQ-9zW" customClass="MoreAppsViewController" customModule="Mark_up_Click_drag" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cYy-ap-ps9"/>
+                        <viewControllerLayoutGuide type="bottom" id="0Hf-2q-GT0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZJO-ED-WMM">
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="500"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdl-5t-UBF">
+                                <rect key="frame" x="53" y="43" width="130" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" backgroundImage="Ideio_logo.png">
+                                    <color key="titleColor" red="0.74811463050000004" green="0.18256561760000001" blue="0.31009104180000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sji-ql-9Sq">
+                                <rect key="frame" x="53" y="294" width="130" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" backgroundImage="Ideio_logo.png">
+                                    <color key="titleColor" red="0.74811463050000004" green="0.18256561760000001" blue="0.31009104180000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Za-hA-fa8">
+                                <rect key="frame" x="322" y="43" width="130" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" backgroundImage="Ideio_logo.png">
+                                    <color key="titleColor" red="0.74811463050000004" green="0.18256561760000001" blue="0.31009104180000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You Are a Social Detective Intermediate" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dnn-d0-Jiq">
+                                <rect key="frame" x="294" y="163" width="186" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" red="1" green="0.86363886010000002" blue="0.5204590764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You Are a Social Detective Beginner" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ovp-0R-KWb">
+                                <rect key="frame" x="25" y="163" width="186" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" red="1" green="0.86363886010000002" blue="0.5204590764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Social Skill Builder My School Day" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="EAZ-RE-aMy">
+                                <rect key="frame" x="25" y="423" width="186" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" red="1" green="0.86363886010000002" blue="0.5204590764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPo-Ei-xtN">
+                                <rect key="frame" x="322" y="294" width="130" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" backgroundImage="Ideio_logo.png">
+                                    <color key="titleColor" red="0.74811463050000004" green="0.18256561760000001" blue="0.31009104180000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Social Skill Builder Lite" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6hd-iX-EfI">
+                                <rect key="frame" x="294" y="423" width="186" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" red="1" green="0.86363886010000002" blue="0.5204590764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="500" height="500"/>
+                    <connections>
+                        <outletCollection property="apps" destination="pdl-5t-UBF" collectionClass="NSMutableArray" id="czN-o6-6oP"/>
+                        <outletCollection property="apps" destination="9Za-hA-fa8" collectionClass="NSMutableArray" id="Cx1-bJ-RWj"/>
+                        <outletCollection property="apps" destination="Sji-ql-9Sq" collectionClass="NSMutableArray" id="6w4-vp-XRD"/>
+                        <outletCollection property="apps" destination="HPo-Ei-xtN" collectionClass="NSMutableArray" id="S40-uW-IQx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b49-vd-9Bf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4529.8828125" y="166.91068814055635"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Ideio_logo.png" width="265" height="189"/>
@@ -1249,9 +1382,10 @@ autism and special needs</string>
         <image name="stock3.png" width="367" height="165"/>
         <image name="stock4.png" width="1900" height="602"/>
         <image name="thought.png" width="570" height="416"/>
+        <image name="thoughttail.png" width="570" height="416"/>
         <image name="user.png" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="iu7-YE-Rn9"/>
+        <segue reference="r12-FS-sVb"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -40,19 +40,26 @@ class ProgramViewController : UIViewController {
         self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[view]-0-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view":customView]))
         self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[view]-0-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view":customView]))
         container.view.backgroundColor = customView.backgroundColor
+        
+        
 
     }
     override func viewDidLayoutSubviews(){
         super.viewDidLoad()
 
-        for view in customView.subviews as [UIView] {
-                if let btn = view as? UIButton {
+        for view in customView.subviews {
+            for view1 in view.subviews as [UIView] {
+                if let btn = view1 as? UIButton {
                     btn.addTarget(self, action: #selector(choosePlace(_ :)), for: .touchUpInside)
                 }
+                
+                    
+                }
+        }
+        
                 /*if let img = view1 as? UIImageView {
                     img.highlightedImage = UIImage(named: "speechred.png")
                 }*/
-            }
 
         
     }
@@ -68,9 +75,10 @@ class ProgramViewController : UIViewController {
                 break
             }
             
-            for view in customView.subviews as [UIView] {
-                if let btn = view as? UIButton{
-                    btn.backgroundColor = UIColor.white
+            for view in customView.subviews {
+                if let view1 = view as? UIView{
+                    view1.layer.borderColor = UIColor.white.cgColor
+                    view1.layer.borderWidth = 0
                     container.goNextButton.isHidden = true 
                     
                     
@@ -87,17 +95,29 @@ class ProgramViewController : UIViewController {
      
         container.place = String(sender.tag)
         container.placeString = sender.titleLabel?.text
-       for view in customView.subviews as [UIView] {
-                            if let btn = view as? UIButton{
-                    btn.backgroundColor = UIColor.white
+       for view in customView.subviews {
+                            if let view1 = view as? UIView{
+                    view1.layer.borderColor = UIColor.white.cgColor
+                    view1.layer.borderWidth = 0
                     
                     
          
             }
-        sender.backgroundColor = UIColor(red:1.00, green:0.86, blue:0.52, alpha:1.0)
+        for view1 in customView.subviews {
+            for view2 in view1.subviews as [UIView] {
+                if let btn = view2 as? UIButton {
+                    if btn == sender {
+                        view1.layer.borderColor = UIColor(red:1.00, green:0.86, blue:0.52, alpha:1.0).cgColor
+                        view1.layer.borderWidth = 4
+                    }
+                    
+                }
+            }
             
         }
-        self.lowlightAll(viewToInspect: customView)
+            
+        }
+
         
         
         container.goNextButton.isHidden = false
@@ -115,9 +135,8 @@ extension UIViewController {
     func lowlightAll(viewToInspect: UIView) {
         for view in viewToInspect.subviews as [UIView] {
             for view1 in view.subviews as [UIView] {
-                if let btn = view1 as? UIButton {
-                    btn.isItHighlighted = false
-                }
+                view1.layer.borderColor = UIColor.white.cgColor
+                view1.layer.borderWidth = 0
             }
         }
     }

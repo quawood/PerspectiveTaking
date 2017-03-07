@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16C67" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16D32" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Progress" representedClassName="Progress" syncable="YES" codeGenerationType="class">
+        <attribute name="place" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="progresses" inverseEntity="User" syncable="YES"/>
+    </entity>
     <entity name="Score" representedClassName="Score" syncable="YES" codeGenerationType="class">
         <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="place" optional="YES" attributeType="String" syncable="YES"/>
@@ -10,10 +15,12 @@
     <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
         <attribute name="dateCreated" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="progresses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Progress" inverseName="user" inverseEntity="Progress" syncable="YES"/>
         <relationship name="scores" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Score" inverseName="user" inverseEntity="Score" syncable="YES"/>
     </entity>
     <elements>
-        <element name="User" positionX="-495" positionY="138" width="128" height="88"/>
         <element name="Score" positionX="-36" positionY="36" width="128" height="118"/>
+        <element name="User" positionX="-495" positionY="138" width="128" height="103"/>
+        <element name="Progress" positionX="-288" positionY="-9" width="128" height="88"/>
     </elements>
 </model>
