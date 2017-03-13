@@ -16,6 +16,8 @@ class UserViewController: UIViewController{
     
     // Mark: - IBOutlets
     @IBOutlet weak var collectionView: UICollectionView!
+    let date = Date()
+    let calendar = NSCalendar.current
     var users = [User]()
     var cellNum:Int = 1
     
@@ -46,7 +48,74 @@ class UserViewController: UIViewController{
 
         
     }
+    @IBAction func newUserBtn(_ sender: Any) {
+        newUser()
+    }
     
+    func newUser() {
+        let alert = UIAlertController(title: "Create User", message: "Enter a User name", preferredStyle: .alert)
+        
+        //2. Add the text field. You can configure it however you need.
+        alert.addTextField { (textField) in
+            textField.placeholder = "enter name here"
+            textField.textAlignment = .center
+            textField.addTarget(self, action: #selector(self.textChanged), for: .editingChanged)
+            
+        }
+        
+        // 3. Grab the value from the text field, and print it when the user clicks OK.
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+            let textField = alert?.textFields?[0] // Force unwrapping because we know it exists.
+            if textField?.text != "" {
+                let components = self.calendar.dateComponents([.month,.day,.year], from: self.date)
+                let user: User = NSEntityDescription.insertNewObject(forEntityName: "User", into: DatabaseController.getContext()) as! User
+                
+                user.name = textField?.text
+                user.dateCreated = "\(components.month!)/\(components.day!)/\(components.year!)"
+                
+                let score1: Score = NSEntityDescription.insertNewObject(forEntityName: "Score", into: DatabaseController.getContext()) as! Score
+                score1.date = ""
+                score1.value = 0
+                score1.place = ""
+                score1.program = ""
+                for i in 1...4 {
+                    let score1: Score = NSEntityDescription.insertNewObject(forEntityName: "Score", into: DatabaseController.getContext()) as! Score
+                    score1.date = ""
+                    score1.value = 0
+                    score1.place = ""
+                    score1.program = String(i)
+                    user.addToScores(score1)
+                }
+                
+                user.addToScores(score1)
+                
+                DatabaseController.saveContext()
+                alert?.dismiss(animated: true, completion: nil)
+                self.loadData()
+
+            }else {
+                textField?.text = "You need a user name"
+                textField?.textColor = UIColor.red
+            }
+            
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { [weak alert] (_) in
+            alert?.dismiss(animated: true, completion: nil)
+        }))
+        
+        // 4. Present the alert.
+        alert.actions[0].isEnabled = false
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func textChanged(_ sender: Any) {
+        let tf = sender as! UITextField
+        var resp : UIResponder! = tf
+        while !(resp is UIAlertController) { resp = resp.next }
+        let alert = resp as! UIAlertController
+        alert.actions[0].isEnabled = (tf.text != "")
+    }
     
     func loadData() {
         let fetchRequest: NSFetchRequest<User> = User.fetchRequest()

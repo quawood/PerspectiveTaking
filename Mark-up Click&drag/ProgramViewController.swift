@@ -44,19 +44,41 @@ class ProgramViewController : UIViewController {
         
 
     }
-    override func viewDidLayoutSubviews(){
-        super.viewDidLoad()
-
-        for view in customView.subviews {
-            for view1 in view.subviews as [UIView] {
-                if let btn = view1 as? UIButton {
-                    btn.addTarget(self, action: #selector(choosePlace(_ :)), for: .touchUpInside)
-                }
-                
+    
+    
+    
+    func configureButtons() {
+        var i = 0
+        for view in customView.subviews as [UIView] {
+            if let cpview = view as? ChoosePlaceView {
+                i = i + 1
+                cpview.placeButton.tag = i
+                if let progresses = currentUs.progresses as? Set<Progress> {
+                    if progresses.count > 0 {
+                        print(progresses.first?.program!)
+                        print(progresses.first?.place!)
+                        for progress in progresses {
+                            if (progress.program == prog) && progress.place == String(i) {
+                                print("all")
+                                cpview.placeProgressLbl.text = "\(progress.value)"
+                            }
+                        }
+                    }
                     
                 }
+                
+                cpview.placeButton.addTarget(self, action: #selector(choosePlace(_ :)), for: .touchUpInside)
+            }
+            
         }
         
+    }
+    override func viewDidLayoutSubviews(){
+        super.viewDidLoad()
+            configureButtons()
+        container = self.parent as! HomeViewController
+
+    
                 /*if let img = view1 as? UIImageView {
                     img.highlightedImage = UIImage(named: "speechred.png")
                 }*/
@@ -70,15 +92,15 @@ class ProgramViewController : UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first
-        for view in self.view.subviews {
+        for view in customView.subviews {
             if view.frame.contains((touch?.location(in: self.view))!) {
                 break
             }
             
             for view in customView.subviews {
-                if let view1 = view as? UIView{
-                    view1.layer.borderColor = UIColor.white.cgColor
-                    view1.layer.borderWidth = 0
+                if let cpview = view as? ChoosePlaceView{
+                    cpview.layer.borderColor = UIColor.white.cgColor
+                    cpview.layer.borderWidth = 0
                     container.goNextButton.isHidden = true 
                     
                     
@@ -90,8 +112,6 @@ class ProgramViewController : UIViewController {
     }
     
     func choosePlace(_ sender: UIButton) {
-        container = self.parent as! HomeViewController
-        print("yah")
      
         container.place = String(sender.tag)
         container.placeString = sender.titleLabel?.text
@@ -103,15 +123,14 @@ class ProgramViewController : UIViewController {
                     
          
             }
-        for view1 in customView.subviews {
-            for view2 in view1.subviews as [UIView] {
-                if let btn = view2 as? UIButton {
-                    if btn == sender {
-                        view1.layer.borderColor = UIColor(red:1.00, green:0.86, blue:0.52, alpha:1.0).cgColor
-                        view1.layer.borderWidth = 4
+        for view in customView.subviews {
+                if let cpview = view as? ChoosePlaceView {
+                    if cpview.placeButton == sender {
+                        cpview.layer.borderColor = UIColor(red:1.00, green:0.86, blue:0.52, alpha:1.0).cgColor
+                        cpview.layer.borderWidth = 4
                     }
                     
-                }
+                
             }
             
         }

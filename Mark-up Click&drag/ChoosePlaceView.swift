@@ -5,7 +5,6 @@
 //  Created by Qualan Woodard on 3/13/17.
 //  Copyright © 2017 Pushbox, LLC'. All rights reserved.
 //
-
 import UIKit
 
 class ChoosePlaceView: UIView {
@@ -13,10 +12,13 @@ class ChoosePlaceView: UIView {
     @IBOutlet weak var placeProgressLbl: UILabel!
     @IBOutlet weak var placeButton: UIButton!
     
-    @IBAction func placeButtonUp(_ sender: Any) {
-        
-    }
     
+    @IBInspectable var title : String?
+        {
+        didSet {
+            placeButton.setTitle(title, for: .normal)
+        }
+    }
     var contentView : UIView?
     
     override init(frame: CGRect) {

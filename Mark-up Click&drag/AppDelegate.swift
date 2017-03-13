@@ -61,6 +61,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return checkOrientation(viewController: viewController!.presentedViewController)
         }
     }
+    func entityIsEmpty(entity: String) -> Bool
+    {
+        
+        let context = NSManagedObjectContext()
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
+        var results : NSArray?
+        
+        do {
+            results = try context.fetch(request) as! [NSManagedObject] as NSArray?
+            
+            return results!.count == 0
+            
+        } catch let error as NSError {
+            // failure
+            print("Error: \(error.debugDescription)")
+            return true
+        }
+    }
+    
 
 }
 

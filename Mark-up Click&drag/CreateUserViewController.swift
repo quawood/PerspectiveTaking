@@ -101,10 +101,12 @@ class CreateUserViewController: UIViewController, UINavigationControllerDelegate
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "backToUser" {
+            
             let vc = segue.destination as! UserViewController
             vc.loadData()
         }
     }
+    
     
 
 }

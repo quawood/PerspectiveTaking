@@ -42,7 +42,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
     var starLocations:[CGPoint]!
     var correctAnss:[Int]!
     var viewPlace:[Int] = [0,0,0,0,0]
-    var randomNum:Int = 1
+    var randomNum:Int!
     
     var currentA = UIView()
     var touch:UITouch!
@@ -125,6 +125,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
         }
     }
 
+    
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
 
         if currentA.frame.contains(touch.previousLocation(in: self.view)) {
@@ -168,7 +169,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
         }
     }
     
-    
+
     
     //setup scene
     func stylesScene() {
@@ -236,11 +237,12 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
     
     
     @IBAction func gotToHome(_ sender: AnyObject) {
-        let alertConrtoller = UIAlertController(title: "Go Home", message: "Go to home and lose progress?", preferredStyle: .alert)
+        let alertConrtoller = UIAlertController(title: "Go Home", message: "Go to home? Your progress will be saved.", preferredStyle: .alert)
         alertConrtoller.addAction(UIAlertAction(title: "No", style: .cancel, handler: { (action: UIAlertAction!) in
             alertConrtoller.dismiss(animated: true, completion: nil)
         }))
         alertConrtoller.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action: UIAlertAction!) in
+            self.saveState()
             self.performSegue(withIdentifier: "toHomefromQuiz", sender: self)
         }))
         present(alertConrtoller, animated: true, completion: nil)
@@ -290,6 +292,21 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let progresses = currentUs.progresses as? Set<Progress> {
+            if progresses.count != 0 {
+                for progress in progresses {
+                    if (progress.program == prog) && progress.place == placeString {
+                        randomNum = Int(progress.value)
+                    } else {
+                        randomNum = 1
+                    }
+                }
+            } else {
+                randomNum = 1
+            }
+            
+        }
        playSound(filename: "CnDInstructions")
         
         xRat  = Float(self.view.bounds.width)/469
@@ -382,7 +399,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
         removeStars()
         turn = 1
         replaceAnswers()
-        randomNum += 1
+        randomNum = randomNum + 1
         nextQuestionBtn.isHidden = true
         viewPlace = [0,0,0,0,0]
         
@@ -488,6 +505,29 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
         timer.invalidate()
         animation.removeFromSuperview()
     }
+    
+    func saveState() {
+        var progressesArray = currentUs.progresses as? Set<Progress>
+        let progress: Progress = NSEntityDescription.insertNewObject(forEntityName: "Progress", into: DatabaseController.getContext()) as! Progress
+        progress.value = Int16(randomNum)
+        progress.place = currentPlace
+        progress.program = prog
+        if (progressesArray?.count)! > 0 {
+            for p in progressesArray! {
+                if (p.place == currentPlace) && (p.program == prog) {
+                    progressesArray?[(progressesArray?.index(of: p))!].value = progress.value
+                    break
+                }
+                progressesArray?.insert(progress)
+            }
+        }else {
+            progressesArray?.insert(progress)
+        }
+        
+        currentUs.progresses = progressesArray as NSSet?
+        DatabaseController.saveContext()
+        
+    }
     @IBAction func saveScore(sender: AnyObject) {
         var scoresArray: [Score]! = []
         var holderArray: [Score]! = []
@@ -518,10 +558,12 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
         }
         
         currentUs.scores = NSSet(array: (scoresArray + holderArray))
-        
+        saveState()
         
         
         DatabaseController.saveContext()
+        
+        
 
         self.performSegue(withIdentifier: "toHomefromQuiz", sender: self)
     }
@@ -533,6 +575,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
     
     func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showMenu" {
+            audioPlayer.stop()
             let vc = segue.destination
             vc.preferredContentSize = CGSize(width: 300, height: 300)
             let controller = vc.popoverPresentationController
