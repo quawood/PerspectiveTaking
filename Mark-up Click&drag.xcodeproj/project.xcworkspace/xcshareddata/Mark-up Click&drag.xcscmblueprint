@@ -1,18 +1,20 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "CD6AADE00364217B9FE86E4C0ACD07A2AEA5D026+++F55BB8D",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "CD6AADE00364217B9FE86E4C0ACD07A2AEA5D026+++97122D8",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "CD6AADE00364217B9FE86E4C0ACD07A2AEA5D026+++DD56021" : 9223372036854775807,
+    "CD6AADE00364217B9FE86E4C0ACD07A2AEA5D026+++023CC2B" : 9223372036854775807,
     "CD6AADE00364217B9FE86E4C0ACD07A2AEA5D026+++F55BB8D" : 9223372036854775807,
-    "CD6AADE00364217B9FE86E4C0ACD07A2AEA5D026+++023CC2B" : 9223372036854775807
+    "CD6AADE00364217B9FE86E4C0ACD07A2AEA5D026+++DD56021" : 9223372036854775807,
+    "CD6AADE00364217B9FE86E4C0ACD07A2AEA5D026+++97122D8" : 9223372036854775807
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C1D0BF10-1DC6-43D5-A04E-C81AC919FC45",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "CD6AADE00364217B9FE86E4C0ACD07A2AEA5D026+++DD56021" : "Mark-up%20Click&drag\/",
+    "CD6AADE00364217B9FE86E4C0ACD07A2AEA5D026+++023CC2B" : "Mark-up%20Click&drag\/",
     "CD6AADE00364217B9FE86E4C0ACD07A2AEA5D026+++F55BB8D" : "Mark-up%20Click&drag%202\/",
-    "CD6AADE00364217B9FE86E4C0ACD07A2AEA5D026+++023CC2B" : "Mark-up%20Click&drag\/"
+    "CD6AADE00364217B9FE86E4C0ACD07A2AEA5D026+++DD56021" : "Mark-up%20Click&drag\/",
+    "CD6AADE00364217B9FE86E4C0ACD07A2AEA5D026+++97122D8" : "PerspectiveTaking\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "Mark-up Click&drag",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -22,6 +24,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/quawood\/ClickandDrag.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "CD6AADE00364217B9FE86E4C0ACD07A2AEA5D026+++023CC2B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/quawood\/PerspectiveTaking.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "CD6AADE00364217B9FE86E4C0ACD07A2AEA5D026+++97122D8"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/quawood\/PerspectiveTaking.git",
