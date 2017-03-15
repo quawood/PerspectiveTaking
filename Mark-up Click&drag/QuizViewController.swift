@@ -243,6 +243,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
         }))
         alertConrtoller.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action: UIAlertAction!) in
             self.saveState()
+            self.audioPlayer.stop()
             self.performSegue(withIdentifier: "toHomefromQuiz", sender: self)
         }))
         present(alertConrtoller, animated: true, completion: nil)
@@ -293,20 +294,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let progresses = currentUs.progresses as? Set<Progress> {
-            if progresses.count != 0 {
-                for progress in progresses {
-                    if (progress.program == prog) && progress.place == placeString {
-                        randomNum = Int(progress.value)
-                    } else {
-                        randomNum = 1
-                    }
-                }
-            } else {
-                randomNum = 1
-            }
-            
-        }
+    
        playSound(filename: "CnDInstructions")
         
         xRat  = Float(self.view.bounds.width)/469
@@ -509,13 +497,16 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
     func saveState() {
         var progressesArray = currentUs.progresses as? Set<Progress>
         let progress: Progress = NSEntityDescription.insertNewObject(forEntityName: "Progress", into: DatabaseController.getContext()) as! Progress
-        progress.value = Int16(randomNum)
+        progress.value = Int16(randomNum-1)
         progress.place = currentPlace
         progress.program = prog
         if (progressesArray?.count)! > 0 {
             for p in progressesArray! {
                 if (p.place == currentPlace) && (p.program == prog) {
-                    progressesArray?[(progressesArray?.index(of: p))!].value = progress.value
+                    if progressesArray?[(progressesArray?.index(of: p))!].value != 5 {
+                        progressesArray?[(progressesArray?.index(of: p))!].value = progress.value
+                    }
+                    
                     break
                 }
                 progressesArray?.insert(progress)
@@ -558,6 +549,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
         }
         
         currentUs.scores = NSSet(array: (scoresArray + holderArray))
+        randomNum = 6
         saveState()
         
         
@@ -575,7 +567,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
     
     func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showMenu" {
-            audioPlayer.stop()
+            
             let vc = segue.destination
             vc.preferredContentSize = CGSize(width: 300, height: 300)
             let controller = vc.popoverPresentationController

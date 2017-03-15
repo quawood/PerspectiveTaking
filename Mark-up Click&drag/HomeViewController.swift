@@ -19,6 +19,8 @@ class HomeViewController: UIViewController{
     @IBOutlet weak var goNextButton: UIButton!
     @IBOutlet weak var programLabel: UILabel!
     var data: [String:AnyObject]!
+    var randomNum: Int!
+    
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
@@ -64,6 +66,7 @@ class HomeViewController: UIViewController{
             destinationVC.currentProg = program
             destinationVC.currentPlace = place
             destinationVC.placeString = placeString
+            destinationVC.randomNum = randomNum
             destinationVC.SetHomeContent()
             activityIndicator.stopAnimating()
 

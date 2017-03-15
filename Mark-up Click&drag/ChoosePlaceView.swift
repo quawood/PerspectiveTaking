@@ -9,7 +9,7 @@ import UIKit
 
 class ChoosePlaceView: UIView {
 
-    @IBOutlet weak var placeProgressLbl: UILabel!
+    @IBOutlet weak var placeProgressLbl: UILabel?
     @IBOutlet weak var placeButton: UIButton!
     
     
@@ -17,6 +17,26 @@ class ChoosePlaceView: UIView {
         {
         didSet {
             placeButton.setTitle(title, for: .normal)
+        }
+    }
+    
+    @IBInspectable var progressTitle : String?
+    {
+        didSet {
+            
+            placeProgressLbl?.text = progressTitle
+            if progressTitle == "0" {
+                placeProgressLbl?.isHidden = true
+                placeProgressLbl?.textColor = UIColor.black
+            } else if (progressTitle == "5") {
+                placeProgressLbl?.isHidden = false
+                placeProgressLbl?.textColor = UIColor.red
+            }
+            
+            else {
+                placeProgressLbl?.isHidden = false
+                placeProgressLbl?.textColor = UIColor.black
+            }
         }
     }
     var contentView : UIView?
@@ -33,6 +53,10 @@ class ChoosePlaceView: UIView {
     
     func xibSetup() {
         contentView = loadViewFromNib()
+        if placeProgressLbl?.text == "0" {
+            self.progressTitle = "0"
+        }
+        
         
         // use bounds not frame or it'll be offset
         contentView!.frame = bounds

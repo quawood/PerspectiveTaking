@@ -60,7 +60,7 @@ class ProgramViewController : UIViewController {
                         for progress in progresses {
                             if (progress.program == prog) && progress.place == String(i) {
                                 print("all")
-                                cpview.placeProgressLbl.text = "\(progress.value)"
+                                cpview.progressTitle = "\(progress.value)"
                             }
                         }
                     }
@@ -115,6 +115,7 @@ class ProgramViewController : UIViewController {
      
         container.place = String(sender.tag)
         container.placeString = sender.titleLabel?.text
+        
        for view in customView.subviews {
                             if let view1 = view as? UIView{
                     view1.layer.borderColor = UIColor.white.cgColor
@@ -126,6 +127,11 @@ class ProgramViewController : UIViewController {
         for view in customView.subviews {
                 if let cpview = view as? ChoosePlaceView {
                     if cpview.placeButton == sender {
+                        if Int((cpview.progressTitle)!)! < 5 {
+                            container.randomNum = Int((cpview.progressTitle)!)! + 1
+                        } else {
+                            container.randomNum = 1
+                        }
                         cpview.layer.borderColor = UIColor(red:1.00, green:0.86, blue:0.52, alpha:1.0).cgColor
                         cpview.layer.borderWidth = 4
                     }
