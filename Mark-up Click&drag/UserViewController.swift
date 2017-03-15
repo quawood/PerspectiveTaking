@@ -124,9 +124,6 @@ class UserViewController: UIViewController{
             users = searchResults
             collectionView.reloadData()
         }
-        catch {
-            fatalError("Error in restrieving User items")
-        }
     }
     
     override func viewDidLoad() {

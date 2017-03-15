@@ -14,71 +14,6 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Create User View Controller-->
-        <scene sceneID="oKu-Gf-kqb">
-            <objects>
-                <viewController id="mEW-tO-2PY" customClass="CreateUserViewController" customModule="Mark_up_Click_drag" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="RGK-Ap-sJC"/>
-                        <viewControllerLayoutGuide type="bottom" id="e6t-0L-nh4"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="6ua-CG-omD">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What is your name?" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="YJt-uO-nLG" customClass="AllowedCharsTextField" customModule="Mark_up_Click_drag" customModuleProvider="target">
-                                <rect key="frame" x="425.5" y="668" width="173" height="30"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="alphabet"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="allowedChars" value="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"/>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.92922952586206897" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="YJt-uO-nLG" firstAttribute="centerX" secondItem="6ua-CG-omD" secondAttribute="centerX" id="bXi-DS-2sX"/>
-                            <constraint firstItem="YJt-uO-nLG" firstAttribute="centerY" secondItem="6ua-CG-omD" secondAttribute="centerY" id="ioH-lu-FMM"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="pWL-VU-KQB">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="JB3-KB-r6G">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AUy-bp-p4S">
-                                <rect key="frame" x="20" y="7" width="50" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="Cancel">
-                                    <color key="titleColor" red="0.74811463050000004" green="0.18256561760000001" blue="0.31009104180000002" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="cancelCreatUser:" destination="mEW-tO-2PY" eventType="touchUpInside" id="v6C-qF-fvz"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="pVM-5j-quP">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vfX-Y0-2vp">
-                                <rect key="frame" x="969" y="7" width="35" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="Save">
-                                    <color key="titleColor" red="0.74811463050000004" green="0.18256561760000001" blue="0.31009104180000002" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="createUserWithSender:" destination="mEW-tO-2PY" eventType="touchUpInside" id="qk3-80-GEy"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="nameTextLabel" destination="YJt-uO-nLG" id="d7P-sA-HWT"/>
-                        <segue destination="Mqq-C0-6WT" kind="unwind" identifier="backToUser" unwindAction="unwindToUsers:" id="W9b-Z0-7Dc"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cqO-oF-xTL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="Mqq-C0-6WT" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="3912.8000000000002" y="-1737.481259370315"/>
-        </scene>
         <!--Users-->
         <scene sceneID="xNt-37-JAl">
             <objects>
@@ -1081,7 +1016,7 @@ Qualan Woodard</string>
                                 </subviews>
                                 <color key="backgroundColor" red="0.33496589467005078" green="0.33496589467005078" blue="0.33496589467005078" alpha="0.94437607020547942" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please click on a location you wish you to work on your perspective taking skills.  " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3m-Sc-YWt">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please click on a location you wish you to work on your perspective taking skills.  Number of dots indicate progress." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3m-Sc-YWt">
                                 <rect key="frame" x="60" y="1145" width="904" height="94"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
@@ -1142,25 +1077,7 @@ Qualan Woodard</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rtz-C5-ehm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2662" y="-1040"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="hhQ-FS-X2M">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Td3-ba-jvj" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7ub-Di-LxV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="mEW-tO-2PY" kind="relationship" relationship="rootViewController" id="MIX-4j-V6q"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mfU-qi-euP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3050" y="-1737"/>
+            <point key="canvasLocation" x="2241" y="-1193"/>
         </scene>
         <!--Edit User-->
         <scene sceneID="Be4-Gc-rEb">

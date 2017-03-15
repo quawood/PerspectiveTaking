@@ -11,6 +11,7 @@ class ChoosePlaceView: UIView {
 
     @IBOutlet weak var placeProgressLbl: UILabel?
     @IBOutlet weak var placeButton: UIButton!
+    @IBOutlet weak var progressMarkerView: UIView!
     
     
     @IBInspectable var title : String?
@@ -28,14 +29,26 @@ class ChoosePlaceView: UIView {
             if progressTitle == "0" {
                 placeProgressLbl?.isHidden = true
                 placeProgressLbl?.textColor = UIColor.black
+                for _ in 0...4 {
+                    //progressMarkerView.subviews[i].isHidden = true
+                }
             } else if (progressTitle == "5") {
-                placeProgressLbl?.isHidden = false
-                placeProgressLbl?.textColor = UIColor.red
+               // placeProgressLbl?.isHidden = false
+                for view in progressMarkerView.subviews {
+                    view.isHidden = false
+                    view.backgroundColor = UIColor.red
+                }
+                
             }
             
             else {
-                placeProgressLbl?.isHidden = false
+              //  placeProgressLbl?.isHidden = false
                 placeProgressLbl?.textColor = UIColor.black
+                for i in 0...(Int(progressTitle!)!-1) {
+                    
+                    progressMarkerView.subviews[i].isHidden = false
+                    progressMarkerView.subviews[i].backgroundColor = UIColor.black
+                }
             }
         }
     }
@@ -56,7 +69,12 @@ class ChoosePlaceView: UIView {
         if placeProgressLbl?.text == "0" {
             self.progressTitle = "0"
         }
-        
+        for view in progressMarkerView.subviews {
+            view.layer.cornerRadius = 5
+            view.layer.borderColor = UIColor(red:0.91, green:0.89, blue:0.89, alpha:1.0).cgColor
+            view.layer.borderWidth = 2
+            view.contentMode = UIViewContentMode.scaleAspectFit
+        }
         
         // use bounds not frame or it'll be offset
         contentView!.frame = bounds
