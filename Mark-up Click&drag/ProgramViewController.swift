@@ -128,7 +128,7 @@ class ProgramViewController : UIViewController {
                             container.randomNum = 1
                         }
                         cpview.layer.borderColor = UIColor(red:1.00, green:0.86, blue:0.52, alpha:1.0).cgColor
-                        cpview.layer.borderWidth = 2
+                        cpview.layer.borderWidth = 3
                     }
                     
                 
