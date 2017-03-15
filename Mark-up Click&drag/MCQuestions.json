@@ -2400,7 +2400,7 @@
                   "answers": [
                               "He is such a good player.",
                               "I don't want to be on their team",
-                              "We are going to lose if you don't get in our group!",
+                              "We're going to lose if you don't come!",
                               "What's for lunch.",
                               ""
                               ],
@@ -2565,8 +2565,8 @@
                              ]
                             ],
                   "correct": [
-                              4,
-                              2
+                              2,
+                              4
                               ]
                   }],
             "4": [{
@@ -3490,8 +3490,8 @@
                   }, {
                   "image": "R1010003S.jpg",
                   "answers": ["I am so hungry!",
-                              "I don't want to talk to him",
-                              "What is wrong?",
+                              "I don't want to talk to him.",
+                              "What's wrong?",
                               "I am late for class.",
                               ""
                               ],
