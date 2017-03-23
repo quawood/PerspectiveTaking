@@ -30,6 +30,7 @@ class HomeViewController: UIViewController{
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.program = grandProgram
         programLabel.text = names[Int(program)!-1]
         prog = program
         userNameLabel.text = currentUs.value(forKey: "name") as? String

@@ -20,7 +20,7 @@ class UserViewController: UIViewController{
     let calendar = NSCalendar.current
     var users = [User]()
     var cellNum:Int = 1
-    
+    var program: String!
 
     @IBAction func unwindToUsers(_ segue: UIStoryboardSegue) {
         
@@ -140,6 +140,10 @@ class UserViewController: UIViewController{
             if controller != nil {
                 controller?.delegate = self as? UIPopoverPresentationControllerDelegate
             }
+        } else if segue.identifier == "goToHome" {
+                    let dc = segue.destination as! HomeViewController
+                    dc.program = program
+
         }
         
     }

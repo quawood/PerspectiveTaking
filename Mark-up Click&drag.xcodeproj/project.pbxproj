@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E0C34351E76D19C00CC7F9E /* ChoosePlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0C34341E76D19C00CC7F9E /* ChoosePlaceView.swift */; };
 		2E0C34371E76D1B600CC7F9E /* ChoosePlaceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E0C34361E76D1B600CC7F9E /* ChoosePlaceView.xib */; };
 		A50D0BB81DFFDEE800AE2978 /* InfoPageControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50D0BB71DFFDEE800AE2978 /* InfoPageControllerViewController.swift */; };
+		A523733B1E79A32800D3DE50 /* ChoosePlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A523733A1E79A32800D3DE50 /* ChoosePlaceView.swift */; };
 		A52E3D461DD3D949001491E3 /* ChooseProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52E3D451DD3D949001491E3 /* ChooseProgramViewController.swift */; };
 		A54B09EF1D7FBACB00D82D49 /* CreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B09EE1D7FBACB00D82D49 /* CreateUserViewController.swift */; };
 		A56F79C11E770A6F00B34BB8 /* 001.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A56F777B1E770A6E00B34BB8 /* 001.jpg */; };
@@ -633,11 +633,12 @@
 		A58D38AB1E78C6CF00D97C17 /* stock2.png in Resources */ = {isa = PBXBuildFile; fileRef = A58D38811E78C6CF00D97C17 /* stock2.png */; };
 		A58D38AC1E78C6CF00D97C17 /* stock3.png in Resources */ = {isa = PBXBuildFile; fileRef = A58D38821E78C6CF00D97C17 /* stock3.png */; };
 		A58D38AD1E78C6CF00D97C17 /* stock4.png in Resources */ = {isa = PBXBuildFile; fileRef = A58D38831E78C6CF00D97C17 /* stock4.png */; };
-		A58D38AE1E78C6CF00D97C17 /* thought.png in Resources */ = {isa = PBXBuildFile; fileRef = A58D38841E78C6CF00D97C17 /* thought.png */; };
 		A58D38B01E78C6CF00D97C17 /* thoughttail0.png in Resources */ = {isa = PBXBuildFile; fileRef = A58D38861E78C6CF00D97C17 /* thoughttail0.png */; };
 		A58D38B11E78C6CF00D97C17 /* thoughttail1.png in Resources */ = {isa = PBXBuildFile; fileRef = A58D38871E78C6CF00D97C17 /* thoughttail1.png */; };
 		A58D38B21E78C6CF00D97C17 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = A58D38881E78C6CF00D97C17 /* user.png */; };
-		A58D38B51E78EAEC00D97C17 /* xigaxq5iA.png in Resources */ = {isa = PBXBuildFile; fileRef = A58D38B41E78EAEC00D97C17 /* xigaxq5iA.png */; };
+		A59461BE1E834DCC00E7D60F /* welcomeGraphic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A59461BD1E834DCC00E7D60F /* welcomeGraphic.jpg */; };
+		A59461C21E83561500E7D60F /* thought.png in Resources */ = {isa = PBXBuildFile; fileRef = A59461C11E83561500E7D60F /* thought.png */; };
+		A59461C41E83588700E7D60F /* thoughtwt.png in Resources */ = {isa = PBXBuildFile; fileRef = A59461C31E83588700E7D60F /* thoughtwt.png */; };
 		A59DFC581DC3DF6800B1CF8D /* ScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59DFC571DC3DF6800B1CF8D /* ScoresViewController.swift */; };
 		A5A8B6DE1D80C289009560D7 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A8B6DD1D80C289009560D7 /* EditProfileViewController.swift */; };
 		A5B4D6E41D7FADC90054D4C8 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B4D6E31D7FADC90054D4C8 /* UserViewController.swift */; };
@@ -647,6 +648,7 @@
 		A5C137841E77A34A00D78344 /* CnDInstructions.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A5C137811E77A34A00D78344 /* CnDInstructions.mp3 */; };
 		A5C137851E77A34A00D78344 /* correctSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A5C137821E77A34A00D78344 /* correctSound.mp3 */; };
 		A5C137861E77A34A00D78344 /* wrongSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A5C137831E77A34A00D78344 /* wrongSound.mp3 */; };
+		A5C723C31E7973BE00D07C99 /* playButton.png in Resources */ = {isa = PBXBuildFile; fileRef = A5C723C21E7973BE00D07C99 /* playButton.png */; };
 		A5DBA24A1DA4A07400C15EDE /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DBA2491DA4A07400C15EDE /* UIImage+Gif.swift */; };
 		A5DCF8CD1DC1789D0082F7EA /* 1.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5DCF8CC1DC1789D0082F7EA /* 1.xib */; };
 		A5DCF8CF1DC17B180082F7EA /* 2.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5DCF8CE1DC17B180082F7EA /* 2.xib */; };
@@ -682,9 +684,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2E0C34341E76D19C00CC7F9E /* ChoosePlaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoosePlaceView.swift; sourceTree = "<group>"; };
 		2E0C34361E76D1B600CC7F9E /* ChoosePlaceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChoosePlaceView.xib; sourceTree = "<group>"; };
 		A50D0BB71DFFDEE800AE2978 /* InfoPageControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoPageControllerViewController.swift; sourceTree = "<group>"; };
+		A523733A1E79A32800D3DE50 /* ChoosePlaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoosePlaceView.swift; sourceTree = "<group>"; };
 		A52E3D451DD3D949001491E3 /* ChooseProgramViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseProgramViewController.swift; sourceTree = "<group>"; };
 		A54B09EE1D7FBACB00D82D49 /* CreateUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUserViewController.swift; sourceTree = "<group>"; };
 		A56F777B1E770A6E00B34BB8 /* 001.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 001.jpg; sourceTree = "<group>"; };
@@ -1308,11 +1310,12 @@
 		A58D38811E78C6CF00D97C17 /* stock2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stock2.png; sourceTree = "<group>"; };
 		A58D38821E78C6CF00D97C17 /* stock3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stock3.png; sourceTree = "<group>"; };
 		A58D38831E78C6CF00D97C17 /* stock4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stock4.png; sourceTree = "<group>"; };
-		A58D38841E78C6CF00D97C17 /* thought.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thought.png; sourceTree = "<group>"; };
 		A58D38861E78C6CF00D97C17 /* thoughttail0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thoughttail0.png; sourceTree = "<group>"; };
 		A58D38871E78C6CF00D97C17 /* thoughttail1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thoughttail1.png; sourceTree = "<group>"; };
 		A58D38881E78C6CF00D97C17 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
-		A58D38B41E78EAEC00D97C17 /* xigaxq5iA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xigaxq5iA.png; sourceTree = "<group>"; };
+		A59461BD1E834DCC00E7D60F /* welcomeGraphic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = welcomeGraphic.jpg; sourceTree = "<group>"; };
+		A59461C11E83561500E7D60F /* thought.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thought.png; sourceTree = "<group>"; };
+		A59461C31E83588700E7D60F /* thoughtwt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thoughtwt.png; sourceTree = "<group>"; };
 		A59DFC571DC3DF6800B1CF8D /* ScoresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoresViewController.swift; sourceTree = "<group>"; };
 		A5A8B6DD1D80C289009560D7 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		A5B4D6E31D7FADC90054D4C8 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
@@ -1322,6 +1325,7 @@
 		A5C137811E77A34A00D78344 /* CnDInstructions.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CnDInstructions.mp3; sourceTree = "<group>"; };
 		A5C137821E77A34A00D78344 /* correctSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = correctSound.mp3; sourceTree = "<group>"; };
 		A5C137831E77A34A00D78344 /* wrongSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wrongSound.mp3; sourceTree = "<group>"; };
+		A5C723C21E7973BE00D07C99 /* playButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playButton.png; sourceTree = "<group>"; };
 		A5DBA2491DA4A07400C15EDE /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
 		A5DCF8CC1DC1789D0082F7EA /* 1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = 1.xib; sourceTree = "<group>"; };
 		A5DCF8CE1DC17B180082F7EA /* 2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = 2.xib; sourceTree = "<group>"; };
@@ -2014,9 +2018,10 @@
 				A58943CF1D710410005456A2 /* HomeViewController.swift */,
 				A59DFC571DC3DF6800B1CF8D /* ScoresViewController.swift */,
 				A5BA1CDE1DB7014300608BE8 /* ProgramViewController.swift */,
-				2E0C34341E76D19C00CC7F9E /* ChoosePlaceView.swift */,
+				A523733A1E79A32800D3DE50 /* ChoosePlaceView.swift */,
 				2E0C34361E76D1B600CC7F9E /* ChoosePlaceView.xib */,
 				A5DCF8CC1DC1789D0082F7EA /* 1.xib */,
+				A5C723BD1E7964E900D07C99 /* Xibs */,
 				A5DCF8CE1DC17B180082F7EA /* 2.xib */,
 				A5DCF8D01DC17B270082F7EA /* 3.xib */,
 				A5DCF8D21DC17B340082F7EA /* 4.xib */,
@@ -2038,6 +2043,8 @@
 		A5C137871E77A35D00D78344 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A59461BD1E834DCC00E7D60F /* welcomeGraphic.jpg */,
+				A5C723C21E7973BE00D07C99 /* playButton.png */,
 				A58D38601E78C6CF00D97C17 /* boy.png */,
 				A58D38611E78C6CF00D97C17 /* emoji1.gif */,
 				A58D38621E78C6CF00D97C17 /* emoji2.gif */,
@@ -2067,20 +2074,27 @@
 				A58D387A1E78C6CF00D97C17 /* speechr.png */,
 				A58D387B1E78C6CF00D97C17 /* speechtail.png */,
 				A58D387C1E78C6CF00D97C17 /* speechtail0.png */,
+				A59461C11E83561500E7D60F /* thought.png */,
 				A58D387D1E78C6CF00D97C17 /* speechtail1.png */,
 				A58D387E1E78C6CF00D97C17 /* SR1.JPG */,
 				A58D387F1E78C6CF00D97C17 /* SR2.JPG */,
 				A58D38801E78C6CF00D97C17 /* stock1.png */,
-				A58D38B41E78EAEC00D97C17 /* xigaxq5iA.png */,
 				A58D38811E78C6CF00D97C17 /* stock2.png */,
+				A59461C31E83588700E7D60F /* thoughtwt.png */,
 				A58D38821E78C6CF00D97C17 /* stock3.png */,
 				A58D38831E78C6CF00D97C17 /* stock4.png */,
-				A58D38841E78C6CF00D97C17 /* thought.png */,
 				A58D38861E78C6CF00D97C17 /* thoughttail0.png */,
 				A58D38871E78C6CF00D97C17 /* thoughttail1.png */,
 				A58D38881E78C6CF00D97C17 /* user.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		A5C723BD1E7964E900D07C99 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Xibs;
 			sourceTree = "<group>";
 		};
 		A5F4830F1D130F8000AA4E85 = {
@@ -2353,7 +2367,6 @@
 				A56F7B111E770A6F00B34BB8 /* R1010007S.jpg in Resources */,
 				A56F7A141E770A6F00B34BB8 /* inappseat.jpg in Resources */,
 				A56F7B571E770A6F00B34BB8 /* R1010055H.jpg in Resources */,
-				A58D38AE1E78C6CF00D97C17 /* thought.png in Resources */,
 				A58D38991E78C6CF00D97C17 /* leadership.png in Resources */,
 				A56F79E11E770A6F00B34BB8 /* cubby1.jpg in Resources */,
 				A56F79F91E770A6F00B34BB8 /* DCP0013c.jpg in Resources */,
@@ -2365,6 +2378,7 @@
 				A56F79EA1E770A6F00B34BB8 /* DCP0006a.jpg in Resources */,
 				A56F7BD91E770A7000B34BB8 /* RR1010073-.jpg in Resources */,
 				A56F7B131E770A6F00B34BB8 /* R1010008H.jpg in Resources */,
+				A5C723C31E7973BE00D07C99 /* playButton.png in Resources */,
 				A56F7AB71E770A6F00B34BB8 /* P1010120.jpg in Resources */,
 				A56F79DC1E770A6F00B34BB8 /* CP1010063.jpg in Resources */,
 				A56F7B0C1E770A6F00B34BB8 /* R1010005.jpg in Resources */,
@@ -2424,6 +2438,7 @@
 				A56F7B5F1E770A6F00B34BB8 /* R1010059H.jpg in Resources */,
 				A56F79D11E770A6F00B34BB8 /* appwait4sq.jpg in Resources */,
 				A56F7A7A1E770A6F00B34BB8 /* P1010059.jpg in Resources */,
+				A59461BE1E834DCC00E7D60F /* welcomeGraphic.jpg in Resources */,
 				A56F7B371E770A6F00B34BB8 /* R1010027H.jpg in Resources */,
 				A56F7AF11E770A6F00B34BB8 /* PICK4KICKBALL.jpg in Resources */,
 				A56F7AA81E770A6F00B34BB8 /* P1010105.jpg in Resources */,
@@ -2441,6 +2456,7 @@
 				A56F7B261E770A6F00B34BB8 /* R1010019.jpg in Resources */,
 				A56F7A701E770A6F00B34BB8 /* P1010049.jpg in Resources */,
 				A56F7AFD1E770A6F00B34BB8 /* playground.jpg in Resources */,
+				A59461C41E83588700E7D60F /* thoughtwt.png in Resources */,
 				A56F7BB61E770A7000B34BB8 /* RL1010033.jpg in Resources */,
 				A56F7A8D1E770A6F00B34BB8 /* P1010078.jpg in Resources */,
 				A58D389E1E78C6CF00D97C17 /* o2.gif in Resources */,
@@ -2473,7 +2489,6 @@
 				A58D38AB1E78C6CF00D97C17 /* stock2.png in Resources */,
 				A56F7B2D1E770A6F00B34BB8 /* R1010022H.jpg in Resources */,
 				A56F7A501E770A6F00B34BB8 /* P1010017.jpg in Resources */,
-				A58D38B51E78EAEC00D97C17 /* xigaxq5iA.png in Resources */,
 				A56F7AF41E770A6F00B34BB8 /* pick4loud.jpg in Resources */,
 				A58D38961E78C6CF00D97C17 /* janimation3.png in Resources */,
 				A56F7AA91E770A6F00B34BB8 /* P1010106.jpg in Resources */,
@@ -2785,6 +2800,7 @@
 				A56F7A7C1E770A6F00B34BB8 /* P1010061.jpg in Resources */,
 				A56F7B9B1E770A7000B34BB8 /* R1010103L.jpg in Resources */,
 				A56F79DE1E770A6F00B34BB8 /* CP1010065.jpg in Resources */,
+				A59461C21E83561500E7D60F /* thought.png in Resources */,
 				A56F7BEE1E770A7000B34BB8 /* shoes.jpg in Resources */,
 				A56F7A391E770A6F00B34BB8 /* lunchspace.jpg in Resources */,
 				A56F7B401E770A6F00B34BB8 /* R1010034.jpg in Resources */,
@@ -2914,7 +2930,7 @@
 				A5E43BEC1D73D6B300339C66 /* User.swift in Sources */,
 				A52E3D461DD3D949001491E3 /* ChooseProgramViewController.swift in Sources */,
 				A5BA1CDF1DB7014300608BE8 /* ProgramViewController.swift in Sources */,
-				2E0C34351E76D19C00CC7F9E /* ChoosePlaceView.swift in Sources */,
+				A523733B1E79A32800D3DE50 /* ChoosePlaceView.swift in Sources */,
 				A5F548D01E2DEA40007169A9 /* ClickDrag.xcdatamodeld in Sources */,
 				A50D0BB81DFFDEE800AE2978 /* InfoPageControllerViewController.swift in Sources */,
 				A5DBA24A1DA4A07400C15EDE /* UIImage+Gif.swift in Sources */,

@@ -144,7 +144,7 @@
                     </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="0.83151584199999995" green="0.31404622395833331" blue="0.35704210069444442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="1" green="0.20392156859999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <point key="canvasLocation" x="30" y="200"/>
         </view>
     </objects>

@@ -75,6 +75,7 @@ class ProgramViewController : UIViewController {
     override func viewDidLayoutSubviews(){
         super.viewDidLoad()
             configureButtons()
+        
         container = self.parent as! HomeViewController
 
     
@@ -127,8 +128,8 @@ class ProgramViewController : UIViewController {
                         } else {
                             container.randomNum = 1
                         }
-                        cpview.layer.borderColor = UIColor(red:1.00, green:0.86, blue:0.52, alpha:1.0).cgColor
-                        cpview.layer.borderWidth = 3
+                        cpview.layer.borderColor = UIColor(red:0.4, green:0.4, blue:0.4, alpha:1.0).cgColor
+                        cpview.layer.borderWidth = 4
                     }
                     
                 
