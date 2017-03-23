@@ -27,7 +27,7 @@ class UserViewController: UIViewController{
     }
     // MARK: - UICollectionViewDataSource
     func checkForFirstOpen() {
-        let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
+      /*  let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
         if launchedBefore  {
             print("Not first launch.")
         }
@@ -37,7 +37,7 @@ class UserViewController: UIViewController{
             self.title = "Start by making a new user!"
             UserDefaults.standard.set(true, forKey: "launchedBefore")
             
-        }
+        }*/
     }
 
     override func viewWillAppear(_ animated: Bool) {

@@ -447,7 +447,7 @@
                   "answers": [
                               "That is funny.",
                               "I want to go NOW!",
-                              "Why isn't he listening.",
+                              "Why isn't he listening?",
                               "Whoa, be careful!",
                               ""
                               ],
@@ -460,9 +460,13 @@
                               ],
                   "image": "P27.jpg",
                   "startails": [
-                                0, 1
+                                0,0, 1
                                 ],
                   "stars": [
+                            [
+                            119,
+                             167
+                            ],
                             [
                              221,
                              93
@@ -473,6 +477,7 @@
                              ]
                             ],
                   "correct": [
+                              2,
                               4,
                               3
                               ]
@@ -493,9 +498,13 @@
                               ],
                   "image": "P18a.jpg",
                   "startails": [
-                                1, 1
+                                0,1, 1
                                 ],
                   "stars": [
+                            [
+                            246,
+                             8
+                            ],
                             [
                              157,
                              126
@@ -505,6 +514,7 @@
                              ]
                             ],
                   "correct": [
+                              2,
                               4,
                               1
                               ]
@@ -1066,9 +1076,13 @@
                               ],
                   "image": "CP1010062.jpg",
                   "startails": [
-                                1, 1
+                                1, 1, 1
                                 ],
                   "stars": [
+                            [
+                            128,
+                             85
+                            ]
                             [
                              321,
                              119
@@ -1079,6 +1093,7 @@
                              ]
                             ],
                   "correct": [
+                              3,
                               1,
                               2
                               ]
@@ -1086,7 +1101,7 @@
                   "answers": [
                               "Is this O.K.?",
                               "I'm ready, let's go!",
-                              "Move, over i need my space.",
+                              "Move over, i need my space.",
                               "Can I have a turn?",
                               ""
                               ],
