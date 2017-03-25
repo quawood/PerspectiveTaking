@@ -27,7 +27,7 @@
                              ],
                             [
                              350,
-                            201
+                             201
                              ],
                             [
                              610,
@@ -101,9 +101,9 @@
                              33
                              ],
                             [
-                            534,
-                            71
-                            ]
+                             534,
+                             71
+                             ]
                             ],
                   "correct": [
                               3,
@@ -127,16 +127,16 @@
                               ],
                   "image": "P1010131.jpg",
                   "startails": [
-                                0,0
+                                0, 0
                                 ],
                   "stars": [
                             [
                              179, 26
                              ],
-                            [376,8]
+                            [376, 8]
                             ],
                   "correct": [
-                              2,4
+                              2, 4
                               ]
                   }, {
                   "answers": [
@@ -167,7 +167,8 @@
                              19
                              ],
                             [567,
-                             61]
+                             61
+                             ]
                             ],
                   "correct": [
                               1,
@@ -201,7 +202,7 @@
                              ],
                             [
                              491,
-                            121
+                             121
                              ]
                             ],
                   "correct": [
@@ -428,15 +429,15 @@
                               ],
                   "image": "P15a.jpg",
                   "startails": [
-                                1, 0
+                                0, 0
                                 ],
                   "stars": [
                             [
-                             190, 15
+                             348, 8
                              ],
                             [
-                             458,
-                             86
+                             420,
+                             88
                              ]
                             ],
                   "correct": [
@@ -460,13 +461,13 @@
                               ],
                   "image": "P27.jpg",
                   "startails": [
-                                0,0, 1
+                                0, 0, 1
                                 ],
                   "stars": [
                             [
-                            119,
+                             119,
                              167
-                            ],
+                             ],
                             [
                              221,
                              93
@@ -498,13 +499,13 @@
                               ],
                   "image": "P18a.jpg",
                   "startails": [
-                                0,1, 1
+                                0, 1, 1
                                 ],
                   "stars": [
                             [
-                            246,
+                             246,
                              8
-                            ],
+                             ],
                             [
                              157,
                              126
@@ -1080,9 +1081,9 @@
                                 ],
                   "stars": [
                             [
-                            128,
+                             128,
                              85
-                            ]
+                             ],
                             [
                              321,
                              119
@@ -1316,7 +1317,8 @@
                                 0,
                                 0
                                 ],
-                  "stars": [[
+                  "stars": [
+                            [
                              261,
                              42
                              ],
@@ -2142,12 +2144,12 @@
                               ""
                               ],
                   "startails": [
-                                1,0
+                                1, 0
                                 ],
                   "stars": [
                             [
                              287,
-                              95
+                             95
                              ],
                             [
                              600,
@@ -2184,7 +2186,7 @@
                              ],
                             [
                              624,
-                            138
+                             138
                              ]
                             ],
                   "correct": [
@@ -2327,7 +2329,7 @@
                              352, 16
                              ],
                             [
-                            529,
+                             529,
                              152
                              ]
                             ],
@@ -2679,7 +2681,8 @@
                              ],
                             [
                              567,
-                             61                             ]
+                             61
+                             ]
                             ],
                   "correct": [
                               1,
@@ -2897,7 +2900,7 @@
                   "image": "R1010067H.jpg",
                   "answers": ["Do you want fries with that?",
                               "That kid keeps on talking!",
-                              "...then we wnt to putt putt, and then we went...",
+                              "...then we went to putt putt, and then we went...",
                               "Look at the time!",
                               ""
                               ],
@@ -2939,7 +2942,7 @@
             "1": [{
                   "image": "RL1010050.jpg",
                   "answers": ["Ahh! I can't find anything in here.",
-                              "Man, you gotta get more orgnized.",
+                              "Man, you gotta get more organized.",
                               "He's amazing!",
                               "This kid has problems.",
                               ""
@@ -3481,7 +3484,7 @@
                               ""
                               ],
                   "startails": [
-                                1,0,0
+                                1, 0, 0
                                 ],
                   "stars": [
                             [

@@ -20,7 +20,7 @@ class ChooseProgramViewController: UIViewController {
 
     
     @IBOutlet weak var programDescription: UILabel!
-    var texts: [String] = ["Highlights interactions, expectations and safety precautions with various peers and adults in their community.", "Highlights interactions within a elementary school setting.", "Highlights interactions during structured activities related to middle/high  school in the classroom, group work and physical education.","Highlights interactions during unstructured times related to middle/high school when social rules are most challenging, in the hall, cafeteria and just hanging out."  ]
+    var texts: [String] = ["Highlights interactions, expectations and safety precautions with various peers and adults in their community.", "Highlights interactions within an elementary school setting.", "Highlights interactions during structured activities related to middle/high  school in the classroom, group work and physical education.","Highlights interactions during unstructured times related to middle/high school when social rules are most challenging, in the hall, cafeteria and just hanging out."  ]
     var images: [String] = ["MC","MSD","SR1","SR2"]
     var programNames: [String] = ["My Community", "My School Day", "School Rules 1", "School Rules 2"]
     var buttonPressed: Int!
