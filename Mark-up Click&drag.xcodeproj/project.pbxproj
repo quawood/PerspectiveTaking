@@ -12,6 +12,11 @@
 		A523733B1E79A32800D3DE50 /* ChoosePlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A523733A1E79A32800D3DE50 /* ChoosePlaceView.swift */; };
 		A52E3D461DD3D949001491E3 /* ChooseProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52E3D451DD3D949001491E3 /* ChooseProgramViewController.swift */; };
 		A54B09EF1D7FBACB00D82D49 /* CreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B09EE1D7FBACB00D82D49 /* CreateUserViewController.swift */; };
+		A56A79341E8854E50088C273 /* Choices Within Title.png in Resources */ = {isa = PBXBuildFile; fileRef = A56A792F1E8854E50088C273 /* Choices Within Title.png */; };
+		A56A79351E8854E50088C273 /* Login Screen.png in Resources */ = {isa = PBXBuildFile; fileRef = A56A79301E8854E50088C273 /* Login Screen.png */; };
+		A56A79361E8854E50088C273 /* Selections Within Category.png in Resources */ = {isa = PBXBuildFile; fileRef = A56A79311E8854E50088C273 /* Selections Within Category.png */; };
+		A56A79371E8854E50088C273 /* Title Choices.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A56A79321E8854E50088C273 /* Title Choices.pdf */; };
+		A56A79381E8854E50088C273 /* Welcome Screen-2.png in Resources */ = {isa = PBXBuildFile; fileRef = A56A79331E8854E50088C273 /* Welcome Screen-2.png */; };
 		A56F79C11E770A6F00B34BB8 /* 001.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A56F777B1E770A6E00B34BB8 /* 001.jpg */; };
 		A56F79C21E770A6F00B34BB8 /* 003.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A56F777C1E770A6E00B34BB8 /* 003.jpg */; };
 		A56F79C31E770A6F00B34BB8 /* 004.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A56F777D1E770A6E00B34BB8 /* 004.jpg */; };
@@ -689,6 +694,11 @@
 		A523733A1E79A32800D3DE50 /* ChoosePlaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoosePlaceView.swift; sourceTree = "<group>"; };
 		A52E3D451DD3D949001491E3 /* ChooseProgramViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseProgramViewController.swift; sourceTree = "<group>"; };
 		A54B09EE1D7FBACB00D82D49 /* CreateUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUserViewController.swift; sourceTree = "<group>"; };
+		A56A792F1E8854E50088C273 /* Choices Within Title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Choices Within Title.png"; sourceTree = "<group>"; };
+		A56A79301E8854E50088C273 /* Login Screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Login Screen.png"; sourceTree = "<group>"; };
+		A56A79311E8854E50088C273 /* Selections Within Category.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Selections Within Category.png"; sourceTree = "<group>"; };
+		A56A79321E8854E50088C273 /* Title Choices.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Title Choices.pdf"; sourceTree = "<group>"; };
+		A56A79331E8854E50088C273 /* Welcome Screen-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Welcome Screen-2.png"; sourceTree = "<group>"; };
 		A56F777B1E770A6E00B34BB8 /* 001.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 001.jpg; sourceTree = "<group>"; };
 		A56F777C1E770A6E00B34BB8 /* 003.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 003.jpg; sourceTree = "<group>"; };
 		A56F777D1E770A6E00B34BB8 /* 004.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 004.jpg; sourceTree = "<group>"; };
@@ -2043,6 +2053,11 @@
 		A5C137871E77A35D00D78344 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A56A792F1E8854E50088C273 /* Choices Within Title.png */,
+				A56A79301E8854E50088C273 /* Login Screen.png */,
+				A56A79311E8854E50088C273 /* Selections Within Category.png */,
+				A56A79321E8854E50088C273 /* Title Choices.pdf */,
+				A56A79331E8854E50088C273 /* Welcome Screen-2.png */,
 				A59461BD1E834DCC00E7D60F /* welcomeGraphic.jpg */,
 				A5C723C21E7973BE00D07C99 /* playButton.png */,
 				A58D38601E78C6CF00D97C17 /* boy.png */,
@@ -2512,6 +2527,7 @@
 				A56F79F41E770A6F00B34BB8 /* DCP0012.jpg in Resources */,
 				A56F7B681E770A7000B34BB8 /* R1010066H.jpg in Resources */,
 				A56F7BD41E770A7000B34BB8 /* RR1010068.jpg in Resources */,
+				A56A79341E8854E50088C273 /* Choices Within Title.png in Resources */,
 				A56F7B4F1E770A6F00B34BB8 /* R1010047.jpg in Resources */,
 				A56F7A7B1E770A6F00B34BB8 /* P1010060.jpg in Resources */,
 				A56F7A9B1E770A6F00B34BB8 /* P1010092.jpg in Resources */,
@@ -2656,6 +2672,7 @@
 				A56F7AF61E770A6F00B34BB8 /* pick4lunchlady2.jpg in Resources */,
 				A56F7B2A1E770A6F00B34BB8 /* R1010021.jpg in Resources */,
 				A56F7A7E1E770A6F00B34BB8 /* P1010063.jpg in Resources */,
+				A56A79371E8854E50088C273 /* Title Choices.pdf in Resources */,
 				A56F7B8E1E770A7000B34BB8 /* R1010094.jpg in Resources */,
 				A56F7B101E770A6F00B34BB8 /* R1010007.jpg in Resources */,
 				A56F7A551E770A6F00B34BB8 /* P1010022.jpg in Resources */,
@@ -2672,6 +2689,7 @@
 				A56F7B701E770A7000B34BB8 /* R1010076.jpg in Resources */,
 				A56F79D71E770A6F00B34BB8 /* buyerwait.jpg in Resources */,
 				A56F7AA11E770A6F00B34BB8 /* P1010098.jpg in Resources */,
+				A56A79361E8854E50088C273 /* Selections Within Category.png in Resources */,
 				A56F7B841E770A7000B34BB8 /* R1010088.jpg in Resources */,
 				A56F7B9D1E770A7000B34BB8 /* R1010105L.jpg in Resources */,
 				A56F7B1E1E770A6F00B34BB8 /* R1010015.jpg in Resources */,
@@ -2799,6 +2817,7 @@
 				A56F79F31E770A6F00B34BB8 /* DCP0011a.jpg in Resources */,
 				A56F7A7C1E770A6F00B34BB8 /* P1010061.jpg in Resources */,
 				A56F7B9B1E770A7000B34BB8 /* R1010103L.jpg in Resources */,
+				A56A79381E8854E50088C273 /* Welcome Screen-2.png in Resources */,
 				A56F79DE1E770A6F00B34BB8 /* CP1010065.jpg in Resources */,
 				A59461C21E83561500E7D60F /* thought.png in Resources */,
 				A56F7BEE1E770A7000B34BB8 /* shoes.jpg in Resources */,
@@ -2836,6 +2855,7 @@
 				A56F7B3E1E770A6F00B34BB8 /* R1010032.jpg in Resources */,
 				A56F79CE1E770A6F00B34BB8 /* applineuprecess.jpg in Resources */,
 				A56F7A2E1E770A6F00B34BB8 /* lunch6.jpg in Resources */,
+				A56A79351E8854E50088C273 /* Login Screen.png in Resources */,
 				A56F7BB51E770A7000B34BB8 /* RL1010032.jpg in Resources */,
 				A56F7A4D1E770A6F00B34BB8 /* P1010014.jpg in Resources */,
 				A56F79D41E770A6F00B34BB8 /* blankscreen.jpg in Resources */,
