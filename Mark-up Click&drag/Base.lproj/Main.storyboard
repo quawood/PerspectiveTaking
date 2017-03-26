@@ -26,20 +26,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOh-sS-WGN">
-                                <rect key="frame" x="20" y="1310" width="129" height="36"/>
-                                <color key="backgroundColor" red="0.047058823530000002" green="0.63921568630000003" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="129" id="Cld-AW-F9u"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
-                                <state key="normal" title="+ New User">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="newUserBtn:" destination="Lwh-yw-5pO" eventType="touchUpInside" id="bcb-e1-iL9"/>
-                                </connections>
-                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Login Screen.png" translatesAutoresizingMaskIntoConstraints="NO" id="k2v-hz-mPN">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="46g-9L-W8T">
                                 <rect key="frame" x="17" y="155" width="990" height="528"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -103,6 +93,20 @@
                                     <outlet property="delegate" destination="Lwh-yw-5pO" id="uP6-rg-d6f"/>
                                 </connections>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOh-sS-WGN">
+                                <rect key="frame" x="76" y="1258" width="237" height="36"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="129" id="Cld-AW-F9u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="+ New User">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="newUserBtn:" destination="Lwh-yw-5pO" eventType="touchUpInside" id="bcb-e1-iL9"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xPD-Tr-wCJ">
                                 <rect key="frame" x="0.0" y="1" width="1" height="0.0"/>
                                 <constraints>
@@ -113,28 +117,19 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0g1-jb-LIi">
-                                <rect key="frame" x="950" y="1310" width="54" height="36"/>
-                                <color key="backgroundColor" red="0.047058823530000002" green="0.63921568630000003" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0g1-jb-LIi">
+                                <rect key="frame" x="854" y="1258" width="103" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="54" id="Kap-bV-M43"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal" title="Info">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="g0H-Ld-XIc" kind="showDetail" id="hMg-f4-1ia"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ITr-2I-Ipl">
-                                <rect key="frame" x="66" y="915" width="892" height="261"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <string key="text">Please create a new user by clicking on the NEW USER tab at the bottom of the page. If you have played before, click on your existing username. To delete or edit a user or get more information on scores, click on info at the bottom of the page. </string>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
-                                <color key="textColor" red="1" green="0.20392156859999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.63921568630000003" green="0.90980392160000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -158,7 +153,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4wn-4X-C4J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3248" y="-1025"/>
+            <point key="canvasLocation" x="3247.8515625" y="-1025.1830161054172"/>
         </scene>
         <!--Quiz View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -470,6 +465,10 @@ well. </string>
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Welcome Screen-2.png" translatesAutoresizingMaskIntoConstraints="NO" id="67x-6r-16Z">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7V-YL-rOe">
                                 <rect key="frame" x="420" y="986" width="193" height="149"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -484,10 +483,6 @@ well. </string>
                                     <segue destination="Lwh-yw-5pO" kind="showDetail" id="Ylt-S2-eo7"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="welcomeGraphic.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="67x-6r-16Z">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="0.94528574486301364" colorSpace="calibratedWhite"/>
                     </view>
@@ -508,6 +503,10 @@ well. </string>
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Title Choices.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bdt-LX-VQw">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ngL-s5-hcI">
                                 <rect key="frame" x="20" y="171" width="984" height="792"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -645,7 +644,7 @@ well. </string>
                 <exit id="BXV-se-6yT" userLabel="Exit" sceneMemberID="exit"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0HM-rZ-xge" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4012" y="-794"/>
+            <point key="canvasLocation" x="4118.5546875" y="-1025.1830161054172"/>
         </scene>
         <!--Info Page Controller View Controller-->
         <scene sceneID="bxx-pP-0c8">
@@ -1279,6 +1278,7 @@ Qualan Woodard</string>
     </scenes>
     <resources>
         <image name="Ideio_logo.png" width="265" height="189"/>
+        <image name="Login Screen.png" width="750" height="1000"/>
         <image name="MC.JPG" width="300" height="300"/>
         <image name="MSD.JPG" width="300" height="300"/>
         <image name="Menu.png" width="25" height="25"/>
@@ -1286,6 +1286,8 @@ Qualan Woodard</string>
         <image name="Refresh.png" width="128" height="128"/>
         <image name="SR1.JPG" width="300" height="300"/>
         <image name="SR2.JPG" width="300" height="300"/>
+        <image name="Title Choices.png" width="750" height="1000"/>
+        <image name="Welcome Screen-2.png" width="750" height="1000"/>
         <image name="boy.png" width="512" height="495"/>
         <image name="leadership.png" width="128" height="128"/>
         <image name="socialskillbuildercycle.png" width="300" height="300"/>
@@ -1297,9 +1299,8 @@ Qualan Woodard</string>
         <image name="thought.png" width="300" height="255"/>
         <image name="thoughtwt.png" width="300" height="255"/>
         <image name="user.png" width="64" height="64"/>
-        <image name="welcomeGraphic.jpg" width="900" height="1200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Qda-fx-DcR"/>
+        <segue reference="Ylt-S2-eo7"/>
     </inferredMetricsTieBreakers>
 </document>
