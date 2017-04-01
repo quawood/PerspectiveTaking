@@ -448,8 +448,8 @@
                   "answers": [
                               "That is funny.",
                               "I want to go NOW!",
-                              "Why isn't he listening?",
-                              "Whoa, be careful!",
+                              "That boy should listen to his da",
+                              "Hey, get back here!",
                               ""
                               ],
                   "bubbles": [
@@ -461,16 +461,16 @@
                               ],
                   "image": "P27.jpg",
                   "startails": [
-                                0, 0, 1
+                                0, 1, 1
                                 ],
                   "stars": [
                             [
-                             119,
-                             167
+                             124,
+                             164
                              ],
                             [
-                             221,
-                             93
+                             129,
+                             102
                              ],
                             [
                              568,
@@ -652,8 +652,8 @@
                              83
                              ],
                             [
-                             241,
-                             28
+                             405,
+                             56
                              ],
                             [
                              532,
@@ -668,9 +668,9 @@
                   }, {
                   "answers": [
                               "What else do you want to see?",
-                              "Oh no, it's sold out.",
-                              "But I really wanted to see only that movie.",
-                              "I don't like this movie.",
+                              "I am so bummed the movie is sold out.",
+                              "Did you get an A on the test?",
+                              "I wish it wasn't raining.",
                               ""
                               ],
                   "bubbles": [
@@ -1200,14 +1200,14 @@
                   }, {
                   "answers": [
                               "It's a nice day.",
-                              "Why won't she share with me?",
+                              "Don't push me!",
                               "Leave me alone!",
                               "You are right!",
                               ""
                               ],
                   "bubbles": [
                               "s",
-                              "t",
+                              "s",
                               "s",
                               "s",
                               ""
@@ -1406,7 +1406,7 @@
         "2": {
             "1": [{
                   "answers": [
-                              "These kids are always messing around in line ",
+                              "These kids always mess around in line ",
                               "Do you know what's for lunch?",
                               "Get back in your space!",
                               "I wonder how I am doing in math?",
@@ -1441,7 +1441,7 @@
                   "answers": [
                               "I know the answer",
                               "You are NOT taking my space in line!",
-                              "Here we go again! They always fight for the front of the line.",
+                              "They always fight for the front of the line!",
                               "I like your new glasses.",
                               ""
                               ],
@@ -1574,9 +1574,9 @@
                   ],
             "2": [{
                   "answers": [
-                              "I was playing here first!",
-                              "I like playing car with you.",
-                              "He's been using the driving wheel all recess!",
+                              "I hope she doesn't want to o monkey bars next!",
+                              "I'm having a great time!",
+                              "I wonder what he wants to play on?",
                               "Let's go in, it's raining.",
                               ""
                               ],
@@ -1800,14 +1800,14 @@
                               ]
                   }, {
                   "answers": [
-                              "I am hungry for that apple.",
-                              "Ms. Smith, I really like that book you have on your desk.",
+                              "Are you my sister?",
+                              "Make sure you Don't do your homework.",
                               "What have I told you about bothering your classmate?",
                               "I didn't think I was talking that much.",
                               ""
                               ],
                   "bubbles": [
-                              "t",
+                              "s",
                               "s",
                               "s",
                               "t",
@@ -1965,9 +1965,9 @@
                               ]
                   }, {
                   "answers": [
-                              "I am so bored of waiting here.",
+                              "I am so tired of waiting here.",
                               "Did you see that squirrel?",
-                              "I am so hungry. I can't wait for lunch!",
+                              "Do you want to sit with me?",
                               "I love to stand in line and wait.",
                               ""
                               ],
@@ -1984,8 +1984,8 @@
                                 ],
                   "stars": [
                             [
-                             102,
-                             227
+                             170,
+                             71
                              ],
                             [
                              433,
@@ -2105,14 +2105,14 @@
                               "I am so proud of these kids!",
                               "They better start listening!",
                               "This deserves a party.",
-                              "I am very tired today.",
+                              "I feel great!",
                               ""
                               ],
                   "bubbles": [
                               "t",
                               "t",
                               "s",
-                              "t",
+                              "s",
                               ""
                               ],
                   "startails": [
@@ -2196,16 +2196,16 @@
                   }, {
                   "image": "R1010119.jpg",
                   "answers": [
-                              "You REALLY know the answers!",
+                              "I should really put this magazine away.",
                               "We should really put this away.",
-                              "Oops!",
+                              "I am so embarassed.",
                               "Girls, class has started!",
                               ""
                               ],
                   "bubbles": [
+                              "1",
                               "s",
-                              "s",
-                              "s",
+                              "t",
                               "s",
                               ""
                               ],
@@ -2304,15 +2304,15 @@
                   "image": "R1010121.jpg",
                   "answers": [
                               "You guys are a good team!",
-                              "Come join the group.",
-                              "This is a good book.",
-                              "Why aren't you following my instructions?",
+                              "Come join our group",
+                              "I like to work alone",
+                              "Excuse me, why are you not with your group?",
                               ""
                               ],
                   "bubbles": [
                               "s",
                               "s",
-                              "t",
+                              "s",
                               "s",
                               ""
                               ],
@@ -2322,8 +2322,8 @@
                   
                   "stars": [
                             [
-                             104,
-                             126
+                             97,
+                             65
                              ],
                             [
                              352, 16
@@ -2417,14 +2417,14 @@
                   "answers": [
                               "He is such a good player.",
                               "I don't want to be on their team",
-                              "We're going to lose if you don't come!",
+                              "I hope we get him on our team.",
                               "What's for lunch.",
                               ""
                               ],
                   "bubbles": [
                               "t",
                               "t",
-                              "s",
+                              "t",
                               "t",
                               ""
                               ],
@@ -2582,8 +2582,8 @@
                              ]
                             ],
                   "correct": [
-                              2,
-                              4
+                              4,
+                              2
                               ]
                   }],
             "4": [{
@@ -2657,10 +2657,10 @@
                               ]
                   }, {
                   "image": "RR1010077.jpg",
-                  "answers": ["Go in . . . we all have.",
+                  "answers": ["Come on, do this prank with us.",
                               "That sounds cool!",
-                              "No, I don't think so! I'm outta here!",
-                              "Come on, just do it!",
+                              "No, thats mean. I'm outta here!",
+                              "We don't want you to get in trouble.",
                               ""
                               ],
                   "bubbles": [
@@ -2761,7 +2761,7 @@
                   "answers": [
                               "Stop pushing!",
                               "That is really nice!",
-                              "I gotta get through here.",
+                              "I gotta get through here!",
                               "Whant to be friends?",
                               ""
                               ],
@@ -2794,7 +2794,7 @@
                   "image": "R1010055H.jpg",
                   "answers": [
                               "You are so cool.",
-                              "What a freak!",
+                              "Wow! He is really upset!",
                               "What time is it?",
                               "This is too loud!",
                               ""
@@ -2900,7 +2900,7 @@
                   "image": "R1010067H.jpg",
                   "answers": ["Do you want fries with that?",
                               "That kid keeps on talking!",
-                              "...then we went to putt putt, and then we went...",
+                              "Blah, blah, blah...",
                               "Look at the time!",
                               ""
                               ],
@@ -3195,7 +3195,7 @@
                   }, {
                   "image": "R1010107L.jpg",
                   "answers": [
-                              "Uh Oh! That boy is getting frustrated.",
+                              "Wow that boy looks tired of listening to him.",
                               "Have you seen my dog?",
                               "I know everything about that.",
                               "Aagh! He's been talking to me for 5 minutes straight.",
@@ -3266,7 +3266,7 @@
                   }, {
                   "image": "R1010109L.jpg",
                   "answers": [
-                              "Let me see that magazine.",
+                              "I know all about that guy in your magazine.",
                               "Hey, want to see my new book?",
                               "Back off!",
                               "Do you want some food?",
@@ -3405,7 +3405,7 @@
                   "image": "R1010093.jpg",
                   "answers": [
                               "MOVE OVER!",
-                              "What are you doing?",
+                              "There is no more room here!",
                               "You are my best friend.",
                               "",
                               ""
@@ -3772,7 +3772,7 @@
                   "answers": ["What is her problem?",
                               "I am having so much fun!",
                               "Get out of my way!",
-                              "Why are you making that face at us?",
+                              "That teacher is so boring!",
                               ""
                               ],
                   "bubbles": [

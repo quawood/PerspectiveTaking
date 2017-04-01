@@ -10,10 +10,9 @@ import UIKit
 import MessageUI
 class InfoPageControllerViewController: UIViewController, MFMailComposeViewControllerDelegate {
 
-    @IBOutlet weak var imagesView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        imagesView.layer.cornerRadius = 8
+
 
         // Do any additional setup after loading the view.
     }

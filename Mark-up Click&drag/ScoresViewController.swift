@@ -11,9 +11,14 @@ import UIKit
 import MessageUI
 class ScoresViewController: UIViewController, MFMailComposeViewControllerDelegate {
     @IBOutlet weak var scoresTableView: UITableView!
-    @IBOutlet weak var scoresLabel: UILabel!
+   
+    var imageNames:[String] = ["MC.png","MSD.png","SR1.png","SR2.png"]
+    
+    @IBOutlet weak var imageIcon: UIImageView!
+    
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var realView: UIView!
+    @IBOutlet weak var backgroundGraphic: UIImageView!
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first!
@@ -23,11 +28,8 @@ class ScoresViewController: UIViewController, MFMailComposeViewControllerDelegat
     }
     
     override func viewDidLoad() {
-        scoresTableView.layer.borderColor = UIColor(red: 23/255, green: 57/255, blue: 100/255, alpha: 1.0).cgColor
-        scoresTableView.layer.borderWidth = 2
-        scoresTableView.layer.cornerRadius = 5
-        scoresLabel.text = "Scores for \(names[Int(prog)!-1])"
-        containerView.layer.cornerRadius = 15
+        backgroundGraphic.image = UIImage(named: "Scores-\(imageNames[Int(prog)!-1])")
+        imageIcon.image = UIImage(named: imageNames[Int(prog)!-1])
 
     }
     

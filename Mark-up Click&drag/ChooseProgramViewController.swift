@@ -10,18 +10,14 @@ import UIKit
 var names: [String] = ["My Community", "My School Day", "School Rules 1", "School Rules 2"]
 var grandProgram: String!
 class ChooseProgramViewController: UIViewController {
-    @IBOutlet weak var programImage: UIImageView!
-    @IBOutlet weak var programName: UILabel!
-    @IBOutlet weak var informationView: UIView!
-    @IBOutlet weak var contentView: UIView!
     @IBOutlet var chooseButtons: [UIButton]!
-    @IBOutlet weak var grandContainer: UIView!
+
     let hightlightColor: UIColor = UIColor(red:0.76, green:0.29, blue:0.00, alpha:1.0)
 
+    @IBOutlet weak var goNextbutton: UIButton!
     
     @IBOutlet weak var programDescription: UILabel!
     var texts: [String] = ["Highlights interactions, expectations and safety precautions with various peers and adults in their community.", "Highlights interactions within an elementary school setting.", "Highlights interactions during structured activities related to middle/high  school in the classroom, group work and physical education.","Highlights interactions during unstructured times related to middle/high school when social rules are most challenging, in the hall, cafeteria and just hanging out."  ]
-    var images: [String] = ["MC","MSD","SR1","SR2"]
     var programNames: [String] = ["My Community", "My School Day", "School Rules 1", "School Rules 2"]
     var buttonPressed: Int!
     var container: UserViewController!
@@ -40,11 +36,6 @@ class ChooseProgramViewController: UIViewController {
             button.addTarget(self, action: #selector(highlighta(_ :)), for: .touchUpInside)
         }
         
-        for view in informationView.subviews {
-            view.isHidden = true
-        }
-        
-        contentView.layer.cornerRadius = 8
         
        /* informationView.layer.cornerRadius = 4
         informationView.layer.borderWidth = 2
@@ -57,12 +48,6 @@ class ChooseProgramViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let touch = touches.first!
-        if !grandContainer.frame.contains(touch.location(in: self.view)) {
-            self.performSegue(withIdentifier: "backUser", sender: self)
-        }
-    }
     
 
     /*
@@ -74,52 +59,48 @@ class ChooseProgramViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    @IBAction func goToHomeButtonAct(_ sender: Any) {
-        let presenter = self.presentingViewController
-        self.dismiss(animated: true, completion: {
-            presenter?.performSegue(withIdentifier: "goToHome", sender: presenter)
-            print(presenter?.title)
-            
-        })
-        
-    }
+
     
     func highlighta(_ sender: UIButton) {
         
         for button in chooseButtons {
             if buttonPressed != nil {
                 if button.tag == buttonPressed {
-                    button.superview?.loseBorder()
+                    button.layer.borderWidth = 0
                 }
+            } else {
+                goNextbutton.backgroundColor = UIColor.clear
+                goNextbutton.isUserInteractionEnabled = true
             }
             
         }
-        
-        for view in informationView.subviews {
-            view.isHidden = false
-        }
+       
         //for view in contentView.subviews {
         //    view.loseBorder()
         //}
-        let borderColor = UIColor(red:1.00, green:0.84, blue:0.04, alpha:1.0)
+        //let borderColor = UIColor(red:1.00, green:0.84, blue:0.04, alpha:1.0)
         
         //sender.superview?.highlightBorder(borderColor: borderColor, width: 2)
+        sender.borderWidth = 3
+        sender.borderColor = UIColor.black
         
         let tagNum = sender.tag - 1
-        let imageName = images[tagNum]
-        programImage.image = UIImage(named:"\(imageName).JPG")
-        programName.text = programNames[tagNum]
+
         programDescription.text = texts[tagNum]
         buttonPressed = sender.tag
-        grandProgram = String(buttonPressed)
         
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToHome" {
+            let destinationVC = segue.destination as! HomeViewController
+            destinationVC.program = String(buttonPressed)
+        }
+    }
 
 }
 
-extension UIView {
+/*extension UIView {
     func highlightBorder(borderColor: UIColor, width: CGFloat) {
         let leftBorder = CALayer()
         leftBorder.frame = CGRect(x: 0,y: 0,width: width ,height: bounds.height)
@@ -154,5 +135,5 @@ extension UIView {
             
         }
     }
-}
+}*/
 
