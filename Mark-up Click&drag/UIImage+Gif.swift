@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import ImageIO
+import AVFoundation
 
 extension UIImageView {
     
@@ -199,4 +200,38 @@ extension UIImage {
         return animation
     }
     
+}
+
+
+class AudioViewController: UIViewController{
+    var audioPlayer:AVAudioPlayer!
+    @IBInspectable var audioPlayerName: String? {
+didSet {
+    playAudio(fileName: audioPlayerName!)
+}
+    }
+
+    func playAudio(fileName: String) {
+        if audioPlayer != nil {
+            if audioPlayer.isPlaying {
+                audioPlayer.stop()
+            }
+        }
+        
+        let url = Bundle.main.url(forResource: fileName, withExtension: "wav")!
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            guard let player = audioPlayer else { return }
+            
+            player.prepareToPlay()
+            player.play()
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       audioPlayer.stop()
+    }
 }

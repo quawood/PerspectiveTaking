@@ -128,6 +128,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Users" id="H5t-ii-fWp"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="audioPlayerName" value="UserScreenCAT"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="collectionView" destination="46g-9L-W8T" id="jRz-pb-xlg"/>
                         <segue destination="BJI-N2-wak" kind="showDetail" identifier="toNext" customClass="CustomSegue" customModule="Mark_up_Click_drag" customModuleProvider="target" id="ZPB-Sf-bRN"/>
@@ -396,6 +399,9 @@ well. </string>
                     <navigationItem key="navigationItem" id="Aom-98-TKq"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="750" height="750"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="audioPlayerName" value="Click and drag"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="checkAnsBtn" destination="JbX-cC-leA" id="CXn-KV-2MC"/>
                         <outlet property="clearAnswerBtn" destination="w9X-Wn-tB9" id="jrf-QZ-4Wf"/>
@@ -427,7 +433,7 @@ well. </string>
                         <outletCollection property="answers" destination="FA7-vu-A35" collectionClass="NSMutableArray" id="Bru-Ps-xgU"/>
                         <outletCollection property="answers" destination="w0X-H8-lJu" collectionClass="NSMutableArray" id="vW0-hg-6cw"/>
                         <outletCollection property="answers" destination="epc-cz-mmy" collectionClass="NSMutableArray" id="wAm-He-DP5"/>
-                        <segue destination="CfM-zo-86q" kind="unwind" identifier="toHomefromQuiz" unwindAction="unwindToHome:" id="UAf-c2-biE"/>
+                        <segue destination="CfM-zo-86q" kind="unwind" identifier="toHomefromQuiz" unwindAction="unwindToHome:" id="HY8-As-1Nb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -435,10 +441,10 @@ well. </string>
             </objects>
             <point key="canvasLocation" x="6105.46875" y="-1045.3879941434845"/>
         </scene>
-        <!--View Controller-->
+        <!--Audio View Controller-->
         <scene sceneID="TZL-hZ-kFx">
             <objects>
-                <viewController modalPresentationStyle="currentContext" id="4sW-Py-xYL" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="currentContext" id="4sW-Py-xYL" customClass="AudioViewController" customModule="Mark_up_Click_drag" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bmZ-kT-SS5"/>
                         <viewControllerLayoutGuide type="bottom" id="cVo-aw-oNw"/>
@@ -468,6 +474,9 @@ well. </string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="0.94528574486301364" colorSpace="calibratedWhite"/>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="audioPlayerName" value="WelcomeCAT"/>
+                    </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xBo-lt-d5R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -529,7 +538,7 @@ well. </string>
                                 <rect key="frame" x="72" y="73" width="116" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="BXV-se-6yT" kind="unwind" unwindAction="unwindToUsers:" id="SI4-wC-etW"/>
+                                    <action selector="backSegue:" destination="BJI-N2-wak" eventType="touchUpInside" id="YPh-H9-fxF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qwk-BO-4bR">
@@ -546,6 +555,9 @@ well. </string>
                             </button>
                         </subviews>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="audioPlayerName" value="Choose a title to play"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="goNextbutton" destination="qwk-BO-4bR" id="sfW-yq-h2H"/>
                         <outlet property="programDescription" destination="Bcp-a4-wsE" id="F0y-2U-N1P"/>
@@ -554,12 +566,13 @@ well. </string>
                         <outletCollection property="chooseButtons" destination="cok-0A-6S6" collectionClass="NSMutableArray" id="FiF-YF-luG"/>
                         <outletCollection property="chooseButtons" destination="Blp-Jb-i8R" collectionClass="NSMutableArray" id="80G-kW-qdI"/>
                         <segue destination="BXV-se-6yT" kind="unwind" identifier="backUser" unwindAction="unwindToUsers:" id="XRO-wf-p4f"/>
+                        <segue destination="Lwh-yw-5pO" kind="showDetail" identifier="back" id="hCa-Rd-w3w"/>
                     </connections>
                 </viewController>
                 <exit id="BXV-se-6yT" userLabel="Exit" sceneMemberID="exit"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0HM-rZ-xge" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4118.5546875" y="-1025.1830161054172"/>
+            <point key="canvasLocation" x="4075" y="-1025"/>
         </scene>
         <!--Info Page Controller View Controller-->
         <scene sceneID="bxx-pP-0c8">
@@ -746,26 +759,26 @@ Qualan Woodard</string>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ScoresCell.png" translatesAutoresizingMaskIntoConstraints="NO" id="VWr-NP-9JV">
-                                                            <rect key="frame" x="0.0" y="0.0" width="480" height="66"/>
+                                                            <rect key="frame" x="-1" y="0.0" width="480" height="66"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Community" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0e-zU-c5u">
-                                                            <rect key="frame" x="141" y="8" width="199" height="21"/>
+                                                            <rect key="frame" x="141" y="8" width="198" height="20"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                                             <color key="textColor" red="0.25241610409999998" green="0.58784610029999995" blue="0.82482314109999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VwJ-PO-0kZ">
-                                                            <rect key="frame" x="219" y="37" width="42" height="20"/>
+                                                            <rect key="frame" x="219" y="37" width="41" height="21"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                             <color key="textColor" red="0.25241610409999998" green="0.58784610029999995" blue="0.82482314109999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1.5.16" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ee-Kv-Kti">
-                                                            <rect key="frame" x="316" y="37" width="84" height="20"/>
+                                                            <rect key="frame" x="316" y="37" width="83" height="21"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -841,7 +854,7 @@ Qualan Woodard</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="XK4-Vt-zlX" kind="embed" id="khS-Du-FYl"/>
+                                    <segue destination="XK4-Vt-zlX" kind="embed" identifier="openProgram" id="khS-Du-FYl"/>
                                 </connections>
                             </containerView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MC.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="SBE-5P-JT7">
@@ -858,13 +871,13 @@ Qualan Woodard</string>
                                     <color key="titleShadowColor" red="0.90912730109999995" green="0.32133343520000002" blue="0.33450056039999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BJI-N2-wak" kind="showDetail" customClass="CustomSegue" customModule="Mark_up_Click_drag" customModuleProvider="target" id="OdL-Wz-jbi"/>
+                                    <segue destination="ePJ-9y-YJu" kind="unwind" unwindAction="unwindToChoose:" id="PPF-rv-FkM"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RbW-br-EXy">
                                 <rect key="frame" x="443" y="1192" width="139" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.047058823530000002" green="0.63921568630000003" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.14642906188964844" green="0.56171411275863647" blue="0.74914443492889404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
                                 <state key="normal" title="Go!">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -913,7 +926,7 @@ Qualan Woodard</string>
                                 <size key="shadowOffset" width="3" height="3"/>
                             </label>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="kLm-Gj-5lM">
-                                <rect key="frame" x="52" y="232" width="37" height="37"/>
+                                <rect key="frame" x="590" y="1201" width="37" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="color" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
@@ -921,6 +934,9 @@ Qualan Woodard</string>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="mTf-Ad-GIl"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="audioPlayerName" value="Please click on a scenerio"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="activityIndicator" destination="kLm-Gj-5lM" id="3iU-2K-Whm"/>
                         <outlet property="contentView" destination="fF4-nc-5xU" id="qm8-hG-cvu"/>
@@ -931,6 +947,7 @@ Qualan Woodard</string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zV6-IW-0wk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ePJ-9y-YJu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="5064.84375" y="-1025.1830161054172"/>
         </scene>
@@ -1046,7 +1063,7 @@ Qualan Woodard</string>
                         <viewControllerLayoutGuide type="bottom" id="nK4-Ni-CaR"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="BdR-QS-LqS">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="870"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </view>
                 </viewController>
@@ -1164,6 +1181,6 @@ Qualan Woodard</string>
         <image name="user.png" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="OdL-Wz-jbi"/>
+        <segue reference="hCa-Rd-w3w"/>
     </inferredMetricsTieBreakers>
 </document>

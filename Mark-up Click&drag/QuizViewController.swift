@@ -13,7 +13,7 @@ import CoreData
 import Foundation
 
 
-class QuizViewController: UIViewController, UIPopoverPresentationControllerDelegate{
+class QuizViewController: AudioViewController, UIPopoverPresentationControllerDelegate{
     var placeString: String!
     @IBOutlet weak var placeLabel: UILabel!
     @IBOutlet weak var sceneView: UIView!
@@ -51,7 +51,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
 
     var turn: Int = 1
     var animation:UIImageView!
-    var audioPlayer:AVAudioPlayer!
+
     
     // JSON Setup
     var json: [String:AnyObject]!
@@ -243,7 +243,6 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
         }))
         alertConrtoller.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action: UIAlertAction!) in
             self.saveState()
-            self.audioPlayer.stop()
             self.performSegue(withIdentifier: "toHomefromQuiz", sender: self)
         }))
         present(alertConrtoller, animated: true, completion: nil)
@@ -295,7 +294,6 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
         super.viewDidLoad()
         
     
-       playSound(filename: "CnDInstructions")
         
         xRat  = Float(self.view.bounds.width)/469
 
@@ -408,17 +406,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
     }
     
     func playSound(filename: String) {
-        let url = Bundle.main.url(forResource: filename, withExtension: "mp3")!
-        
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: url)
-            guard let player = audioPlayer else { return }
-            
-            player.prepareToPlay()
-            player.play()
-        } catch let error {
-            print(error.localizedDescription)
-        }
+        self.playAudio(fileName: filename)
     }
 
 
@@ -566,6 +554,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
     }
     
     func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+        self.audioPlayer.stop()
         if segue.identifier == "showMenu" {
             
             let vc = segue.destination

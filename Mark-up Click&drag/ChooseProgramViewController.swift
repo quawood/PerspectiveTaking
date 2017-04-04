@@ -9,7 +9,7 @@
 import UIKit
 var names: [String] = ["My Community", "My School Day", "School Rules 1", "School Rules 2"]
 var grandProgram: String!
-class ChooseProgramViewController: UIViewController {
+class ChooseProgramViewController: AudioViewController {
     @IBOutlet var chooseButtons: [UIButton]!
 
     let hightlightColor: UIColor = UIColor(red:0.76, green:0.29, blue:0.00, alpha:1.0)
@@ -42,7 +42,9 @@ class ChooseProgramViewController: UIViewController {
         informationView.layer.borderColor = UIColor(red:1.00, green:0.84, blue:0.04, alpha:1.0).cgColor*/
         // Do any additional setup after loading the view.
     }
-
+    @IBAction func unwindToChoose(_ segue: UIStoryboardSegue) {
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -59,10 +61,14 @@ class ChooseProgramViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    @IBAction func backSegue(_ sender: Any) {
+        performSegue(withIdentifier: "back", sender: self)
+    }
     
     func highlighta(_ sender: UIButton) {
-        
+        let tagNum = sender.tag - 1
+        self.playAudio(fileName: names[tagNum])
         for button in chooseButtons {
             if buttonPressed != nil {
                 if button.tag == buttonPressed {
@@ -81,20 +87,22 @@ class ChooseProgramViewController: UIViewController {
         //let borderColor = UIColor(red:1.00, green:0.84, blue:0.04, alpha:1.0)
         
         //sender.superview?.highlightBorder(borderColor: borderColor, width: 2)
-        sender.borderWidth = 3
+        sender.borderWidth = 5
         sender.borderColor = UIColor.black
         
-        let tagNum = sender.tag - 1
-
+        
+        
         programDescription.text = texts[tagNum]
         buttonPressed = sender.tag
         
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        self.audioPlayer.stop()
         if segue.identifier == "goToHome" {
             let destinationVC = segue.destination as! HomeViewController
             destinationVC.program = String(buttonPressed)
+            
         }
     }
 

@@ -90,35 +90,16 @@ class ProgramViewController : UIViewController {
          customView.removeFromSuperview()
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let touch = touches.first
-        for view in customView.subviews {
-            if view.frame.contains((touch?.location(in: self.view))!) {
-                break
-            }
-            
-            for view in customView.subviews {
-                if let cpview = view as? ChoosePlaceView{
-                    cpview.layer.borderColor = UIColor.white.cgColor
-                    cpview.layer.borderWidth = 0
-                    container.goNextButton.isHidden = true 
-                    
-                    
-                }
-                
-                }
-
-        }
-    }
-    
     func choosePlace(_ sender: UIButton) {
      
         container.place = String(sender.tag)
         container.placeString = sender.titleLabel?.text
         
        for view in customView.subviews {
-                view.layer.borderColor = UIColor.white.cgColor
-                view.layer.borderWidth = 0
+        if let cpview = view as? ChoosePlaceView {
+            cpview.placeButton.setTitleColor(UIColor.white, for: .normal)
+        }
+        
 
         for view in customView.subviews {
                 if let cpview = view as? ChoosePlaceView {
@@ -128,8 +109,7 @@ class ProgramViewController : UIViewController {
                         } else {
                             container.randomNum = 1
                         }
-                        cpview.layer.borderColor = UIColor(red:0.4, green:0.4, blue:0.4, alpha:1.0).cgColor
-                        cpview.layer.borderWidth = 4
+                        cpview.placeButton.setTitleColor(UIColor.red, for: .normal)
                     }
                     
                 

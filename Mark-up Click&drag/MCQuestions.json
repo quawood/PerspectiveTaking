@@ -448,7 +448,7 @@
                   "answers": [
                               "That is funny.",
                               "I want to go NOW!",
-                              "That boy should listen to his da",
+                              "That boy should listen to his dad",
                               "Hey, get back here!",
                               ""
                               ],
@@ -461,7 +461,7 @@
                               ],
                   "image": "P27.jpg",
                   "startails": [
-                                0, 1, 1
+                                1, 1, 1
                                 ],
                   "stars": [
                             [
@@ -633,7 +633,7 @@
                               "NO! It is sold out. We will have to come back.",
                               "Look at him, what's his problem.",
                               "You're my friend.",
-                              "Can we see the later movie? "
+                              "PLEASE...Can we see the later movie? "
                               ],
                   "bubbles": [
                               "s",
@@ -1062,7 +1062,7 @@
                   }],
             "7": [{
                   "answers": [
-                              "I said I would sit here!",
+                              "This is MY seat!",
                               "I wish he would move over!",
                               "Why are they fighting?",
                               "Let's have some fun.",
@@ -1406,6 +1406,337 @@
         "2": {
             "1": [{
                   "answers": [
+                              "Move!  I need to get my lunch!",
+                              "My favorite color is pink and green.",
+                              "Wow! She is rude to push through us.",
+                              "Hi Ashley! I wonder what we are having for lunch today.",
+                              ""
+                              ],
+                  "bubbles": [
+                              "s",
+                              "t",
+                              "t",
+                              "s",
+                              ""
+                              ],
+                  "image": "cubbyshove.jpg",
+                  "startails": [
+                                1, 0
+                                ],
+                  "stars": [
+                            [
+                             323,
+                             46
+                             ],
+                            [
+                             539,
+                             94
+                             ]
+                            ],
+                  "correct": [
+                              3,
+                              1
+                              ]
+                  }, {
+                  "answers": [
+                              "She is such a good friend.",
+                              "She is making me feel uncomfortable.",
+                              "I wish mom would pack me chips for lunch.",
+                              "I hate chips.",
+                              ""
+                              ],
+                  "bubbles": [
+                              "t",
+                              "t",
+                              "t",
+                              "t",
+                              ""
+                              ],
+                  "image": "notsharingchips.jpg",
+                  "startails": [
+                                1, 0
+                                ],
+                  "stars": [
+                            [90,
+                             95
+                             ],
+                            [
+                             531,
+                             131
+                             ]
+                            ],
+                  "correct": [
+                              2,
+                              3
+                              ]
+                  }, {
+                  "answers": [
+                              "I am so tired of waiting here.",
+                              "Did you see that squirrel?",
+                              "Do you want to sit with me?",
+                              "I love to stand in line and wait.",
+                              ""
+                              ],
+                  "bubbles": [
+                              "t",
+                              "t",
+                              "s",
+                              "t",
+                              ""
+                              ],
+                  "image": "inapplineup1.jpg",
+                  "startails": [
+                                0, 0
+                                ],
+                  "stars": [
+                            [
+                             170,
+                             71
+                             ],
+                            [
+                             433,
+                             145
+                             ]
+                            ],
+                  "correct": [
+                              3,
+                              1
+                              ]
+                  }, {
+                  "answers": [
+                              "I wish they would include me in their conversation.",
+                              "The three of us are best friends.",
+                              "Hopefully there is something good in my lunch today!",
+                              "The funniest thing happen to me last night.",
+                              ""
+                              ],
+                  "bubbles": [
+                              "t",
+                              "s",
+                              "t",
+                              "s",
+                              ""
+                              ],
+                  "image": "kidsatlunch.jpg",
+                  "startails": [
+                                0, 1
+                                ],
+                  "stars": [
+                            [
+                             354,
+                             95
+                             ],
+                            [
+                             549,
+                             106
+                             ]
+                            ],
+                  "correct": [
+                              4,
+                              1
+                              ]
+                  }, {
+                  "answers": [
+                              "Hope my dog is okay.",
+                              "My favorite flavor of milk is chocolate.",
+                              "She is such a polite girl.",
+                              "She makes me so mad!",
+                              ""
+                              ],
+                  "bubbles": [
+                              "t",
+                              "t",
+                              "t",
+                              "t",
+                              ""
+                              ],
+                  "image": "getmilk2.jpg",
+                  "startails": [
+                                0, 1
+                                ],
+                  "stars": [
+                            [
+                             189,
+                             60
+                             ],
+                            [
+                             521,
+                             87
+                             ]
+                            ],
+                  "correct": [
+                              3,
+                              2
+                              ]
+                  }],
+            "2": [{
+                  "answers": [
+                              "I hope she doesn't want to do monkey bars next!",
+                              "I'm having a great time!",
+                              "I wonder what he wants to play on?",
+                              "Let's go in, it's raining.",
+                              ""
+                              ],
+                  "bubbles": [
+                              "s",
+                              "s",
+                              "t",
+                              "s",
+                              ""
+                              ],
+                  "image": "rider3.jpg",
+                  "startails": [
+                                0, 1
+                                ],
+                  "stars": [
+                            [
+                             131,
+                             74
+                             ],
+                            [
+                             402,
+                             91
+                             ]
+                            ],
+                  "correct": [
+                              3,
+                              1
+                              ]
+                  }, {
+                  "answers": [
+                              "Gag! Your shoes are horrible!",
+                              "Why do they always make fun of me.",
+                              "Put your pointer finger in and shake it all about.",
+                              "These are my new friends.",
+                              ""
+                              ],
+                  "bubbles": [
+                              "s",
+                              "s",
+                              "s",
+                              "s",
+                              ""
+                              ],
+                  "image": "shoes1.jpg",
+                  "startails": [
+                                1, 0
+                                ],
+                  "stars": [
+                            [
+                             137,
+                             152
+                             ],
+                            [
+                             331,
+                             133
+                             ]
+                            ],
+                  "correct": [
+                              2,
+                              1
+                              ]
+                  }, {
+                  "answers": [
+                              "I am tired.",
+                              "Where is my jump rope?",
+                              "She is a good player. Glad she is on our team!",
+                              "Awesome game today! Great playing.",
+                              ""
+                              ],
+                  "bubbles": [
+                              "t",
+                              "t",
+                              "t",
+                              "t",
+                              ""
+                              ],
+                  "image": "high5kick.jpg",
+                  "startails": [
+                                0, 0
+                                ],
+                  "stars": [
+                            [
+                             244,
+                             61
+                             ],
+                            [
+                             503,
+                             40
+                             ]
+                            ],
+                  "correct": [
+                              4,
+                              3
+                              ]
+                  }, {
+                  "answers": [
+                              "Hey, sorry for bumping into you.",
+                              "You did such a bad job in the game.",
+                              "No problem, just be careful next time.",
+                              "I like your red shirt.",
+                              ""
+                              ],
+                  "bubbles": [
+                              "s",
+                              "s",
+                              "s",
+                              "s",
+                              ""
+                              ],
+                  "image": "nicebumpkick1.jpg",
+                  "startails": [
+                                1, 0
+                                ],
+                  "stars": [
+                            [
+                             169,
+                             34
+                             ],
+                            [
+                             445,
+                             34
+                             ]
+                            ],
+                  "correct": [
+                              1,
+                              3
+                              ]
+                  }, {
+                  "answers": [
+                              "She makes me really mad.",
+                              "She is so fun to play with on the jungle gym.",
+                              "He likes my funny ideas.",
+                              "Wonder what is for lunch?",
+                              ""
+                              ],
+                  "bubbles": [
+                              "t",
+                              "t",
+                              "t",
+                              "t",
+                              ""
+                              ],
+                  "image": "rider1.jpg",
+                  "startails": [
+                                0, 1
+                                ],
+                  "stars": [
+                            [
+                             181,
+                             89
+                             ],
+                            [
+                             435,
+                             99
+                             ]
+                            ],
+                  "correct": [
+                              3,
+                              2
+                              ]
+                  }],
+            "3": [{
+                  "answers": [
                               "These kids always mess around in line ",
                               "Do you know what's for lunch?",
                               "Get back in your space!",
@@ -1570,179 +1901,12 @@
                               2
                               ]
                   }
-                  
                   ],
-            "2": [{
-                  "answers": [
-                              "I hope she doesn't want to o monkey bars next!",
-                              "I'm having a great time!",
-                              "I wonder what he wants to play on?",
-                              "Let's go in, it's raining.",
-                              ""
-                              ],
-                  "bubbles": [
-                              "s",
-                              "s",
-                              "t",
-                              "s",
-                              ""
-                              ],
-                  "image": "rider3.jpg",
-                  "startails": [
-                                0, 1
-                                ],
-                  "stars": [
-                            [
-                             131,
-                             74
-                             ],
-                            [
-                             402,
-                             91
-                             ]
-                            ],
-                  "correct": [
-                              3,
-                              1
-                              ]
-                  }, {
-                  "answers": [
-                              "Gag! Your shoes are horrible!",
-                              "Why do they always make fun of me.",
-                              "Put your pointer finger in and shake it all about.",
-                              "These are my new friends.",
-                              ""
-                              ],
-                  "bubbles": [
-                              "s",
-                              "s",
-                              "s",
-                              "s",
-                              ""
-                              ],
-                  "image": "shoes1.jpg",
-                  "startails": [
-                                1, 0
-                                ],
-                  "stars": [
-                            [
-                             137,
-                             152
-                             ],
-                            [
-                             331,
-                             133
-                             ]
-                            ],
-                  "correct": [
-                              2,
-                              1
-                              ]
-                  }, {
-                  "answers": [
-                              "I am tired.",
-                              "Where is my jump rope?",
-                              "She is a good player.  Glad she is on our team!",
-                              "Awesome game today! Great playing.",
-                              ""
-                              ],
-                  "bubbles": [
-                              "t",
-                              "t",
-                              "t",
-                              "t",
-                              ""
-                              ],
-                  "image": "high5kick.jpg",
-                  "startails": [
-                                1, 0
-                                ],
-                  "stars": [
-                            [
-                             244,
-                             61
-                             ],
-                            [
-                             503,
-                             40
-                             ]
-                            ],
-                  "correct": [
-                              4,
-                              3
-                              ]
-                  }, {
-                  "answers": [
-                              "Hey, sorry for bumping into you.",
-                              "You did such a bad job in the game.",
-                              "No problem, just be careful next time.",
-                              "I like your red shirt.",
-                              ""
-                              ],
-                  "bubbles": [
-                              "s",
-                              "s",
-                              "s",
-                              "s",
-                              ""
-                              ],
-                  "image": "nicebumpkick1.jpg",
-                  "startails": [
-                                1, 0
-                                ],
-                  "stars": [
-                            [
-                             169,
-                             34
-                             ],
-                            [
-                             445,
-                             34
-                             ]
-                            ],
-                  "correct": [
-                              1,
-                              3
-                              ]
-                  }, {
-                  "answers": [
-                              "She makes me really mad.",
-                              "She is so fun to play with on the jungle gym.",
-                              "He likes my funny ideas.",
-                              "Wonder what is for lunch?",
-                              ""
-                              ],
-                  "bubbles": [
-                              "t",
-                              "t",
-                              "t",
-                              "t",
-                              ""
-                              ],
-                  "image": "rider1.jpg",
-                  "startails": [
-                                0, 1
-                                ],
-                  "stars": [
-                            [
-                             181,
-                             89
-                             ],
-                            [
-                             435,
-                             99
-                             ]
-                            ],
-                  "correct": [
-                              3,
-                              2
-                              ]
-                  }],
-            "3": [{
+            "4": [{
                   "answers": [
                               "Stop! The school is closed.",
                               "I'm letting my class know it's time to come in from recess.",
-                              "Time to go back in. Hope everyone did their homework.",
+                              "How much is this?",
                               "I am so excited to go out to recess.",
                               ""
                               ],
@@ -1801,7 +1965,7 @@
                   }, {
                   "answers": [
                               "Are you my sister?",
-                              "Make sure you Don't do your homework.",
+                              "Make sure you DON'T do your homework.",
                               "What have I told you about bothering your classmate?",
                               "I didn't think I was talking that much.",
                               ""
@@ -1896,171 +2060,6 @@
                   "correct": [
                               2,
                               3
-                              ]
-                  }],
-            "4": [{
-                  "answers": [
-                              "Move!  I need to get my lunch!",
-                              "My favorite color is pink and green.",
-                              "Wow! She is rude to push through us.",
-                              "Hi Ashley! I wonder what we are having for lunch today.",
-                              ""
-                              ],
-                  "bubbles": [
-                              "s",
-                              "t",
-                              "t",
-                              "s",
-                              ""
-                              ],
-                  "image": "cubbyshove.jpg",
-                  "startails": [
-                                0, 0
-                                ],
-                  "stars": [
-                            [
-                             408,
-                             42
-                             ],
-                            [
-                             461,
-                             94
-                             ]
-                            ],
-                  "correct": [
-                              3,
-                              1
-                              ]
-                  }, {
-                  "answers": [
-                              "She is such a good friend.",
-                              "She is making me feel uncomfortable.",
-                              "I wish mom would pack me chips for lunch.",
-                              "I hate chips.",
-                              ""
-                              ],
-                  "bubbles": [
-                              "t",
-                              "t",
-                              "t",
-                              "t",
-                              ""
-                              ],
-                  "image": "notsharingchips.jpg",
-                  "startails": [
-                                1, 0
-                                ],
-                  "stars": [
-                            [90,
-                             95
-                             ],
-                            [
-                             531,
-                             131
-                             ]
-                            ],
-                  "correct": [
-                              2,
-                              3
-                              ]
-                  }, {
-                  "answers": [
-                              "I am so tired of waiting here.",
-                              "Did you see that squirrel?",
-                              "Do you want to sit with me?",
-                              "I love to stand in line and wait.",
-                              ""
-                              ],
-                  "bubbles": [
-                              "t",
-                              "t",
-                              "s",
-                              "t",
-                              ""
-                              ],
-                  "image": "inapplineup1.jpg",
-                  "startails": [
-                                0, 0
-                                ],
-                  "stars": [
-                            [
-                             170,
-                             71
-                             ],
-                            [
-                             433,
-                             145
-                             ]
-                            ],
-                  "correct": [
-                              3,
-                              1
-                              ]
-                  }, {
-                  "answers": [
-                              "I wish they would include me in their conversation.",
-                              "The three of us are best friends.",
-                              "Let's see what is in my lunch.  Hopefully, something good!",
-                              "The funniest thing happen to me last night.",
-                              ""
-                              ],
-                  "bubbles": [
-                              "t",
-                              "s",
-                              "t",
-                              "s",
-                              ""
-                              ],
-                  "image": "kidsatlunch.jpg",
-                  "startails": [
-                                0, 1
-                                ],
-                  "stars": [
-                            [
-                             354,
-                             95
-                             ],
-                            [
-                             549,
-                             106
-                             ]
-                            ],
-                  "correct": [
-                              4,
-                              1
-                              ]
-                  }, {
-                  "answers": [
-                              "Hope my dog is okay.",
-                              "My favorite flavor of milk is chocolate",
-                              "She is such a polite girl.",
-                              "She makes me so mad!",
-                              ""
-                              ],
-                  "bubbles": [
-                              "t",
-                              "t",
-                              "t",
-                              "t",
-                              ""
-                              ],
-                  "image": "getmilk2.jpg",
-                  "startails": [
-                                0, 1
-                                ],
-                  "stars": [
-                            [
-                             189,
-                             60
-                             ],
-                            [
-                             521,
-                             87
-                             ]
-                            ],
-                  "correct": [
-                              3,
-                              2
                               ]
                   }]
         },
@@ -2196,16 +2195,16 @@
                   }, {
                   "image": "R1010119.jpg",
                   "answers": [
-                              "I should really put this magazine away.",
+                              "I should really put this magazine away now.",
                               "We should really put this away.",
-                              "I am so embarassed.",
+                              "I am so embarassed!",
                               "Girls, class has started!",
                               ""
                               ],
                   "bubbles": [
-                              "1",
                               "s",
-                              "t",
+                              "s",
+                              "s",
                               "s",
                               ""
                               ],
@@ -2582,8 +2581,8 @@
                              ]
                             ],
                   "correct": [
-                              4,
-                              2
+                              2,
+                              4
                               ]
                   }],
             "4": [{
@@ -2725,7 +2724,7 @@
                   "image": "RR1010078.jpg",
                   "answers": ["I am going to get you!",
                               "You are so nice to me.",
-                              "you're going to get detention for fighting!",
+                              "You're going to get detention for fighting!",
                               "Whoa! Don't shove me!",
                               ""
                               ],

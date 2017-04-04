@@ -12,7 +12,7 @@ import CoreData
 let reuseIdentifier = "cell"
 
 var currentUs:User!
-class UserViewController: UIViewController{
+class UserViewController: AudioViewController{
     
     // Mark: - IBOutlets
     @IBOutlet weak var collectionView: UICollectionView!

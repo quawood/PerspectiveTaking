@@ -66,6 +66,7 @@
 		A52EAB811E8F671E00682C1B /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = A52EAB4B1E8F671E00682C1B /* user.png */; };
 		A52EAB821E8F671E00682C1B /* Welcome Screen-2.png in Resources */ = {isa = PBXBuildFile; fileRef = A52EAB4C1E8F671E00682C1B /* Welcome Screen-2.png */; };
 		A54B09EF1D7FBACB00D82D49 /* CreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B09EE1D7FBACB00D82D49 /* CreateUserViewController.swift */; };
+		A562FEBB1E93AAF000CC4984 /* WelcomeCAT.wav in Resources */ = {isa = PBXBuildFile; fileRef = A562FEBA1E93AAF000CC4984 /* WelcomeCAT.wav */; };
 		A56F79C11E770A6F00B34BB8 /* 001.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A56F777B1E770A6E00B34BB8 /* 001.jpg */; };
 		A56F79C21E770A6F00B34BB8 /* 003.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A56F777C1E770A6E00B34BB8 /* 003.jpg */; };
 		A56F79C31E770A6F00B34BB8 /* 004.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A56F777D1E770A6E00B34BB8 /* 004.jpg */; };
@@ -653,13 +654,36 @@
 		A58943D01D710410005456A2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58943CF1D710410005456A2 /* HomeViewController.swift */; };
 		A59DFC581DC3DF6800B1CF8D /* ScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59DFC571DC3DF6800B1CF8D /* ScoresViewController.swift */; };
 		A5A8B6DE1D80C289009560D7 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A8B6DD1D80C289009560D7 /* EditProfileViewController.swift */; };
+		A5AC34DC1E90AB030066D073 /* Choose a program to play (alt option).wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34C51E90AB030066D073 /* Choose a program to play (alt option).wav */; };
+		A5AC34DD1E90AB030066D073 /* Choose a title to play.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34C61E90AB030066D073 /* Choose a title to play.wav */; };
+		A5AC34DE1E90AB030066D073 /* Click and drag.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34C71E90AB030066D073 /* Click and drag.wav */; };
+		A5AC34DF1E90AB030066D073 /* Great job.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34C81E90AB030066D073 /* Great job.wav */; };
+		A5AC34E01E90AB030066D073 /* If you have played before.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34C91E90AB030066D073 /* If you have played before.wav */; };
+		A5AC34E11E90AB030066D073 /* My Community.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34CA1E90AB030066D073 /* My Community.wav */; };
+		A5AC34E21E90AB030066D073 /* My School Day.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34CB1E90AB030066D073 /* My School Day.wav */; };
+		A5AC34E31E90AB030066D073 /* Perfect.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34CC1E90AB030066D073 /* Perfect.wav */; };
+		A5AC34E41E90AB030066D073 /* Please click on a scenerio.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34CD1E90AB030066D073 /* Please click on a scenerio.wav */; };
+		A5AC34E51E90AB030066D073 /* Press go to begin.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34CE1E90AB030066D073 /* Press go to begin.wav */; };
+		A5AC34E61E90AB030066D073 /* School Rules 1.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34CF1E90AB030066D073 /* School Rules 1.wav */; };
+		A5AC34E71E90AB030066D073 /* School Rules 2.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34D01E90AB030066D073 /* School Rules 2.wav */; };
+		A5AC34E81E90AB030066D073 /* Take another look.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34D11E90AB030066D073 /* Take another look.wav */; };
+		A5AC34E91E90AB030066D073 /* That's okay. Try again..wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34D21E90AB030066D073 /* That's okay. Try again..wav */; };
+		A5AC34EA1E90AB030066D073 /* This app allows....wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34D31E90AB030066D073 /* This app allows....wav */; };
+		A5AC34EB1E90AB030066D073 /* To create a new user.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34D41E90AB030066D073 /* To create a new user.wav */; };
+		A5AC34EC1E90AB030066D073 /* To delete or edit a user.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34D51E90AB030066D073 /* To delete or edit a user.wav */; };
+		A5AC34ED1E90AB030066D073 /* Users will learn to....wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34D61E90AB030066D073 /* Users will learn to....wav */; };
+		A5AC34EE1E90AB030066D073 /* UserScreenCAT.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34D71E90AB030066D073 /* UserScreenCAT.wav */; };
+		A5AC34EF1E90AB030066D073 /* Welcome.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34D81E90AB030066D073 /* Welcome.wav */; };
+		A5AC34F01E90AB030066D073 /* WelcomeCAT.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34D91E90AB030066D073 /* WelcomeCAT.wav */; };
+		A5AC34F11E90AB030066D073 /* Wow. Super job. .wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34DA1E90AB030066D073 /* Wow. Super job. .wav */; };
+		A5AC34F21E90AB030066D073 /* You are good at this.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34DB1E90AB030066D073 /* You are good at this.wav */; };
 		A5B4D6E41D7FADC90054D4C8 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B4D6E31D7FADC90054D4C8 /* UserViewController.swift */; };
 		A5B4D6E61D7FB1BF0054D4C8 /* UserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B4D6E51D7FB1BF0054D4C8 /* UserCollectionViewCell.swift */; };
 		A5B5F2441D4D722800A51F81 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B5F2431D4D722800A51F81 /* QuizViewController.swift */; };
 		A5BA1CDF1DB7014300608BE8 /* ProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BA1CDE1DB7014300608BE8 /* ProgramViewController.swift */; };
-		A5C137841E77A34A00D78344 /* CnDInstructions.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A5C137811E77A34A00D78344 /* CnDInstructions.mp3 */; };
-		A5C137851E77A34A00D78344 /* correctSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A5C137821E77A34A00D78344 /* correctSound.mp3 */; };
-		A5C137861E77A34A00D78344 /* wrongSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A5C137831E77A34A00D78344 /* wrongSound.mp3 */; };
+		A5C137841E77A34A00D78344 /* CnDInstructions.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5C137811E77A34A00D78344 /* CnDInstructions.wav */; };
+		A5C137851E77A34A00D78344 /* correctSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5C137821E77A34A00D78344 /* correctSound.wav */; };
+		A5C137861E77A34A00D78344 /* wrongSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5C137831E77A34A00D78344 /* wrongSound.wav */; };
 		A5DBA24A1DA4A07400C15EDE /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DBA2491DA4A07400C15EDE /* UIImage+Gif.swift */; };
 		A5DCF8CD1DC1789D0082F7EA /* 1.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5DCF8CC1DC1789D0082F7EA /* 1.xib */; };
 		A5DCF8CF1DC17B180082F7EA /* 2.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5DCF8CE1DC17B180082F7EA /* 2.xib */; };
@@ -754,6 +778,7 @@
 		A52EAB4B1E8F671E00682C1B /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
 		A52EAB4C1E8F671E00682C1B /* Welcome Screen-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Welcome Screen-2.png"; sourceTree = "<group>"; };
 		A54B09EE1D7FBACB00D82D49 /* CreateUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUserViewController.swift; sourceTree = "<group>"; };
+		A562FEBA1E93AAF000CC4984 /* WelcomeCAT.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = WelcomeCAT.wav; sourceTree = "<group>"; };
 		A56F777B1E770A6E00B34BB8 /* 001.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 001.jpg; sourceTree = "<group>"; };
 		A56F777C1E770A6E00B34BB8 /* 003.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 003.jpg; sourceTree = "<group>"; };
 		A56F777D1E770A6E00B34BB8 /* 004.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 004.jpg; sourceTree = "<group>"; };
@@ -1341,13 +1366,36 @@
 		A58943CF1D710410005456A2 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A59DFC571DC3DF6800B1CF8D /* ScoresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoresViewController.swift; sourceTree = "<group>"; };
 		A5A8B6DD1D80C289009560D7 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		A5AC34C51E90AB030066D073 /* Choose a program to play (alt option).wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Choose a program to play (alt option).wav"; sourceTree = "<group>"; };
+		A5AC34C61E90AB030066D073 /* Choose a title to play.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Choose a title to play.wav"; sourceTree = "<group>"; };
+		A5AC34C71E90AB030066D073 /* Click and drag.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Click and drag.wav"; sourceTree = "<group>"; };
+		A5AC34C81E90AB030066D073 /* Great job.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Great job.wav"; sourceTree = "<group>"; };
+		A5AC34C91E90AB030066D073 /* If you have played before.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "If you have played before.wav"; sourceTree = "<group>"; };
+		A5AC34CA1E90AB030066D073 /* My Community.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "My Community.wav"; sourceTree = "<group>"; };
+		A5AC34CB1E90AB030066D073 /* My School Day.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "My School Day.wav"; sourceTree = "<group>"; };
+		A5AC34CC1E90AB030066D073 /* Perfect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Perfect.wav; sourceTree = "<group>"; };
+		A5AC34CD1E90AB030066D073 /* Please click on a scenerio.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Please click on a scenerio.wav"; sourceTree = "<group>"; };
+		A5AC34CE1E90AB030066D073 /* Press go to begin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Press go to begin.wav"; sourceTree = "<group>"; };
+		A5AC34CF1E90AB030066D073 /* School Rules 1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "School Rules 1.wav"; sourceTree = "<group>"; };
+		A5AC34D01E90AB030066D073 /* School Rules 2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "School Rules 2.wav"; sourceTree = "<group>"; };
+		A5AC34D11E90AB030066D073 /* Take another look.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Take another look.wav"; sourceTree = "<group>"; };
+		A5AC34D21E90AB030066D073 /* That's okay. Try again..wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "That's okay. Try again..wav"; sourceTree = "<group>"; };
+		A5AC34D31E90AB030066D073 /* This app allows....wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "This app allows....wav"; sourceTree = "<group>"; };
+		A5AC34D41E90AB030066D073 /* To create a new user.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "To create a new user.wav"; sourceTree = "<group>"; };
+		A5AC34D51E90AB030066D073 /* To delete or edit a user.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "To delete or edit a user.wav"; sourceTree = "<group>"; };
+		A5AC34D61E90AB030066D073 /* Users will learn to....wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Users will learn to....wav"; sourceTree = "<group>"; };
+		A5AC34D71E90AB030066D073 /* UserScreenCAT.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = UserScreenCAT.wav; sourceTree = "<group>"; };
+		A5AC34D81E90AB030066D073 /* Welcome.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Welcome.wav; sourceTree = "<group>"; };
+		A5AC34D91E90AB030066D073 /* WelcomeCAT.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = WelcomeCAT.wav; sourceTree = "<group>"; };
+		A5AC34DA1E90AB030066D073 /* Wow. Super job. .wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Wow. Super job. .wav"; sourceTree = "<group>"; };
+		A5AC34DB1E90AB030066D073 /* You are good at this.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "You are good at this.wav"; sourceTree = "<group>"; };
 		A5B4D6E31D7FADC90054D4C8 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		A5B4D6E51D7FB1BF0054D4C8 /* UserCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCollectionViewCell.swift; sourceTree = "<group>"; };
 		A5B5F2431D4D722800A51F81 /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		A5BA1CDE1DB7014300608BE8 /* ProgramViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramViewController.swift; sourceTree = "<group>"; };
-		A5C137811E77A34A00D78344 /* CnDInstructions.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CnDInstructions.mp3; sourceTree = "<group>"; };
-		A5C137821E77A34A00D78344 /* correctSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = correctSound.mp3; sourceTree = "<group>"; };
-		A5C137831E77A34A00D78344 /* wrongSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wrongSound.mp3; sourceTree = "<group>"; };
+		A5C137811E77A34A00D78344 /* CnDInstructions.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = CnDInstructions.wav; sourceTree = "<group>"; };
+		A5C137821E77A34A00D78344 /* correctSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = correctSound.wav; sourceTree = "<group>"; };
+		A5C137831E77A34A00D78344 /* wrongSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wrongSound.wav; sourceTree = "<group>"; };
 		A5DBA2491DA4A07400C15EDE /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
 		A5DCF8CC1DC1789D0082F7EA /* 1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = 1.xib; sourceTree = "<group>"; };
 		A5DCF8CE1DC17B180082F7EA /* 2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = 2.xib; sourceTree = "<group>"; };
@@ -2124,9 +2172,33 @@
 		A5C137801E77A34A00D78344 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				A5C137811E77A34A00D78344 /* CnDInstructions.mp3 */,
-				A5C137821E77A34A00D78344 /* correctSound.mp3 */,
-				A5C137831E77A34A00D78344 /* wrongSound.mp3 */,
+				A5AC34C51E90AB030066D073 /* Choose a program to play (alt option).wav */,
+				A5AC34C61E90AB030066D073 /* Choose a title to play.wav */,
+				A5AC34C71E90AB030066D073 /* Click and drag.wav */,
+				A5AC34C81E90AB030066D073 /* Great job.wav */,
+				A5AC34C91E90AB030066D073 /* If you have played before.wav */,
+				A5AC34CA1E90AB030066D073 /* My Community.wav */,
+				A5AC34CB1E90AB030066D073 /* My School Day.wav */,
+				A5AC34CC1E90AB030066D073 /* Perfect.wav */,
+				A5AC34CD1E90AB030066D073 /* Please click on a scenerio.wav */,
+				A5AC34CE1E90AB030066D073 /* Press go to begin.wav */,
+				A5AC34CF1E90AB030066D073 /* School Rules 1.wav */,
+				A562FEBA1E93AAF000CC4984 /* WelcomeCAT.wav */,
+				A5AC34D01E90AB030066D073 /* School Rules 2.wav */,
+				A5AC34D11E90AB030066D073 /* Take another look.wav */,
+				A5AC34D21E90AB030066D073 /* That's okay. Try again..wav */,
+				A5AC34D31E90AB030066D073 /* This app allows....wav */,
+				A5AC34D41E90AB030066D073 /* To create a new user.wav */,
+				A5AC34D51E90AB030066D073 /* To delete or edit a user.wav */,
+				A5AC34D61E90AB030066D073 /* Users will learn to....wav */,
+				A5AC34D71E90AB030066D073 /* UserScreenCAT.wav */,
+				A5AC34D81E90AB030066D073 /* Welcome.wav */,
+				A5AC34D91E90AB030066D073 /* WelcomeCAT.wav */,
+				A5AC34DA1E90AB030066D073 /* Wow. Super job. .wav */,
+				A5AC34DB1E90AB030066D073 /* You are good at this.wav */,
+				A5C137811E77A34A00D78344 /* CnDInstructions.wav */,
+				A5C137821E77A34A00D78344 /* correctSound.wav */,
+				A5C137831E77A34A00D78344 /* wrongSound.wav */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -2308,12 +2380,14 @@
 				A56F7AB81E770A6F00B34BB8 /* P1010121.jpg in Resources */,
 				A56F7AA51E770A6F00B34BB8 /* P1010102.jpg in Resources */,
 				A56F7B9E1E770A7000B34BB8 /* R1010106L.jpg in Resources */,
+				A5AC34EC1E90AB030066D073 /* To delete or edit a user.wav in Resources */,
 				A56F7BB81E770A7000B34BB8 /* RL1010035.jpg in Resources */,
 				A56F7A061E770A6F00B34BB8 /* gymtalk.jpg in Resources */,
 				A56F7B1F1E770A6F00B34BB8 /* R1010015H.jpg in Resources */,
 				A56F7B601E770A6F00B34BB8 /* R1010060.jpg in Resources */,
 				A56F7B471E770A6F00B34BB8 /* R1010040.jpg in Resources */,
 				A56F7B671E770A7000B34BB8 /* R1010065H.jpg in Resources */,
+				A5AC34E91E90AB030066D073 /* That's okay. Try again..wav in Resources */,
 				A56F7AE91E770A6F00B34BB8 /* PICK4general2.jpg in Resources */,
 				A56F7BCA1E770A7000B34BB8 /* RL1010071.jpg in Resources */,
 				A56F79C71E770A6F00B34BB8 /* appclass2.jpg in Resources */,
@@ -2335,6 +2409,7 @@
 				A56F79E51E770A6F00B34BB8 /* cubbyshove1.jpg in Resources */,
 				A52EAB5D1E8F671E00682C1B /* janimation3.png in Resources */,
 				A56F7A991E770A6F00B34BB8 /* P1010090.jpg in Resources */,
+				A5AC34E31E90AB030066D073 /* Perfect.wav in Resources */,
 				A56F7AB91E770A6F00B34BB8 /* P1010122.jpg in Resources */,
 				A56F7B991E770A7000B34BB8 /* R1010101L.jpg in Resources */,
 				A56F7B7F1E770A7000B34BB8 /* R1010085H.jpg in Resources */,
@@ -2348,7 +2423,7 @@
 				A56F7A201E770A6F00B34BB8 /* joke1.jpg in Resources */,
 				A52EAB5C1E8F671E00682C1B /* janimation2.png in Resources */,
 				A56F7B921E770A7000B34BB8 /* R1010096H.jpg in Resources */,
-				A5C137861E77A34A00D78344 /* wrongSound.mp3 in Resources */,
+				A5C137861E77A34A00D78344 /* wrongSound.wav in Resources */,
 				A56F7B051E770A6F00B34BB8 /* R1010001S.jpg in Resources */,
 				A56F79EC1E770A6F00B34BB8 /* DCP0007a.jpg in Resources */,
 				A56F7B7A1E770A7000B34BB8 /* R1010083.jpg in Resources */,
@@ -2367,15 +2442,16 @@
 				A56F7A6D1E770A6F00B34BB8 /* P1010046.jpg in Resources */,
 				A56F7B6C1E770A7000B34BB8 /* R1010072.jpg in Resources */,
 				A56F7B501E770A6F00B34BB8 /* R1010048.jpg in Resources */,
+				A5AC34EE1E90AB030066D073 /* UserScreenCAT.wav in Resources */,
 				A52EAB741E8F671E00682C1B /* speechtail0.png in Resources */,
 				A56F7ABD1E770A6F00B34BB8 /* P1010126.jpg in Resources */,
 				A56F7B281E770A6F00B34BB8 /* R1010020.jpg in Resources */,
-				A5C137841E77A34A00D78344 /* CnDInstructions.mp3 in Resources */,
+				A5C137841E77A34A00D78344 /* CnDInstructions.wav in Resources */,
 				A56F7A271E770A6F00B34BB8 /* lineuprecess.jpg in Resources */,
 				A56F7B8B1E770A7000B34BB8 /* R1010092.jpg in Resources */,
 				A56F7AD61E770A6F00B34BB8 /* P26a.jpg in Resources */,
 				A56F7B871E770A7000B34BB8 /* R1010090.jpg in Resources */,
-				A5C137851E77A34A00D78344 /* correctSound.mp3 in Resources */,
+				A5C137851E77A34A00D78344 /* correctSound.wav in Resources */,
 				A56F7C021E770A7000B34BB8 /* teachlineuprecess.jpg in Resources */,
 				A56F7B931E770A7000B34BB8 /* R1010097.jpg in Resources */,
 				A56F7B181E770A6F00B34BB8 /* R1010012.jpg in Resources */,
@@ -2391,6 +2467,7 @@
 				A56F7A771E770A6F00B34BB8 /* P1010056.jpg in Resources */,
 				A56F7AF01E770A6F00B34BB8 /* pick4joke2.jpg in Resources */,
 				A56F7ADE1E770A6F00B34BB8 /* paymilk2.jpg in Resources */,
+				A5AC34DC1E90AB030066D073 /* Choose a program to play (alt option).wav in Resources */,
 				A56F7B511E770A6F00B34BB8 /* R1010049.jpg in Resources */,
 				A56F7B7D1E770A7000B34BB8 /* R1010084H.jpg in Resources */,
 				A56F7ACC1E770A6F00B34BB8 /* P1010477.jpg in Resources */,
@@ -2402,6 +2479,7 @@
 				A56F7A1F1E770A6F00B34BB8 /* joke.jpg in Resources */,
 				A56F79DB1E770A6F00B34BB8 /* CP1010062.jpg in Resources */,
 				A56F7B661E770A7000B34BB8 /* R1010065.jpg in Resources */,
+				A5AC34EA1E90AB030066D073 /* This app allows....wav in Resources */,
 				A56F79F21E770A6F00B34BB8 /* DCP0011.jpg in Resources */,
 				A56F7BF21E770A7000B34BB8 /* spaceline2.jpg in Resources */,
 				A52EAB7B1E8F671E00682C1B /* stock4.png in Resources */,
@@ -2461,6 +2539,7 @@
 				A56F7B4E1E770A6F00B34BB8 /* R1010046.jpg in Resources */,
 				A56F7B7B1E770A7000B34BB8 /* R1010083H.jpg in Resources */,
 				A56F7B861E770A7000B34BB8 /* R1010089C.jpg in Resources */,
+				A5AC34ED1E90AB030066D073 /* Users will learn to....wav in Resources */,
 				A56F7A1C1E770A6F00B34BB8 /* janitor.jpg in Resources */,
 				A56F7AA31E770A6F00B34BB8 /* P1010100.jpg in Resources */,
 				A56F7B7C1E770A7000B34BB8 /* R1010084.jpg in Resources */,
@@ -2502,6 +2581,7 @@
 				A56F7A8D1E770A6F00B34BB8 /* P1010078.jpg in Resources */,
 				A56F7B2C1E770A6F00B34BB8 /* R1010022.jpg in Resources */,
 				A56F7B851E770A7000B34BB8 /* R1010089.jpg in Resources */,
+				A562FEBB1E93AAF000CC4984 /* WelcomeCAT.wav in Resources */,
 				A56F7BC21E770A7000B34BB8 /* RL1010048.jpg in Resources */,
 				A56F7BA91E770A7000B34BB8 /* R1010117.jpg in Resources */,
 				A56F7AFE1E770A6F00B34BB8 /* playground2.jpg in Resources */,
@@ -2520,6 +2600,7 @@
 				A56F7B951E770A7000B34BB8 /* R1010098.jpg in Resources */,
 				A56F7A011E770A6F00B34BB8 /* generallunch2.jpg in Resources */,
 				A56F7A1E1E770A6F00B34BB8 /* jenwaitpic.jpg in Resources */,
+				A5AC34E61E90AB030066D073 /* School Rules 1.wav in Resources */,
 				A56F7A6F1E770A6F00B34BB8 /* P1010048.jpg in Resources */,
 				A56F7A251E770A6F00B34BB8 /* kidlunch.jpg in Resources */,
 				A56F79DF1E770A6F00B34BB8 /* CP1010067.jpg in Resources */,
@@ -2560,6 +2641,7 @@
 				A56F7B8D1E770A7000B34BB8 /* R1010093.jpg in Resources */,
 				A56F7BF11E770A7000B34BB8 /* spaceline.jpg in Resources */,
 				A52EAB551E8F671E00682C1B /* emoji5.gif in Resources */,
+				A5AC34E41E90AB030066D073 /* Please click on a scenerio.wav in Resources */,
 				A56F79ED1E770A6F00B34BB8 /* DCP0008.jpg in Resources */,
 				A5DCF8D11DC17B270082F7EA /* 3.xib in Resources */,
 				A56F7A711E770A6F00B34BB8 /* P1010050.jpg in Resources */,
@@ -2570,6 +2652,7 @@
 				A56F7BBB1E770A7000B34BB8 /* RL1010041.jpg in Resources */,
 				A52EAB751E8F671E00682C1B /* speechtail1.png in Resources */,
 				A56F7B521E770A6F00B34BB8 /* R1010050.jpg in Resources */,
+				A5AC34E71E90AB030066D073 /* School Rules 2.wav in Resources */,
 				A56F7BE91E770A7000B34BB8 /* school1a.jpg in Resources */,
 				A56F7A6E1E770A6F00B34BB8 /* P1010047.jpg in Resources */,
 				A56F7B0E1E770A6F00B34BB8 /* R1010006.jpg in Resources */,
@@ -2602,9 +2685,11 @@
 				A56F79E91E770A6F00B34BB8 /* DCP0006.jpg in Resources */,
 				A56F7A801E770A6F00B34BB8 /* P1010065.jpg in Resources */,
 				A56F7A0D1E770A6F00B34BB8 /* inappclass1.jpg in Resources */,
+				A5AC34DE1E90AB030066D073 /* Click and drag.wav in Resources */,
 				A56F7BC01E770A7000B34BB8 /* RL1010046.jpg in Resources */,
 				A52EAB5E1E8F671E00682C1B /* janimation4.png in Resources */,
 				A56F7B6F1E770A7000B34BB8 /* R1010075.jpg in Resources */,
+				A5AC34E01E90AB030066D073 /* If you have played before.wav in Resources */,
 				A56F7B201E770A6F00B34BB8 /* R1010016.jpg in Resources */,
 				A52EAB791E8F671E00682C1B /* stock2.png in Resources */,
 				A56F7A4B1E770A6F00B34BB8 /* P1010012.jpg in Resources */,
@@ -2678,6 +2763,7 @@
 				A56F7AB11E770A6F00B34BB8 /* P1010114.jpg in Resources */,
 				A52EAB601E8F671E00682C1B /* leadership.png in Resources */,
 				A56F79C21E770A6F00B34BB8 /* 003.jpg in Resources */,
+				A5AC34E81E90AB030066D073 /* Take another look.wav in Resources */,
 				A56F7BA11E770A7000B34BB8 /* R1010109L.jpg in Resources */,
 				A56F7B171E770A6F00B34BB8 /* R1010011H.jpg in Resources */,
 				A56F7BC91E770A7000B34BB8 /* RL1010070.jpg in Resources */,
@@ -2741,6 +2827,7 @@
 				A52EAB501E8F671E00682C1B /* choosePlaceG.png in Resources */,
 				A56F7B041E770A6F00B34BB8 /* R1010001.jpg in Resources */,
 				A56F79EF1E770A6F00B34BB8 /* DCP0009.jpg in Resources */,
+				A5AC34EF1E90AB030066D073 /* Welcome.wav in Resources */,
 				A56F7A171E770A6F00B34BB8 /* inappsharelunch.jpg in Resources */,
 				A56F7ACA1E770A6F00B34BB8 /* P1010139.jpg in Resources */,
 				A56F7AFC1E770A6F00B34BB8 /* playground-6.jpg in Resources */,
@@ -2758,6 +2845,7 @@
 				A56F7A121E770A6F00B34BB8 /* inapplunch.jpg in Resources */,
 				A56F7A0B1E770A6F00B34BB8 /* image45.jpg in Resources */,
 				A56F7A731E770A6F00B34BB8 /* P1010052.jpg in Resources */,
+				A5AC34F11E90AB030066D073 /* Wow. Super job. .wav in Resources */,
 				A56F7A3E1E770A6F00B34BB8 /* notsharingchips.jpg in Resources */,
 				A56F7BCD1E770A7000B34BB8 /* RR1010053.jpg in Resources */,
 				A56F79E71E770A6F00B34BB8 /* D30a.jpg in Resources */,
@@ -2777,6 +2865,7 @@
 				A56F7A821E770A6F00B34BB8 /* P1010067.jpg in Resources */,
 				A56F7A861E770A6F00B34BB8 /* P1010071.jpg in Resources */,
 				A52EAB7A1E8F671E00682C1B /* stock3.png in Resources */,
+				A5AC34F01E90AB030066D073 /* WelcomeCAT.wav in Resources */,
 				A56F7ABC1E770A6F00B34BB8 /* P1010125.jpg in Resources */,
 				A56F7AE61E770A6F00B34BB8 /* PICK4CHEERING.jpg in Resources */,
 				A56F79EB1E770A6F00B34BB8 /* DCP0007.jpg in Resources */,
@@ -2810,6 +2899,7 @@
 				A56F7A611E770A6F00B34BB8 /* P1010034.jpg in Resources */,
 				A52EAB6C1E8F671E00682C1B /* Scores-SR2.png in Resources */,
 				A56F7BF91E770A7000B34BB8 /* taghurt.jpg in Resources */,
+				A5AC34EB1E90AB030066D073 /* To create a new user.wav in Resources */,
 				A56F7A071E770A6F00B34BB8 /* hangingout.jpg in Resources */,
 				A52EAB581E8F671E00682C1B /* Info Screen.png in Resources */,
 				A56F7A921E770A6F00B34BB8 /* P1010083.jpg in Resources */,
@@ -2839,6 +2929,7 @@
 				A56F79FF1E770A6F00B34BB8 /* generalclass2.jpg in Resources */,
 				A56F7B631E770A7000B34BB8 /* R1010062H.jpg in Resources */,
 				A56F7A831E770A6F00B34BB8 /* P1010068.jpg in Resources */,
+				A5AC34DD1E90AB030066D073 /* Choose a title to play.wav in Resources */,
 				A56F7A281E770A6F00B34BB8 /* lineuprecess1.jpg in Resources */,
 				A56F7BD81E770A7000B34BB8 /* RR1010072.jpg in Resources */,
 				A56F7B011E770A6F00B34BB8 /* playground5.jpg in Resources */,
@@ -2887,6 +2978,7 @@
 				A56F7AFF1E770A6F00B34BB8 /* playground3.jpg in Resources */,
 				A56F7B361E770A6F00B34BB8 /* R1010027.jpg in Resources */,
 				A56F7B3E1E770A6F00B34BB8 /* R1010032.jpg in Resources */,
+				A5AC34DF1E90AB030066D073 /* Great job.wav in Resources */,
 				A56F79CE1E770A6F00B34BB8 /* applineuprecess.jpg in Resources */,
 				A56F7A2E1E770A6F00B34BB8 /* lunch6.jpg in Resources */,
 				A52EAB621E8F671E00682C1B /* MC.JPG in Resources */,
@@ -2909,9 +3001,11 @@
 				A56F7AA21E770A6F00B34BB8 /* P1010099.jpg in Resources */,
 				A56F7B321E770A6F00B34BB8 /* R1010025.jpg in Resources */,
 				A52EAB7F1E8F671E00682C1B /* thoughtwt.png in Resources */,
+				A5AC34F21E90AB030066D073 /* You are good at this.wav in Resources */,
 				A56F7BDF1E770A7000B34BB8 /* RR1010077.jpg in Resources */,
 				A56F7B151E770A6F00B34BB8 /* R1010009H.jpg in Resources */,
 				A56F7A561E770A6F00B34BB8 /* P1010023.jpg in Resources */,
+				A5AC34E51E90AB030066D073 /* Press go to begin.wav in Resources */,
 				A56F7BFE1E770A7000B34BB8 /* teacherlineuprecess2.jpg in Resources */,
 				A56F7B291E770A6F00B34BB8 /* R1010020H.jpg in Resources */,
 				A56F7AC21E770A6F00B34BB8 /* P1010131.jpg in Resources */,
@@ -2919,6 +3013,7 @@
 				A56F7AD91E770A6F00B34BB8 /* P30.jpg in Resources */,
 				A56F7A1D1E770A6F00B34BB8 /* janitor2.jpg in Resources */,
 				A52EAB7C1E8F671E00682C1B /* thought.png in Resources */,
+				A5AC34E11E90AB030066D073 /* My Community.wav in Resources */,
 				A56F7B9C1E770A7000B34BB8 /* R1010104L.jpg in Resources */,
 				A56F7BFA1E770A7000B34BB8 /* taghurt1.jpg in Resources */,
 				A56F7B531E770A6F00B34BB8 /* R1010051.jpg in Resources */,
@@ -2933,6 +3028,7 @@
 				A58608C11E606DDC006DC11E /* MCQuestions.json in Resources */,
 				A56F7C051E770A7000B34BB8 /* timeoutshoes.jpg in Resources */,
 				A56F7B6B1E770A7000B34BB8 /* R1010069H.jpg in Resources */,
+				A5AC34E21E90AB030066D073 /* My School Day.wav in Resources */,
 				A56F79F61E770A6F00B34BB8 /* DCP0013.jpg in Resources */,
 				A56F7AEE1E770A6F00B34BB8 /* PICK4JENWAIT.jpg in Resources */,
 				A56F7B7E1E770A7000B34BB8 /* R1010085.jpg in Resources */,

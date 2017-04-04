@@ -8,7 +8,7 @@
 import CoreData
 import UIKit
 var prog: String!
-class HomeViewController: UIViewController{
+class HomeViewController: AudioViewController{
     
     
     @IBOutlet weak var programTitle: UILabel!
@@ -101,6 +101,9 @@ class HomeViewController: UIViewController{
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier != "openProgram" {
+            self.audioPlayer.stop()
+        }
         if segue.identifier == "toQuiz"
         {
             
