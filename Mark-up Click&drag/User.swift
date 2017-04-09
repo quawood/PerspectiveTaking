@@ -109,6 +109,7 @@ public class LoadingOverlay{
         
         overlayView.addSubview(activityIndicator)
         view.addSubview(overlayView)
+
         
         activityIndicator.startAnimating()
     }

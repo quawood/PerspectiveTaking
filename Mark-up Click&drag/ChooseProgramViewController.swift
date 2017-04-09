@@ -16,8 +16,8 @@ class ChooseProgramViewController: AudioViewController {
 
     @IBOutlet weak var goNextbutton: UIButton!
     
-    @IBOutlet weak var programDescription: UILabel!
-    var texts: [String] = ["Highlights interactions, expectations and safety precautions with various peers and adults in their community.", "Highlights interactions within an elementary school setting.", "Highlights interactions during structured activities related to middle/high  school in the classroom, group work and physical education.","Highlights interactions during unstructured times related to middle/high school when social rules are most challenging, in the hall, cafeteria and just hanging out."  ]
+    /**@IBOutlet weak var programDescription: UILabel!
+    var texts: [String] = ["Highlights interactions, expectations and safety precautions with various peers and adults in their community.", "Highlights interactions within an elementary school setting.", "Highlights interactions during structured activities related to middle/high  school in the classroom, group work and physical education.","Highlights interactions during unstructured times related to middle/high school when social rules are most challenging, in the hall, cafeteria and just hanging out."  ]**/
     var programNames: [String] = ["My Community", "My School Day", "School Rules 1", "School Rules 2"]
     var buttonPressed: Int!
     var container: UserViewController!
@@ -92,7 +92,7 @@ class ChooseProgramViewController: AudioViewController {
         
         
         
-        programDescription.text = texts[tagNum]
+        //programDescription.text = texts[tagNum]
         buttonPressed = sender.tag
         
     }

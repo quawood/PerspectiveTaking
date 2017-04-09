@@ -133,7 +133,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
             for i in 0...stars.count-1 {
                 
                 let starframe = CGRect(x: stars[i].frame.origin.x + scenarioView.frame.origin.x - 50, y: stars[i].frame.origin.y +
-                    scenarioView.frame.origin.y - 50 , width: 100 * self.view.bounds.width/414 , height: 100 * self.view.bounds.width/469)
+                    scenarioView.frame.origin.y - 50 , width: 50 * self.view.bounds.width/414 , height: 50 * self.view.bounds.width/469)
                 if (starframe.contains(currentA.center) && (viewPlace[i] == 0||viewPlace[i] == currentA.tag)) {
 
                     if viewPlace.contains(currentA.tag) {
