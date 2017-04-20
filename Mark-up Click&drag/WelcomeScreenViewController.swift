@@ -10,8 +10,12 @@ import UIKit
 import AVFoundation
 class WelcomeScreenViewController: AudioViewController {
 
+    @IBOutlet weak var goNextButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        goNextButton.layer.cornerRadius = 5
+        goNextButton.layer.borderColor = UIColor.white.cgColor
+        goNextButton.layer.borderWidth = 2
         UIView.animate(withDuration: 0.5, animations: {
             self.playBackgroundMusic(filename: "SSBAppintro.mp3")
         })

@@ -67,8 +67,9 @@
 		A52EAB7E1E8F671E00682C1B /* thoughttail1.png in Resources */ = {isa = PBXBuildFile; fileRef = A52EAB481E8F671E00682C1B /* thoughttail1.png */; };
 		A52EAB7F1E8F671E00682C1B /* thoughtwt.png in Resources */ = {isa = PBXBuildFile; fileRef = A52EAB491E8F671E00682C1B /* thoughtwt.png */; };
 		A52EAB811E8F671E00682C1B /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = A52EAB4B1E8F671E00682C1B /* user.png */; };
-		A52EAB821E8F671E00682C1B /* Welcome Screen-2.png in Resources */ = {isa = PBXBuildFile; fileRef = A52EAB4C1E8F671E00682C1B /* Welcome Screen-2.png */; };
 		A54B09EF1D7FBACB00D82D49 /* CreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B09EE1D7FBACB00D82D49 /* CreateUserViewController.swift */; };
+		A55C1DF71EA85075000E542C /* School Rules 1.wav in Resources */ = {isa = PBXBuildFile; fileRef = A55C1DF31EA85075000E542C /* School Rules 1.wav */; };
+		A55C1DF81EA85075000E542C /* School Rules 2.wav in Resources */ = {isa = PBXBuildFile; fileRef = A55C1DF41EA85075000E542C /* School Rules 2.wav */; };
 		A562FEBB1E93AAF000CC4984 /* WelcomeCAT.wav in Resources */ = {isa = PBXBuildFile; fileRef = A562FEBA1E93AAF000CC4984 /* WelcomeCAT.wav */; };
 		A56F79C11E770A6F00B34BB8 /* 001.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A56F777B1E770A6E00B34BB8 /* 001.jpg */; };
 		A56F79C21E770A6F00B34BB8 /* 003.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A56F777C1E770A6E00B34BB8 /* 003.jpg */; };
@@ -687,6 +688,9 @@
 		A5C137841E77A34A00D78344 /* CnDInstructions.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5C137811E77A34A00D78344 /* CnDInstructions.wav */; };
 		A5C137851E77A34A00D78344 /* correctSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5C137821E77A34A00D78344 /* correctSound.wav */; };
 		A5C137861E77A34A00D78344 /* wrongSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5C137831E77A34A00D78344 /* wrongSound.wav */; };
+		A5C1A7721EA10B6200AF8937 /* AinslieNormRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A5C1A7711EA10AE700AF8937 /* AinslieNormRegular.otf */; };
+		A5C1A7741EA10C8300AF8937 /* Selections Within Category.png in Resources */ = {isa = PBXBuildFile; fileRef = A5C1A7731EA10C8300AF8937 /* Selections Within Category.png */; };
+		A5C1A7761EA10FEB00AF8937 /* Welcome Screen.png in Resources */ = {isa = PBXBuildFile; fileRef = A5C1A7751EA10FEB00AF8937 /* Welcome Screen.png */; };
 		A5DBA24A1DA4A07400C15EDE /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DBA2491DA4A07400C15EDE /* UIImage+Gif.swift */; };
 		A5DCF8CD1DC1789D0082F7EA /* 1.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5DCF8CC1DC1789D0082F7EA /* 1.xib */; };
 		A5DCF8CF1DC17B180082F7EA /* 2.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5DCF8CE1DC17B180082F7EA /* 2.xib */; };
@@ -782,8 +786,9 @@
 		A52EAB481E8F671E00682C1B /* thoughttail1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thoughttail1.png; sourceTree = "<group>"; };
 		A52EAB491E8F671E00682C1B /* thoughtwt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thoughtwt.png; sourceTree = "<group>"; };
 		A52EAB4B1E8F671E00682C1B /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
-		A52EAB4C1E8F671E00682C1B /* Welcome Screen-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Welcome Screen-2.png"; sourceTree = "<group>"; };
 		A54B09EE1D7FBACB00D82D49 /* CreateUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUserViewController.swift; sourceTree = "<group>"; };
+		A55C1DF31EA85075000E542C /* School Rules 1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "School Rules 1.wav"; sourceTree = "<group>"; };
+		A55C1DF41EA85075000E542C /* School Rules 2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "School Rules 2.wav"; sourceTree = "<group>"; };
 		A562FEBA1E93AAF000CC4984 /* WelcomeCAT.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = WelcomeCAT.wav; sourceTree = "<group>"; };
 		A56F777B1E770A6E00B34BB8 /* 001.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 001.jpg; sourceTree = "<group>"; };
 		A56F777C1E770A6E00B34BB8 /* 003.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 003.jpg; sourceTree = "<group>"; };
@@ -1402,6 +1407,9 @@
 		A5C137811E77A34A00D78344 /* CnDInstructions.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = CnDInstructions.wav; sourceTree = "<group>"; };
 		A5C137821E77A34A00D78344 /* correctSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = correctSound.wav; sourceTree = "<group>"; };
 		A5C137831E77A34A00D78344 /* wrongSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wrongSound.wav; sourceTree = "<group>"; };
+		A5C1A7711EA10AE700AF8937 /* AinslieNormRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AinslieNormRegular.otf; sourceTree = "<group>"; };
+		A5C1A7731EA10C8300AF8937 /* Selections Within Category.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Selections Within Category.png"; sourceTree = "<group>"; };
+		A5C1A7751EA10FEB00AF8937 /* Welcome Screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Welcome Screen.png"; sourceTree = "<group>"; };
 		A5DBA2491DA4A07400C15EDE /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
 		A5DCF8CC1DC1789D0082F7EA /* 1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = 1.xib; sourceTree = "<group>"; };
 		A5DCF8CE1DC17B180082F7EA /* 2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = 2.xib; sourceTree = "<group>"; };
@@ -1453,6 +1461,7 @@
 		A52EAB151E8F671200682C1B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A5C1A7711EA10AE700AF8937 /* AinslieNormRegular.otf */,
 				A52EAB161E8F671E00682C1B /* Images */,
 			);
 			name = Images;
@@ -1461,6 +1470,8 @@
 		A52EAB161E8F671E00682C1B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A5C1A7751EA10FEB00AF8937 /* Welcome Screen.png */,
+				A5C1A7731EA10C8300AF8937 /* Selections Within Category.png */,
 				A52727481E9A54D000D5779E /* Login Screen.png */,
 				A52727491E9A54D000D5779E /* Selections Within Category.png */,
 				A527274A1E9A54D000D5779E /* Title Choices.png */,
@@ -1514,7 +1525,6 @@
 				A52EAB481E8F671E00682C1B /* thoughttail1.png */,
 				A52EAB491E8F671E00682C1B /* thoughtwt.png */,
 				A52EAB4B1E8F671E00682C1B /* user.png */,
-				A52EAB4C1E8F671E00682C1B /* Welcome Screen-2.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -2185,6 +2195,8 @@
 				A5AC34C61E90AB030066D073 /* Choose a title to play.wav */,
 				A5AC34C71E90AB030066D073 /* Click and drag.wav */,
 				A5AC34C81E90AB030066D073 /* Great job.wav */,
+				A55C1DF31EA85075000E542C /* School Rules 1.wav */,
+				A55C1DF41EA85075000E542C /* School Rules 2.wav */,
 				A5AC34C91E90AB030066D073 /* If you have played before.wav */,
 				A5AC34CA1E90AB030066D073 /* My Community.wav */,
 				A5AC34CB1E90AB030066D073 /* My School Day.wav */,
@@ -2384,6 +2396,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5C1A7721EA10B6200AF8937 /* AinslieNormRegular.otf in Resources */,
 				A56F7BDD1E770A7000B34BB8 /* RR1010076-.jpg in Resources */,
 				A56F79DD1E770A6F00B34BB8 /* CP1010064.jpg in Resources */,
 				A56F7AB81E770A6F00B34BB8 /* P1010121.jpg in Resources */,
@@ -2564,6 +2577,7 @@
 				A56F7ADC1E770A6F00B34BB8 /* P7a.jpg in Resources */,
 				A56F7B341E770A6F00B34BB8 /* R1010026.jpg in Resources */,
 				A56F7B751E770A7000B34BB8 /* R1010080H.jpg in Resources */,
+				A55C1DF81EA85075000E542C /* School Rules 2.wav in Resources */,
 				A56F79E31E770A6F00B34BB8 /* cubbyreach.jpg in Resources */,
 				A56F7B6A1E770A7000B34BB8 /* R1010068H.jpg in Resources */,
 				A56F7B091E770A6F00B34BB8 /* R1010003S.jpg in Resources */,
@@ -2584,6 +2598,7 @@
 				A56F7A6A1E770A6F00B34BB8 /* P1010043.jpg in Resources */,
 				A56F7B1B1E770A6F00B34BB8 /* R1010013H.jpg in Resources */,
 				A56F7A581E770A6F00B34BB8 /* P1010025.jpg in Resources */,
+				A5C1A7761EA10FEB00AF8937 /* Welcome Screen.png in Resources */,
 				A56F7B561E770A6F00B34BB8 /* R1010055.jpg in Resources */,
 				A56F7B261E770A6F00B34BB8 /* R1010019.jpg in Resources */,
 				A56F7A701E770A6F00B34BB8 /* P1010049.jpg in Resources */,
@@ -2636,6 +2651,7 @@
 				A56F7BBE1E770A7000B34BB8 /* RL1010044.jpg in Resources */,
 				A52EAB561E8F671E00682C1B /* girl.png in Resources */,
 				A56F7AA41E770A6F00B34BB8 /* P1010101.jpg in Resources */,
+				A55C1DF71EA85075000E542C /* School Rules 1.wav in Resources */,
 				A56F7BFC1E770A7000B34BB8 /* teacher2.jpg in Resources */,
 				A56F7A5C1E770A6F00B34BB8 /* P1010029.jpg in Resources */,
 				A56F79F41E770A6F00B34BB8 /* DCP0012.jpg in Resources */,
@@ -2719,6 +2735,7 @@
 				A5DCF8D31DC17B340082F7EA /* 4.xib in Resources */,
 				A56F7B711E770A7000B34BB8 /* R1010077.jpg in Resources */,
 				A56F7B441E770A6F00B34BB8 /* R1010038.jpg in Resources */,
+				A5C1A7741EA10C8300AF8937 /* Selections Within Category.png in Resources */,
 				A56F7BE31E770A7000B34BB8 /* Rschool1.jpg in Resources */,
 				A56F7B771E770A7000B34BB8 /* R1010081H.jpg in Resources */,
 				A52EAB701E8F671E00682C1B /* socialskillbuildercycle.png in Resources */,
@@ -2778,7 +2795,6 @@
 				A56F7BA11E770A7000B34BB8 /* R1010109L.jpg in Resources */,
 				A56F7B171E770A6F00B34BB8 /* R1010011H.jpg in Resources */,
 				A56F7BC91E770A7000B34BB8 /* RL1010070.jpg in Resources */,
-				A52EAB821E8F671E00682C1B /* Welcome Screen-2.png in Resources */,
 				A56F7A671E770A6F00B34BB8 /* P1010040.jpg in Resources */,
 				A56F7BEA1E770A7000B34BB8 /* school2.jpg in Resources */,
 				2E0C34371E76D1B600CC7F9E /* ChoosePlaceView.xib in Resources */,

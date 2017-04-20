@@ -49,6 +49,7 @@ class UserViewController: AudioViewController{
         
     }
     @IBAction func newUserBtn(_ sender: Any) {
+        self.audioPlayer.stop()
         newUser()
     }
     

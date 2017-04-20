@@ -112,7 +112,9 @@ class HomeViewController: AudioViewController{
             destinationVC.currentPlace = place
             destinationVC.placeString = placeString
             destinationVC.randomNum = randomNum
+            destinationVC.progName = programTitle.text
             destinationVC.SetHomeContent()
+            
             activityIndicator.stopAnimating()
 
             

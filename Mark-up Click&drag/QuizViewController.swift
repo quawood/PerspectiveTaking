@@ -39,6 +39,9 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
     var timer = Timer()
     var correct:Int = 0
     
+    var progName: String!
+    @IBOutlet weak var ProgramLabel: UILabel!
+    
     var starLocations:[CGPoint]!
     var correctAnss:[Int]!
     var viewPlace:[Int] = [0,0,0,0,0]
@@ -86,8 +89,8 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
             currentA.center = CGPoint(x: touch.location(in: self.view).x-deltaX, y: touch.location(in: self.view).y-deltaY)
             
             for i in 0...stars.count-1 {
-                let starframe = CGRect(x: stars[i].frame.origin.x + scenarioView.frame.origin.x - 50 , y: stars[i].frame.origin.y +
-                    scenarioView.frame.origin.y - 50, width: 100 * self.view.bounds.width/469 , height: 100 * self.view.bounds.width/469)
+                let starframe = CGRect(x: stars[i].frame.origin.x + scenarioView.frame.origin.x - 25 , y: stars[i].frame.origin.y +
+                    scenarioView.frame.origin.y - 25, width: 75 * self.view.bounds.width/469 , height: 75 * self.view.bounds.width/469)
                 if (starframe.contains(currentA.center) && (viewPlace[i] == 0||viewPlace[i] == currentA.tag)) {
                     
                     for view in currentA.subviews {
@@ -132,8 +135,8 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
 
             for i in 0...stars.count-1 {
                 
-                let starframe = CGRect(x: stars[i].frame.origin.x + scenarioView.frame.origin.x - 50, y: stars[i].frame.origin.y +
-                    scenarioView.frame.origin.y - 50 , width: 50 * self.view.bounds.width/414 , height: 50 * self.view.bounds.width/469)
+                let starframe = CGRect(x: stars[i].frame.origin.x + scenarioView.frame.origin.x - 25, y: stars[i].frame.origin.y +
+                    scenarioView.frame.origin.y - 25 , width: 75 * self.view.bounds.width/414 , height: 75 * self.view.bounds.width/469)
                 if (starframe.contains(currentA.center) && (viewPlace[i] == 0||viewPlace[i] == currentA.tag)) {
 
                     if viewPlace.contains(currentA.tag) {
@@ -175,6 +178,8 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
     func stylesScene() {
         homeButton.layer.cornerRadius = 5
         homeButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        finishButton.layer.cornerRadius = 5
+        nextQuestionBtn.layer.cornerRadius = 5
        // helpButton.layer.cornerRadius = 5
         //helpButton.titleLabel?.font = helpButton.titleLabel?.font.withSize((homeButton.titleLabel?.font.pointSize)!)
         checkAnsBtn.layer.cornerRadius = 5
@@ -251,8 +256,6 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
     func disableScene() {
         checkAnsBtn.isUserInteractionEnabled = false
         sceneView.isUserInteractionEnabled = false
-        nextQuestionBtn.isUserInteractionEnabled = true
-        finishButton.isUserInteractionEnabled = true
     }
 
     
@@ -293,7 +296,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    
+        ProgramLabel.text = progName
         
         xRat  = Float(self.view.bounds.width)/469
 
@@ -412,8 +415,11 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
 
     
     @IBAction func checkAns(sender: AnyObject) {
+        let goodAudios:[String] = ["Great job","Perfect","Wow. Super job. ","You are good at this"]
+        let badAudios:[String] = ["Take another look","That's okay. Try again."]
         if viewPlace == correctAnss {
-            playSound(filename: "correctSound")
+            let randomIndex = Int(arc4random_uniform(UInt32(goodAudios.count)))
+            self.playAudio(fileName: goodAudios[randomIndex])
             //nextQuestionBtn.isHidden = false
             if turn == 1 {
                 let random = numbers[Int(arc4random_uniform(UInt32(numbers.count)) + 1) - 1]
@@ -430,15 +436,16 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
                 disableScene()
             }
             if randomNum != 5 {
+                disableScene()
                 nextQuestionBtn.isHidden = false
-                nextQuestionBtn.isUserInteractionEnabled = true
             }
             else {
                 finishButton.isHidden = false
             }
         }
         else if turn == 1 {
-            playSound(filename: "wrongSound")
+            let randomIndex = Int(arc4random_uniform(UInt32(badAudios.count)))
+            self.playAudio(fileName: badAudios[randomIndex])
             turn = turn + 1
             replaceAnswers()
             viewPlace = [Int](repeating
@@ -468,11 +475,9 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
             
             if randomNum != 5 {
                 nextQuestionBtn.isHidden = false
-                nextQuestionBtn.isUserInteractionEnabled = true
             }
             else {
                 finishButton.isHidden = false
-                finishButton.isUserInteractionEnabled = true
             }
         }
     }
