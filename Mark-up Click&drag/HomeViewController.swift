@@ -72,7 +72,7 @@ class HomeViewController: AudioViewController{
         // Dispose of any resources that can be recreated.
     }
     
-    func clearOrResume(_ sender: AnyObject) {
+    func clearOrResume() {
         if randomNum > 1  {
         let alertConrtoller = UIAlertController(title: "Start Quiz", message: "Start over or resume from where you left off.", preferredStyle: .alert)
         alertConrtoller.addAction(UIAlertAction(title: "Start Over", style: .cancel, handler: { (action: UIAlertAction!) in
@@ -96,15 +96,15 @@ class HomeViewController: AudioViewController{
                 let progress: Progress = NSEntityDescription.insertNewObject(forEntityName: "Progress", into: DatabaseController.getContext()) as! Progress
                 
                 progress.value = Int16(0)
-                progress.place = String(sender.tag)
+                progress.place = self.place
                 progress.program = prog
                 
                 if (progressesArray?.count)! > 0 {
+                    print(progressesArray?.count)
                     for p in progressesArray! {
-                        print(sender.tag)
+                        print(self.place)
                         
-                        if (p.place == String(sender.tag)) && (p.program == prog) {
-                            
+                        if (p.place == self.place) && (p.program == prog) {
                             
                             progressesArray?[(progressesArray?.index(of: p))!].value = progress.value
                         }
@@ -125,7 +125,7 @@ class HomeViewController: AudioViewController{
         alert.view.tintColor = UIColor.black
         activityIndicator.startAnimating()
         DispatchQueue.main.async {
-            self.clearOrResume(sender)
+            self.clearOrResume()
         }
         
     }
