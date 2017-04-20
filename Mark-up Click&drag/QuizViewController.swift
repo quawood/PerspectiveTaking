@@ -262,7 +262,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
     
     func GetHomeData(completionHandler: ((NSDictionary) -> Void)?)
     {
-        let file = Bundle.main.path(forResource: "MCQuestions", ofType: "json")
+        let file = Bundle.main.path(forResource: "questions", ofType: "json")
         let url = NSURL(fileURLWithPath: file!)
         let request: NSURLRequest = NSURLRequest(url:url as URL)
         let config = URLSessionConfiguration.default
@@ -407,6 +407,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
             answers[4].isHidden = false
         }
         self.audioPlayer.stop()
+        self.quizPlayer.removeAllItems()
     }
     
     func playSound(filename: String) {

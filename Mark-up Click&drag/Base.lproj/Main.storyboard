@@ -193,7 +193,7 @@
                                         <rect key="frame" x="54" y="113" width="644" height="300"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="R1010109L.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Ws2-tC-BgJ">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="R1010114.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Ws2-tC-BgJ">
                                                 <rect key="frame" x="0.0" y="-1" width="644" height="301"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.63921568630000003" green="0.90980392160000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -667,17 +667,6 @@ well. </string>
                                     </segue>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ekp-Io-58b">
-                                <rect key="frame" x="427" y="965" width="173" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="25"/>
-                                <state key="normal" title="Toggle audio">
-                                    <color key="titleColor" red="0.86274509803921573" green="0.28480232423611113" blue="0.1842496693" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="toggleAudio:" destination="g0H-Ld-XIc" eventType="touchUpInside" id="MGi-Kj-Ktb"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1043,6 +1032,18 @@ well. </string>
                                             <action selector="deleteStudent:" destination="sws-sE-EgX" eventType="touchUpInside" id="Sgk-xW-aBf"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IUC-cz-CNo">
+                                        <rect key="frame" x="319" y="545" width="173" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="25"/>
+                                        <state key="normal" title="Toggle audio">
+                                            <color key="titleColor" red="0.86274509799999999" green="0.28480232420000001" blue="0.1842496693" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="toggleAudio:" destination="g0H-Ld-XIc" eventType="touchUpInside" id="GwB-5y-IHI"/>
+                                            <action selector="toggleAudio:" destination="sws-sE-EgX" eventType="touchUpInside" id="XJa-nT-Oel"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.3135790228843689" green="0.71675080060958862" blue="0.82187420129776001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -1205,7 +1206,7 @@ well. </string>
         <image name="Info Screen.png" width="750" height="1000"/>
         <image name="Login Screen.png" width="750" height="1000"/>
         <image name="MC.JPG" width="300" height="300"/>
-        <image name="R1010109L.jpg" width="480" height="360"/>
+        <image name="R1010114.jpg" width="480" height="360"/>
         <image name="Refresh.png" width="128" height="128"/>
         <image name="SD App Icon.JPG" width="1024" height="1024"/>
         <image name="SD Intermediate.jpg" width="64" height="64"/>

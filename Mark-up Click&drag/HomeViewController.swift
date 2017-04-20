@@ -39,10 +39,10 @@ class HomeViewController: AudioViewController{
         
 
     }
-    func saveState() {
+    func startOver() {
         var progressesArray = currentUs.progresses as? Set<Progress>
         let progress: Progress = NSEntityDescription.insertNewObject(forEntityName: "Progress", into: DatabaseController.getContext()) as! Progress
-        progress.value = Int16(randomNum-1)
+        progress.value = Int16(0)
         progress.place = place
         progress.program = prog
         if (progressesArray?.count)! > 0 {
@@ -77,7 +77,7 @@ class HomeViewController: AudioViewController{
         let alertConrtoller = UIAlertController(title: "Start Quiz", message: "Start over or resume from where you left off.", preferredStyle: .alert)
         alertConrtoller.addAction(UIAlertAction(title: "Start Over", style: .cancel, handler: { (action: UIAlertAction!) in
             self.randomNum = 1
-            self.saveState()
+            self.startOver()
             self.performSegue(withIdentifier: "toQuiz", sender: self)
         }))
         alertConrtoller.addAction(UIAlertAction(title: "Resume", style: .default, handler: { (action: UIAlertAction!) in
@@ -92,26 +92,8 @@ class HomeViewController: AudioViewController{
                 alertConrtoller.dismiss(animated: true, completion: nil)
             }))
             alertConrtoller.addAction(UIAlertAction(title: "Retake", style: .default, handler: { (action: UIAlertAction!) in
-                var progressesArray = currentUs.progresses as? Set<Progress>
-                let progress: Progress = NSEntityDescription.insertNewObject(forEntityName: "Progress", into: DatabaseController.getContext()) as! Progress
-                
-                progress.value = Int16(0)
-                progress.place = self.place
-                progress.program = prog
-                
-                if (progressesArray?.count)! > 0 {
-                    print(progressesArray?.count)
-                    for p in progressesArray! {
-                        print(self.place)
-                        
-                        if (p.place == self.place) && (p.program == prog) {
-                            
-                            progressesArray?[(progressesArray?.index(of: p))!].value = progress.value
-                        }
-                    }
-                }
-                currentUs.progresses = progressesArray as NSSet?
-                DatabaseController.saveContext()
+                self.randomNum = 1
+                self.startOver()
                 self.performSegue(withIdentifier: "toQuiz", sender: self)
                 
             }))

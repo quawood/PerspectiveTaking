@@ -16,7 +16,7 @@
 		A527274F1E9A5E9500D5779E /* WelcomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A527274E1E9A5E9500D5779E /* WelcomeScreenViewController.swift */; };
 		A52727511E9A5EE200D5779E /* SSBAppintro.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A52727501E9A5EE200D5779E /* SSBAppintro.mp3 */; };
 		A52727531E9A65CA00D5779E /* DeleteUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52727521E9A65CA00D5779E /* DeleteUsersViewController.swift */; };
-		A529E1951EA87C49002E3D25 /* MCQuestions.json in Resources */ = {isa = PBXBuildFile; fileRef = A529E1941EA87C49002E3D25 /* MCQuestions.json */; };
+		A529E1971EA87D48002E3D25 /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = A529E1961EA87D48002E3D25 /* questions.json */; };
 		A52E3D461DD3D949001491E3 /* ChooseProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52E3D451DD3D949001491E3 /* ChooseProgramViewController.swift */; };
 		A52EAB4D1E8F671E00682C1B /* bottomnavbar.png in Resources */ = {isa = PBXBuildFile; fileRef = A52EAB171E8F671E00682C1B /* bottomnavbar.png */; };
 		A52EAB4E1E8F671E00682C1B /* boy.png in Resources */ = {isa = PBXBuildFile; fileRef = A52EAB181E8F671E00682C1B /* boy.png */; };
@@ -741,7 +741,7 @@
 		A527274E1E9A5E9500D5779E /* WelcomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeScreenViewController.swift; sourceTree = "<group>"; };
 		A52727501E9A5EE200D5779E /* SSBAppintro.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SSBAppintro.mp3; sourceTree = "<group>"; };
 		A52727521E9A65CA00D5779E /* DeleteUsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteUsersViewController.swift; sourceTree = "<group>"; };
-		A529E1941EA87C49002E3D25 /* MCQuestions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MCQuestions.json; sourceTree = "<group>"; };
+		A529E1961EA87D48002E3D25 /* questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = questions.json; sourceTree = "<group>"; };
 		A52E3D451DD3D949001491E3 /* ChooseProgramViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseProgramViewController.swift; sourceTree = "<group>"; };
 		A52EAB171E8F671E00682C1B /* bottomnavbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottomnavbar.png; sourceTree = "<group>"; };
 		A52EAB181E8F671E00682C1B /* boy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boy.png; sourceTree = "<group>"; };
@@ -2277,7 +2277,7 @@
 				A5F548CC1E2D9F3C007169A9 /* DatabaseController.swift */,
 				A5F4831B1D130F8100AA4E85 /* AppDelegate.swift */,
 				A5F4831F1D130F8100AA4E85 /* Main.storyboard */,
-				A529E1941EA87C49002E3D25 /* MCQuestions.json */,
+				A529E1961EA87D48002E3D25 /* questions.json */,
 				A5F483251D130F8100AA4E85 /* Assets.xcassets */,
 				A56F777A1E770A6E00B34BB8 /* Collection */,
 				A53D85E11D6B9F9E007544FB /* Helper Files */,
@@ -2502,7 +2502,6 @@
 				A56F7A741E770A6F00B34BB8 /* P1010053.jpg in Resources */,
 				A56F7AE01E770A6F00B34BB8 /* PICK41lunchlady4.jpg in Resources */,
 				A56F7BF31E770A7000B34BB8 /* spacelineup.jpg in Resources */,
-				A529E1951EA87C49002E3D25 /* MCQuestions.json in Resources */,
 				A56F7A901E770A6F00B34BB8 /* P1010081.jpg in Resources */,
 				A56F7B481E770A6F00B34BB8 /* R1010040H.jpg in Resources */,
 				A56F7B491E770A6F00B34BB8 /* R1010041.jpg in Resources */,
@@ -2723,6 +2722,7 @@
 				A56F7B1A1E770A6F00B34BB8 /* R1010013.jpg in Resources */,
 				A56F7ACD1E770A6F00B34BB8 /* P11a.jpg in Resources */,
 				A56F7B801E770A7000B34BB8 /* R1010086.jpg in Resources */,
+				A529E1971EA87D48002E3D25 /* questions.json in Resources */,
 				A52EAB6D1E8F671E00682C1B /* ScoresCell.png in Resources */,
 				A56F7A291E770A6F00B34BB8 /* lunch1.jpg in Resources */,
 				A56F7A451E770A6F00B34BB8 /* P1010006.jpg in Resources */,

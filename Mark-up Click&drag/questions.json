@@ -429,15 +429,15 @@
                               ],
                   "image": "P15a.jpg",
                   "startails": [
-                                0, 0
+                                1, 0
                                 ],
                   "stars": [
                             [
-                             348, 8
+                             227, 8
                              ],
                             [
-                             420,
-                             88
+                             373,
+                             53
                              ]
                             ],
                   "correct": [
@@ -461,16 +461,16 @@
                               ],
                   "image": "P27.jpg",
                   "startails": [
-                                1, 1, 1
+                                0, 0, 1
                                 ],
                   "stars": [
                             [
-                             124,
-                             164
+                             99,
+                            124
                              ],
                             [
-                             129,
-                             102
+                             199,
+                             65
                              ],
                             [
                              568,
@@ -1102,7 +1102,7 @@
                   "answers": [
                               "Is this O.K.?",
                               "I'm ready, let's go!",
-                              "Move over, i need my space.",
+                              "Move over, I need my space.",
                               "Can I have a turn?",
                               ""
                               ],
@@ -2147,12 +2147,12 @@
                                 ],
                   "stars": [
                             [
-                             287,
-                             95
+                             266,
+                             61
                              ],
                             [
-                             600,
-                             120
+                             562,
+                             92
                              ]
                             ],
                   "correct": [
@@ -2197,7 +2197,7 @@
                   "answers": [
                               "I should really put this magazine away now.",
                               "We should really put this away.",
-                              "I am so embarassed!",
+                              "How do I get this computer started?",
                               "Girls, class has started!",
                               ""
                               ],
@@ -2209,25 +2209,20 @@
                               ""
                               ],
                   "startails": [
-                                1, 1, 0
+                                1, 0
                                 ],
                   
                   "stars": [
                             [
                              132,
                              195
-                             ],
-                            [
-                             330,
-                             150
-                             ],
+                             ]
                             [
                              570, 14
                              ]
                             ],
                   "correct": [
                               2,
-                              3,
                               4
                               ]
                   }],
@@ -2237,7 +2232,7 @@
                               "He gives such a good report!",
                               "He needs to look at the class",
                               "This is soooo boring!",
-                              "What are my friends doing over there?",
+                              "I'm having the best time ever!",
                               ""
                               ],
                   "bubbles": [

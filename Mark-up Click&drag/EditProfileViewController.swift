@@ -128,8 +128,9 @@ class EditProfileViewController: UIViewController,UINavigationControllerDelegate
         
     }
 
-    
-    
+    @IBAction func toggleAudio(_ sender: Any) {
+        isAudioEnabled = !isAudioEnabled
+    }
     
     
     @IBAction func deleteStudent(_ sender: AnyObject) {
