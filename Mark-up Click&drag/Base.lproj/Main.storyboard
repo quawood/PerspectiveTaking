@@ -9,8 +9,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="AinslieNormRegular.otf">
-            <string>Ainslie-NorReg</string>
+        <array key="AinslieNorBold.otf">
+            <string>Ainslie-NorBol</string>
         </array>
         <array key="texgyreschola-regular.otf">
             <string>TeXGyreSchola-Regular</string>
@@ -59,7 +59,7 @@
                                 <rect key="frame" x="17" y="237" width="990" height="649"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="649" id="Ral-Df-do1"/>
+                                    <constraint firstAttribute="height" constant="649" id="dkD-nU-KEh"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="20" id="3bH-ux-q6Y">
                                     <size key="itemSize" width="160" height="140"/>
@@ -82,31 +82,31 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="160" height="140"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I love SSB" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Nxg-6s-Dsq">
-                                                            <rect key="frame" x="0.0" y="0.0" width="160" height="140"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="160" height="132"/>
                                                             <color key="tintColor" red="0.83151584199999995" green="0.56004238029999998" blue="0.82892841650000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                                            <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="19"/>
                                                             <color key="textColor" red="0.1748891175" green="0.41068443659999998" blue="0.647359252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="tw9-ps-gqW" secondAttribute="trailing" id="KQM-l4-00H"/>
-                                                        <constraint firstItem="tw9-ps-gqW" firstAttribute="leading" secondItem="OAr-BO-TuE" secondAttribute="leading" id="V8j-ln-GCF"/>
-                                                        <constraint firstItem="tw9-ps-gqW" firstAttribute="bottom" secondItem="Nxg-6s-Dsq" secondAttribute="bottom" id="c0q-SM-25x"/>
-                                                        <constraint firstItem="Nxg-6s-Dsq" firstAttribute="trailing" secondItem="tw9-ps-gqW" secondAttribute="trailing" id="lPD-R1-cOT"/>
-                                                        <constraint firstItem="Nxg-6s-Dsq" firstAttribute="top" secondItem="tw9-ps-gqW" secondAttribute="top" id="vAN-AD-b1h"/>
-                                                        <constraint firstItem="tw9-ps-gqW" firstAttribute="leading" secondItem="Nxg-6s-Dsq" secondAttribute="leading" id="w4z-oC-866"/>
-                                                        <constraint firstAttribute="bottom" secondItem="Nxg-6s-Dsq" secondAttribute="bottom" id="wfq-oS-gbh"/>
-                                                        <constraint firstItem="Nxg-6s-Dsq" firstAttribute="top" secondItem="OAr-BO-TuE" secondAttribute="top" id="zv8-iX-AF6"/>
+                                                        <constraint firstAttribute="trailing" secondItem="tw9-ps-gqW" secondAttribute="trailing" id="2lB-Im-bgL"/>
+                                                        <constraint firstItem="Nxg-6s-Dsq" firstAttribute="leading" secondItem="tw9-ps-gqW" secondAttribute="leading" id="Qt1-TK-tgq"/>
+                                                        <constraint firstItem="tw9-ps-gqW" firstAttribute="top" secondItem="OAr-BO-TuE" secondAttribute="top" id="SmZ-sH-ng7"/>
+                                                        <constraint firstItem="Nxg-6s-Dsq" firstAttribute="bottom" secondItem="OAr-BO-TuE" secondAttribute="bottomMargin" id="eMg-5S-XcT"/>
+                                                        <constraint firstAttribute="bottom" secondItem="tw9-ps-gqW" secondAttribute="bottom" id="fSk-tB-OtT"/>
+                                                        <constraint firstItem="tw9-ps-gqW" firstAttribute="leading" secondItem="OAr-BO-TuE" secondAttribute="leading" id="lYc-ZU-X9p"/>
+                                                        <constraint firstItem="tw9-ps-gqW" firstAttribute="trailing" secondItem="Nxg-6s-Dsq" secondAttribute="trailing" id="sgt-Po-NOx"/>
+                                                        <constraint firstItem="tw9-ps-gqW" firstAttribute="top" secondItem="Nxg-6s-Dsq" secondAttribute="top" id="u9l-vV-J4I"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="OAr-BO-TuE" secondAttribute="trailing" id="7aw-MS-4wv"/>
-                                            <constraint firstItem="OAr-BO-TuE" firstAttribute="leading" secondItem="hJf-gs-zyj" secondAttribute="leading" id="FK2-eq-MjG"/>
-                                            <constraint firstItem="OAr-BO-TuE" firstAttribute="top" secondItem="hJf-gs-zyj" secondAttribute="top" id="QXo-SJ-4db"/>
-                                            <constraint firstAttribute="bottom" secondItem="OAr-BO-TuE" secondAttribute="bottom" id="vgE-C7-hpO"/>
+                                            <constraint firstAttribute="bottom" secondItem="OAr-BO-TuE" secondAttribute="bottom" id="IT5-84-T3U"/>
+                                            <constraint firstItem="OAr-BO-TuE" firstAttribute="leading" secondItem="hJf-gs-zyj" secondAttribute="leading" id="cZW-qF-Yad"/>
+                                            <constraint firstItem="OAr-BO-TuE" firstAttribute="top" secondItem="hJf-gs-zyj" secondAttribute="top" id="i0J-Jd-9bh"/>
+                                            <constraint firstAttribute="trailing" secondItem="OAr-BO-TuE" secondAttribute="trailing" id="toU-yf-mkx"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="userNameLabel" destination="Nxg-6s-Dsq" id="rR3-E4-Hzn"/>
@@ -121,13 +121,13 @@
                         </subviews>
                         <color key="backgroundColor" red="0.63921568630000003" green="0.90980392160000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="k2v-hz-mPN" secondAttribute="trailing" id="5JS-8c-QHd"/>
-                            <constraint firstItem="k2v-hz-mPN" firstAttribute="bottom" secondItem="keA-Hw-y5d" secondAttribute="top" id="7pg-Tx-FsL"/>
-                            <constraint firstItem="k2v-hz-mPN" firstAttribute="top" secondItem="8dS-2l-l6O" secondAttribute="top" id="Ch0-S0-sur"/>
-                            <constraint firstItem="46g-9L-W8T" firstAttribute="top" secondItem="85g-Iw-79M" secondAttribute="bottom" constant="217" id="Eq4-nc-au8"/>
-                            <constraint firstItem="k2v-hz-mPN" firstAttribute="centerX" secondItem="46g-9L-W8T" secondAttribute="centerX" id="Fkq-9h-iSo"/>
-                            <constraint firstItem="k2v-hz-mPN" firstAttribute="leading" secondItem="8dS-2l-l6O" secondAttribute="leading" id="ha2-CT-itA"/>
-                            <constraint firstItem="46g-9L-W8T" firstAttribute="leading" secondItem="8dS-2l-l6O" secondAttribute="leadingMargin" constant="-3" id="zfB-iK-vpI"/>
+                            <constraint firstItem="46g-9L-W8T" firstAttribute="leading" secondItem="8dS-2l-l6O" secondAttribute="leadingMargin" constant="-3" id="28G-Yj-ZFX"/>
+                            <constraint firstAttribute="trailing" secondItem="k2v-hz-mPN" secondAttribute="trailing" id="HZc-Dv-6Uu"/>
+                            <constraint firstItem="k2v-hz-mPN" firstAttribute="centerX" secondItem="46g-9L-W8T" secondAttribute="centerX" id="Kgv-cr-qyM"/>
+                            <constraint firstItem="k2v-hz-mPN" firstAttribute="bottom" secondItem="keA-Hw-y5d" secondAttribute="top" id="apm-Tc-TuY"/>
+                            <constraint firstItem="k2v-hz-mPN" firstAttribute="leading" secondItem="8dS-2l-l6O" secondAttribute="leading" id="dqq-YV-pmf"/>
+                            <constraint firstItem="k2v-hz-mPN" firstAttribute="top" secondItem="8dS-2l-l6O" secondAttribute="top" id="ffP-2X-uVz"/>
+                            <constraint firstItem="46g-9L-W8T" firstAttribute="top" secondItem="85g-Iw-79M" secondAttribute="bottom" constant="217" id="snX-5e-AgS"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Users" id="H5t-ii-fWp"/>
@@ -163,7 +163,7 @@
                                 <rect key="frame" x="501" y="421" width="90" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.86284291739999996" green="0.42735332250000002" blue="0.1842496693" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
+                                <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="21"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.39389673223350252" green="0.14911039590804109" blue="0.17497693439274464" alpha="0.95146618149999995" colorSpace="custom" customColorSpace="sRGB"/>
@@ -176,7 +176,7 @@
                                 <rect key="frame" x="501" y="421" width="90" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.86284291739999996" green="0.42735332250000002" blue="0.1842496693" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="26"/>
+                                <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="26"/>
                                 <state key="normal" title="Finish">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.39389673219999999" green="0.1491103959" blue="0.17497693440000001" alpha="0.95146618149999995" colorSpace="custom" customColorSpace="sRGB"/>
@@ -248,7 +248,7 @@
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" none="YES"/>
                                                 </accessibility>
-                                                <fontDescription key="fontDescription" name="TeXGyreSchola-Regular" family="TeX Gyre Schola" pointSize="14"/>
+                                                <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="14"/>
                                                 <color key="textColor" red="0.26666666666666666" green="0.59607843137254901" blue="0.82745098039215681" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -266,7 +266,7 @@
                                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="He's so embarassing " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MhZ-Rv-4Dv">
                                                 <rect key="frame" x="25" y="33" width="90" height="74"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="TeXGyreSchola-Regular" family="TeX Gyre Schola" pointSize="13"/>
+                                                <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="14"/>
                                                 <color key="textColor" red="0.25241610409999998" green="0.58784610029999995" blue="0.82482314109999999" alpha="0.98520440919999996" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -286,7 +286,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                 <string key="text">You're waiting so 
 well. </string>
-                                                <fontDescription key="fontDescription" name="TeXGyreSchola-Regular" family="TeX Gyre Schola" pointSize="14"/>
+                                                <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="14"/>
                                                 <color key="textColor" red="0.25241610409999998" green="0.58784610029999995" blue="0.82482314109999999" alpha="0.98520440919999996" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -304,7 +304,7 @@ well. </string>
                                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I love you. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KpA-vP-psb">
                                                 <rect key="frame" x="25" y="33" width="90" height="74"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="TeXGyreSchola-Regular" family="TeX Gyre Schola" pointSize="14"/>
+                                                <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="14"/>
                                                 <color key="textColor" red="0.25241610409999998" green="0.58784610029999995" blue="0.82482314109999999" alpha="0.98520440919999996" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -324,7 +324,7 @@ well. </string>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                 <string key="text">I hate sitting and
  waiting.</string>
-                                                <fontDescription key="fontDescription" name="TeXGyreSchola-Regular" family="TeX Gyre Schola" pointSize="14"/>
+                                                <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="14"/>
                                                 <color key="textColor" red="0.25241610409999998" green="0.58784610029999995" blue="0.82482314109999999" alpha="0.98520440919999996" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -334,7 +334,7 @@ well. </string>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Restaurant" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.30000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="WhC-Bx-zma">
                                         <rect key="frame" x="252" y="421" width="248" height="19"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -342,7 +342,7 @@ well. </string>
                                         <rect key="frame" x="280" y="448" width="192" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.86284291744232178" green="0.42735332250595093" blue="0.18424966931343079" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="Ainslie-NorReg" family="Ainslie" pointSize="21"/>
+                                        <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="21"/>
                                         <state key="normal" title="Check Answer">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -354,7 +354,7 @@ well. </string>
                                         <rect key="frame" x="618" y="421" width="80" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.86284291744232178" green="0.42735332250595093" blue="0.18424966931343079" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                        <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="22"/>
                                         <color key="tintColor" red="0.74811463050000004" green="0.18256561760000001" blue="0.31009104180000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Home"/>
                                         <connections>
@@ -364,7 +364,7 @@ well. </string>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clear Answer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VEP-6v-Oq8">
                                         <rect key="frame" x="54" y="421" width="114" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="20"/>
                                         <color key="textColor" red="0.73080569510000004" green="0.38661265369999998" blue="0.77662748100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -377,11 +377,11 @@ well. </string>
                                             <action selector="clearAnswersWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FaW-ss-ODU"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6S-hj-6dy">
-                                        <rect key="frame" x="335" y="47" width="242" height="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Community" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6S-hj-6dy">
+                                        <rect key="frame" x="335" y="47" width="242" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="23"/>
+                                        <color key="textColor" red="0.9454694390296936" green="0.77977448701858521" blue="0.4777795672416687" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -667,6 +667,17 @@ well. </string>
                                     </segue>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ekp-Io-58b">
+                                <rect key="frame" x="427" y="965" width="173" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="25"/>
+                                <state key="normal" title="Toggle audio">
+                                    <color key="titleColor" red="0.86274509803921573" green="0.28480232423611113" blue="0.1842496693" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleAudio:" destination="g0H-Ld-XIc" eventType="touchUpInside" id="MGi-Kj-Ktb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -764,29 +775,29 @@ well. </string>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ScoresCell.png" translatesAutoresizingMaskIntoConstraints="NO" id="VWr-NP-9JV">
-                                                            <rect key="frame" x="-2" y="-1" width="480" height="59"/>
+                                                            <rect key="frame" x="-2" y="-1" width="480" height="58"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Community" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0e-zU-c5u">
-                                                            <rect key="frame" x="139" y="9" width="198" height="20"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                                            <color key="textColor" red="0.25241610409999998" green="0.58784610029999995" blue="0.82482314109999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VwJ-PO-0kZ">
-                                                            <rect key="frame" x="164" y="38" width="43" height="21"/>
+                                                            <rect key="frame" x="216" y="23" width="45" height="21"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                             <color key="textColor" red="0.25241610409999998" green="0.58784610029999995" blue="0.82482314109999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1.5.16" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7ee-Kv-Kti">
-                                                            <rect key="frame" x="256" y="38" width="81" height="21"/>
+                                                            <rect key="frame" x="392" y="18" width="78" height="22"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                             <color key="textColor" red="0.14642906189999999" green="0.56171411280000005" blue="0.74914443490000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Community" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0e-zU-c5u">
+                                                            <rect key="frame" x="138" y="5" width="197" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                                            <color key="textColor" red="0.25241610409999998" green="0.58784610029999995" blue="0.82482314109999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -920,7 +931,7 @@ well. </string>
                                 <rect key="frame" x="274" y="99" width="482" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.96353143453598022" green="0.89250737428665161" blue="0.24878531694412231" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="52"/>
                                 <color key="textColor" red="0.31881961226463318" green="0.53353381156921387" blue="0.24851816892623901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.45063942670822144" green="0.62067109346389771" blue="0.22026354074478149" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1064,7 +1075,7 @@ well. </string>
                         <viewControllerLayoutGuide type="bottom" id="nK4-Ni-CaR"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="BdR-QS-LqS">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="870"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </view>
                 </viewController>
@@ -1088,23 +1099,23 @@ well. </string>
                                 <rect key="frame" x="53" y="43" width="130" height="130"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" backgroundImage="Ideio_logo.png">
+                                <state key="normal" backgroundImage="SD App Icon.JPG">
                                     <color key="titleColor" red="0.74811463050000004" green="0.18256561760000001" blue="0.31009104180000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sji-ql-9Sq">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sji-ql-9Sq">
                                 <rect key="frame" x="53" y="294" width="130" height="130"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" backgroundImage="Ideio_logo.png">
+                                <state key="normal" backgroundImage="SSB App.jpg">
                                     <color key="titleColor" red="0.74811463050000004" green="0.18256561760000001" blue="0.31009104180000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Za-hA-fa8">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Za-hA-fa8">
                                 <rect key="frame" x="322" y="43" width="130" height="130"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" backgroundImage="Ideio_logo.png">
+                                <state key="normal" backgroundImage="SD Intermediate.jpg">
                                     <color key="titleColor" red="0.74811463050000004" green="0.18256561760000001" blue="0.31009104180000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
@@ -1129,11 +1140,11 @@ well. </string>
                                 <color key="textColor" red="1" green="0.86363886010000002" blue="0.5204590764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPo-Ei-xtN">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPo-Ei-xtN">
                                 <rect key="frame" x="322" y="294" width="130" height="130"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" backgroundImage="Ideio_logo.png">
+                                <state key="normal" backgroundImage="SSB Lite.JPG">
                                     <color key="titleColor" red="0.74811463050000004" green="0.18256561760000001" blue="0.31009104180000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
@@ -1191,12 +1202,15 @@ well. </string>
     </scenes>
     <resources>
         <image name="Choices Within Title.png" width="750" height="1000"/>
-        <image name="Ideio_logo.png" width="265" height="189"/>
         <image name="Info Screen.png" width="750" height="1000"/>
         <image name="Login Screen.png" width="750" height="1000"/>
         <image name="MC.JPG" width="300" height="300"/>
         <image name="R1010109L.jpg" width="480" height="360"/>
         <image name="Refresh.png" width="128" height="128"/>
+        <image name="SD App Icon.JPG" width="1024" height="1024"/>
+        <image name="SD Intermediate.jpg" width="64" height="64"/>
+        <image name="SSB App.jpg" width="225" height="225"/>
+        <image name="SSB Lite.JPG" width="1024" height="1024"/>
         <image name="Scores-MC.png" width="750" height="1000"/>
         <image name="ScoresCell.png" width="483" height="97"/>
         <image name="Selections Within Category.png" width="750" height="1000"/>

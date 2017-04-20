@@ -27,7 +27,7 @@
                              ],
                             [
                              350,
-                             201
+                            201
                              ],
                             [
                              610,
@@ -101,9 +101,9 @@
                              33
                              ],
                             [
-                             534,
-                             71
-                             ]
+                            534,
+                            71
+                            ]
                             ],
                   "correct": [
                               3,
@@ -127,16 +127,16 @@
                               ],
                   "image": "P1010131.jpg",
                   "startails": [
-                                0, 0
+                                0,0
                                 ],
                   "stars": [
                             [
                              179, 26
                              ],
-                            [376, 8]
+                            [376,8]
                             ],
                   "correct": [
-                              2, 4
+                              2,4
                               ]
                   }, {
                   "answers": [
@@ -167,8 +167,7 @@
                              19
                              ],
                             [567,
-                             61
-                             ]
+                             61]
                             ],
                   "correct": [
                               1,
@@ -191,7 +190,7 @@
                               "t",
                               ""
                               ],
-                  "image": "P1010014.jpg",
+                  "image": "P10100141.jpg",
                   "startails": [
                                 0, 1
                                 ],
@@ -202,7 +201,7 @@
                              ],
                             [
                              491,
-                             121
+                            121
                              ]
                             ],
                   "correct": [
@@ -224,7 +223,7 @@
                               "s",
                               ""
                               ],
-                  "image": "P1010030.jpg",
+                  "image": "P10100301.jpg",
                   "startails": [
                                 0, 0, 1
                                 ],
@@ -261,7 +260,7 @@
                               "s",
                               ""
                               ],
-                  "image": "P1010033.jpg",
+                  "image": "P1010033a.jpg",
                   "startails": [
                                 0, 0
                                 ],
@@ -294,7 +293,7 @@
                               "s",
                               ""
                               ],
-                  "image": "P1010034.jpg",
+                  "image": "P10100341.jpg",
                   "startails": [
                                 0, 1
                                 ],
@@ -327,7 +326,7 @@
                               "s",
                               ""
                               ],
-                  "image": "P1010040.jpg",
+                  "image": "P10100401.jpg",
                   "startails": [
                                 0, 1
                                 ],
@@ -427,17 +426,17 @@
                               "s",
                               ""
                               ],
-                  "image": "P15a.jpg",
+                  "image": "P15a1.jpg",
                   "startails": [
-                                0, 0
+                                1, 0
                                 ],
                   "stars": [
                             [
-                             348, 8
+                             190, 15
                              ],
                             [
-                             420,
-                             88
+                             458,
+                             86
                              ]
                             ],
                   "correct": [
@@ -448,8 +447,8 @@
                   "answers": [
                               "That is funny.",
                               "I want to go NOW!",
-                              "That boy should listen to his dad",
-                              "Hey, get back here!",
+                              "Why isn't he listening.",
+                              "Whoa, be careful!",
                               ""
                               ],
                   "bubbles": [
@@ -461,16 +460,12 @@
                               ],
                   "image": "P27.jpg",
                   "startails": [
-                                1, 1, 1
+                                0, 1
                                 ],
                   "stars": [
                             [
-                             124,
-                             164
-                             ],
-                            [
-                             129,
-                             102
+                             221,
+                             93
                              ],
                             [
                              568,
@@ -478,7 +473,6 @@
                              ]
                             ],
                   "correct": [
-                              2,
                               4,
                               3
                               ]
@@ -499,13 +493,9 @@
                               ],
                   "image": "P18a.jpg",
                   "startails": [
-                                0, 1, 1
+                                1, 1
                                 ],
                   "stars": [
-                            [
-                             246,
-                             8
-                             ],
                             [
                              157,
                              126
@@ -515,7 +505,6 @@
                              ]
                             ],
                   "correct": [
-                              2,
                               4,
                               1
                               ]
@@ -572,7 +561,7 @@
                               "s",
                               "t"
                               ],
-                  "image": "P1010081.jpg",
+                  "image": "P10100811.jpg",
                   "startails": [
                                 0, 0
                                 ],
@@ -605,7 +594,7 @@
                               "s",
                               "s"
                               ],
-                  "image": "P1010084.jpg",
+                  "image": "P10100841.jpg",
                   "startails": [
                                 0, 0, 1
                                 ],
@@ -630,10 +619,10 @@
                   }, {
                   "answers": [
                               "Can't wait to see the movie with you.",
-                              "No, son. It is sold out. We will have to come back.",
+                              "NO! It is sold out. We will have to come back.",
                               "Look at him, what's his problem.",
                               "You're my friend.",
-                              "PLEASE...Can we see the later movie? "
+                              "Can we see the later movie? "
                               ],
                   "bubbles": [
                               "s",
@@ -642,7 +631,7 @@
                               "s",
                               "s"
                               ],
-                  "image": "P1010093.jpg",
+                  "image": "P10100931.jpg",
                   "startails": [
                                 0, 0, 1
                                 ],
@@ -652,8 +641,8 @@
                              83
                              ],
                             [
-                             405,
-                             56
+                             241,
+                             28
                              ],
                             [
                              532,
@@ -668,9 +657,9 @@
                   }, {
                   "answers": [
                               "What else do you want to see?",
-                              "I am so bummed the movie is sold out.",
-                              "Did you get an A on the test?",
-                              "I wish it wasn't raining.",
+                              "Oh no, it's sold out.",
+                              "But I really wanted to see only that movie.",
+                              "I don't like this movie.",
                               ""
                               ],
                   "bubbles": [
@@ -680,7 +669,7 @@
                               "s",
                               "s"
                               ],
-                  "image": "P1010095.jpg",
+                  "image": "P10100952.jpg",
                   "startails": [
                                 0, 0
                                 ],
@@ -714,7 +703,7 @@
                               "s",
                               ""
                               ],
-                  "image": "P1010097.jpg",
+                  "image": "P10100971.jpg",
                   "startails": [
                                 1, 0, 0
                                 ],
@@ -789,7 +778,7 @@
                               "s",
                               "s"
                               ],
-                  "image": "P1010104.jpg",
+                  "image": "P10101042.jpg",
                   "startails": [
                                 0, 0
                                 ],
@@ -822,7 +811,7 @@
                               "t",
                               "s"
                               ],
-                  "image": "P1010109.jpg",
+                  "image": "P10101099.jpg",
                   "startails": [
                                 0, 0
                                 ],
@@ -889,7 +878,7 @@
                               "s",
                               "t"
                               ],
-                  "image": "P1010050.jpg",
+                  "image": "P1010050a.jpg",
                   "startails": [
                                 0, 1, 0
                                 ],
@@ -965,7 +954,7 @@
                               "s",
                               "s"
                               ],
-                  "image": "P1010059.jpg",
+                  "image": "P10100592.jpg",
                   "startails": [
                                 1, 0
                                 ],
@@ -998,7 +987,7 @@
                               "s",
                               "s"
                               ],
-                  "image": "P1010067.jpg",
+                  "image": "P10100672.jpg",
                   "startails": [
                                 1, 0, 0
                                 ],
@@ -1062,7 +1051,7 @@
                   }],
             "7": [{
                   "answers": [
-                              "This is MY seat!",
+                              "I said I would sit here!",
                               "I wish he would move over!",
                               "Why are they fighting?",
                               "Let's have some fun.",
@@ -1077,13 +1066,9 @@
                               ],
                   "image": "CP1010062.jpg",
                   "startails": [
-                                1, 1, 1
+                                1, 1
                                 ],
                   "stars": [
-                            [
-                             128,
-                             85
-                             ],
                             [
                              321,
                              119
@@ -1094,7 +1079,6 @@
                              ]
                             ],
                   "correct": [
-                              3,
                               1,
                               2
                               ]
@@ -1102,7 +1086,7 @@
                   "answers": [
                               "Is this O.K.?",
                               "I'm ready, let's go!",
-                              "Move over, i need my space.",
+                              "Move, over i need my space.",
                               "Can I have a turn?",
                               ""
                               ],
@@ -1200,14 +1184,14 @@
                   }, {
                   "answers": [
                               "It's a nice day.",
-                              "Don't push me!",
+                              "Why won't she share with me?",
                               "Leave me alone!",
                               "You are right!",
                               ""
                               ],
                   "bubbles": [
                               "s",
-                              "s",
+                              "t",
                               "s",
                               "s",
                               ""
@@ -1317,8 +1301,7 @@
                                 0,
                                 0
                                 ],
-                  "stars": [
-                            [
+                  "stars": [[
                              261,
                              42
                              ],
@@ -1406,338 +1389,7 @@
         "2": {
             "1": [{
                   "answers": [
-                              "Move!  I need to get my lunch!",
-                              "My favorite color is pink and green.",
-                              "Wow! She is rude to push through us.",
-                              "Hi Ashley! I wonder what we are having for lunch today.",
-                              ""
-                              ],
-                  "bubbles": [
-                              "s",
-                              "t",
-                              "t",
-                              "s",
-                              ""
-                              ],
-                  "image": "cubbyshove.jpg",
-                  "startails": [
-                                1, 0
-                                ],
-                  "stars": [
-                            [
-                             323,
-                             46
-                             ],
-                            [
-                             539,
-                             94
-                             ]
-                            ],
-                  "correct": [
-                              3,
-                              1
-                              ]
-                  }, {
-                  "answers": [
-                              "She is such a good friend.",
-                              "She is making me feel uncomfortable.",
-                              "I wish mom would pack me chips for lunch.",
-                              "I hate chips.",
-                              ""
-                              ],
-                  "bubbles": [
-                              "t",
-                              "t",
-                              "t",
-                              "t",
-                              ""
-                              ],
-                  "image": "notsharingchips.jpg",
-                  "startails": [
-                                1, 0
-                                ],
-                  "stars": [
-                            [90,
-                             95
-                             ],
-                            [
-                             531,
-                             131
-                             ]
-                            ],
-                  "correct": [
-                              2,
-                              3
-                              ]
-                  }, {
-                  "answers": [
-                              "I am so tired of waiting here.",
-                              "Did you see that squirrel?",
-                              "Do you want to sit with me?",
-                              "I love to stand in line and wait.",
-                              ""
-                              ],
-                  "bubbles": [
-                              "t",
-                              "t",
-                              "s",
-                              "t",
-                              ""
-                              ],
-                  "image": "inapplineup1.jpg",
-                  "startails": [
-                                0, 0
-                                ],
-                  "stars": [
-                            [
-                             170,
-                             71
-                             ],
-                            [
-                             433,
-                             145
-                             ]
-                            ],
-                  "correct": [
-                              3,
-                              1
-                              ]
-                  }, {
-                  "answers": [
-                              "I wish they would include me in their conversation.",
-                              "The three of us are best friends.",
-                              "Hopefully there is something good in my lunch today!",
-                              "The funniest thing happen to me last night.",
-                              ""
-                              ],
-                  "bubbles": [
-                              "t",
-                              "s",
-                              "t",
-                              "s",
-                              ""
-                              ],
-                  "image": "kidsatlunch.jpg",
-                  "startails": [
-                                0, 1
-                                ],
-                  "stars": [
-                            [
-                             354,
-                             95
-                             ],
-                            [
-                             549,
-                             106
-                             ]
-                            ],
-                  "correct": [
-                              4,
-                              1
-                              ]
-                  }, {
-                  "answers": [
-                              "Hope my dog is okay.",
-                              "My favorite flavor of milk is chocolate.",
-                              "She is such a polite girl.",
-                              "She makes me so mad!",
-                              ""
-                              ],
-                  "bubbles": [
-                              "t",
-                              "t",
-                              "t",
-                              "t",
-                              ""
-                              ],
-                  "image": "getmilk2.jpg",
-                  "startails": [
-                                0, 1
-                                ],
-                  "stars": [
-                            [
-                             189,
-                             60
-                             ],
-                            [
-                             521,
-                             87
-                             ]
-                            ],
-                  "correct": [
-                              3,
-                              2
-                              ]
-                  }],
-            "2": [{
-                  "answers": [
-                              "I hope she doesn't want to do monkey bars next!",
-                              "I'm having a great time!",
-                              "I wonder what he wants to play on?",
-                              "Let's go in, it's raining.",
-                              ""
-                              ],
-                  "bubbles": [
-                              "s",
-                              "s",
-                              "t",
-                              "s",
-                              ""
-                              ],
-                  "image": "rider3.jpg",
-                  "startails": [
-                                0, 1
-                                ],
-                  "stars": [
-                            [
-                             131,
-                             74
-                             ],
-                            [
-                             402,
-                             91
-                             ]
-                            ],
-                  "correct": [
-                              3,
-                              1
-                              ]
-                  }, {
-                  "answers": [
-                              "Gag! Your shoes are horrible!",
-                              "Why do they always make fun of me.",
-                              "Put your pointer finger in and shake it all about.",
-                              "These are my new friends.",
-                              ""
-                              ],
-                  "bubbles": [
-                              "s",
-                              "s",
-                              "s",
-                              "s",
-                              ""
-                              ],
-                  "image": "shoes1.jpg",
-                  "startails": [
-                                1, 0
-                                ],
-                  "stars": [
-                            [
-                             137,
-                             152
-                             ],
-                            [
-                             331,
-                             133
-                             ]
-                            ],
-                  "correct": [
-                              2,
-                              1
-                              ]
-                  }, {
-                  "answers": [
-                              "I am tired.",
-                              "Where is my jump rope?",
-                              "She is a good player. Glad she is on our team!",
-                              "Awesome game today! Great playing.",
-                              ""
-                              ],
-                  "bubbles": [
-                              "t",
-                              "t",
-                              "t",
-                              "t",
-                              ""
-                              ],
-                  "image": "high5kick.jpg",
-                  "startails": [
-                                0, 0
-                                ],
-                  "stars": [
-                            [
-                             244,
-                             61
-                             ],
-                            [
-                             503,
-                             40
-                             ]
-                            ],
-                  "correct": [
-                              4,
-                              3
-                              ]
-                  }, {
-                  "answers": [
-                              "Hey, sorry for bumping into you.",
-                              "You did such a bad job in the game.",
-                              "No problem, just be careful next time.",
-                              "I like your red shirt.",
-                              ""
-                              ],
-                  "bubbles": [
-                              "s",
-                              "s",
-                              "s",
-                              "s",
-                              ""
-                              ],
-                  "image": "nicebumpkick1.jpg",
-                  "startails": [
-                                1, 0
-                                ],
-                  "stars": [
-                            [
-                             169,
-                             34
-                             ],
-                            [
-                             445,
-                             34
-                             ]
-                            ],
-                  "correct": [
-                              1,
-                              3
-                              ]
-                  }, {
-                  "answers": [
-                              "She makes me really mad.",
-                              "She is so fun to play with on the jungle gym.",
-                              "He likes my funny ideas.",
-                              "Wonder what is for lunch?",
-                              ""
-                              ],
-                  "bubbles": [
-                              "t",
-                              "t",
-                              "t",
-                              "t",
-                              ""
-                              ],
-                  "image": "rider1.jpg",
-                  "startails": [
-                                0, 1
-                                ],
-                  "stars": [
-                            [
-                             181,
-                             89
-                             ],
-                            [
-                             435,
-                             99
-                             ]
-                            ],
-                  "correct": [
-                              3,
-                              2
-                              ]
-                  }],
-            "3": [{
-                  "answers": [
-                              "These kids always mess around in line ",
+                              "These kids are always messing around in line ",
                               "Do you know what's for lunch?",
                               "Get back in your space!",
                               "I wonder how I am doing in math?",
@@ -1772,7 +1424,7 @@
                   "answers": [
                               "I know the answer",
                               "You are NOT taking my space in line!",
-                              "They always fight for the front of the line!",
+                              "Here we go again! They always fight for the front of the line.",
                               "I like your new glasses.",
                               ""
                               ],
@@ -1901,12 +1553,179 @@
                               2
                               ]
                   }
+                  
                   ],
-            "4": [{
+            "2": [{
+                  "answers": [
+                              "I was playing here first!",
+                              "I like playing car with you.",
+                              "He's been using the driving wheel all recess!",
+                              "Let's go in, it's raining.",
+                              ""
+                              ],
+                  "bubbles": [
+                              "s",
+                              "s",
+                              "t",
+                              "s",
+                              ""
+                              ],
+                  "image": "rider3.jpg",
+                  "startails": [
+                                0, 1
+                                ],
+                  "stars": [
+                            [
+                             131,
+                             74
+                             ],
+                            [
+                             402,
+                             91
+                             ]
+                            ],
+                  "correct": [
+                              3,
+                              1
+                              ]
+                  }, {
+                  "answers": [
+                              "Gag! Your shoes are horrible!",
+                              "Why do they always make fun of me.",
+                              "Put your pointer finger in and shake it all about.",
+                              "These are my new friends.",
+                              ""
+                              ],
+                  "bubbles": [
+                              "s",
+                              "s",
+                              "s",
+                              "s",
+                              ""
+                              ],
+                  "image": "shoes1.jpg",
+                  "startails": [
+                                1, 0
+                                ],
+                  "stars": [
+                            [
+                             137,
+                             152
+                             ],
+                            [
+                             331,
+                             133
+                             ]
+                            ],
+                  "correct": [
+                              2,
+                              1
+                              ]
+                  }, {
+                  "answers": [
+                              "I am tired.",
+                              "Where is my jump rope?",
+                              "She is a good player.  Glad she is on our team!",
+                              "Awesome game today! Great playing.",
+                              ""
+                              ],
+                  "bubbles": [
+                              "t",
+                              "t",
+                              "t",
+                              "t",
+                              ""
+                              ],
+                  "image": "high5kick.jpg",
+                  "startails": [
+                                1, 0
+                                ],
+                  "stars": [
+                            [
+                             244,
+                             61
+                             ],
+                            [
+                             503,
+                             40
+                             ]
+                            ],
+                  "correct": [
+                              4,
+                              3
+                              ]
+                  }, {
+                  "answers": [
+                              "Hey, sorry for bumping into you.",
+                              "You did such a bad job in the game.",
+                              "No problem, just be careful next time.",
+                              "I like your red shirt.",
+                              ""
+                              ],
+                  "bubbles": [
+                              "s",
+                              "s",
+                              "s",
+                              "s",
+                              ""
+                              ],
+                  "image": "nicebumpkick1.jpg",
+                  "startails": [
+                                1, 0
+                                ],
+                  "stars": [
+                            [
+                             169,
+                             34
+                             ],
+                            [
+                             445,
+                             34
+                             ]
+                            ],
+                  "correct": [
+                              1,
+                              3
+                              ]
+                  }, {
+                  "answers": [
+                              "She makes me really mad.",
+                              "She is so fun to play with on the jungle gym.",
+                              "He likes my funny ideas.",
+                              "Wonder what is for lunch?",
+                              ""
+                              ],
+                  "bubbles": [
+                              "t",
+                              "t",
+                              "t",
+                              "t",
+                              ""
+                              ],
+                  "image": "rider1.jpg",
+                  "startails": [
+                                0, 1
+                                ],
+                  "stars": [
+                            [
+                             181,
+                             89
+                             ],
+                            [
+                             435,
+                             99
+                             ]
+                            ],
+                  "correct": [
+                              3,
+                              2
+                              ]
+                  }],
+            "3": [{
                   "answers": [
                               "Stop! The school is closed.",
                               "I'm letting my class know it's time to come in from recess.",
-                              "How much is this?",
+                              "Time to go back in. Hope everyone did their homework.",
                               "I am so excited to go out to recess.",
                               ""
                               ],
@@ -1964,14 +1783,14 @@
                               ]
                   }, {
                   "answers": [
-                              "Are you my sister?",
-                              "Make sure you DON'T do your homework.",
+                              "I am hungry for that apple.",
+                              "Ms. Smith, I really like that book you have on your desk.",
                               "What have I told you about bothering your classmate?",
                               "I didn't think I was talking that much.",
                               ""
                               ],
                   "bubbles": [
-                              "s",
+                              "t",
                               "s",
                               "s",
                               "t",
@@ -2061,11 +1880,176 @@
                               2,
                               3
                               ]
+                  }],
+            "4": [{
+                  "answers": [
+                              "Move!  I need to get my lunch!",
+                              "My favorite color is pink and green.",
+                              "Wow! She is rude to push through us.",
+                              "Hi Ashley! I wonder what we are having for lunch today.",
+                              ""
+                              ],
+                  "bubbles": [
+                              "s",
+                              "t",
+                              "t",
+                              "s",
+                              ""
+                              ],
+                  "image": "cubbyshove.jpg",
+                  "startails": [
+                                0, 0
+                                ],
+                  "stars": [
+                            [
+                             408,
+                             42
+                             ],
+                            [
+                             461,
+                             94
+                             ]
+                            ],
+                  "correct": [
+                              3,
+                              1
+                              ]
+                  }, {
+                  "answers": [
+                              "She is such a good friend.",
+                              "She is making me feel uncomfortable.",
+                              "I wish mom would pack me chips for lunch.",
+                              "I hate chips.",
+                              ""
+                              ],
+                  "bubbles": [
+                              "t",
+                              "t",
+                              "t",
+                              "t",
+                              ""
+                              ],
+                  "image": "notsharingchips.jpg",
+                  "startails": [
+                                1, 0
+                                ],
+                  "stars": [
+                            [90,
+                             95
+                             ],
+                            [
+                             531,
+                             131
+                             ]
+                            ],
+                  "correct": [
+                              2,
+                              3
+                              ]
+                  }, {
+                  "answers": [
+                              "I am so bored of waiting here.",
+                              "Did you see that squirrel?",
+                              "I am so hungry. I can't wait for lunch!",
+                              "I love to stand in line and wait.",
+                              ""
+                              ],
+                  "bubbles": [
+                              "t",
+                              "t",
+                              "s",
+                              "t",
+                              ""
+                              ],
+                  "image": "inapplineup1.jpg",
+                  "startails": [
+                                0, 0
+                                ],
+                  "stars": [
+                            [
+                             102,
+                             227
+                             ],
+                            [
+                             433,
+                             145
+                             ]
+                            ],
+                  "correct": [
+                              3,
+                              1
+                              ]
+                  }, {
+                  "answers": [
+                              "I wish they would include me in their conversation.",
+                              "The three of us are best friends.",
+                              "Let's see what is in my lunch.  Hopefully, something good!",
+                              "The funniest thing happen to me last night.",
+                              ""
+                              ],
+                  "bubbles": [
+                              "t",
+                              "s",
+                              "t",
+                              "s",
+                              ""
+                              ],
+                  "image": "kidsatlunch.jpg",
+                  "startails": [
+                                0, 1
+                                ],
+                  "stars": [
+                            [
+                             354,
+                             95
+                             ],
+                            [
+                             549,
+                             106
+                             ]
+                            ],
+                  "correct": [
+                              4,
+                              1
+                              ]
+                  }, {
+                  "answers": [
+                              "Hope my dog is okay.",
+                              "My favorite flavor of milk is chocolate",
+                              "She is such a polite girl.",
+                              "She makes me so mad!",
+                              ""
+                              ],
+                  "bubbles": [
+                              "t",
+                              "t",
+                              "t",
+                              "t",
+                              ""
+                              ],
+                  "image": "getmilk2.jpg",
+                  "startails": [
+                                0, 1
+                                ],
+                  "stars": [
+                            [
+                             189,
+                             60
+                             ],
+                            [
+                             521,
+                             87
+                             ]
+                            ],
+                  "correct": [
+                              3,
+                              2
+                              ]
                   }]
         },
         "3": {
             "1": [{
-                  "image": "R1010091C.jpg",
+                  "image": "p1010091a.jpg",
                   "answers": [
                               "I wish he would let me look at it!",
                               "That is sooo cool!",
@@ -2099,19 +2083,19 @@
                               3
                               ]
                   }, {
-                  "image": "R1010016.jpg",
+                  "image": "p1010016a.jpg",
                   "answers": [
                               "I am so proud of these kids!",
                               "They better start listening!",
                               "This deserves a party.",
-                              "I feel great!",
+                              "I am very tired today.",
                               ""
                               ],
                   "bubbles": [
                               "t",
                               "t",
                               "s",
-                              "s",
+                              "t",
                               ""
                               ],
                   "startails": [
@@ -2127,7 +2111,7 @@
                               2
                               ]
                   }, {
-                  "image": "R1010114.jpg",
+                  "image": "p1010114a.jpg",
                   "answers": [
                               "Pick me! I know the answers.",
                               "Where is she?  ",
@@ -2143,12 +2127,12 @@
                               ""
                               ],
                   "startails": [
-                                1, 0
+                                1,0
                                 ],
                   "stars": [
                             [
                              287,
-                             95
+                              95
                              ],
                             [
                              600,
@@ -2160,7 +2144,7 @@
                               3
                               ]
                   }, {
-                  "image": "R1010116.jpg",
+                  "image": "p1010116a.jpg",
                   "answers": [
                               "AHHHHHH!",
                               "I love it when he screams.",
@@ -2185,7 +2169,7 @@
                              ],
                             [
                              624,
-                             138
+                            138
                              ]
                             ],
                   "correct": [
@@ -2193,11 +2177,11 @@
                               4
                               ]
                   }, {
-                  "image": "R1010119.jpg",
+                  "image": "p10101192.jpg",
                   "answers": [
-                              "I should really put this magazine away now.",
+                              "You REALLY know the answers!",
                               "We should really put this away.",
-                              "I am so embarassed!",
+                              "Oops!",
                               "Girls, class has started!",
                               ""
                               ],
@@ -2232,7 +2216,7 @@
                               ]
                   }],
             "2": [{
-                  "image": "R1010004.jpg",
+                  "image": "p1010004a.jpg",
                   "answers": [
                               "He gives such a good report!",
                               "He needs to look at the class",
@@ -2266,7 +2250,7 @@
                               3
                               ]
                   }, {
-                  "image": "R1010120.jpg",
+                  "image": "p10101202.jpg",
                   "answers": [
                               "Could you please turn around?!",
                               "Yikes! He is in trouble now!",
@@ -2300,18 +2284,18 @@
                               2
                               ]
                   }, {
-                  "image": "R1010121.jpg",
+                  "image": "p10101212.jpg",
                   "answers": [
                               "You guys are a good team!",
-                              "Come join our group",
-                              "I like to work alone",
-                              "Excuse me, why are you not with your group?",
+                              "Come join the group.",
+                              "This is a good book.",
+                              "Why aren't you following my instructions?",
                               ""
                               ],
                   "bubbles": [
                               "s",
                               "s",
-                              "s",
+                              "t",
                               "s",
                               ""
                               ],
@@ -2321,14 +2305,14 @@
                   
                   "stars": [
                             [
-                             97,
-                             65
+                             104,
+                             126
                              ],
                             [
                              352, 16
                              ],
                             [
-                             529,
+                            529,
                              152
                              ]
                             ],
@@ -2338,7 +2322,7 @@
                               3
                               ]
                   }, {
-                  "image": "R1010002.jpg",
+                  "image": "p1010002a.jpg",
                   "answers": [
                               "I am so bored!",
                               "I love this class!",
@@ -2377,7 +2361,7 @@
                               3
                               ]
                   }, {
-                  "image": "R1010008.jpg",
+                  "image": "p1010008a.jpg",
                   "answers": [
                               "She is stupid!",
                               "I can't understand her.",
@@ -2412,18 +2396,18 @@
                               ]
                   }],
             "3": [{
-                  "image": "R1010040.jpg",
+                  "image": "P1010040.jpg",
                   "answers": [
                               "He is such a good player.",
                               "I don't want to be on their team",
-                              "I hope we get him on our team.",
+                              "We are going to lose if you don't get in our group!",
                               "What's for lunch.",
                               ""
                               ],
                   "bubbles": [
                               "t",
                               "t",
-                              "t",
+                              "s",
                               "t",
                               ""
                               ],
@@ -2445,7 +2429,7 @@
                               3
                               ]
                   }, {
-                  "image": "R1010038.jpg",
+                  "image": "p1010038a.jpg",
                   "answers": [
                               "He is a real loser!",
                               "He is so nice.  ",
@@ -2484,7 +2468,7 @@
                               4
                               ]
                   }, {
-                  "image": "R1010044.jpg",
+                  "image": "p1010044a.jpg",
                   "answers": [
                               "You are the reason we lost the race!",
                               "We make such a good team.",
@@ -2518,7 +2502,7 @@
                               1
                               ]
                   }, {
-                  "image": "R1010060.jpg",
+                  "image": "p1010060a.jpg",
                   "answers": [
                               "I hate being on this team.",
                               "30 push - ups for being lazy!",
@@ -2551,7 +2535,7 @@
                               3
                               ]
                   }, {
-                  "image": "R1010048.jpg",
+                  "image": "p1010048a.jpg",
                   "answers": [
                               "Wow, that was a hard relay!",
                               "Woah! I need to plug my nose from that smell!",
@@ -2581,12 +2565,12 @@
                              ]
                             ],
                   "correct": [
-                              2,
-                              4
+                              4,
+                              2
                               ]
                   }],
             "4": [{
-                  "image": "RR1010066.jpg",
+                  "image": "p1010066b.jpg",
                   "answers": ["What do you think you are doing?",
                               "You students are so much fun!",
                               "Hey, toss it here!",
@@ -2623,7 +2607,7 @@
                               4
                               ]
                   }, {
-                  "image": "RR1010072.jpg",
+                  "image": "p1010072b.jpg",
                   "answers": ["Hey kid, give me some room!",
                               "I want to be on his team.",
                               "He is so rude.",
@@ -2655,11 +2639,11 @@
                               3
                               ]
                   }, {
-                  "image": "RR1010077.jpg",
-                  "answers": ["Come on, do this prank with us.",
+                  "image": "p1010077b.jpg",
+                  "answers": ["Go in . . . we all have.",
                               "That sounds cool!",
-                              "No, thats mean. I'm outta here!",
-                              "We don't want you to get in trouble.",
+                              "No, I don't think so! I'm outta here!",
+                              "Come on, just do it!",
                               ""
                               ],
                   "bubbles": [
@@ -2680,15 +2664,14 @@
                              ],
                             [
                              567,
-                             61
-                             ]
+                             61                             ]
                             ],
                   "correct": [
                               1,
                               3
                               ]
                   }, {
-                  "image": "RR1010070.jpg",
+                  "image": "p1010070b.jpg",
                   "answers": ["Let's run some more laps.",
                               "I know the answer.",
                               "I am so hot.",
@@ -2721,10 +2704,10 @@
                               3
                               ]
                   }, {
-                  "image": "RR1010078.jpg",
+                  "image": "p1010078b.jpg",
                   "answers": ["I am going to get you!",
                               "You are so nice to me.",
-                              "You're going to get detention for fighting!",
+                              "Dude, you are going to get detention for fighting!",
                               "Whoa! Don't shove me!",
                               ""
                               ],
@@ -2756,11 +2739,11 @@
                               ]
                   }],
             "5": [{
-                  "image": "R1010016H.jpg",
+                  "image": "p1010016b.jpg",
                   "answers": [
                               "Stop pushing!",
                               "That is really nice!",
-                              "I gotta get through here!",
+                              "I gotta get through here.",
                               "Whant to be friends?",
                               ""
                               ],
@@ -2790,10 +2773,10 @@
                               3
                               ]
                   }, {
-                  "image": "R1010055H.jpg",
+                  "image": "p1010055b.jpg",
                   "answers": [
                               "You are so cool.",
-                              "Wow! He is really upset!",
+                              "What a freak!",
                               "What time is it?",
                               "This is too loud!",
                               ""
@@ -2824,7 +2807,7 @@
                               2
                               ]
                   }, {
-                  "image": "R1010059H.jpg",
+                  "image": "p1010059b.jpg",
                   "answers": ["Ha ha! Look at those boys hugging!",
                               "Back off, dude!",
                               "I am so hungry.",
@@ -2862,7 +2845,7 @@
                               4
                               ]
                   }, {
-                  "image": "R1010062H.jpg",
+                  "image": "p1010062b.jpg",
                   "answers": [
                               "I like your hat, man!",
                               "Hey dude, what's up?",
@@ -2896,10 +2879,10 @@
                               2
                               ]
                   }, {
-                  "image": "R1010067H.jpg",
+                  "image": "p1010067b.jpg",
                   "answers": ["Do you want fries with that?",
                               "That kid keeps on talking!",
-                              "Blah, blah, blah...",
+                              "...then we wnt to putt putt, and then we went...",
                               "Look at the time!",
                               ""
                               ],
@@ -2939,9 +2922,9 @@
         },
         "4": {
             "1": [{
-                  "image": "RL1010050.jpg",
+                  "image": "p1010050b.jpg",
                   "answers": ["Ahh! I can't find anything in here.",
-                              "Man, you gotta get more organized.",
+                              "Man, you gotta get more orgnized.",
                               "He's amazing!",
                               "This kid has problems.",
                               ""
@@ -2954,7 +2937,7 @@
                               ""
                               ],
                   "startails": [
-                                0, 0, 0
+                                0, 0
                                 ],
                   "stars": [
                             [
@@ -2964,22 +2947,17 @@
                             [
                              426,
                              96
-                             ],
-                            [
-                             630,
-                             45
                              ]
                             
                             ],
                   "correct": [
                               2,
-                              1,
-                              4
+                              1
                               ]
                   
                   
                   }, {
-                  "image": "RL1010093.jpg",
+                  "image": "p10100933.jpg",
                   "answers": ["Oh! they look mean.",
                               "I will ask them for help with my homework.",
                               "What is your name?",
@@ -3014,7 +2992,7 @@
                   
                   
                   }, {
-                  "image": "RL1010094.jpg",
+                  "image": "p1010094.jpg",
                   "answers": ["I love her hat.",
                               "Don't bug me!",
                               "Hi! How are you?",
@@ -3048,7 +3026,7 @@
                               ]
                   
                   }, {
-                  "image": "RL1010053.jpg",
+                  "image": "p1010053b.jpg",
                   "answers": ["You are going to be in trouble.",
                               "He is so cool!",
                               "I can't find my homework that is due today!",
@@ -3088,7 +3066,7 @@
                   
                   
                   }, {
-                  "image": "RL1010049.jpg",
+                  "image": "p1010049b.jpg",
                   "answers": ["My back is killing me!",
                               "I love homework!",
                               "You're dumb.",
@@ -3125,7 +3103,7 @@
                   ],
             
             "2": [{
-                  "image": "R1010105L.jpg",
+                  "image": "p1010105.jpg",
                   "answers": [
                               "Those kids are fooling around in line!",
                               "How much is milk?",
@@ -3159,7 +3137,7 @@
                               4
                               ]
                   }, {
-                  "image": "R1010099L.jpg",
+                  "image": "p1010099.jpg",
                   "answers": [
                               "What is this kid doing?",
                               "I want to hang out.",
@@ -3192,9 +3170,9 @@
                               4
                               ]
                   }, {
-                  "image": "R1010107L.jpg",
+                  "image": "p1010107.jpg",
                   "answers": [
-                              "Wow that boy looks tired of listening to him.",
+                              "Uh Oh! That boy is getting frustrated.",
                               "Have you seen my dog?",
                               "I know everything about that.",
                               "Aagh! He's been talking to me for 5 minutes straight.",
@@ -3230,7 +3208,7 @@
                               4
                               ]
                   }, {
-                  "image": "R1010106L.jpg",
+                  "image": "p10101066.jpg",
                   "answers": [
                               "What are you doing?",
                               "Please, sit down.",
@@ -3263,9 +3241,9 @@
                               3
                               ]
                   }, {
-                  "image": "R1010109L.jpg",
+                  "image": "p1010109.jpg",
                   "answers": [
-                              "I know all about that guy in your magazine.",
+                              "Let me see that magazine.",
                               "Hey, want to see my new book?",
                               "Back off!",
                               "Do you want some food?",
@@ -3297,7 +3275,7 @@
                               ]
                   }],
             "3": [{
-                  "image": "R1010080.jpg",
+                  "image": "p1010080.jpg",
                   "answers": [
                               "What is that kid doing?",
                               "This is cool.  ",
@@ -3330,7 +3308,7 @@
                               3
                               ]
                   }, {
-                  "image": "R1010088.jpg",
+                  "image": "p1010088.jpg",
                   "answers": [
                               "I have something in my nose.",
                               "Can I sit here?",
@@ -3363,10 +3341,10 @@
                               3
                               ]
                   }, {
-                  "image": "R1010111.jpg",
+                  "image": "p1010111.jpg",
                   "answers": [
                               "I used to be on T.V.",
-                              "That sounds strange",
+                              "That sounds strange. . . ",
                               "Do you want some juice?  ",
                               "I can't believe it!",
                               ""
@@ -3401,10 +3379,10 @@
                               4
                               ]
                   }, {
-                  "image": "R1010093.jpg",
+                  "image": "p10100932.jpg",
                   "answers": [
                               "MOVE OVER!",
-                              "There is no more room here!",
+                              "What are you doing?",
                               "You are my best friend.",
                               "",
                               ""
@@ -3434,7 +3412,7 @@
                               2
                               ]
                   }, {
-                  "image": "R1010079.jpg",
+                  "image": "p10100799.jpg",
                   "answers": [
                               "Hi, do you want to talk?",
                               "I am lost.",
@@ -3468,7 +3446,7 @@
                               ]
                   }],
             "4": [{
-                  "image": "R1010002S.jpg",
+                  "image": "p1010002b.jpg",
                   "answers": ["I really like you!",
                               "You are too close.",
                               "I am hungry.",
@@ -3477,13 +3455,13 @@
                               ],
                   "bubbles": [
                               "s",
-                              "t",
+                              "s",
                               "s",
                               "t",
                               ""
                               ],
                   "startails": [
-                                1, 0, 0
+                                1,0,0
                                 ],
                   "stars": [
                             [
@@ -3505,10 +3483,10 @@
                               4
                               ]
                   }, {
-                  "image": "R1010003S.jpg",
+                  "image": "p1010003b.jpg",
                   "answers": ["I am so hungry!",
-                              "I don't want to talk to him.",
-                              "What's wrong?",
+                              "I don't want to talk to him",
+                              "What is wrong?",
                               "I am late for class.",
                               ""
                               ],
@@ -3537,7 +3515,7 @@
                               3
                               ]
                   }, {
-                  "image": "R1010004S.jpg",
+                  "image": "p1010004b.jpg",
                   "answers": ["I really like this guy.",
                               "I hate you.",
                               "I think this girl is cool.",
@@ -3547,7 +3525,7 @@
                   "bubbles": [
                               "t",
                               "s",
-                              "t",
+                              "s",
                               "",
                               ""
                               ],
@@ -3569,7 +3547,7 @@
                               3
                               ]
                   }, {
-                  "image": "R1010096H.jpg",
+                  "image": "p1010096b.jpg",
                   "answers": ["Yell it out!",
                               "Pst! Don't tell anyone.",
                               "I can't believe it.",
@@ -3601,7 +3579,7 @@
                               3
                               ]
                   }, {
-                  "image": "R1010017H.jpg",
+                  "image": "p1010017b.jpg",
                   "answers": ["You are a jerk!",
                               "I like your glasses.",
                               "Thanks!",
@@ -3636,7 +3614,7 @@
                   
                   ],
             "5": [{
-                  "image": "R1010026H.jpg",
+                  "image": "p1010026b.jpg",
                   "answers": ["What time is it?",
                               "I am so mad!",
                               "",
@@ -3664,7 +3642,7 @@
                               ]
                   
                   }, {
-                  "image": "R1010097H.jpg",
+                  "image": "p1010097b.jpg",
                   "answers": ["Get off me!",
                               "Did you see my bike?",
                               "Let me see what you have!",
@@ -3697,7 +3675,7 @@
                               ]
                   
                   }, {
-                  "image": "R1010095H.jpg",
+                  "image": "p1010095b.jpg",
                   "answers": ["I hate you.",
                               "I think she is cute.",
                               "I think he is so cool!",
@@ -3730,7 +3708,7 @@
                               ]
                   
                   }, {
-                  "image": "R1010014H.jpg",
+                  "image": "p1010014b.jpg",
                   "answers": ["Let's be friends.",
                               "Your hair feels funny!",
                               "Will you guys leave me alone?",
@@ -3767,11 +3745,11 @@
                               ]
                   
                   }, {
-                  "image": "R1010057H.jpg",
+                  "image": "p1010057b.jpg",
                   "answers": ["What is her problem?",
                               "I am having so much fun!",
                               "Get out of my way!",
-                              "That teacher is so boring!",
+                              "Why are you making that face at us?",
                               ""
                               ],
                   "bubbles": [

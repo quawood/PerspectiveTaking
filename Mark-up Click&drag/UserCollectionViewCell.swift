@@ -37,7 +37,7 @@ class ScoreTableViewCell: UITableViewCell {
     @IBOutlet weak var dateNameLabel: UILabel!
     func updateUI() {
         placeNameLabel.text = score.place
-        scoreNameLabel.text = String(describing: score.value)
+        scoreNameLabel.text = String(describing: score.value) + "/5"
         dateNameLabel.text = score.date
     }
     

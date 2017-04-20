@@ -70,6 +70,11 @@
 		A54B09EF1D7FBACB00D82D49 /* CreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B09EE1D7FBACB00D82D49 /* CreateUserViewController.swift */; };
 		A55C1DF71EA85075000E542C /* School Rules 1.wav in Resources */ = {isa = PBXBuildFile; fileRef = A55C1DF31EA85075000E542C /* School Rules 1.wav */; };
 		A55C1DF81EA85075000E542C /* School Rules 2.wav in Resources */ = {isa = PBXBuildFile; fileRef = A55C1DF41EA85075000E542C /* School Rules 2.wav */; };
+		A55C1DFF1EA8570C000E542C /* SSB Lite.JPG in Resources */ = {isa = PBXBuildFile; fileRef = A55C1DFE1EA8570C000E542C /* SSB Lite.JPG */; };
+		A55C1E011EA85714000E542C /* SD Intermediate.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A55C1E001EA85714000E542C /* SD Intermediate.jpg */; };
+		A55C1E031EA85718000E542C /* SD App Icon.JPG in Resources */ = {isa = PBXBuildFile; fileRef = A55C1E021EA85718000E542C /* SD App Icon.JPG */; };
+		A55C1E051EA85726000E542C /* SSB App.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A55C1E041EA85726000E542C /* SSB App.jpg */; };
+		A55C1E061EA85C1D000E542C /* AinslieNorBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A55C1DFD1EA854C8000E542C /* AinslieNorBold.otf */; };
 		A562FEBB1E93AAF000CC4984 /* WelcomeCAT.wav in Resources */ = {isa = PBXBuildFile; fileRef = A562FEBA1E93AAF000CC4984 /* WelcomeCAT.wav */; };
 		A56F79C11E770A6F00B34BB8 /* 001.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A56F777B1E770A6E00B34BB8 /* 001.jpg */; };
 		A56F79C21E770A6F00B34BB8 /* 003.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A56F777C1E770A6E00B34BB8 /* 003.jpg */; };
@@ -654,7 +659,6 @@
 		A56F7C051E770A7000B34BB8 /* timeoutshoes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A56F79BF1E770A6F00B34BB8 /* timeoutshoes.jpg */; };
 		A56F7C061E770A7000B34BB8 /* timeoutshoes1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A56F79C01E770A6F00B34BB8 /* timeoutshoes1.jpg */; };
 		A57F6C131E6ED329000C1C77 /* MoreAppsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57F6C121E6ED329000C1C77 /* MoreAppsViewController.swift */; };
-		A58608C11E606DDC006DC11E /* MCQuestions.json in Resources */ = {isa = PBXBuildFile; fileRef = A58608C01E606DDC006DC11E /* MCQuestions.json */; };
 		A58943D01D710410005456A2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58943CF1D710410005456A2 /* HomeViewController.swift */; };
 		A59DFC581DC3DF6800B1CF8D /* ScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59DFC571DC3DF6800B1CF8D /* ScoresViewController.swift */; };
 		A5A8B6DE1D80C289009560D7 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A8B6DD1D80C289009560D7 /* EditProfileViewController.swift */; };
@@ -681,6 +685,8 @@
 		A5AC34F01E90AB030066D073 /* WelcomeCAT.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34D91E90AB030066D073 /* WelcomeCAT.wav */; };
 		A5AC34F11E90AB030066D073 /* Wow. Super job. .wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34DA1E90AB030066D073 /* Wow. Super job. .wav */; };
 		A5AC34F21E90AB030066D073 /* You are good at this.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34DB1E90AB030066D073 /* You are good at this.wav */; };
+		A5AC3AC71EA865BA00790812 /* MCQuestions.json in Resources */ = {isa = PBXBuildFile; fileRef = A5AC3AC61EA865BA00790812 /* MCQuestions.json */; };
+		A5AC3AC91EA866D900790812 /* That's okay.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC3AC81EA866D900790812 /* That's okay.wav */; };
 		A5B4D6E41D7FADC90054D4C8 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B4D6E31D7FADC90054D4C8 /* UserViewController.swift */; };
 		A5B4D6E61D7FB1BF0054D4C8 /* UserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B4D6E51D7FB1BF0054D4C8 /* UserCollectionViewCell.swift */; };
 		A5B5F2441D4D722800A51F81 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B5F2431D4D722800A51F81 /* QuizViewController.swift */; };
@@ -789,6 +795,11 @@
 		A54B09EE1D7FBACB00D82D49 /* CreateUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUserViewController.swift; sourceTree = "<group>"; };
 		A55C1DF31EA85075000E542C /* School Rules 1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "School Rules 1.wav"; sourceTree = "<group>"; };
 		A55C1DF41EA85075000E542C /* School Rules 2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "School Rules 2.wav"; sourceTree = "<group>"; };
+		A55C1DFD1EA854C8000E542C /* AinslieNorBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AinslieNorBold.otf; sourceTree = "<group>"; };
+		A55C1DFE1EA8570C000E542C /* SSB Lite.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "SSB Lite.JPG"; sourceTree = "<group>"; };
+		A55C1E001EA85714000E542C /* SD Intermediate.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "SD Intermediate.jpg"; sourceTree = "<group>"; };
+		A55C1E021EA85718000E542C /* SD App Icon.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "SD App Icon.JPG"; sourceTree = "<group>"; };
+		A55C1E041EA85726000E542C /* SSB App.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "SSB App.jpg"; sourceTree = "<group>"; };
 		A562FEBA1E93AAF000CC4984 /* WelcomeCAT.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = WelcomeCAT.wav; sourceTree = "<group>"; };
 		A56F777B1E770A6E00B34BB8 /* 001.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 001.jpg; sourceTree = "<group>"; };
 		A56F777C1E770A6E00B34BB8 /* 003.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 003.jpg; sourceTree = "<group>"; };
@@ -1373,7 +1384,6 @@
 		A56F79BF1E770A6F00B34BB8 /* timeoutshoes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timeoutshoes.jpg; sourceTree = "<group>"; };
 		A56F79C01E770A6F00B34BB8 /* timeoutshoes1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timeoutshoes1.jpg; sourceTree = "<group>"; };
 		A57F6C121E6ED329000C1C77 /* MoreAppsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreAppsViewController.swift; sourceTree = "<group>"; };
-		A58608C01E606DDC006DC11E /* MCQuestions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MCQuestions.json; sourceTree = "<group>"; };
 		A58943CF1D710410005456A2 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A59DFC571DC3DF6800B1CF8D /* ScoresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoresViewController.swift; sourceTree = "<group>"; };
 		A5A8B6DD1D80C289009560D7 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
@@ -1400,6 +1410,8 @@
 		A5AC34D91E90AB030066D073 /* WelcomeCAT.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = WelcomeCAT.wav; sourceTree = "<group>"; };
 		A5AC34DA1E90AB030066D073 /* Wow. Super job. .wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Wow. Super job. .wav"; sourceTree = "<group>"; };
 		A5AC34DB1E90AB030066D073 /* You are good at this.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "You are good at this.wav"; sourceTree = "<group>"; };
+		A5AC3AC61EA865BA00790812 /* MCQuestions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MCQuestions.json; sourceTree = "<group>"; };
+		A5AC3AC81EA866D900790812 /* That's okay.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "That's okay.wav"; sourceTree = "<group>"; };
 		A5B4D6E31D7FADC90054D4C8 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		A5B4D6E51D7FB1BF0054D4C8 /* UserCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCollectionViewCell.swift; sourceTree = "<group>"; };
 		A5B5F2431D4D722800A51F81 /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
@@ -1461,6 +1473,7 @@
 		A52EAB151E8F671200682C1B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A55C1DFD1EA854C8000E542C /* AinslieNorBold.otf */,
 				A5C1A7711EA10AE700AF8937 /* AinslieNormRegular.otf */,
 				A52EAB161E8F671E00682C1B /* Images */,
 			);
@@ -1470,6 +1483,10 @@
 		A52EAB161E8F671E00682C1B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A55C1E001EA85714000E542C /* SD Intermediate.jpg */,
+				A55C1E021EA85718000E542C /* SD App Icon.JPG */,
+				A55C1DFE1EA8570C000E542C /* SSB Lite.JPG */,
+				A55C1E041EA85726000E542C /* SSB App.jpg */,
 				A5C1A7751EA10FEB00AF8937 /* Welcome Screen.png */,
 				A5C1A7731EA10C8300AF8937 /* Selections Within Category.png */,
 				A52727481E9A54D000D5779E /* Login Screen.png */,
@@ -2202,6 +2219,7 @@
 				A5AC34CB1E90AB030066D073 /* My School Day.wav */,
 				A5AC34CC1E90AB030066D073 /* Perfect.wav */,
 				A5AC34CD1E90AB030066D073 /* Please click on a scenerio.wav */,
+				A5AC3AC81EA866D900790812 /* That's okay.wav */,
 				A5AC34CE1E90AB030066D073 /* Press go to begin.wav */,
 				A5AC34CF1E90AB030066D073 /* School Rules 1.wav */,
 				A562FEBA1E93AAF000CC4984 /* WelcomeCAT.wav */,
@@ -2258,8 +2276,8 @@
 				A52EAB151E8F671200682C1B /* Images */,
 				A5F548CC1E2D9F3C007169A9 /* DatabaseController.swift */,
 				A5F4831B1D130F8100AA4E85 /* AppDelegate.swift */,
-				A58608C01E606DDC006DC11E /* MCQuestions.json */,
 				A5F4831F1D130F8100AA4E85 /* Main.storyboard */,
+				A5AC3AC61EA865BA00790812 /* MCQuestions.json */,
 				A5F483251D130F8100AA4E85 /* Assets.xcassets */,
 				A56F777A1E770A6E00B34BB8 /* Collection */,
 				A53D85E11D6B9F9E007544FB /* Helper Files */,
@@ -2399,6 +2417,7 @@
 				A5C1A7721EA10B6200AF8937 /* AinslieNormRegular.otf in Resources */,
 				A56F7BDD1E770A7000B34BB8 /* RR1010076-.jpg in Resources */,
 				A56F79DD1E770A6F00B34BB8 /* CP1010064.jpg in Resources */,
+				A55C1E061EA85C1D000E542C /* AinslieNorBold.otf in Resources */,
 				A56F7AB81E770A6F00B34BB8 /* P1010121.jpg in Resources */,
 				A56F7AA51E770A6F00B34BB8 /* P1010102.jpg in Resources */,
 				A56F7B9E1E770A7000B34BB8 /* R1010106L.jpg in Resources */,
@@ -2499,6 +2518,7 @@
 				A56F7B541E770A6F00B34BB8 /* R1010052.jpg in Resources */,
 				A56F7AD81E770A6F00B34BB8 /* P29a.jpg in Resources */,
 				A52EAB711E8F671E00682C1B /* speech.png in Resources */,
+				A55C1E011EA85714000E542C /* SD Intermediate.jpg in Resources */,
 				A56F7A1F1E770A6F00B34BB8 /* joke.jpg in Resources */,
 				A56F79DB1E770A6F00B34BB8 /* CP1010062.jpg in Resources */,
 				A56F7B661E770A7000B34BB8 /* R1010065.jpg in Resources */,
@@ -2522,6 +2542,7 @@
 				A56F7B131E770A6F00B34BB8 /* R1010008H.jpg in Resources */,
 				A56F7AB71E770A6F00B34BB8 /* P1010120.jpg in Resources */,
 				A56F79DC1E770A6F00B34BB8 /* CP1010063.jpg in Resources */,
+				A55C1E031EA85718000E542C /* SD App Icon.JPG in Resources */,
 				A56F7B0C1E770A6F00B34BB8 /* R1010005.jpg in Resources */,
 				A56F79D51E770A6F00B34BB8 /* booing.jpg in Resources */,
 				A56F7AEA1E770A6F00B34BB8 /* PICK4generalclass.jpg in Resources */,
@@ -2649,6 +2670,7 @@
 				A56F7BD21E770A7000B34BB8 /* RR1010066.jpg in Resources */,
 				A52EAB641E8F671E00682C1B /* MSD.JPG in Resources */,
 				A56F7BBE1E770A7000B34BB8 /* RL1010044.jpg in Resources */,
+				A5AC3AC91EA866D900790812 /* That's okay.wav in Resources */,
 				A52EAB561E8F671E00682C1B /* girl.png in Resources */,
 				A56F7AA41E770A6F00B34BB8 /* P1010101.jpg in Resources */,
 				A55C1DF71EA85075000E542C /* School Rules 1.wav in Resources */,
@@ -2727,6 +2749,7 @@
 				A56F7B211E770A6F00B34BB8 /* R1010016H.jpg in Resources */,
 				A56F7A491E770A6F00B34BB8 /* P1010010.jpg in Resources */,
 				A56F79D01E770A6F00B34BB8 /* applineuprecess2.jpg in Resources */,
+				A55C1DFF1EA8570C000E542C /* SSB Lite.JPG in Resources */,
 				A56F7BF01E770A7000B34BB8 /* shoes2.jpg in Resources */,
 				A56F7A3B1E770A6F00B34BB8 /* missingbmp.jpg in Resources */,
 				A52EAB5F1E8F671E00682C1B /* janimation5.png in Resources */,
@@ -3003,6 +3026,7 @@
 				A56F7BB21E770A7000B34BB8 /* RL1010010.jpg in Resources */,
 				A56F7AFF1E770A6F00B34BB8 /* playground3.jpg in Resources */,
 				A56F7B361E770A6F00B34BB8 /* R1010027.jpg in Resources */,
+				A5AC3AC71EA865BA00790812 /* MCQuestions.json in Resources */,
 				A56F7B3E1E770A6F00B34BB8 /* R1010032.jpg in Resources */,
 				A5AC34DF1E90AB030066D073 /* Great job.wav in Resources */,
 				A56F79CE1E770A6F00B34BB8 /* applineuprecess.jpg in Resources */,
@@ -3051,12 +3075,12 @@
 				A56F7B1C1E770A6F00B34BB8 /* R1010014.jpg in Resources */,
 				A56F7B461E770A6F00B34BB8 /* R1010039H.jpg in Resources */,
 				A56F7ADB1E770A6F00B34BB8 /* P7.jpg in Resources */,
-				A58608C11E606DDC006DC11E /* MCQuestions.json in Resources */,
 				A56F7C051E770A7000B34BB8 /* timeoutshoes.jpg in Resources */,
 				A56F7B6B1E770A7000B34BB8 /* R1010069H.jpg in Resources */,
 				A5AC34E21E90AB030066D073 /* My School Day.wav in Resources */,
 				A56F79F61E770A6F00B34BB8 /* DCP0013.jpg in Resources */,
 				A56F7AEE1E770A6F00B34BB8 /* PICK4JENWAIT.jpg in Resources */,
+				A55C1E051EA85726000E542C /* SSB App.jpg in Resources */,
 				A56F7B7E1E770A7000B34BB8 /* R1010085.jpg in Resources */,
 				A52EAB6A1E8F671E00682C1B /* Scores-MSD.png in Resources */,
 				A56F7AEC1E770A6F00B34BB8 /* pick4hangingout3.jpg in Resources */,

@@ -107,7 +107,7 @@ class ProgramViewController : UIViewController {
                         if Int((cpview.progressTitle)!)! < 5 {
                             container.randomNum = Int((cpview.progressTitle)!)! + 1
                         } else {
-                            container.randomNum = 1
+                            container.randomNum = 0
                         }
                         cpview.placeButton.setTitleColor(UIColor.red, for: .normal)
                     }

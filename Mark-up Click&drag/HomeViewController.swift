@@ -72,8 +72,8 @@ class HomeViewController: AudioViewController{
         // Dispose of any resources that can be recreated.
     }
     
-    func clearOrResume() {
-        if randomNum != 1 {
+    func clearOrResume(_ sender: AnyObject) {
+        if randomNum > 1  {
         let alertConrtoller = UIAlertController(title: "Start Quiz", message: "Start over or resume from where you left off.", preferredStyle: .alert)
         alertConrtoller.addAction(UIAlertAction(title: "Start Over", style: .cancel, handler: { (action: UIAlertAction!) in
             self.randomNum = 1
@@ -84,8 +84,38 @@ class HomeViewController: AudioViewController{
             self.performSegue(withIdentifier: "toQuiz", sender: self)
         }))
         present(alertConrtoller, animated: true, completion: nil)
-        } else {
+        } else if randomNum == 1 {
             self.performSegue(withIdentifier: "toQuiz", sender: self)
+        } else if randomNum == 0 {
+            let alertConrtoller = UIAlertController(title: "Retake Quiz", message: "Restart and retake quiz?", preferredStyle: .alert)
+            alertConrtoller.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+                alertConrtoller.dismiss(animated: true, completion: nil)
+            }))
+            alertConrtoller.addAction(UIAlertAction(title: "Retake", style: .default, handler: { (action: UIAlertAction!) in
+                var progressesArray = currentUs.progresses as? Set<Progress>
+                let progress: Progress = NSEntityDescription.insertNewObject(forEntityName: "Progress", into: DatabaseController.getContext()) as! Progress
+                
+                progress.value = Int16(0)
+                progress.place = String(sender.tag)
+                progress.program = prog
+                
+                if (progressesArray?.count)! > 0 {
+                    for p in progressesArray! {
+                        print(sender.tag)
+                        
+                        if (p.place == String(sender.tag)) && (p.program == prog) {
+                            
+                            
+                            progressesArray?[(progressesArray?.index(of: p))!].value = progress.value
+                        }
+                    }
+                }
+                currentUs.progresses = progressesArray as NSSet?
+                DatabaseController.saveContext()
+                self.performSegue(withIdentifier: "toQuiz", sender: self)
+                
+            }))
+            present(alertConrtoller, animated: true, completion: nil)
         }
     }
 
@@ -95,7 +125,7 @@ class HomeViewController: AudioViewController{
         alert.view.tintColor = UIColor.black
         activityIndicator.startAnimating()
         DispatchQueue.main.async {
-            self.clearOrResume()
+            self.clearOrResume(sender)
         }
         
     }

@@ -30,6 +30,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
     @IBOutlet weak var finishButton: UIButton!
     @IBOutlet weak var currentScore: UILabel!
   //  @IBOutlet weak var helpButton: UIButton!
+    var quizPlayer: AVQueuePlayer!
     @IBOutlet weak var homeButton: UIButton!
     var source: HomeViewController!
     var numbers = [1,2,3,4, 5]
@@ -405,21 +406,33 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
         else {
             answers[4].isHidden = false
         }
-        
+        self.audioPlayer.stop()
     }
     
     func playSound(filename: String) {
         self.playAudio(fileName: filename)
     }
 
-
+    func playInSequence(soundsArray: [String]) {
+        var audioItems: [AVPlayerItem] = []
+        for audioName in soundsArray {
+            let url = NSURL(fileURLWithPath: Bundle.main.path(forResource: audioName, ofType: "wav")!)
+            print(audioName)
+            let item = AVPlayerItem(url: url as URL)
+            audioItems.append(item)
+        }
+        
+        quizPlayer = AVQueuePlayer(items: audioItems)
+        quizPlayer.play()
+    }
     
     @IBAction func checkAns(sender: AnyObject) {
         let goodAudios:[String] = ["Great job","Perfect","Wow. Super job. ","You are good at this"]
-        let badAudios:[String] = ["Take another look","That's okay. Try again."]
+        let badAudios:[String] = ["Take another look","That's okay. Try again.", "That's okay"]
+        let neutral:[String] = ["correctSound", "wrongSound"]
         if viewPlace == correctAnss {
             let randomIndex = Int(arc4random_uniform(UInt32(goodAudios.count)))
-            self.playAudio(fileName: goodAudios[randomIndex])
+            playInSequence(soundsArray:[neutral[0], goodAudios[randomIndex]])
             //nextQuestionBtn.isHidden = false
             if turn == 1 {
                 let random = numbers[Int(arc4random_uniform(UInt32(numbers.count)) + 1) - 1]
@@ -440,12 +453,14 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
                 nextQuestionBtn.isHidden = false
             }
             else {
+                disableScene()
                 finishButton.isHidden = false
             }
         }
         else if turn == 1 {
-            let randomIndex = Int(arc4random_uniform(UInt32(badAudios.count)))
-            self.playAudio(fileName: badAudios[randomIndex])
+            
+            let randomIndex = Int(arc4random_uniform(UInt32(badAudios.count-1)))
+            playInSequence(soundsArray: [neutral[1], badAudios[randomIndex]])
             turn = turn + 1
             replaceAnswers()
             viewPlace = [Int](repeating
@@ -453,6 +468,8 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
             
         }
         else if turn == 2 {
+            playInSequence(soundsArray: [neutral[1], "That's okay"])
+            
             starLocations = []
             for i in viewPlace {
                 if i != 0 {
@@ -496,9 +513,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
         if (progressesArray?.count)! > 0 {
             for p in progressesArray! {
                 if (p.place == currentPlace) && (p.program == prog) {
-                    if progressesArray?[(progressesArray?.index(of: p))!].value != 5 {
                         progressesArray?[(progressesArray?.index(of: p))!].value = progress.value
-                    }
                     
                     break
                 }

@@ -32,7 +32,7 @@
 	<string>Choose Pic</string>
 	<key>UIAppFonts</key>
 	<array>
-		<string>AinslieNormRegular.otf</string>
+		<string>AinslieNorBold.otf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

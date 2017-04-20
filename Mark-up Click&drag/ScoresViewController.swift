@@ -56,7 +56,7 @@ class ScoresViewController: UIViewController, MFMailComposeViewControllerDelegat
         let mailComposerVC = MFMailComposeViewController()
         mailComposerVC.mailComposeDelegate = self // Extremely important to set the --mailComposeDelegate-- property, NOT the --delegate-- property
         
-        mailComposerVC.setToRecipients(["someone@somewhere.com"])
+        mailComposerVC.setToRecipients(["info@socialskillbuilder.com"])
         mailComposerVC.setSubject("Scores for \(names[Int(prog)!-1])")
         let scores = currentUs.scores
         var valueScores: [Int]! = []
@@ -110,6 +110,7 @@ extension ScoresViewController:UITableViewDataSource, UITableViewDelegate {
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")! as! ScoreTableViewCell
         cell.score = scoresArray[scoresArray.count - indexPath.item - 1]
+        
         return cell
     }
 }

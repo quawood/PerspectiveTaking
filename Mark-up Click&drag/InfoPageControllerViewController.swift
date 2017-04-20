@@ -8,6 +8,7 @@
 
 import UIKit
 import MessageUI
+var isAudioEnabled: Bool = true
 class InfoPageControllerViewController: UIViewController, MFMailComposeViewControllerDelegate {
 
     override func viewDidLoad() {
@@ -21,7 +22,9 @@ class InfoPageControllerViewController: UIViewController, MFMailComposeViewContr
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    @IBAction func toggleAudio(_ sender: Any) {
+        isAudioEnabled = !isAudioEnabled
+    }
     @IBAction func goToWebsiteBtn(_ sender: Any) {
         UIApplication.shared.openURL(URL(string: "http://www.socialskillbuilder.com/")!)
     }

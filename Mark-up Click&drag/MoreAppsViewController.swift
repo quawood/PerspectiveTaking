@@ -10,7 +10,7 @@ import UIKit
 
 class MoreAppsViewController: UIViewController {
     @IBOutlet var apps: [UIButton]!
-    
+    var urls: [String] = ["https://itunes.apple.com/us/app/social-detective/id975189305?mt=8", "https://itunes.apple.com/us/app/social-detective-intermediate/id1079442478?mt=8", "https://itunes.apple.com/us/app/social-skill-builder-my-school-day/id570787918?mt=8", "https://itunes.apple.com/us/app/social-skill-builder-lite/id486116417?mt=8"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,11 +20,14 @@ class MoreAppsViewController: UIViewController {
             button.titleLabel?.numberOfLines = 0
             button.titleLabel?.adjustsFontSizeToFitWidth = true
             button.titleLabel?.textAlignment = .center
+            button.addTarget(self, action: #selector(goToApp(_ :)), for: .touchUpInside)
         }
 
         // Do any additional setup after loading the view.
     }
-
+    func goToApp(_ sender: UIButton) {
+        UIApplication.shared.openURL(NSURL(string: urls[sender.tag])! as URL)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
