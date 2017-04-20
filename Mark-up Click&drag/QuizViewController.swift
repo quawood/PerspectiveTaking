@@ -370,7 +370,6 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
         for lab in answerLabs {
             if lab.font.pointSize < minimumFont {
                 minimumFont = lab.font.pointSize
-                print(minimumFont)
             }
         }
         for lab in answerLabs {
@@ -418,7 +417,6 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
         var audioItems: [AVPlayerItem] = []
         for audioName in soundsArray {
             let url = NSURL(fileURLWithPath: Bundle.main.path(forResource: audioName, ofType: "wav")!)
-            print(audioName)
             let item = AVPlayerItem(url: url as URL)
             audioItems.append(item)
         }
@@ -438,7 +436,6 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
             if turn == 1 {
                 let random = numbers[Int(arc4random_uniform(UInt32(numbers.count)) + 1) - 1]
                 numbers.remove(at: numbers.index(of: random)!)
-                print(numbers.count)
                 animation = UIImageView(image:UIImage.gif(name: "emoji\(random)"))
                 animation.center = CGPoint(x: view.frame.width/2, y: view.frame.height/2 - 50)
                 animation.bounds.size = CGSize(width: 200, height: 200)
