@@ -8,7 +8,7 @@
 
 import UIKit
 import MessageUI
-var isAudioEnabled: Bool = true
+
 class InfoPageControllerViewController: UIViewController, MFMailComposeViewControllerDelegate {
 
     override func viewDidLoad() {

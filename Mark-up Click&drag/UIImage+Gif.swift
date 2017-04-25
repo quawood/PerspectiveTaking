@@ -229,11 +229,14 @@ didSet {
         } catch let error {
             print(error.localizedDescription)
         }
-        if isAudioEnabled == false {
-            self.audioPlayer.volume = 0
-        } else {
-            self.audioPlayer.volume = 0.5
+        if currentUs != nil {
+            if currentUs.isAudioEnabled == false {
+                self.audioPlayer.volume = 0
+            } else {
+                self.audioPlayer.volume = 0.5
+            }
         }
+        
 
     }
     

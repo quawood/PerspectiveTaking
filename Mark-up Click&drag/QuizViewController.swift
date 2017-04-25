@@ -17,12 +17,9 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
     var placeString: String!
     @IBOutlet weak var placeLabel: UILabel!
     @IBOutlet weak var sceneView: UIView!
-    @IBOutlet var labImages: [UIImageView]!
     @IBOutlet var anchors: [UIView]!
-    @IBOutlet var answers: [UIView]!
-    @IBOutlet var answerLabs: [UILabel]!
+    @IBOutlet var answers: [AnswerView]!
     @IBOutlet weak var scenarioView: UIView!
-    @IBOutlet var rewards: [UIImageView]!
     @IBOutlet weak var scenarioImg: UIImageView!
     @IBOutlet weak var nextQuestionBtn: UIButton!
     @IBOutlet weak var checkAnsBtn: UIButton!
@@ -32,6 +29,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
   //  @IBOutlet weak var helpButton: UIButton!
     var quizPlayer: AVQueuePlayer!
     @IBOutlet weak var homeButton: UIButton!
+    @IBOutlet weak var nextToContLbl: UILabel!
     var source: HomeViewController!
     var numbers = [1,2,3,4, 5]
     let date = NSDate()
@@ -47,8 +45,8 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
     var correctAnss:[Int]!
     var viewPlace:[Int] = [0,0,0,0,0]
     var randomNum:Int!
-    
-    var currentA = UIView()
+    var isSceneEnabled:Bool! = true
+    var currentA = AnswerView()
     var touch:UITouch!
     var deltaX: CGFloat!
     var deltaY: CGFloat!
@@ -72,105 +70,107 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
     
     //Touch controllers
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        touch = touches.first! 
-        for a in answers {
-            if a.frame.contains(touch.previousLocation(in: self.view)) {
-                currentA = a
-                deltaX = touch.location(in: self.view).x - currentA.center.x
-                deltaY = touch.location(in: self.view).y - currentA.center.y
-                currentA.center = CGPoint(x: touch.location(in: self.view).x - deltaX, y: touch.location(in: self.view).y - deltaY)
-                
+        if isSceneEnabled {
+            touch = touches.first!
+            for a in answers {
+                if a.frame.contains(touch.previousLocation(in: self.view)) {
+                    currentA = a
+                    deltaX = touch.location(in: self.view).x - currentA.center.x
+                    deltaY = touch.location(in: self.view).y - currentA.center.y
+                    currentA.center = CGPoint(x: touch.location(in: self.view).x - deltaX, y: touch.location(in: self.view).y - deltaY)
+                    
+                }
             }
         }
+        
     }
     
 
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if currentA.frame.contains(touch.previousLocation(in: self.view)) {
-            currentA.center = CGPoint(x: touch.location(in: self.view).x-deltaX, y: touch.location(in: self.view).y-deltaY)
-            
-            for i in 0...stars.count-1 {
-                let starframe = CGRect(x: stars[i].frame.origin.x + scenarioView.frame.origin.x - 25 , y: stars[i].frame.origin.y +
-                    scenarioView.frame.origin.y - 25, width: 75 * self.view.bounds.width/469 , height: 75 * self.view.bounds.width/469)
-                if (starframe.contains(currentA.center) && (viewPlace[i] == 0||viewPlace[i] == currentA.tag)) {
-                    
-                    for view in currentA.subviews {
-                        if let img = view as? UIImageView {
-                            let k = Int(startails[i])
-                            if img.tag == 0 {
-                                img.highlightedImage = UIImage(named:"speechtail\(k).png")
-                            }
-                            else {
-                                img.highlightedImage = UIImage(named: "thoughttail\(k).png")
-                            }
-                            
-                            stars[i].isHidden = true
-                            img.isHighlighted = true
+        if isSceneEnabled {
+            if currentA.frame.contains(touch.previousLocation(in: self.view)) {
+                currentA.center = CGPoint(x: touch.location(in: self.view).x-deltaX, y: touch.location(in: self.view).y-deltaY)
+                
+                for i in 0...stars.count-1 {
+                    let starframe = CGRect(x: stars[i].frame.origin.x + scenarioView.frame.origin.x - 25 , y: stars[i].frame.origin.y +
+                        scenarioView.frame.origin.y - 25, width: 75 * self.view.bounds.width/469 , height: 75 * self.view.bounds.width/469)
+                    if (starframe.contains(currentA.center) && (viewPlace[i] == 0||viewPlace[i] == currentA.tag)) {
+                        
+                        let k = Int(startails[i])
+                        if currentA.answerImage.tag == 0 {
+                            currentA.answerImage.highlightedImage = UIImage(named:"speechtail\(k).png")
                         }
+                        else {
+                            currentA.answerImage.highlightedImage = UIImage(named: "thoughttail\(k).png")
+                        }
+                        
+                        stars[i].isHidden = true
+                        currentA.answerImage.isHighlighted = true
+                        break
+                        
                     }
-                    break
-                    
-                }
-                else {
-                    for view in currentA.subviews {
-                        if let img = view as? UIImageView {
-                            img.isHighlighted = false
-                            if viewPlace[i] == 0 {
-                                stars[i].isHidden = false
-                            }
-                            
-                            
-                            
+                    else {
+                        
+                        currentA.answerImage.isHighlighted = false
+                        if viewPlace[i] == 0 {
+                            stars[i].isHidden = false
                         }
+                        
+                        
+                        
                     }
                 }
+                
             }
-            
         }
+
     }
 
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-
-        if currentA.frame.contains(touch.previousLocation(in: self.view)) {
-
-            for i in 0...stars.count-1 {
+        if isSceneEnabled {
+            
+            if currentA.frame.contains(touch.previousLocation(in: self.view)) {
                 
-                let starframe = CGRect(x: stars[i].frame.origin.x + scenarioView.frame.origin.x - 25, y: stars[i].frame.origin.y +
-                    scenarioView.frame.origin.y - 25 , width: 75 * self.view.bounds.width/414 , height: 75 * self.view.bounds.width/469)
-                if (starframe.contains(currentA.center) && (viewPlace[i] == 0||viewPlace[i] == currentA.tag)) {
-
+                for i in 0...stars.count-1 {
+                    
+                    let starframe = CGRect(x: stars[i].frame.origin.x + scenarioView.frame.origin.x - 25, y: stars[i].frame.origin.y +
+                        scenarioView.frame.origin.y - 25 , width: 75 * self.view.bounds.width/414 , height: 75 * self.view.bounds.width/469)
+                    if (starframe.contains(currentA.center) && (viewPlace[i] == 0||viewPlace[i] == currentA.tag)) {
+                        
+                        if viewPlace.contains(currentA.tag) {
+                            viewPlace[viewPlace.index(of: currentA.tag)!] = 0
+                        }
+                        viewPlace[i] = currentA.tag
+                        
+                        if viewPlace.contains(0) == false {
+                            checkAnsBtn.isUserInteractionEnabled = true
+                        }
+                        break
+                        
+                    }
+                    
+                }
+                
+                if currentA.answerImage.isHighlighted == false{
+                    currentA.frame.origin = anchors[currentA.tag-1].center
+                    currentA.answerImage.isHighlighted = false
                     if viewPlace.contains(currentA.tag) {
                         viewPlace[viewPlace.index(of: currentA.tag)!] = 0
+                        if viewPlace.contains(0) == true {
+                            checkAnsBtn.isUserInteractionEnabled = false
+                        }
                     }
-                    viewPlace[i] = currentA.tag
-                    
-                    if viewPlace.contains(0) == false {
-                        checkAnsBtn.isUserInteractionEnabled = true
-                    }
-                    break
-                    
                 }
                 
             }
-            
-            if (currentA.subviews[0] as! UIImageView).isHighlighted == false{
-                currentA.frame.origin = anchors[currentA.tag-1].center
-                (currentA.subviews[0] as! UIImageView).isHighlighted = false
-                if viewPlace.contains(currentA.tag) {
-                    viewPlace[viewPlace.index(of: currentA.tag)!] = 0
-                    if viewPlace.contains(0) == true {
-                        checkAnsBtn.isUserInteractionEnabled = false
-                    }
+            for i in 0...stars.count - 1 {
+                if viewPlace[i] == 0 {
+                    stars[i].isHidden = false
                 }
             }
+        }
 
-        }
-        for i in 0...stars.count - 1 {
-            if viewPlace[i] == 0 {
-                stars[i].isHidden = false
-            }
-        }
     }
     
 
@@ -213,11 +213,8 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
     func replaceAnswers() {
         for i in 0...answers.count-1 {
             answers[i].frame.origin = anchors[i].center
-            for view in answers[i].subviews as [UIView]{
-                if let img = view as? UIImageView {
-                    img.isHighlighted = false
-                }
-            }
+
+            answers[i].answerImage.isHighlighted = false
         }
         for star in stars {
             star.isHidden = false
@@ -257,6 +254,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
     func disableScene() {
         checkAnsBtn.isUserInteractionEnabled = false
         sceneView.isUserInteractionEnabled = false
+        isSceneEnabled = false
     }
 
     
@@ -307,7 +305,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
 
         scenarioView.layer.cornerRadius = 10
         nextQuestion()
-        if answerLabs[4].text == "" {
+        if answers[4].answerText.text == "" {
             answers[4].isHidden = true
         }
         else {
@@ -334,12 +332,13 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
         let currentSpot = currentProgram[currentPlace] as! [AnyObject]
         let numm = currentSpot[randomNum-1] as! [String:AnyObject]
            if let label = numm["answers"] as? [String] , let stars = numm["stars"] as? [[Int]] , let correct = numm["correct"] as? [Int], let bubbles = numm["bubbles"] as? [String], let image = numm["image"] as? String {
+            
              startails = numm["startails"] as? [Float]
-                for i in 0...answerLabs.count-1 {
-                    answerLabs[i].text = label[i]
+                for i in 0...answers.count-1 {
+                    answers[i].answerText.text = label[i]
                     
                     answers[i].layer.zPosition = 10
-                    if answerLabs[i].text == "" {
+                    if answers[i].answerText.text == "" {
                         answers[i].isHidden = true
                         
                     }
@@ -348,14 +347,12 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
                     }
                     
                     if bubbles[i] == "s" {
-                        labImages[i].image = UIImage(named: "speech.png")
-                        labImages[i].tag = 0
-                        //labImages[i].highlightedImage = UIImage(named: "speechtail0")
-                        //labImages[i].highlightedImage = UIImage(named: "speechtail1")
+                        answers[i].answerImage.image = UIImage(named: "speech.png")
+                        answers[i].answerImage.tag = 0
                     }
                     else if bubbles[i] == "t" {
-                        labImages[i].image = UIImage(named: "thought.png")
-                        labImages[i].tag = 1
+                        answers[i].answerImage.image = UIImage(named: "thought.png")
+                        answers[i].answerImage.tag = 1
                     }
                 }
                 for j in 0...stars.count-1 {
@@ -367,13 +364,13 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
                 scenarioImg.image = UIImage(named: image)
                 viewPlace = [Int](repeating:0, count:correctAnss.count)
             }
-        for lab in answerLabs {
-            if lab.font.pointSize < minimumFont {
-                minimumFont = lab.font.pointSize
+        for lab in answers {
+            if lab.answerText.font.pointSize < minimumFont {
+                minimumFont = lab.answerText.font.pointSize
             }
         }
-        for lab in answerLabs {
-            lab.font = lab.font.withSize(minimumFont)
+        for lab in answers {
+            lab.answerText.font = lab.answerText.font.withSize(minimumFont)
         }
         
     }
@@ -390,6 +387,8 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
         replaceAnswers()
         randomNum = randomNum + 1
         nextQuestionBtn.isHidden = true
+        nextToContLbl.text = "Press NEXT to continue"
+        nextToContLbl.isHidden = true
         viewPlace = [0,0,0,0,0]
         
         checkAnsBtn.isUserInteractionEnabled = false
@@ -399,7 +398,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
         if randomNum != 6 {
             nextQuestion()
         }
-        if answerLabs[4].text == "" {
+        if answers[4].answerText.text == "" {
             answers[4].isHidden = true
         }
         else {
@@ -432,7 +431,6 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
         if viewPlace == correctAnss {
             let randomIndex = Int(arc4random_uniform(UInt32(goodAudios.count)))
             playInSequence(soundsArray:[neutral[0], goodAudios[randomIndex]])
-            //nextQuestionBtn.isHidden = false
             if turn == 1 {
                 let random = numbers[Int(arc4random_uniform(UInt32(numbers.count)) + 1) - 1]
                 numbers.remove(at: numbers.index(of: random)!)
@@ -449,10 +447,14 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
             if randomNum != 5 {
                 disableScene()
                 nextQuestionBtn.isHidden = false
+                nextToContLbl.isHidden = false
+                nextToContLbl.text = "Press NEXT to continue"
             }
             else {
                 disableScene()
                 finishButton.isHidden = false
+                nextToContLbl.isHidden = false
+                nextToContLbl.text = "Press FINISH to go home"
             }
         }
         else if turn == 1 {
@@ -481,8 +483,11 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
                 if correctAnss.contains(i) {
                     c = c + 1
                     answers[i-1].frame.origin =  CGPoint(x:starLocations[correctAnss.index(of: i)!].x , y: starLocations[correctAnss.index(of: i)!].y)
-                   
                     answers[i-1].isUserInteractionEnabled = false
+                    let k = Int(startails[correctAnss.index(of: i)!])
+                    print(k)
+                    answers[i-1].answerImage.highlightedImage = UIImage(named:"cspeechtail\(k).png")
+                    answers[i-1].answerImage.isHighlighted = true
                 }
             }
             disableScene()
@@ -490,9 +495,12 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
             
             if randomNum != 5 {
                 nextQuestionBtn.isHidden = false
+                nextToContLbl.isHidden = false
             }
             else {
                 finishButton.isHidden = false
+                nextToContLbl.isHidden = false
+                nextToContLbl.text = "Press FINISH to go home"
             }
         }
     }

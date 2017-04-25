@@ -129,7 +129,8 @@ class EditProfileViewController: UIViewController,UINavigationControllerDelegate
     }
 
     @IBAction func toggleAudio(_ sender: Any) {
-        isAudioEnabled = !isAudioEnabled
+        currentUs.isAudioEnabled = !currentUs.isAudioEnabled
+        DatabaseController.saveContext()
     }
     
     

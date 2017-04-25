@@ -11,8 +11,8 @@ var prog: String!
 class HomeViewController: AudioViewController{
     
     
-    @IBOutlet weak var programTitle: UILabel!
-    @IBOutlet weak var programImage: UIImageView!
+    @IBOutlet weak var graphicImage: UIImageView!
+    var programTitle: String!
     @IBOutlet weak var contentView: UIView!
     var program: String!
     var place: String!
@@ -31,9 +31,11 @@ class HomeViewController: AudioViewController{
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        programTitle.text = names[Int(program)! - 1]
+        graphicImage.image = UIImage(named: "CWT\(Int(program!)! - 1)")
+        print("CWT\(program!)")
+        programTitle = names[Int(program)! - 1]
         prog = program
-        programImage.image = UIImage(named: images[Int(program)! - 1])
+ 
       //  programLabel.text = names[Int(program)!-1]3
           
         
@@ -124,7 +126,7 @@ class HomeViewController: AudioViewController{
             destinationVC.currentPlace = place
             destinationVC.placeString = placeString
             destinationVC.randomNum = randomNum
-            destinationVC.progName = programTitle.text
+            destinationVC.progName = programTitle
             destinationVC.SetHomeContent()
             
             activityIndicator.stopAnimating()

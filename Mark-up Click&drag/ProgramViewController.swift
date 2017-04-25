@@ -97,7 +97,7 @@ class ProgramViewController : UIViewController {
         
        for view in customView.subviews {
         if let cpview = view as? ChoosePlaceView {
-            cpview.placeButton.setTitleColor(UIColor.white, for: .normal)
+            cpview.placeButton.setTitleColor(UIColor(red: 36/255, green: 72/255, blue: 128/255, alpha: 1.0), for: .normal)
         }
         
 
