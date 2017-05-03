@@ -11,6 +11,7 @@ var prog: String!
 class HomeViewController: AudioViewController{
     
     
+    @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var graphicImage: UIImageView!
     var programTitle: String!
     @IBOutlet weak var contentView: UIView!
@@ -35,7 +36,8 @@ class HomeViewController: AudioViewController{
         print("CWT\(program!)")
         programTitle = names[Int(program)! - 1]
         prog = program
- 
+        
+        backButton.layer.cornerRadius = 5
       //  programLabel.text = names[Int(program)!-1]3
           
         

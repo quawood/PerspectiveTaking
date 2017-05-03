@@ -253,7 +253,6 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
     
     func disableScene() {
         checkAnsBtn.isUserInteractionEnabled = false
-        sceneView.isUserInteractionEnabled = false
         isSceneEnabled = false
     }
 
@@ -321,6 +320,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
     //Question controllers
 
     func nextQuestion() {
+        isSceneEnabled = true
         stars=[]
         viewPlace = [0,0,0,0,0]
         var minimumFont: CGFloat = 100
@@ -381,7 +381,6 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
     }
     
     @IBAction func nextQuestion(sender: AnyObject) {
-        sceneView.isUserInteractionEnabled = true
         removeStars()
         turn = 1
         replaceAnswers()
@@ -413,6 +412,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
     }
 
     func playInSequence(soundsArray: [String]) {
+        self.audioPlayer.stop()
         var audioItems: [AVPlayerItem] = []
         for audioName in soundsArray {
             let url = NSURL(fileURLWithPath: Bundle.main.path(forResource: audioName, ofType: "wav")!)

@@ -15,6 +15,7 @@ class ScoresViewController: UIViewController, MFMailComposeViewControllerDelegat
     var imageNames:[String] = ["MC.png","MSD.png","SR1.png","SR2.png"]
     
     @IBOutlet weak var imageIcon: UIImageView!
+    @IBOutlet weak var backButton: UIButton!
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var realView: UIView!
@@ -30,6 +31,7 @@ class ScoresViewController: UIViewController, MFMailComposeViewControllerDelegat
     override func viewDidLoad() {
         backgroundGraphic.image = UIImage(named: "Scores-\(imageNames[Int(prog)!-1])")
         imageIcon.image = UIImage(named: imageNames[Int(prog)!-1])
+        backButton.layer.cornerRadius = 5
 
     }
     
@@ -56,7 +58,6 @@ class ScoresViewController: UIViewController, MFMailComposeViewControllerDelegat
         let mailComposerVC = MFMailComposeViewController()
         mailComposerVC.mailComposeDelegate = self // Extremely important to set the --mailComposeDelegate-- property, NOT the --delegate-- property
         
-        mailComposerVC.setToRecipients(["info@socialskillbuilder.com"])
         mailComposerVC.setSubject("Scores for \(names[Int(prog)!-1])")
         let scores = currentUs.scores
         var valueScores: [Int]! = []

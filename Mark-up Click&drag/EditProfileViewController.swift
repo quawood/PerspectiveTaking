@@ -15,6 +15,7 @@ class EditProfileViewController: UIViewController,UINavigationControllerDelegate
     
 
 
+    @IBOutlet weak var toggleAudioBtn: UIButton!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var dateCreatedLabel: UILabel!
     @IBOutlet weak var nameText: UITextField!
@@ -23,6 +24,8 @@ class EditProfileViewController: UIViewController,UINavigationControllerDelegate
     @IBOutlet weak var canceEditingButton: UIButton!
     //@IBOutlet weak var goBackHomeButton: UIButton!
     @IBOutlet weak var realView: UIView!
+    
+    var onOff: [String] = ["Audio is on, click to turn it off","Audio is off, click to turn it on"]
      
     func loadData() {
         nameText.text = currentUs.name
@@ -86,7 +89,8 @@ class EditProfileViewController: UIViewController,UINavigationControllerDelegate
         super.viewDidLoad()
         loadData()
         self.nameText.delegate = self
-
+        
+        toggleAudioBtn.setTitle(onOff[Int(NSNumber(value: !currentUs.isAudioEnabled))], for: .normal)
         //chooseImage.layer.cornerRadius = 155 ;
         // Do any additional setup after loading the view.
         containerView.layer.cornerRadius = 15
@@ -130,7 +134,9 @@ class EditProfileViewController: UIViewController,UINavigationControllerDelegate
 
     @IBAction func toggleAudio(_ sender: Any) {
         currentUs.isAudioEnabled = !currentUs.isAudioEnabled
+        
         DatabaseController.saveContext()
+        toggleAudioBtn.setTitle(onOff[Int(NSNumber(value: currentUs.isAudioEnabled))], for: .normal)
     }
     
     

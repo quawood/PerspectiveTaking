@@ -11,6 +11,7 @@ var names: [String] = ["My Community", "My School Day", "School Rules 1", "Schoo
 var grandProgram: String!
 class ChooseProgramViewController: AudioViewController {
     @IBOutlet var chooseButtons: [UIButton]!
+    @IBOutlet weak var backButton: UIButton!
 
     let hightlightColor: UIColor = UIColor(red:0.76, green:0.29, blue:0.00, alpha:1.0)
 
@@ -35,7 +36,7 @@ class ChooseProgramViewController: AudioViewController {
         for button in chooseButtons {
             button.addTarget(self, action: #selector(highlighta(_ :)), for: .touchUpInside)
         }
-        
+        backButton.layer.cornerRadius = 5
         
        /* informationView.layer.cornerRadius = 4
         informationView.layer.borderWidth = 2
