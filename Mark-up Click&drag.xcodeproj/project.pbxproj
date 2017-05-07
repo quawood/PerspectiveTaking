@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2E0C34371E76D1B600CC7F9E /* ChoosePlaceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E0C34361E76D1B600CC7F9E /* ChoosePlaceView.xib */; };
 		A50D0BB81DFFDEE800AE2978 /* InfoPageControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50D0BB71DFFDEE800AE2978 /* InfoPageControllerViewController.swift */; };
+		A50F2A601EBFA83A0082B7EA /* SD Intermediate-Large High Resolution.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A50F2A5F1EBFA83A0082B7EA /* SD Intermediate-Large High Resolution.jpg */; };
 		A523733B1E79A32800D3DE50 /* ChoosePlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A523733A1E79A32800D3DE50 /* ChoosePlaceView.swift */; };
 		A527274F1E9A5E9500D5779E /* WelcomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A527274E1E9A5E9500D5779E /* WelcomeScreenViewController.swift */; };
 		A52727511E9A5EE200D5779E /* SSBAppintro.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A52727501E9A5EE200D5779E /* SSBAppintro.mp3 */; };
@@ -744,6 +745,7 @@
 /* Begin PBXFileReference section */
 		2E0C34361E76D1B600CC7F9E /* ChoosePlaceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChoosePlaceView.xib; sourceTree = "<group>"; };
 		A50D0BB71DFFDEE800AE2978 /* InfoPageControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoPageControllerViewController.swift; sourceTree = "<group>"; };
+		A50F2A5F1EBFA83A0082B7EA /* SD Intermediate-Large High Resolution.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "SD Intermediate-Large High Resolution.jpg"; sourceTree = "<group>"; };
 		A523733A1E79A32800D3DE50 /* ChoosePlaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoosePlaceView.swift; sourceTree = "<group>"; };
 		A527274E1E9A5E9500D5779E /* WelcomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeScreenViewController.swift; sourceTree = "<group>"; };
 		A52727501E9A5EE200D5779E /* SSBAppintro.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SSBAppintro.mp3; sourceTree = "<group>"; };
@@ -1503,6 +1505,7 @@
 		A52EAB161E8F671E00682C1B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A50F2A5F1EBFA83A0082B7EA /* SD Intermediate-Large High Resolution.jpg */,
 				A55C1E001EA85714000E542C /* SD Intermediate.jpg */,
 				A55C1E021EA85718000E542C /* SD App Icon.JPG */,
 				A55C1DFE1EA8570C000E542C /* SSB Lite.JPG */,
@@ -2512,6 +2515,7 @@
 				A56F7A2A1E770A6F00B34BB8 /* lunch2.jpg in Resources */,
 				A56F79F71E770A6F00B34BB8 /* DCP0013a.jpg in Resources */,
 				A56F7A6D1E770A6F00B34BB8 /* P1010046.jpg in Resources */,
+				A50F2A601EBFA83A0082B7EA /* SD Intermediate-Large High Resolution.jpg in Resources */,
 				A56F7B6C1E770A7000B34BB8 /* R1010072.jpg in Resources */,
 				A56F7B501E770A6F00B34BB8 /* R1010048.jpg in Resources */,
 				A5AC34EE1E90AB030066D073 /* UserScreenCAT.wav in Resources */,
