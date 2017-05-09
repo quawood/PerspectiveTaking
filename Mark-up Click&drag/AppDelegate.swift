@@ -16,8 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.        UIButton.appearance().borderWidth = 2;
-        UIButton.appearance().cornerRadius = 5;
-               return true
+        return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

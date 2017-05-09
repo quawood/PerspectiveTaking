@@ -10,6 +10,8 @@
 		2E0C34371E76D1B600CC7F9E /* ChoosePlaceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E0C34361E76D1B600CC7F9E /* ChoosePlaceView.xib */; };
 		A50D0BB81DFFDEE800AE2978 /* InfoPageControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50D0BB71DFFDEE800AE2978 /* InfoPageControllerViewController.swift */; };
 		A50F2A601EBFA83A0082B7EA /* SD Intermediate-Large High Resolution.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A50F2A5F1EBFA83A0082B7EA /* SD Intermediate-Large High Resolution.jpg */; };
+		A50F2A621EC15E6C0082B7EA /* ToggleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A50F2A611EC15E6C0082B7EA /* ToggleView.xib */; };
+		A50F2A641EC15F4F0082B7EA /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50F2A631EC15F4F0082B7EA /* ToggleView.swift */; };
 		A523733B1E79A32800D3DE50 /* ChoosePlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A523733A1E79A32800D3DE50 /* ChoosePlaceView.swift */; };
 		A527274F1E9A5E9500D5779E /* WelcomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A527274E1E9A5E9500D5779E /* WelcomeScreenViewController.swift */; };
 		A52727511E9A5EE200D5779E /* SSBAppintro.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A52727501E9A5EE200D5779E /* SSBAppintro.mp3 */; };
@@ -746,6 +748,8 @@
 		2E0C34361E76D1B600CC7F9E /* ChoosePlaceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChoosePlaceView.xib; sourceTree = "<group>"; };
 		A50D0BB71DFFDEE800AE2978 /* InfoPageControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoPageControllerViewController.swift; sourceTree = "<group>"; };
 		A50F2A5F1EBFA83A0082B7EA /* SD Intermediate-Large High Resolution.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "SD Intermediate-Large High Resolution.jpg"; sourceTree = "<group>"; };
+		A50F2A611EC15E6C0082B7EA /* ToggleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ToggleView.xib; sourceTree = "<group>"; };
+		A50F2A631EC15F4F0082B7EA /* ToggleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleView.swift; sourceTree = "<group>"; };
 		A523733A1E79A32800D3DE50 /* ChoosePlaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoosePlaceView.swift; sourceTree = "<group>"; };
 		A527274E1E9A5E9500D5779E /* WelcomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeScreenViewController.swift; sourceTree = "<group>"; };
 		A52727501E9A5EE200D5779E /* SSBAppintro.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SSBAppintro.mp3; sourceTree = "<group>"; };
@@ -1583,6 +1587,8 @@
 				A5E43BEB1D73D6B300339C66 /* User.swift */,
 				A5DBA2491DA4A07400C15EDE /* UIImage+Gif.swift */,
 				A5EFC1651E10F4A80071F4DE /* CustomSegue.swift */,
+				A50F2A611EC15E6C0082B7EA /* ToggleView.xib */,
+				A50F2A631EC15F4F0082B7EA /* ToggleView.swift */,
 			);
 			name = "Helper Files";
 			sourceTree = "<group>";
@@ -2929,6 +2935,7 @@
 				A56F7BE11E770A7000B34BB8 /* RR1010079.jpg in Resources */,
 				A56F7B811E770A7000B34BB8 /* R1010086H.jpg in Resources */,
 				A56F7B241E770A6F00B34BB8 /* R1010018.jpg in Resources */,
+				A50F2A621EC15E6C0082B7EA /* ToggleView.xib in Resources */,
 				A56F7C031E770A7000B34BB8 /* teachlineuprecess1.jpg in Resources */,
 				A56F7BD71E770A7000B34BB8 /* RR1010071.jpg in Resources */,
 				A56F7B621E770A7000B34BB8 /* R1010061H.jpg in Resources */,
@@ -3180,6 +3187,7 @@
 				A527274F1E9A5E9500D5779E /* WelcomeScreenViewController.swift in Sources */,
 				A5A8B6DE1D80C289009560D7 /* EditProfileViewController.swift in Sources */,
 				A59DFC581DC3DF6800B1CF8D /* ScoresViewController.swift in Sources */,
+				A50F2A641EC15F4F0082B7EA /* ToggleView.swift in Sources */,
 				A5B4D6E61D7FB1BF0054D4C8 /* CollectionCells.swift in Sources */,
 				A5F4831C1D130F8100AA4E85 /* AppDelegate.swift in Sources */,
 				A54B09EF1D7FBACB00D82D49 /* CreateUserViewController.swift in Sources */,
