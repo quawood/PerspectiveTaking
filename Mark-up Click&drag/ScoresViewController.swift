@@ -20,14 +20,7 @@ class ScoresViewController: UIViewController, MFMailComposeViewControllerDelegat
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var realView: UIView!
     @IBOutlet weak var backgroundGraphic: UIImageView!
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let touch = touches.first!
-        if !realView.frame.contains(touch.location(in: self.view)) {
-            self.performSegue(withIdentifier: "backToHome", sender: self)
-        }
-    }
-    
+    var valueScores: [String]! = []
     override func viewDidLoad() {
         backgroundGraphic.image = UIImage(named: "Scores-\(imageNames[Int(prog)!-1])")
         imageIcon.image = UIImage(named: imageNames[Int(prog)!-1])
@@ -46,12 +39,32 @@ class ScoresViewController: UIViewController, MFMailComposeViewControllerDelegat
     }
 
     @IBAction func sendEmailButtonTapped(sender: AnyObject) {
-        let mailComposeViewController = configuredMailComposeViewController()
-        if MFMailComposeViewController.canSendMail() {
-            self.present(mailComposeViewController, animated: true, completion: nil)
-        } else {
-            self.showSendMailErrorAlert()
+        let scores = currentUs.scores
+        for score in scores as! Set<Score> {
+            if score.program! == prog {
+                if score.date != nil {
+                    valueScores.append("\(String(describing: score.date)) \(String(score.place!)!): \(Int(score.value))")
+                }
+                
+            }
+            
         }
+        print(valueScores.count)
+        if valueScores.count > 1 {
+            let mailComposeViewController = self.configuredMailComposeViewController()
+            if MFMailComposeViewController.canSendMail() {
+                self.present(mailComposeViewController, animated: true, completion: nil)
+            } else {
+                self.showSendMailErrorAlert()
+            }
+        }
+        else {
+            let alertConrtoller = UIAlertController(title: "No quizzes to send", message: "You have to take at least one quiz", preferredStyle: .alert)
+            alertConrtoller.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { (action: UIAlertAction!) in
+                alertConrtoller.dismiss(animated: true, completion: nil)
+            }))
+        }
+
     }
     
     func configuredMailComposeViewController() -> MFMailComposeViewController {
@@ -59,15 +72,15 @@ class ScoresViewController: UIViewController, MFMailComposeViewControllerDelegat
         mailComposerVC.mailComposeDelegate = self // Extremely important to set the --mailComposeDelegate-- property, NOT the --delegate-- property
         
         mailComposerVC.setSubject("Scores for \(names[Int(prog)!-1])")
-        let scores = currentUs.scores
-        var valueScores: [Int]! = []
-        for score in scores as! Set<Score> {
-            if score.program! == prog {
-                valueScores.append(Int(score.value))
-            }
-            
+        
+        
+
+        
+        var bodyString: String!
+        for i in 0..<valueScores.count {
+            bodyString = bodyString + "\n\(valueScores[i])"
         }
-        mailComposerVC.setMessageBody("Here is a report for your scores for this program: \(valueScores) ", isHTML: false)
+        mailComposerVC.setMessageBody("Here \nis a report for your scores for this program: \n" + bodyString, isHTML: false)
         
         return mailComposerVC
     }

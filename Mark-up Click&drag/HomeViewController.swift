@@ -82,14 +82,26 @@ class HomeViewController: AudioViewController{
         alertConrtoller.addAction(UIAlertAction(title: "Start Over", style: .cancel, handler: { (action: UIAlertAction!) in
             self.randomNum = 1
             self.startOver()
-            self.performSegue(withIdentifier: "toQuiz", sender: self)
+            self.activityIndicator.startAnimating()
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "toQuiz", sender: self)
+            }
+            
         }))
         alertConrtoller.addAction(UIAlertAction(title: "Resume", style: .default, handler: { (action: UIAlertAction!) in
-            self.performSegue(withIdentifier: "toQuiz", sender: self)
+            self.activityIndicator.startAnimating()
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "toQuiz", sender: self)
+            }
+            
         }))
         present(alertConrtoller, animated: true, completion: nil)
         } else if randomNum == 1 {
-            self.performSegue(withIdentifier: "toQuiz", sender: self)
+            activityIndicator.startAnimating()
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "toQuiz", sender: self)
+            }
+            
         } else if randomNum == 0 {
             let alertConrtoller = UIAlertController(title: "Retake Quiz", message: "Restart and retake quiz?", preferredStyle: .alert)
             alertConrtoller.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
@@ -98,7 +110,11 @@ class HomeViewController: AudioViewController{
             alertConrtoller.addAction(UIAlertAction(title: "Retake", style: .default, handler: { (action: UIAlertAction!) in
                 self.randomNum = 1
                 self.startOver()
-                self.performSegue(withIdentifier: "toQuiz", sender: self)
+                self.activityIndicator.startAnimating()
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "toQuiz", sender: self)
+                }
+                
                 
             }))
             present(alertConrtoller, animated: true, completion: nil)
@@ -109,11 +125,7 @@ class HomeViewController: AudioViewController{
         alert = UIAlertController(title: nil, message: "Please wait...", preferredStyle: .alert)
         
         alert.view.tintColor = UIColor.black
-        activityIndicator.startAnimating()
-        DispatchQueue.main.async {
-            self.clearOrResume()
-        }
-        
+        clearOrResume()
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

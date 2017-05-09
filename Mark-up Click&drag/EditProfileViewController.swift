@@ -88,6 +88,7 @@ class EditProfileViewController: UIViewController,UINavigationControllerDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
+
         self.nameText.delegate = self
         
         toggleAudioBtn.setTitle(onOff[Int(NSNumber(value: !currentUs.isAudioEnabled))], for: .normal)
@@ -136,7 +137,7 @@ class EditProfileViewController: UIViewController,UINavigationControllerDelegate
         currentUs.isAudioEnabled = !currentUs.isAudioEnabled
         
         DatabaseController.saveContext()
-        toggleAudioBtn.setTitle(onOff[Int(NSNumber(value: currentUs.isAudioEnabled))], for: .normal)
+        toggleAudioBtn.setTitle(onOff[Int(NSNumber(value: !currentUs.isAudioEnabled))], for: .normal)
     }
     
     

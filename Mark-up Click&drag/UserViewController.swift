@@ -73,7 +73,7 @@ class UserViewController: AudioViewController{
                 
                 user.name = textField?.text
                 user.dateCreated = "\(components.month!)/\(components.day!)/\(components.year!)"
-                
+                user.isAudioEnabled = true
                 let score1: Score = NSEntityDescription.insertNewObject(forEntityName: "Score", into: DatabaseController.getContext()) as! Score
                 score1.date = ""
                 score1.value = 0
