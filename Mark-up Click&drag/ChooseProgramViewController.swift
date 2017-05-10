@@ -35,6 +35,7 @@ class ChooseProgramViewController: AudioViewController {
        // grandContainer.layer.borderColor = UIColor(red:0, green:0, blue:0, alpha:1.0).cgColor
         for button in chooseButtons {
             button.addTarget(self, action: #selector(highlighta(_ :)), for: .touchUpInside)
+            button.style()
         }
         backButton.layer.cornerRadius = 5
         

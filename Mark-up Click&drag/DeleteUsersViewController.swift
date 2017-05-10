@@ -13,6 +13,7 @@ class DeleteUsersTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
+        tableView.tableFooterView = UIView()
 
         // Do any additional setup after loading the view.
     }

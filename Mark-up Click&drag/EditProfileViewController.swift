@@ -15,7 +15,7 @@ class EditProfileViewController: UIViewController,UINavigationControllerDelegate
     
 
 
-
+    @IBOutlet var buttons: [UIButton]!
     @IBOutlet weak var toggleAudioView: ToggleView!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var dateCreatedLabel: UILabel!
@@ -37,7 +37,9 @@ class EditProfileViewController: UIViewController,UINavigationControllerDelegate
     }
     
     func stlyeScene() {
-
+        for button in buttons as [UIButton]{
+            button.style()
+        }
     }
     
     func keyboardWillShow(notification: NSNotification) {

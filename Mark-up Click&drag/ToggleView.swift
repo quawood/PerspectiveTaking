@@ -50,6 +50,7 @@ class ToggleView: UIView {
     }
     
     func xibSetup() {
+        
         contentView = loadViewFromNib()
         // use bounds not frame or it'll be offset
         contentView!.frame = bounds
@@ -59,6 +60,7 @@ class ToggleView: UIView {
         
         // Adding custom subview on top of our view (over any custom drawing > see note below)
         addSubview(contentView!)
+        highlightMover.layer.cornerRadius = 5 
     }
     
     func loadViewFromNib() -> UIView! {

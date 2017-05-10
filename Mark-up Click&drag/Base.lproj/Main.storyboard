@@ -12,6 +12,9 @@
         <array key="AinslieNorBold.otf">
             <string>Ainslie-NorBol</string>
         </array>
+        <array key="AinslieNormRegular.otf">
+            <string>Ainslie-NorReg</string>
+        </array>
         <array key="texgyreschola-regular.otf">
             <string>TeXGyreSchola-Regular</string>
         </array>
@@ -239,7 +242,7 @@
                                         <rect key="frame" x="280" y="448" width="192" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.86284291744232178" green="0.42735332250595093" blue="0.18424966931343079" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="21"/>
+                                        <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="22"/>
                                         <state key="normal" title="Check Answer">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -288,34 +291,34 @@
                                         <color key="textColor" red="0.9455457329750061" green="0.77582675218582153" blue="0.47369217872619629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NE5-Oa-Gzx">
+                                        <rect key="frame" x="750" y="456" width="97" height="27"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.86284291739999996" green="0.42735332250000002" blue="0.1842496693" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="22"/>
+                                        <state key="normal" title="Finish">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" red="0.39389673219999999" green="0.1491103959" blue="0.17497693440000001" alpha="0.95146618149999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="saveScoreWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2gE-P4-4sb"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dqf-fr-D2J" userLabel="Next Question">
+                                        <rect key="frame" x="750" y="456" width="90" height="27"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.86284291739999996" green="0.42735332250000002" blue="0.1842496693" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="21"/>
+                                        <state key="normal" title="Next">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" red="0.39389673223350252" green="0.14911039590804109" blue="0.17497693439274464" alpha="0.95146618149999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nextQuestionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5co-1Z-dgI"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </view>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dqf-fr-D2J" userLabel="Next Question">
-                                <rect key="frame" x="501" y="421" width="90" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.86284291739999996" green="0.42735332250000002" blue="0.1842496693" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="21"/>
-                                <state key="normal" title="Next">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.39389673223350252" green="0.14911039590804109" blue="0.17497693439274464" alpha="0.95146618149999995" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="nextQuestionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5co-1Z-dgI"/>
-                                </connections>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NE5-Oa-Gzx">
-                                <rect key="frame" x="501" y="421" width="90" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.86284291739999996" green="0.42735332250000002" blue="0.1842496693" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="26"/>
-                                <state key="normal" title="Finish">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.39389673219999999" green="0.1491103959" blue="0.17497693440000001" alpha="0.95146618149999995" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="saveScoreWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2gE-P4-4sb"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -354,7 +357,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="CfM-zo-86q" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="6165" y="-1037"/>
+            <point key="canvasLocation" x="6164.6484375" y="-1037.0424597364567"/>
         </scene>
         <!--Welcome Screen View Controller-->
         <scene sceneID="TZL-hZ-kFx">
@@ -456,7 +459,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7o-Pe-ia3">
-                                <rect key="frame" x="54" y="51" width="123" height="41"/>
+                                <rect key="frame" x="64" y="63" width="123" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="40"/>
                                 <state key="normal" title="Back">
@@ -568,17 +571,6 @@
                                     </segue>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgG-FX-B1B">
-                                <rect key="frame" x="60" y="58" width="126" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="40"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="jgT-LB-dgF" kind="unwind" unwindAction="unwindToUsers:" id="lrR-yw-wfq"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dwj-N5-gDe">
                                 <rect key="frame" x="221" y="761" width="240" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -591,6 +583,17 @@
                                     <segue destination="HoL-UW-iBw" kind="popoverPresentation" identifier="popUsers" popoverAnchorView="Dwj-N5-gDe" id="p42-Cc-uEw">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgG-FX-B1B">
+                                <rect key="frame" x="65" y="65" width="126" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="40"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="jgT-LB-dgF" kind="unwind" unwindAction="unwindToUsers:" id="lrR-yw-wfq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -614,9 +617,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="500" height="500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cEG-DB-OkG">
-                                <rect key="frame" x="0.0" y="0.0" width="500" height="500"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cEG-DB-OkG">
+                                <rect key="frame" x="-9" y="0.0" width="471" height="500"/>
                                 <string key="text">        Produced by
         Social Skill Builder, Inc
         PO Box 2430
@@ -635,13 +637,19 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cEG-DB-OkG" firstAttribute="leading" secondItem="z9T-TA-LBs" secondAttribute="leadingMargin" constant="-29" id="6eB-lJ-le8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cEG-DB-OkG" secondAttribute="trailing" constant="18" id="UP9-or-8Wa"/>
+                            <constraint firstItem="cEG-DB-OkG" firstAttribute="bottom" secondItem="uBO-dQ-hrf" secondAttribute="top" id="Zbd-7v-r7G"/>
+                            <constraint firstItem="cEG-DB-OkG" firstAttribute="top" secondItem="z9T-TA-LBs" secondAttribute="top" id="tTR-ah-28v"/>
+                        </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="500" height="500"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FGy-gr-wJS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3436" y="944"/>
+            <point key="canvasLocation" x="3435.9375" y="943.9238653001463"/>
         </scene>
         <!--Scores View Controller-->
         <scene sceneID="jDS-j1-rur">
@@ -660,6 +668,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.71315634250640869" green="0.85871106386184692" blue="0.896831214427948" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQm-bz-zLa">
+                                <rect key="frame" x="20" y="1280" width="200" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="40"/>
+                                <state key="normal" title="Scores">
+                                    <color key="titleColor" red="0.14117647059999999" green="0.28235294119999998" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MC.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="2I8-7Z-6Mg">
                                 <rect key="frame" x="777" y="50" width="196" height="214"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -680,46 +696,46 @@
                                 <rect key="frame" x="132" y="575" width="754" height="559"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" pagingEnabled="YES" dataMode="prototypes" style="plain" separatorStyle="none" sectionIndexMinimumDisplayRowCount="5" rowHeight="76" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z6c-ZJ-VXT">
-                                        <rect key="frame" x="45" y="26" width="648" height="498"/>
+                                    <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" pagingEnabled="YES" dataMode="prototypes" style="plain" separatorStyle="none" sectionIndexMinimumDisplayRowCount="5" rowHeight="77" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z6c-ZJ-VXT">
+                                        <rect key="frame" x="102" y="8" width="551" height="498"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="separatorColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="76" id="evc-9K-2sp" customClass="ScoreTableViewCell" customModule="Mark_up_Click_drag" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="648" height="76"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="77" id="evc-9K-2sp" customClass="ScoreTableViewCell" customModule="Mark_up_Click_drag" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="551" height="77"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="evc-9K-2sp" id="o3g-4m-8ys">
-                                                    <rect key="frame" x="0.0" y="0.0" width="648" height="76"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="551" height="77"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yZP-9u-ept">
-                                                            <rect key="frame" x="6" y="0.0" width="645" height="76"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="554" height="71"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                             <subviews>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ScoresCell.png" translatesAutoresizingMaskIntoConstraints="NO" id="VWr-NP-9JV">
-                                                                    <rect key="frame" x="-8" y="-1" width="651" height="77"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="550" height="71"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Community" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0e-zU-c5u">
-                                                                    <rect key="frame" x="119" y="2" width="409" height="29"/>
+                                                                    <rect key="frame" x="143" y="-1" width="268" height="31"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                                    <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="20"/>
+                                                                    <color key="textColor" red="0.25241610409999998" green="0.58784610029999995" blue="0.82482314109999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VwJ-PO-0kZ">
+                                                                    <rect key="frame" x="228" y="34" width="88" height="27"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                                    <fontDescription key="fontDescription" name="Ainslie-NorReg" family="Ainslie" pointSize="23"/>
                                                                     <color key="textColor" red="0.25241610409999998" green="0.58784610029999995" blue="0.82482314109999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1.5.16" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7ee-Kv-Kti">
-                                                                    <rect key="frame" x="537" y="23" width="99" height="32"/>
+                                                                    <rect key="frame" x="410" y="-1" width="73" height="31"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                                                    <fontDescription key="fontDescription" name="Ainslie-NorReg" family="Ainslie" pointSize="20"/>
                                                                     <color key="textColor" red="0.14642906189999999" green="0.56171411280000005" blue="0.74914443490000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VwJ-PO-0kZ">
-                                                                    <rect key="frame" x="264" y="39" width="107" height="28"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="27"/>
-                                                                    <color key="textColor" red="0.25241610409999998" green="0.58784610029999995" blue="0.82482314109999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
@@ -745,14 +761,23 @@
                                 </subviews>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guT-jD-3IA">
-                                <rect key="frame" x="53" y="50" width="123" height="41"/>
+                                <rect key="frame" x="68" y="70" width="123" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="40"/>
                                 <state key="normal" title="Back">
                                     <color key="titleColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="FQp-zJ-5Sg" kind="unwind" unwindAction="unwindToHome:" id="AhJ-D8-6QJ"/>
+                                    <action selector="backToHome:" destination="kK3-iv-YIB" eventType="touchUpInside" id="KDy-hO-AUS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvj-lw-njc">
+                                <rect key="frame" x="804" y="1282" width="200" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="40"/>
+                                <state key="normal" title="Home"/>
+                                <connections>
+                                    <action selector="backToHome:" destination="kK3-iv-YIB" eventType="touchUpInside" id="Q1L-MI-XVS"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -765,12 +790,13 @@
                         <outlet property="realView" destination="BJr-RF-juf" id="2U3-cD-KCU"/>
                         <outlet property="scoresTableView" destination="Z6c-ZJ-VXT" id="05o-6J-4KA"/>
                         <segue destination="FQp-zJ-5Sg" kind="unwind" identifier="backToHome" unwindAction="unwindToHome:" id="xn9-VT-baY"/>
+                        <segue destination="Dpg-0w-fya" kind="showDetail" identifier="backToHome" customClass="CustomSegue" customModule="Mark_up_Click_drag" customModuleProvider="target" id="Rzu-RC-Pty"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="trV-Ce-L4Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="FQp-zJ-5Sg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="6536.71875" y="-1781.112737920937"/>
+            <point key="canvasLocation" x="6477" y="-1756"/>
         </scene>
         <!--Home-->
         <scene sceneID="hzp-CU-7iX">
@@ -788,6 +814,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="geT-94-sBj">
+                                <rect key="frame" x="20" y="1281" width="200" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="40"/>
+                                <state key="normal" title="Home">
+                                    <color key="titleColor" red="0.14117647059999999" green="0.28235294119999998" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fF4-nc-5xU">
                                 <rect key="frame" x="0.0" y="287" width="1024" height="792"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -807,8 +841,22 @@
                                     <action selector="goNextAction:" destination="Dpg-0w-fya" eventType="touchUpInside" id="yid-93-afv"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oVv-Gt-nfe">
+                                <rect key="frame" x="412" y="1281" width="200" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="40"/>
+                                <state key="normal" title="User"/>
+                                <connections>
+                                    <segue destination="sws-sE-EgX" kind="presentation" modalPresentationStyle="overCurrentContext" id="mLB-ks-WPX"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="kLm-Gj-5lM">
+                                <rect key="frame" x="20" y="1211" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="color" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGx-lm-ovj">
-                                <rect key="frame" x="55" y="52" width="123" height="41"/>
+                                <rect key="frame" x="62" y="67" width="123" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="40"/>
                                 <state key="normal" title="Back">
@@ -818,17 +866,8 @@
                                     <segue destination="ePJ-9y-YJu" kind="unwind" unwindAction="unwindToChoose:" id="XLY-Yu-VtK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oVv-Gt-nfe">
-                                <rect key="frame" x="247" y="1280" width="200" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="40"/>
-                                <state key="normal" title="User"/>
-                                <connections>
-                                    <segue destination="sws-sE-EgX" kind="presentation" modalPresentationStyle="overCurrentContext" id="mLB-ks-WPX"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tG4-KM-OIC">
-                                <rect key="frame" x="577" y="1279" width="200" height="67"/>
+                                <rect key="frame" x="804" y="1281" width="200" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="40"/>
                                 <state key="normal" title="Scores"/>
@@ -836,11 +875,6 @@
                                     <segue destination="kK3-iv-YIB" kind="presentation" customClass="CustomSegue" customModule="Mark_up_Click_drag" customModuleProvider="target" modalPresentationStyle="overCurrentContext" id="eli-mw-sa0"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="kLm-Gj-5lM">
-                                <rect key="frame" x="20" y="1211" width="37" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <color key="color" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -899,55 +933,55 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fPC-cW-cmr">
-                                        <rect key="frame" x="110" y="12" width="600" height="56"/>
+                                        <rect key="frame" x="8" y="12" width="125" height="206"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBp-1V-ZP8">
-                                                <rect key="frame" x="8" y="8" width="140" height="40"/>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lec-M6-AvE">
+                                                <rect key="frame" x="17" y="49" width="90" height="40"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.71315634250000004" green="0.85871106389999996" blue="0.89683121440000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
-                                                <state key="normal" title="Delete ">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="deleteStudent:" destination="sws-sE-EgX" eventType="touchUpInside" id="Sgk-xW-aBf"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IZV-Wy-ww2">
-                                                <rect key="frame" x="156" y="8" width="140" height="40"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.71315634250000004" green="0.85871106389999996" blue="0.89683121440000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                                <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="19"/>
                                                 <state key="normal" title="Edit">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="makeEdits:" destination="sws-sE-EgX" eventType="touchUpInside" id="xdA-II-ggQ"/>
+                                                    <action selector="makeEdits:" destination="sws-sE-EgX" eventType="touchUpInside" id="wBF-K0-21c"/>
                                                 </connections>
                                             </button>
-                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYa-Q0-ACg">
-                                                <rect key="frame" x="452" y="8" width="140" height="40"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Db5-pn-XBf">
+                                                <rect key="frame" x="17" y="97" width="90" height="40"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.86274509799999999" green="0.28480232420000001" blue="0.1842496693" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
-                                                <state key="normal" title="Save">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="saveEdits:" destination="sws-sE-EgX" eventType="touchUpInside" id="6Nl-yu-vwv"/>
-                                                </connections>
-                                            </button>
-                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJN-Ka-LAF">
-                                                <rect key="frame" x="304" y="8" width="140" height="40"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.86274509799999999" green="0.28480232420000001" blue="0.1842496693" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                                <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="19"/>
                                                 <state key="normal" title="Cancel">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="cancelEdits:" destination="sws-sE-EgX" eventType="touchUpInside" id="tfu-vH-tx9"/>
+                                                    <action selector="cancelEdits:" destination="sws-sE-EgX" eventType="touchUpInside" id="p7C-HZ-czf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aha-pZ-KEk">
+                                                <rect key="frame" x="17" y="0.0" width="90" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.71315634250000004" green="0.85871106389999996" blue="0.89683121440000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="19"/>
+                                                <state key="normal" title="Delete ">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="deleteStudent:" destination="sws-sE-EgX" eventType="touchUpInside" id="4xV-qR-Nbf"/>
+                                                </connections>
+                                            </button>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqI-NR-FDs">
+                                                <rect key="frame" x="17" y="145" width="90" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.86274509799999999" green="0.28480232420000001" blue="0.1842496693" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="19"/>
+                                                <state key="normal" title="Save">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="saveEdits:" destination="sws-sE-EgX" eventType="touchUpInside" id="zu5-ZF-b27"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -961,7 +995,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rtW-ei-0q7" customClass="ToggleView" customModule="Mark_up_Click_drag" customModuleProvider="target">
-                                        <rect key="frame" x="258" y="560" width="304" height="56"/>
+                                        <rect key="frame" x="311" y="567" width="198" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
@@ -972,14 +1006,18 @@
                     </view>
                     <navigationItem key="navigationItem" title="Edit User" id="dbC-G9-bu8"/>
                     <connections>
-                        <outlet property="canceEditingButton" destination="nJN-Ka-LAF" id="8zJ-PX-b3U"/>
+                        <outlet property="canceEditingButton" destination="Db5-pn-XBf" id="9lD-iE-9Z1"/>
                         <outlet property="containerView" destination="Dqa-eU-zcU" id="bNR-lL-Yfu"/>
                         <outlet property="dateCreatedLabel" destination="Gfb-Ir-oTo" id="0Fi-NJ-p0I"/>
-                        <outlet property="editSaveButton" destination="IZV-Wy-ww2" id="6H5-qo-7du"/>
+                        <outlet property="editSaveButton" destination="lec-M6-AvE" id="13e-5Q-uID"/>
                         <outlet property="nameText" destination="ssL-32-Lbw" id="dbq-yc-kzq"/>
                         <outlet property="realView" destination="Dqa-eU-zcU" id="WP9-Sb-EQo"/>
-                        <outlet property="saveEditButton" destination="mYa-Q0-ACg" id="VIh-m6-D9d"/>
+                        <outlet property="saveEditButton" destination="gqI-NR-FDs" id="ph5-DX-ROU"/>
                         <outlet property="toggleAudioView" destination="rtW-ei-0q7" id="S0p-Ud-qvW"/>
+                        <outletCollection property="buttons" destination="aha-pZ-KEk" collectionClass="NSMutableArray" id="jHC-24-X0a"/>
+                        <outletCollection property="buttons" destination="lec-M6-AvE" collectionClass="NSMutableArray" id="77T-2G-XOd"/>
+                        <outletCollection property="buttons" destination="Db5-pn-XBf" collectionClass="NSMutableArray" id="hpc-zf-LfK"/>
+                        <outletCollection property="buttons" destination="gqI-NR-FDs" collectionClass="NSMutableArray" id="UYP-fa-dc7"/>
                         <segue destination="yOR-Yl-j95" kind="unwind" identifier="backToHome" unwindAction="unwindToHome:" id="mRy-Zd-Ijz"/>
                         <segue destination="yOR-Yl-j95" kind="unwind" identifier="backToUser" unwindAction="unwindToUsers:" id="uSC-o4-HOH"/>
                     </connections>
@@ -987,7 +1025,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sfo-Ny-Ng6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="yOR-Yl-j95" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="5861.71875" y="-1775.4026354319178"/>
+            <point key="canvasLocation" x="5512" y="-1769"/>
         </scene>
         <!--Program View Controller-->
         <scene sceneID="cM1-3N-xKD">
@@ -998,7 +1036,7 @@
                         <viewControllerLayoutGuide type="bottom" id="nK4-Ni-CaR"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="BdR-QS-LqS">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="792"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </view>
                 </viewController>
@@ -1135,7 +1173,7 @@
         <image name="SSB App.jpg" width="225" height="225"/>
         <image name="SSB Lite.JPG" width="1024" height="1024"/>
         <image name="Scores-MC.png" width="750" height="1000"/>
-        <image name="ScoresCell.png" width="483" height="97"/>
+        <image name="ScoresCell.png" width="482" height="95"/>
         <image name="Selections Within Category.png" width="750" height="1000"/>
         <image name="Title Choices.png" width="750" height="1000"/>
         <image name="Welcome Screen.png" width="750" height="1000"/>
@@ -1143,6 +1181,7 @@
         <image name="thoughtwt.png" width="300" height="255"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Rzu-RC-Pty"/>
         <segue reference="hCa-Rd-w3w"/>
     </inferredMetricsTieBreakers>
 </document>

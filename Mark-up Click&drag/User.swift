@@ -139,6 +139,16 @@ class LoadingViewController: UIViewController {
     }
 }
 
+extension UIColor {
+    var coreImageColor: CIColor {
+        return CIColor(color: self)
+    }
+    var components: (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
+        let coreImageColor = self.coreImageColor
+        return (coreImageColor.red, coreImageColor.green, coreImageColor.blue, coreImageColor.alpha)
+    }
+}
+
 extension UIButton {
     dynamic var borderColor: UIColor? {
         get {
@@ -156,5 +166,42 @@ extension UIButton {
     dynamic var cornerRadius: CGFloat {
         get { return layer.cornerRadius }
         set { layer.cornerRadius = newValue }
+    }
+}
+
+extension UIButton {
+    func style() {
+        self.cornerRadius = 3
+    }
+    
+    
+    var isThisEnabled: Bool? {
+        get {
+            return isUserInteractionEnabled
+        }set {
+            var backColor = UIColor(red: 0.562745098, green: 0.2274509804, blue: 0.1843137255, alpha: 1)
+            self.isUserInteractionEnabled = newValue as! Bool
+            let colorComps = [CFloat((backColor.components.red)),CFloat((backColor.components.blue)),CFloat((backColor.components.green)),CFloat((backColor.components.alpha))]
+            var mincomp = CFloat()
+            
+            for number in colorComps {
+                mincomp = min(mincomp, CFloat(CGFloat(number )))
+            }
+            var deltaC = CFloat(0.14)
+            deltaC = deltaC - mincomp
+            if newValue == true {
+                backColor = UIColor(red: (CGFloat(colorComps[0] + deltaC)), green:CGFloat(colorComps[1] + deltaC), blue:CGFloat(colorComps[2] + deltaC), alpha: CGFloat(1))
+                
+            }
+            else if newValue == false {
+                backColor = UIColor(red: (CGFloat(colorComps[0] - deltaC)), green:CGFloat(colorComps[1] - deltaC), blue:CGFloat(colorComps[2] - deltaC), alpha: CGFloat(0.2))
+               
+            }
+            UIView.animate(withDuration: 0.1, animations: {
+                self.backgroundColor = backColor
+            })
+            
+            
+        }
     }
 }

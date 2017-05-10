@@ -144,7 +144,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
                         viewPlace[i] = currentA.tag
                         
                         if viewPlace.contains(0) == false {
-                            checkAnsBtn.isUserInteractionEnabled = true
+                            checkAnsBtn.isThisEnabled = true
                         }
                         break
                         
@@ -158,7 +158,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
                     if viewPlace.contains(currentA.tag) {
                         viewPlace[viewPlace.index(of: currentA.tag)!] = 0
                         if viewPlace.contains(0) == true {
-                            checkAnsBtn.isUserInteractionEnabled = false
+                            checkAnsBtn.isThisEnabled = false
                         }
                     }
                 }
@@ -177,17 +177,18 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
     
     //setup scene
     func stylesScene() {
-        homeButton.layer.cornerRadius = 5
+        homeButton.layer.cornerRadius = 3
         homeButton.titleLabel?.adjustsFontSizeToFitWidth = true
-        finishButton.layer.cornerRadius = 5
-        nextQuestionBtn.layer.cornerRadius = 5
+        finishButton.layer.cornerRadius = 3
+        nextQuestionBtn.layer.cornerRadius = 3
        // helpButton.layer.cornerRadius = 5
         //helpButton.titleLabel?.font = helpButton.titleLabel?.font.withSize((homeButton.titleLabel?.font.pointSize)!)
-        checkAnsBtn.layer.cornerRadius = 5
+        checkAnsBtn.layer.cornerRadius = 3
         checkAnsBtn.titleLabel?.adjustsFontSizeToFitWidth = true
         
         finishButton.titleLabel?.adjustsFontSizeToFitWidth = true
         nextQuestionBtn.titleLabel?.adjustsFontSizeToFitWidth = true
+        scenarioView.layer.cornerRadius = 10
         
     }
     func genStars() {
@@ -220,7 +221,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
             star.isHidden = false
         }
         viewPlace = [Int](repeating:0, count:viewPlace.count)
-        checkAnsBtn.isUserInteractionEnabled = false
+        checkAnsBtn.isThisEnabled = false
     }
     
     func removeStars() {
@@ -252,8 +253,10 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
     }
     
     func disableScene() {
-        checkAnsBtn.isUserInteractionEnabled = false
+        checkAnsBtn.isThisEnabled = false
         isSceneEnabled = false
+        homeButton.isUserInteractionEnabled = false
+        clearAnswerBtn.isUserInteractionEnabled = false
     }
 
     
@@ -302,7 +305,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
         //source.alert.dismiss(animated: true, completion: nil)
         placeLabel.text = placeString
 
-        scenarioView.layer.cornerRadius = 10
+        
         nextQuestion()
         if answers[4].answerText.text == "" {
             answers[4].isHidden = true
@@ -321,6 +324,10 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
 
     func nextQuestion() {
         isSceneEnabled = true
+        checkAnsBtn.isThisEnabled = false
+        homeButton.isUserInteractionEnabled = true
+        clearAnswerBtn.isUserInteractionEnabled = true
+        
         stars=[]
         viewPlace = [0,0,0,0,0]
         var minimumFont: CGFloat = 100
@@ -385,12 +392,16 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
         turn = 1
         replaceAnswers()
         randomNum = randomNum + 1
-        nextQuestionBtn.isHidden = true
+        UIView.animate(withDuration: 0.5, animations: {
+            self.nextQuestionBtn.frame.origin.x = self.nextQuestionBtn.frame.origin.x + self.nextQuestionBtn.frame.width
+            self.nextQuestionBtn.isHidden = true
+            
+        })
         nextToContLbl.text = "Press NEXT to continue"
         nextToContLbl.isHidden = true
         viewPlace = [0,0,0,0,0]
         
-        checkAnsBtn.isUserInteractionEnabled = false
+        checkAnsBtn.isThisEnabled = false
         if animation != nil {
             animation.removeFromSuperview()
         }
@@ -412,16 +423,19 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
     }
 
     func playInSequence(soundsArray: [String]) {
-        self.audioPlayer.stop()
-        var audioItems: [AVPlayerItem] = []
-        for audioName in soundsArray {
-            let url = NSURL(fileURLWithPath: Bundle.main.path(forResource: audioName, ofType: "wav")!)
-            let item = AVPlayerItem(url: url as URL)
-            audioItems.append(item)
+        if currentUs.isAudioEnabled {
+            self.audioPlayer.stop()
+            var audioItems: [AVPlayerItem] = []
+            for audioName in soundsArray {
+                let url = NSURL(fileURLWithPath: Bundle.main.path(forResource: audioName, ofType: "wav")!)
+                let item = AVPlayerItem(url: url as URL)
+                audioItems.append(item)
+            }
+            
+            quizPlayer = AVQueuePlayer(items: audioItems)
+            quizPlayer.play()
         }
-        
-        quizPlayer = AVQueuePlayer(items: audioItems)
-        quizPlayer.play()
+ 
     }
     
     @IBAction func checkAns(sender: AnyObject) {
@@ -446,15 +460,25 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
             }
             if randomNum != 5 {
                 disableScene()
-                nextQuestionBtn.isHidden = false
-                nextToContLbl.isHidden = false
-                nextToContLbl.text = "Press NEXT to continue"
+                
+                UIView.animate(withDuration: 0.5, animations: {
+                    self.nextQuestionBtn.frame.origin.x = self.nextQuestionBtn.frame.origin.x - self.nextQuestionBtn.frame.width
+                    self.nextQuestionBtn.isHidden = false
+                    self.nextToContLbl.isHidden = false
+                    self.nextToContLbl.text = "Press NEXT to continue"
+                    
+                })
+
             }
             else {
                 disableScene()
-                finishButton.isHidden = false
-                nextToContLbl.isHidden = false
-                nextToContLbl.text = "Press FINISH to go home"
+                UIView.animate(withDuration: 0.5, animations: {
+                    self.finishButton.frame.origin.x = self.finishButton.frame.origin.x - self.finishButton.frame.width
+                    self.finishButton.isHidden = false
+                    self.nextToContLbl.isHidden = false
+                    self.nextToContLbl.text = "Press FINISH to go home"
+                    
+                })
             }
         }
         else if turn == 1 {
@@ -494,13 +518,22 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
             //self.view.isUserInteractionEnabled = false
             
             if randomNum != 5 {
-                nextQuestionBtn.isHidden = false
-                nextToContLbl.isHidden = false
+                UIView.animate(withDuration: 0.5, animations: {
+                    self.nextQuestionBtn.frame.origin.x = self.nextQuestionBtn.frame.origin.x - self.nextQuestionBtn.frame.width
+                    self.nextQuestionBtn.isHidden = false
+                    self.nextToContLbl.isHidden = false
+                    self.nextToContLbl.text = "Press NEXT to continue"
+                    
+                })
             }
             else {
-                finishButton.isHidden = false
-                nextToContLbl.isHidden = false
-                nextToContLbl.text = "Press FINISH to go home"
+                UIView.animate(withDuration: 0.5, animations: {
+                    self.finishButton.frame.origin.x = self.finishButton.frame.origin.x - self.finishButton.frame.width
+                    self.finishButton.isHidden = false
+                    self.nextToContLbl.isHidden = false
+                    self.nextToContLbl.text = "Press FINISH to go home"
+                    
+                })
             }
         }
     }
