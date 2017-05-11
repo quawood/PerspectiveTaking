@@ -14,6 +14,7 @@ class ScoresViewController: UIViewController, MFMailComposeViewControllerDelegat
    
     var imageNames:[String] = ["MC.png","MSD.png","SR1.png","SR2.png"]
     
+    @IBOutlet var buttons: [UIButton]!
     @IBOutlet weak var imageIcon: UIImageView!
     @IBOutlet weak var backButton: UIButton!
     
@@ -36,6 +37,14 @@ class ScoresViewController: UIViewController, MFMailComposeViewControllerDelegat
     override func viewDidLayoutSubviews(){
         scoresTableView.frame = CGRect(x: scoresTableView.frame.origin.x, y: scoresTableView.frame.origin.y, width: scoresTableView.frame.size.width, height: scoresTableView.contentSize.height)
         scoresTableView.reloadData()
+        styleScene()
+    }
+    
+    func styleScene() {
+        for button in buttons as! [UIButton] {
+            button.titleLabel?.adjustsFontSizeToFitWidth = true
+            
+        }
     }
 
     @IBAction func sendEmailButtonTapped(sender: AnyObject) {

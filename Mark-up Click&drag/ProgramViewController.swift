@@ -58,7 +58,7 @@ class ProgramViewController : UIViewController {
                     if progresses.count > 0 {
                         for progress in progresses {
                             if (progress.program == prog) && progress.place == String(i) {
-                                print("all")
+                                
                                 cpview.progressTitle = "\(progress.value)"
                             }
                         }

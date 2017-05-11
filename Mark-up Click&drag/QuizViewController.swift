@@ -64,10 +64,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
     var stars: [UIImageView] = []
     
 
-    @IBAction func unwindToQuiz(_ segue: UIStoryboardSegue) {
-        
-    }
-    
+
     //Touch controllers
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if isSceneEnabled {
@@ -255,7 +252,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
     func disableScene() {
         checkAnsBtn.isThisEnabled = false
         isSceneEnabled = false
-        homeButton.isUserInteractionEnabled = false
+ 
         clearAnswerBtn.isUserInteractionEnabled = false
     }
 
@@ -325,7 +322,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
     func nextQuestion() {
         isSceneEnabled = true
         checkAnsBtn.isThisEnabled = false
-        homeButton.isUserInteractionEnabled = true
+
         clearAnswerBtn.isUserInteractionEnabled = true
         
         stars=[]
@@ -393,7 +390,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
         replaceAnswers()
         randomNum = randomNum + 1
         UIView.animate(withDuration: 0.5, animations: {
-            self.nextQuestionBtn.frame.origin.x = self.nextQuestionBtn.frame.origin.x + self.nextQuestionBtn.frame.width
+            self.nextQuestionBtn.frame.origin.x = self.view.frame.width
             self.nextQuestionBtn.isHidden = true
             
         })
@@ -415,7 +412,10 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
             answers[4].isHidden = false
         }
         self.audioPlayer.stop()
-        self.quizPlayer.removeAllItems()
+        if currentUs.isAudioEnabled {
+            self.quizPlayer.removeAllItems()
+        }
+        
     }
     
     func playSound(filename: String) {
@@ -462,7 +462,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
                 disableScene()
                 
                 UIView.animate(withDuration: 0.5, animations: {
-                    self.nextQuestionBtn.frame.origin.x = self.nextQuestionBtn.frame.origin.x - self.nextQuestionBtn.frame.width
+                    self.nextQuestionBtn.frame.origin.x = self.nextQuestionBtn.frame.origin.x - (self.view.frame.width/2) - (self.nextQuestionBtn.frame.width/2)
                     self.nextQuestionBtn.isHidden = false
                     self.nextToContLbl.isHidden = false
                     self.nextToContLbl.text = "Press NEXT to continue"
@@ -473,7 +473,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
             else {
                 disableScene()
                 UIView.animate(withDuration: 0.5, animations: {
-                    self.finishButton.frame.origin.x = self.finishButton.frame.origin.x - self.finishButton.frame.width
+                    self.finishButton.frame.origin.x = self.finishButton.frame.origin.x - (self.view.frame.width/2) - (self.finishButton.frame.width/2)
                     self.finishButton.isHidden = false
                     self.nextToContLbl.isHidden = false
                     self.nextToContLbl.text = "Press FINISH to go home"
@@ -519,7 +519,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
             
             if randomNum != 5 {
                 UIView.animate(withDuration: 0.5, animations: {
-                    self.nextQuestionBtn.frame.origin.x = self.nextQuestionBtn.frame.origin.x - self.nextQuestionBtn.frame.width
+                    self.nextQuestionBtn.frame.origin.x = self.nextQuestionBtn.frame.origin.x - (self.view.frame.width/2) - (self.nextQuestionBtn.frame.width/2)
                     self.nextQuestionBtn.isHidden = false
                     self.nextToContLbl.isHidden = false
                     self.nextToContLbl.text = "Press NEXT to continue"
@@ -528,7 +528,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
             }
             else {
                 UIView.animate(withDuration: 0.5, animations: {
-                    self.finishButton.frame.origin.x = self.finishButton.frame.origin.x - self.finishButton.frame.width
+                    self.finishButton.frame.origin.x = self.finishButton.frame.origin.x - (self.view.frame.width/2) - (self.finishButton.frame.width/2)
                     self.finishButton.isHidden = false
                     self.nextToContLbl.isHidden = false
                     self.nextToContLbl.text = "Press FINISH to go home"
@@ -612,16 +612,13 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
         self.performSegue(withIdentifier: "showMenu", sender: self)
     }
     
-    func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         self.audioPlayer.stop()
-        if segue.identifier == "showMenu" {
+        if segue.identifier == "toHomefromQuiz" {
             
-            let vc = segue.destination
-            vc.preferredContentSize = CGSize(width: 300, height: 300)
-            let controller = vc.popoverPresentationController
-            if controller != nil {
-                controller?.delegate = self
-            }
+            let vc = segue.destination as! HomeViewController
+            vc.program = currentProg
+            
         }
     }
     

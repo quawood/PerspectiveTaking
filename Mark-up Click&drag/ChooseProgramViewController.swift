@@ -38,6 +38,7 @@ class ChooseProgramViewController: AudioViewController {
             button.style()
         }
         backButton.layer.cornerRadius = 5
+        backButton.titleLabel?.adjustsFontSizeToFitWidth = true
         
        /* informationView.layer.cornerRadius = 4
         informationView.layer.borderWidth = 2

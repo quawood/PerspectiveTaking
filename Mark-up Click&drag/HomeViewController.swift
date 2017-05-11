@@ -10,7 +10,7 @@ import UIKit
 var prog: String!
 class HomeViewController: AudioViewController{
     
-    
+    @IBOutlet var buttons: [UIButton]!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var graphicImage: UIImageView!
     var programTitle: String!
@@ -30,14 +30,25 @@ class HomeViewController: AudioViewController{
     @IBAction func unwindToHome(_ segue: UIStoryboardSegue) {
         
     }
+    
+    func styleScene() {
+        for button in buttons as! [UIButton] {
+            button.titleLabel?.adjustsFontSizeToFitWidth = true
+            
+        }
+        backButton.layer.cornerRadius = 5
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(program)
         graphicImage.image = UIImage(named: "CWT\(Int(program!)! - 1)")
         print("CWT\(program!)")
         programTitle = names[Int(program)! - 1]
         prog = program
         
-        backButton.layer.cornerRadius = 5
+        
+        styleScene()
       //  programLabel.text = names[Int(program)!-1]3
           
         
@@ -54,6 +65,7 @@ class HomeViewController: AudioViewController{
                 if (p.place == place) && (p.program == prog) {
                     if progressesArray?[(progressesArray?.index(of: p))!].value != 5 {
                         progressesArray?[(progressesArray?.index(of: p))!].value = progress.value
+                        print(progress.value)
                     }
                     
                     break

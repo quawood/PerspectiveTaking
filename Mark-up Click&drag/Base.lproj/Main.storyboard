@@ -277,7 +277,7 @@
                                             <action selector="clearAnswersWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FaW-ss-ODU"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Community" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6S-hj-6dy">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Community" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="r6S-hj-6dy">
                                         <rect key="frame" x="335" y="47" width="242" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="23"/>
@@ -292,7 +292,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NE5-Oa-Gzx">
-                                        <rect key="frame" x="750" y="456" width="97" height="27"/>
+                                        <rect key="frame" x="750" y="456" width="90" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.86284291739999996" green="0.42735332250000002" blue="0.1842496693" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="22"/>
@@ -351,11 +351,10 @@
                         <outletCollection property="answers" destination="FA7-vu-A35" collectionClass="NSMutableArray" id="Bru-Ps-xgU"/>
                         <outletCollection property="answers" destination="w0X-H8-lJu" collectionClass="NSMutableArray" id="vW0-hg-6cw"/>
                         <outletCollection property="answers" destination="epc-cz-mmy" collectionClass="NSMutableArray" id="wAm-He-DP5"/>
-                        <segue destination="CfM-zo-86q" kind="unwind" identifier="toHomefromQuiz" unwindAction="unwindToHome:" id="HY8-As-1Nb"/>
+                        <segue destination="Dpg-0w-fya" kind="showDetail" identifier="toHomefromQuiz" customClass="CustomSegue" customModule="Mark_up_Click_drag" customModuleProvider="target" id="NYT-Ap-xaS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <exit id="CfM-zo-86q" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="6164.6484375" y="-1037.0424597364567"/>
         </scene>
@@ -717,21 +716,21 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="550" height="71"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                                 </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Community" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0e-zU-c5u">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Community" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="m0e-zU-c5u">
                                                                     <rect key="frame" x="143" y="-1" width="268" height="31"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                                     <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="20"/>
                                                                     <color key="textColor" red="0.25241610409999998" green="0.58784610029999995" blue="0.82482314109999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VwJ-PO-0kZ">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="VwJ-PO-0kZ">
                                                                     <rect key="frame" x="228" y="34" width="88" height="27"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                                     <fontDescription key="fontDescription" name="Ainslie-NorReg" family="Ainslie" pointSize="23"/>
                                                                     <color key="textColor" red="0.25241610409999998" green="0.58784610029999995" blue="0.82482314109999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1.5.16" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7ee-Kv-Kti">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1.5.16" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="7ee-Kv-Kti">
                                                                     <rect key="frame" x="410" y="-1" width="73" height="31"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                                     <fontDescription key="fontDescription" name="Ainslie-NorReg" family="Ainslie" pointSize="20"/>
@@ -789,6 +788,10 @@
                         <outlet property="imageIcon" destination="2I8-7Z-6Mg" id="RfS-Ol-EKt"/>
                         <outlet property="realView" destination="BJr-RF-juf" id="2U3-cD-KCU"/>
                         <outlet property="scoresTableView" destination="Z6c-ZJ-VXT" id="05o-6J-4KA"/>
+                        <outletCollection property="buttons" destination="guT-jD-3IA" collectionClass="NSMutableArray" id="MmF-Im-Lmd"/>
+                        <outletCollection property="buttons" destination="eh8-RR-XjK" collectionClass="NSMutableArray" id="ZzI-eN-QUX"/>
+                        <outletCollection property="buttons" destination="gvj-lw-njc" collectionClass="NSMutableArray" id="l9s-94-F4y"/>
+                        <outletCollection property="buttons" destination="SQm-bz-zLa" collectionClass="NSMutableArray" id="KmC-mw-HrQ"/>
                         <segue destination="FQp-zJ-5Sg" kind="unwind" identifier="backToHome" unwindAction="unwindToHome:" id="xn9-VT-baY"/>
                         <segue destination="Dpg-0w-fya" kind="showDetail" identifier="backToHome" customClass="CustomSegue" customModule="Mark_up_Click_drag" customModuleProvider="target" id="Rzu-RC-Pty"/>
                     </connections>
@@ -888,6 +891,11 @@
                         <outlet property="contentView" destination="fF4-nc-5xU" id="qm8-hG-cvu"/>
                         <outlet property="goNextButton" destination="RbW-br-EXy" id="3T4-gB-ACV"/>
                         <outlet property="graphicImage" destination="fxJ-5o-wtE" id="yVy-QY-egd"/>
+                        <outletCollection property="buttons" destination="YGx-lm-ovj" collectionClass="NSMutableArray" id="UWy-Rn-Pvg"/>
+                        <outletCollection property="buttons" destination="RbW-br-EXy" collectionClass="NSMutableArray" id="2bl-Vf-yWo"/>
+                        <outletCollection property="buttons" destination="geT-94-sBj" collectionClass="NSMutableArray" id="KMf-wQ-Z2u"/>
+                        <outletCollection property="buttons" destination="oVv-Gt-nfe" collectionClass="NSMutableArray" id="aId-zh-ZD5"/>
+                        <outletCollection property="buttons" destination="tG4-KM-OIC" collectionClass="NSMutableArray" id="FVb-ZR-6tD"/>
                         <segue destination="BYZ-38-t0r" kind="showDetail" identifier="toQuiz" customClass="CustomSegue" customModule="Mark_up_Click_drag" customModuleProvider="target" id="fz9-T2-PQk"/>
                     </connections>
                 </viewController>
@@ -987,7 +995,7 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Audio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dak-2C-5xE">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Audio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Dak-2C-5xE">
                                         <rect key="frame" x="363" y="516" width="95" height="43"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="32"/>
@@ -1036,7 +1044,7 @@
                         <viewControllerLayoutGuide type="bottom" id="nK4-Ni-CaR"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="BdR-QS-LqS">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="792"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </view>
                 </viewController>

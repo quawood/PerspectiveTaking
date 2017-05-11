@@ -67,7 +67,9 @@ class UserViewController: AudioViewController{
         // 3. Grab the value from the text field, and print it when the user clicks OK.
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
             let textField = alert?.textFields?[0] // Force unwrapping because we know it exists.
-            if textField?.text != "" {
+
+            if textField?.text != ""{
+                
                 let components = self.calendar.dateComponents([.month,.day,.year], from: self.date)
                 let user: User = NSEntityDescription.insertNewObject(forEntityName: "User", into: DatabaseController.getContext()) as! User
                 
@@ -95,8 +97,9 @@ class UserViewController: AudioViewController{
                 self.loadData()
 
             }else {
-                textField?.text = "You need a user name"
+                textField?.text = "You need a user name or that user name is already taken"
                 textField?.textColor = UIColor.red
+                textField?.reloadInputViews()
             }
             
         }))
@@ -111,11 +114,18 @@ class UserViewController: AudioViewController{
     }
     
     func textChanged(_ sender: Any) {
+        var isNameOriginal = true
+
         let tf = sender as! UITextField
+        for user in self.users {
+            if tf.text == user.name {
+                isNameOriginal = false
+            }
+        }
         var resp : UIResponder! = tf
         while !(resp is UIAlertController) { resp = resp.next }
         let alert = resp as! UIAlertController
-        alert.actions[0].isEnabled = (tf.text != "")
+        alert.actions[0].isEnabled = (tf.text != "")&&(isNameOriginal == true)
     }
     
     func loadData() {

@@ -172,6 +172,7 @@ extension UIButton {
 extension UIButton {
     func style() {
         self.cornerRadius = 3
+        self.titleLabel?.adjustsFontSizeToFitWidth = true
     }
     
     

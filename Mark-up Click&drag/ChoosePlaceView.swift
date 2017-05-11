@@ -44,6 +44,7 @@ class ChoosePlaceView: UIView {
             else {
               //  placeProgressLbl?.isHidden = false
                 placeProgressLbl?.textColor = UIColor.black
+                
                 for i in 0...(Int(progressTitle!)!-1) {
                     
                     progressMarkerView.subviews[i].isHidden = false
