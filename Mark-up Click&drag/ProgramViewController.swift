@@ -60,6 +60,7 @@ class ProgramViewController : UIViewController {
                             if (progress.program == prog) && progress.place == String(i) {
                                 
                                 cpview.progressTitle = "\(progress.value)"
+                                
                             }
                         }
                     }

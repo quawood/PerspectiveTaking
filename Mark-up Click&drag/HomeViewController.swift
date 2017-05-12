@@ -65,7 +65,7 @@ class HomeViewController: AudioViewController{
                 if (p.place == place) && (p.program == prog) {
                     if progressesArray?[(progressesArray?.index(of: p))!].value != 5 {
                         progressesArray?[(progressesArray?.index(of: p))!].value = progress.value
-                        print(progress.value)
+                        
                     }
                     
                     break

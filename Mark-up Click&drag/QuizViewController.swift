@@ -557,6 +557,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
             for p in progressesArray! {
                 if (p.place == currentPlace) && (p.program == prog) {
                         progressesArray?[(progressesArray?.index(of: p))!].value = progress.value
+                    print("okay")
                     
                     break
                 }
