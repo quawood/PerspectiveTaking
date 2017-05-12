@@ -39,14 +39,7 @@
                     <rect key="frame" x="571" y="345" width="335" height="58"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Movie Theatre"/>
-                    </userDefinedRuntimeAttributes>
-                </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fei-fR-oJl" customClass="ChoosePlaceView" customModule="Mark_up_Click_drag" customModuleProvider="target">
-                    <rect key="frame" x="571" y="500" width="335" height="58"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Doctor's Office"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Movie Theater"/>
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tvr-LN-Ktc" customClass="ChoosePlaceView" customModule="Mark_up_Click_drag" customModuleProvider="target">
@@ -56,11 +49,11 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="title" value="Grocery Store"/>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pP2-JF-XyC" customClass="ChoosePlaceView" customModule="Mark_up_Click_drag" customModuleProvider="target">
-                    <rect key="frame" x="571" y="655" width="335" height="58"/>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fei-fR-oJl" customClass="ChoosePlaceView" customModule="Mark_up_Click_drag" customModuleProvider="target">
+                    <rect key="frame" x="571" y="500" width="335" height="58"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Friend's House"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Doctor's Office"/>
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rqA-Yu-F2H" customClass="ChoosePlaceView" customModule="Mark_up_Click_drag" customModuleProvider="target">
@@ -68,6 +61,13 @@
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="title" value="Car Ride"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pP2-JF-XyC" customClass="ChoosePlaceView" customModule="Mark_up_Click_drag" customModuleProvider="target">
+                    <rect key="frame" x="571" y="655" width="335" height="58"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Friend's House"/>
                     </userDefinedRuntimeAttributes>
                 </view>
             </subviews>

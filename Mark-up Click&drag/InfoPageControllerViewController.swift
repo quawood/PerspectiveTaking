@@ -22,6 +22,11 @@ class InfoPageControllerViewController: UIViewController, MFMailComposeViewContr
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBAction func rateThisApp(_ sender: Any) {
+        rateApp(appId: "id1139973594") { success in
+            print("RateApp \(success)")
+        }
+    }
 
     @IBAction func goToWebsiteBtn(_ sender: Any) {
         UIApplication.shared.openURL(URL(string: "http://www.socialskillbuilder.com/")!)
@@ -34,6 +39,17 @@ class InfoPageControllerViewController: UIViewController, MFMailComposeViewContr
         } else {
             self.showSendMailErrorAlert()
         }
+    }
+    func rateApp(appId: String, completion: @escaping ((_ success: Bool)->())) {
+        guard let url = URL(string : "itms-apps://itunes.apple.com/app/" + appId) else {
+            completion(false)
+            return
+        }
+        guard #available(iOS 10, *) else {
+            completion(UIApplication.shared.openURL(url))
+            return
+        }
+        UIApplication.shared.open(url, options: [:], completionHandler: completion)
     }
     
     func configuredMailComposeViewController() -> MFMailComposeViewController {

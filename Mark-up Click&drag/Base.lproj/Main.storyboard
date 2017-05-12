@@ -174,7 +174,6 @@
                                                 <rect key="frame" x="8" y="256" width="56" height="36"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="TeXGyreSchola-Regular" family="TeX Gyre Schola" pointSize="27"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -284,11 +283,11 @@
                                         <color key="textColor" red="0.9454694390296936" green="0.77977448701858521" blue="0.4777795672416687" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Press NEXT to continue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbM-zM-QeR">
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Press NEXT to continue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbM-zM-QeR">
                                         <rect key="frame" x="276" y="483" width="199" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="18"/>
-                                        <color key="textColor" red="0.9455457329750061" green="0.77582675218582153" blue="0.47369217872619629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.89946831597222221" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NE5-Oa-Gzx">
@@ -595,6 +594,13 @@
                                     <segue destination="jgT-LB-dgF" kind="unwind" unwindAction="unwindToUsers:" id="lrR-yw-wfq"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38w-9H-eK4">
+                                <rect key="frame" x="562" y="761" width="240" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="rateThisApp:" destination="g0H-Ld-XIc" eventType="touchUpInside" id="wdI-jm-lwp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -719,6 +725,7 @@
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Community" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="m0e-zU-c5u">
                                                                     <rect key="frame" x="143" y="-1" width="268" height="31"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                                    <color key="tintColor" red="1" green="0.99607843137254903" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="20"/>
                                                                     <color key="textColor" red="0.25241610409999998" green="0.58784610029999995" blue="0.82482314109999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -726,6 +733,7 @@
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="VwJ-PO-0kZ">
                                                                     <rect key="frame" x="228" y="34" width="88" height="27"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                                    <color key="tintColor" red="1" green="0.99607843137254903" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <fontDescription key="fontDescription" name="Ainslie-NorReg" family="Ainslie" pointSize="23"/>
                                                                     <color key="textColor" red="0.25241610409999998" green="0.58784610029999995" blue="0.82482314109999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -733,6 +741,7 @@
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1.5.16" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="7ee-Kv-Kti">
                                                                     <rect key="frame" x="410" y="-1" width="73" height="31"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                                    <color key="tintColor" red="1" green="0.99607843137254903" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <fontDescription key="fontDescription" name="Ainslie-NorReg" family="Ainslie" pointSize="20"/>
                                                                     <color key="textColor" red="0.14642906189999999" green="0.56171411280000005" blue="0.74914443490000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -848,7 +857,7 @@
                                 <rect key="frame" x="412" y="1281" width="200" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="40"/>
-                                <state key="normal" title="User"/>
+                                <state key="normal" title="Settings"/>
                                 <connections>
                                     <segue destination="sws-sE-EgX" kind="presentation" modalPresentationStyle="overCurrentContext" id="mLB-ks-WPX"/>
                                 </connections>
@@ -998,7 +1007,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Audio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Dak-2C-5xE">
                                         <rect key="frame" x="363" y="516" width="95" height="43"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="32"/>
+                                        <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="25"/>
                                         <color key="textColor" red="0.86274509799999999" green="0.28480232420000001" blue="0.1842496693" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1189,7 +1198,7 @@
         <image name="thoughtwt.png" width="300" height="255"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Rzu-RC-Pty"/>
+        <segue reference="NYT-Ap-xaS"/>
         <segue reference="hCa-Rd-w3w"/>
     </inferredMetricsTieBreakers>
 </document>

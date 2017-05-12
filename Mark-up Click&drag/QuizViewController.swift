@@ -186,6 +186,9 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
         finishButton.titleLabel?.adjustsFontSizeToFitWidth = true
         nextQuestionBtn.titleLabel?.adjustsFontSizeToFitWidth = true
         scenarioView.layer.cornerRadius = 10
+        for answer in answers {
+            answer.answerText.textColor = UIColor(red: 0.2666666667, green: 0.5960784314, blue: 0.8274509804, alpha: 1)
+        }
         
     }
     func genStars() {
@@ -462,7 +465,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
                 disableScene()
                 
                 UIView.animate(withDuration: 0.5, animations: {
-                    self.nextQuestionBtn.frame.origin.x = self.nextQuestionBtn.frame.origin.x - (self.view.frame.width/2) - (self.nextQuestionBtn.frame.width/2)
+                    self.nextQuestionBtn.frame.origin.x = self.homeButton.frame.origin.x
                     self.nextQuestionBtn.isHidden = false
                     self.nextToContLbl.isHidden = false
                     self.nextToContLbl.text = "Press NEXT to continue"
@@ -473,7 +476,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
             else {
                 disableScene()
                 UIView.animate(withDuration: 0.5, animations: {
-                    self.finishButton.frame.origin.x = self.finishButton.frame.origin.x - (self.view.frame.width/2) - (self.finishButton.frame.width/2)
+                    self.finishButton.frame.origin.x = self.homeButton.frame.origin.x
                     self.finishButton.isHidden = false
                     self.nextToContLbl.isHidden = false
                     self.nextToContLbl.text = "Press FINISH to go home"
@@ -511,6 +514,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
                     let k = Int(startails[correctAnss.index(of: i)!])
                     print(k)
                     answers[i-1].answerImage.highlightedImage = UIImage(named:"cspeechtail\(k).png")
+                    answers[i-1].answerText.textColor = UIColor.black
                     answers[i-1].answerImage.isHighlighted = true
                 }
             }
@@ -519,19 +523,19 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
             
             if randomNum != 5 {
                 UIView.animate(withDuration: 0.5, animations: {
-                    self.nextQuestionBtn.frame.origin.x = self.nextQuestionBtn.frame.origin.x - (self.view.frame.width/2) - (self.nextQuestionBtn.frame.width/2)
+                    self.nextQuestionBtn.frame.origin.x = self.homeButton.frame.origin.x
                     self.nextQuestionBtn.isHidden = false
                     self.nextToContLbl.isHidden = false
-                    self.nextToContLbl.text = "Press NEXT to continue"
+                    self.nextToContLbl.text = "Here are the correct answers - press NEXT to continue to red & bold"
                     
                 })
             }
             else {
                 UIView.animate(withDuration: 0.5, animations: {
-                    self.finishButton.frame.origin.x = self.finishButton.frame.origin.x - (self.view.frame.width/2) - (self.finishButton.frame.width/2)
+                    self.finishButton.frame.origin.x = self.homeButton.frame.origin.x
                     self.finishButton.isHidden = false
                     self.nextToContLbl.isHidden = false
-                    self.nextToContLbl.text = "Press FINISH to go home"
+                    self.nextToContLbl.text = "Here are the correct answers - Press FINISH to go home"
                     
                 })
             }
