@@ -32,7 +32,7 @@ class HomeViewController: AudioViewController{
     }
     
     func styleScene() {
-        for button in buttons as! [UIButton] {
+        for button in buttons! {
             button.titleLabel?.adjustsFontSizeToFitWidth = true
             
         }

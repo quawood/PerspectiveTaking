@@ -58,7 +58,7 @@ class DeleteUsersTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")! as! UITableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")! 
         cell.textLabel?.text = users[indexPath.item].name
         return cell
     }

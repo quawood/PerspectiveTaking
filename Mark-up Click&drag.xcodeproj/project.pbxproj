@@ -64,7 +64,6 @@
 		A52EAB811E8F671E00682C1B /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = A52EAB4B1E8F671E00682C1B /* user.png */; };
 		A551E1FA1EC6E128000C1E97 /* cthoughttail0.png in Resources */ = {isa = PBXBuildFile; fileRef = A551E1F81EC6E128000C1E97 /* cthoughttail0.png */; };
 		A551E1FB1EC6E128000C1E97 /* cthoughttail1.png in Resources */ = {isa = PBXBuildFile; fileRef = A551E1F91EC6E128000C1E97 /* cthoughttail1.png */; };
-		A55C1DF71EA85075000E542C /* School Rules 1.wav in Resources */ = {isa = PBXBuildFile; fileRef = A55C1DF31EA85075000E542C /* School Rules 1.wav */; };
 		A55C1DF81EA85075000E542C /* School Rules 2.wav in Resources */ = {isa = PBXBuildFile; fileRef = A55C1DF41EA85075000E542C /* School Rules 2.wav */; };
 		A55C1DFF1EA8570C000E542C /* SSB Lite.JPG in Resources */ = {isa = PBXBuildFile; fileRef = A55C1DFE1EA8570C000E542C /* SSB Lite.JPG */; };
 		A55C1E011EA85714000E542C /* SD Intermediate.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A55C1E001EA85714000E542C /* SD Intermediate.jpg */; };
@@ -669,7 +668,6 @@
 		A59B2A1A1EACF21200922C8A /* Selections Within Category.png in Resources */ = {isa = PBXBuildFile; fileRef = A59B2A191EACF21200922C8A /* Selections Within Category.png */; };
 		A59B2A1C1EACF23A00922C8A /* Title Choices.png in Resources */ = {isa = PBXBuildFile; fileRef = A59B2A1B1EACF23A00922C8A /* Title Choices.png */; };
 		A59B2A1E1EACF25400922C8A /* Welcome Screen.png in Resources */ = {isa = PBXBuildFile; fileRef = A59B2A1D1EACF25400922C8A /* Welcome Screen.png */; };
-		A59B2A201EAD00C700922C8A /* Selections Within Category.png in Resources */ = {isa = PBXBuildFile; fileRef = A59B2A1F1EAD00C700922C8A /* Selections Within Category.png */; };
 		A59B2A221EAD76FF00922C8A /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59B2A211EAD76FF00922C8A /* Answer.swift */; };
 		A59B2A241EAD771400922C8A /* AnswerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A59B2A231EAD771400922C8A /* AnswerView.xib */; };
 		A59DFC581DC3DF6800B1CF8D /* ScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59DFC571DC3DF6800B1CF8D /* ScoresViewController.swift */; };
@@ -685,7 +683,6 @@
 		A5AC34E41E90AB030066D073 /* Please click on a scenerio.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34CD1E90AB030066D073 /* Please click on a scenerio.wav */; };
 		A5AC34E51E90AB030066D073 /* Press go to begin.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34CE1E90AB030066D073 /* Press go to begin.wav */; };
 		A5AC34E61E90AB030066D073 /* School Rules 1.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34CF1E90AB030066D073 /* School Rules 1.wav */; };
-		A5AC34E71E90AB030066D073 /* School Rules 2.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34D01E90AB030066D073 /* School Rules 2.wav */; };
 		A5AC34E81E90AB030066D073 /* Take another look.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34D11E90AB030066D073 /* Take another look.wav */; };
 		A5AC34E91E90AB030066D073 /* That's okay. Try again..wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34D21E90AB030066D073 /* That's okay. Try again..wav */; };
 		A5AC34EA1E90AB030066D073 /* This app allows....wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34D31E90AB030066D073 /* This app allows....wav */; };
@@ -694,7 +691,6 @@
 		A5AC34ED1E90AB030066D073 /* Users will learn to....wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34D61E90AB030066D073 /* Users will learn to....wav */; };
 		A5AC34EE1E90AB030066D073 /* UserScreenCAT.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34D71E90AB030066D073 /* UserScreenCAT.wav */; };
 		A5AC34EF1E90AB030066D073 /* Welcome.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34D81E90AB030066D073 /* Welcome.wav */; };
-		A5AC34F01E90AB030066D073 /* WelcomeCAT.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34D91E90AB030066D073 /* WelcomeCAT.wav */; };
 		A5AC34F11E90AB030066D073 /* Wow. Super job. .wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34DA1E90AB030066D073 /* Wow. Super job. .wav */; };
 		A5AC34F21E90AB030066D073 /* You are good at this.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34DB1E90AB030066D073 /* You are good at this.wav */; };
 		A5AC3AC91EA866D900790812 /* That's okay.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC3AC81EA866D900790812 /* That's okay.wav */; };
@@ -706,7 +702,6 @@
 		A5C137851E77A34A00D78344 /* correctSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5C137821E77A34A00D78344 /* correctSound.wav */; };
 		A5C137861E77A34A00D78344 /* wrongSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5C137831E77A34A00D78344 /* wrongSound.wav */; };
 		A5C1A7721EA10B6200AF8937 /* AinslieNormRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A5C1A7711EA10AE700AF8937 /* AinslieNormRegular.otf */; };
-		A5C1A7741EA10C8300AF8937 /* Selections Within Category.png in Resources */ = {isa = PBXBuildFile; fileRef = A5C1A7731EA10C8300AF8937 /* Selections Within Category.png */; };
 		A5DBA24A1DA4A07400C15EDE /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DBA2491DA4A07400C15EDE /* UIImage+Gif.swift */; };
 		A5DCF8CD1DC1789D0082F7EA /* 1.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5DCF8CC1DC1789D0082F7EA /* 1.xib */; };
 		A5DCF8CF1DC17B180082F7EA /* 2.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5DCF8CE1DC17B180082F7EA /* 2.xib */; };
@@ -725,7 +720,6 @@
 		A5F548D01E2DEA40007169A9 /* ClickDrag.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A5F548CE1E2DEA40007169A9 /* ClickDrag.xcdatamodeld */; };
 		A5FBAE5C1EAD912E00AEF4C3 /* cspeechtail0.png in Resources */ = {isa = PBXBuildFile; fileRef = A5FBAE591EAD912E00AEF4C3 /* cspeechtail0.png */; };
 		A5FBAE5D1EAD912E00AEF4C3 /* cspeechtail1.png in Resources */ = {isa = PBXBuildFile; fileRef = A5FBAE5A1EAD912E00AEF4C3 /* cspeechtail1.png */; };
-		A5FBAE5E1EAD912E00AEF4C3 /* speechtail0.png in Resources */ = {isa = PBXBuildFile; fileRef = A5FBAE5B1EAD912E00AEF4C3 /* speechtail0.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -2411,7 +2405,7 @@
 		A5F483101D130F8000AA4E85 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Pushbox, LLC'";
 				TargetAttributes = {
 					A5F483171D130F8100AA4E85 = {
@@ -2720,13 +2714,11 @@
 				A5AC3AC91EA866D900790812 /* That's okay.wav in Resources */,
 				A52EAB561E8F671E00682C1B /* girl.png in Resources */,
 				A56F7AA41E770A6F00B34BB8 /* P1010101.jpg in Resources */,
-				A55C1DF71EA85075000E542C /* School Rules 1.wav in Resources */,
 				A56F7BFC1E770A7000B34BB8 /* teacher2.jpg in Resources */,
 				A5FBAE5D1EAD912E00AEF4C3 /* cspeechtail1.png in Resources */,
 				A56F7A5C1E770A6F00B34BB8 /* P1010029.jpg in Resources */,
 				A56F79F41E770A6F00B34BB8 /* DCP0012.jpg in Resources */,
 				A59B2A0C1EACF18F00922C8A /* CWT3.png in Resources */,
-				A59B2A201EAD00C700922C8A /* Selections Within Category.png in Resources */,
 				A56F7B681E770A7000B34BB8 /* R1010066H.jpg in Resources */,
 				A56F7BD41E770A7000B34BB8 /* RR1010068.jpg in Resources */,
 				A56F7B4F1E770A6F00B34BB8 /* R1010047.jpg in Resources */,
@@ -2750,7 +2742,6 @@
 				A56F7BBB1E770A7000B34BB8 /* RL1010041.jpg in Resources */,
 				A52EAB751E8F671E00682C1B /* speechtail1.png in Resources */,
 				A56F7B521E770A6F00B34BB8 /* R1010050.jpg in Resources */,
-				A5AC34E71E90AB030066D073 /* School Rules 2.wav in Resources */,
 				A56F7BE91E770A7000B34BB8 /* school1a.jpg in Resources */,
 				A56F7A6E1E770A6F00B34BB8 /* P1010047.jpg in Resources */,
 				A56F7B0E1E770A6F00B34BB8 /* R1010006.jpg in Resources */,
@@ -2807,7 +2798,6 @@
 				A5DCF8D31DC17B340082F7EA /* 4.xib in Resources */,
 				A56F7B711E770A7000B34BB8 /* R1010077.jpg in Resources */,
 				A56F7B441E770A6F00B34BB8 /* R1010038.jpg in Resources */,
-				A5C1A7741EA10C8300AF8937 /* Selections Within Category.png in Resources */,
 				A56F7BE31E770A7000B34BB8 /* Rschool1.jpg in Resources */,
 				A56F7B771E770A7000B34BB8 /* R1010081H.jpg in Resources */,
 				A52EAB701E8F671E00682C1B /* socialskillbuildercycle.png in Resources */,
@@ -2971,9 +2961,7 @@
 				A56F7A0C1E770A6F00B34BB8 /* inappclass.jpg in Resources */,
 				A56F7A821E770A6F00B34BB8 /* P1010067.jpg in Resources */,
 				A56F7A861E770A6F00B34BB8 /* P1010071.jpg in Resources */,
-				A5FBAE5E1EAD912E00AEF4C3 /* speechtail0.png in Resources */,
 				A52EAB7A1E8F671E00682C1B /* stock3.png in Resources */,
-				A5AC34F01E90AB030066D073 /* WelcomeCAT.wav in Resources */,
 				A56F7ABC1E770A6F00B34BB8 /* P1010125.jpg in Resources */,
 				A56F7AE61E770A6F00B34BB8 /* PICK4CHEERING.jpg in Resources */,
 				A56F79EB1E770A6F00B34BB8 /* DCP0007.jpg in Resources */,

@@ -181,7 +181,7 @@ extension UIButton {
             return isUserInteractionEnabled
         }set {
             var backColor = UIColor(red: 0.562745098, green: 0.2274509804, blue: 0.1843137255, alpha: 1)
-            self.isUserInteractionEnabled = newValue as! Bool
+            self.isUserInteractionEnabled = newValue!
             let colorComps = [CFloat((backColor.components.red)),CFloat((backColor.components.blue)),CFloat((backColor.components.green)),CFloat((backColor.components.alpha))]
             var mincomp = CFloat()
             

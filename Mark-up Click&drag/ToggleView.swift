@@ -19,7 +19,6 @@ class ToggleView: UIView {
     var toggleBool : Bool?
     {
         didSet {
-            var translationFl: CGFloat = onToggleButton.bounds.origin.x - offToggleButton.bounds.origin.x
             UIView.animate(withDuration: 0.1, animations: {
                 print(self.toggleBool!)
                 if self.toggleBool == true {
