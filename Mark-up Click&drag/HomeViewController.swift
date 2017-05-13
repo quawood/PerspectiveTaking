@@ -156,11 +156,6 @@ class HomeViewController: AudioViewController{
             destinationVC.SetHomeContent()
             
             activityIndicator.stopAnimating()
-
-            
-            
-           
-            
         }
     }
     

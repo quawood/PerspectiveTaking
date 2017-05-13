@@ -57,7 +57,7 @@ class ProgramViewController : UIViewController {
                 if let progresses = currentUs.progresses as? Set<Progress> {
                     if progresses.count > 0 {
                         for progress in progresses {
-                            if (progress.program == prog) && progress.place == String(i) {
+                            if (progress.program! == prog) && progress.place! == String(i) {
                                 
                                 cpview.progressTitle = "\(progress.value)"
                                 
@@ -75,7 +75,7 @@ class ProgramViewController : UIViewController {
     }
     override func viewDidLayoutSubviews(){
         super.viewDidLoad()
-            configureButtons()
+        configureButtons()
         
         container = self.parent as! HomeViewController
 

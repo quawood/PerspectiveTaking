@@ -62,7 +62,8 @@
 		A52EAB7E1E8F671E00682C1B /* thoughttail1.png in Resources */ = {isa = PBXBuildFile; fileRef = A52EAB481E8F671E00682C1B /* thoughttail1.png */; };
 		A52EAB7F1E8F671E00682C1B /* thoughtwt.png in Resources */ = {isa = PBXBuildFile; fileRef = A52EAB491E8F671E00682C1B /* thoughtwt.png */; };
 		A52EAB811E8F671E00682C1B /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = A52EAB4B1E8F671E00682C1B /* user.png */; };
-		A54B09EF1D7FBACB00D82D49 /* CreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B09EE1D7FBACB00D82D49 /* CreateUserViewController.swift */; };
+		A551E1FA1EC6E128000C1E97 /* cthoughttail0.png in Resources */ = {isa = PBXBuildFile; fileRef = A551E1F81EC6E128000C1E97 /* cthoughttail0.png */; };
+		A551E1FB1EC6E128000C1E97 /* cthoughttail1.png in Resources */ = {isa = PBXBuildFile; fileRef = A551E1F91EC6E128000C1E97 /* cthoughttail1.png */; };
 		A55C1DF71EA85075000E542C /* School Rules 1.wav in Resources */ = {isa = PBXBuildFile; fileRef = A55C1DF31EA85075000E542C /* School Rules 1.wav */; };
 		A55C1DF81EA85075000E542C /* School Rules 2.wav in Resources */ = {isa = PBXBuildFile; fileRef = A55C1DF41EA85075000E542C /* School Rules 2.wav */; };
 		A55C1DFF1EA8570C000E542C /* SSB Lite.JPG in Resources */ = {isa = PBXBuildFile; fileRef = A55C1DFE1EA8570C000E542C /* SSB Lite.JPG */; };
@@ -800,7 +801,8 @@
 		A52EAB481E8F671E00682C1B /* thoughttail1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thoughttail1.png; sourceTree = "<group>"; };
 		A52EAB491E8F671E00682C1B /* thoughtwt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thoughtwt.png; sourceTree = "<group>"; };
 		A52EAB4B1E8F671E00682C1B /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
-		A54B09EE1D7FBACB00D82D49 /* CreateUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUserViewController.swift; sourceTree = "<group>"; };
+		A551E1F81EC6E128000C1E97 /* cthoughttail0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cthoughttail0.png; sourceTree = "<group>"; };
+		A551E1F91EC6E128000C1E97 /* cthoughttail1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cthoughttail1.png; sourceTree = "<group>"; };
 		A55C1DF31EA85075000E542C /* School Rules 1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "School Rules 1.wav"; sourceTree = "<group>"; };
 		A55C1DF41EA85075000E542C /* School Rules 2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "School Rules 2.wav"; sourceTree = "<group>"; };
 		A55C1DFD1EA854C8000E542C /* AinslieNorBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AinslieNorBold.otf; sourceTree = "<group>"; };
@@ -1531,6 +1533,8 @@
 				A5FBAE5A1EAD912E00AEF4C3 /* cspeechtail1.png */,
 				A5FBAE5B1EAD912E00AEF4C3 /* speechtail0.png */,
 				A52EAB1D1E8F671E00682C1B /* emoji3.gif */,
+				A551E1F81EC6E128000C1E97 /* cthoughttail0.png */,
+				A551E1F91EC6E128000C1E97 /* cthoughttail1.png */,
 				A52EAB1E1E8F671E00682C1B /* emoji4.gif */,
 				A52EAB1F1E8F671E00682C1B /* emoji5.gif */,
 				A52EAB201E8F671E00682C1B /* girl.png */,
@@ -2198,7 +2202,6 @@
 			children = (
 				A50D0BB71DFFDEE800AE2978 /* InfoPageControllerViewController.swift */,
 				A5B4D6E31D7FADC90054D4C8 /* UserViewController.swift */,
-				A54B09EE1D7FBACB00D82D49 /* CreateUserViewController.swift */,
 				A52727521E9A65CA00D5779E /* DeleteUsersViewController.swift */,
 				A5B4D6E51D7FB1BF0054D4C8 /* CollectionCells.swift */,
 				A57F6C121E6ED329000C1C77 /* MoreAppsViewController.swift */,
@@ -2599,6 +2602,7 @@
 				A56F7B5E1E770A6F00B34BB8 /* R1010059.jpg in Resources */,
 				A56F7A7F1E770A6F00B34BB8 /* P1010064.jpg in Resources */,
 				A56F7AAB1E770A6F00B34BB8 /* P1010108.jpg in Resources */,
+				A551E1FA1EC6E128000C1E97 /* cthoughttail0.png in Resources */,
 				A56F7A261E770A6F00B34BB8 /* kidsatlunch.jpg in Resources */,
 				A59B2A0B1EACF18F00922C8A /* CWT2.png in Resources */,
 				A56F7B4B1E770A6F00B34BB8 /* R1010043.jpg in Resources */,
@@ -2929,6 +2933,7 @@
 				A56F7A171E770A6F00B34BB8 /* inappsharelunch.jpg in Resources */,
 				A56F7ACA1E770A6F00B34BB8 /* P1010139.jpg in Resources */,
 				A56F7AFC1E770A6F00B34BB8 /* playground-6.jpg in Resources */,
+				A551E1FB1EC6E128000C1E97 /* cthoughttail1.png in Resources */,
 				A56F7B031E770A6F00B34BB8 /* playing.jpg in Resources */,
 				A59B2A151EACF1E600922C8A /* Scores-MC.png in Resources */,
 				A56F7BE11E770A7000B34BB8 /* RR1010079.jpg in Resources */,
@@ -3190,7 +3195,6 @@
 				A50F2A641EC15F4F0082B7EA /* ToggleView.swift in Sources */,
 				A5B4D6E61D7FB1BF0054D4C8 /* CollectionCells.swift in Sources */,
 				A5F4831C1D130F8100AA4E85 /* AppDelegate.swift in Sources */,
-				A54B09EF1D7FBACB00D82D49 /* CreateUserViewController.swift in Sources */,
 				A57F6C131E6ED329000C1C77 /* MoreAppsViewController.swift in Sources */,
 				A5EFC1661E10F4A80071F4DE /* CustomSegue.swift in Sources */,
 			);
@@ -3347,7 +3351,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.SocialSkillBuilder.CnD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -3365,7 +3369,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

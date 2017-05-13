@@ -51,15 +51,14 @@ class ScoresViewController: UIViewController, MFMailComposeViewControllerDelegat
         let scores = currentUs.scores
         for score in scores as! Set<Score> {
             if score.program! == prog {
-                if score.date != nil {
-                    valueScores.append("\(String(describing: score.date)) \(String(score.place!)!): \(Int(score.value))")
+                if score.date != "" {
+                    valueScores.append("\(score.date!) \(String(score.place!)!): \(Int(score.value))")
                 }
                 
             }
             
         }
-        print(valueScores.count)
-        if valueScores.count > 1 {
+        if valueScores.count >= 1 {
             let mailComposeViewController = self.configuredMailComposeViewController()
             if MFMailComposeViewController.canSendMail() {
                 self.present(mailComposeViewController, animated: true, completion: nil)
@@ -72,6 +71,7 @@ class ScoresViewController: UIViewController, MFMailComposeViewControllerDelegat
             alertConrtoller.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { (action: UIAlertAction!) in
                 alertConrtoller.dismiss(animated: true, completion: nil)
             }))
+            self.present(alertConrtoller, animated: true, completion: nil)
         }
 
     }
@@ -90,11 +90,11 @@ class ScoresViewController: UIViewController, MFMailComposeViewControllerDelegat
         
 
         
-        var bodyString: String!
+        var bodyString: String! = ""
         for i in 0..<valueScores.count {
             bodyString = bodyString + "\n\(valueScores[i])"
         }
-        mailComposerVC.setMessageBody("Here \nis a report for your scores for this program: \n" + bodyString, isHTML: false)
+        mailComposerVC.setMessageBody("Here is a report of my scores for \(names[Int(prog)!-1]): " + bodyString, isHTML: false)
         
         return mailComposerVC
     }

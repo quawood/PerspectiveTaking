@@ -328,6 +328,9 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
 
         clearAnswerBtn.isUserInteractionEnabled = true
         
+        for answer in answers {
+            answer.answerText.textColor = UIColor(red: 0.2666666667, green: 0.5960784314, blue: 0.8274509804, alpha: 1)
+        }
         stars=[]
         viewPlace = [0,0,0,0,0]
         var minimumFont: CGFloat = 100
@@ -512,8 +515,12 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
                     answers[i-1].frame.origin =  CGPoint(x:starLocations[correctAnss.index(of: i)!].x , y: starLocations[correctAnss.index(of: i)!].y)
                     answers[i-1].isUserInteractionEnabled = false
                     let k = Int(startails[correctAnss.index(of: i)!])
-                    print(k)
-                    answers[i-1].answerImage.highlightedImage = UIImage(named:"cspeechtail\(k).png")
+                    if answers[i-1].answerImage.tag == 0 {
+                        answers[i-1].answerImage.highlightedImage = UIImage(named:"cspeechtail\(k).png")
+                    }else {
+                        answers[i-1].answerImage.highlightedImage = UIImage(named:"cthoughttail\(k).png")
+                    }
+                    
                     answers[i-1].answerText.textColor = UIColor.black
                     answers[i-1].answerImage.isHighlighted = true
                 }
@@ -526,7 +533,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
                     self.nextQuestionBtn.frame.origin.x = self.homeButton.frame.origin.x
                     self.nextQuestionBtn.isHidden = false
                     self.nextToContLbl.isHidden = false
-                    self.nextToContLbl.text = "Here are the correct answers - press NEXT to continue to red & bold"
+                    self.nextToContLbl.text = "Here are the correct answers - press NEXT to continue"
                     
                 })
             }
@@ -548,6 +555,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
     }
     
     func saveState() {
+        var found: Bool = false
         var progressesArray = currentUs.progresses as? Set<Progress>
         let progress: Progress = NSEntityDescription.insertNewObject(forEntityName: "Progress", into: DatabaseController.getContext()) as! Progress
         progress.value = Int16(randomNum-1)
@@ -555,14 +563,19 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
         progress.program = prog
         if (progressesArray?.count)! > 0 {
             for p in progressesArray! {
-                if (p.place == currentPlace) && (p.program == prog) {
+                if (p.place! == currentPlace) && (p.program! == prog) {
                         progressesArray?[(progressesArray?.index(of: p))!].value = progress.value
-                    print("okay")
-                    
+                    found = true
                     break
+                    
                 }
-                progressesArray?.insert(progress)
+                
             }
+            if !found {
+               progressesArray?.insert(progress)
+            }
+            
+            
         }else {
             progressesArray?.insert(progress)
         }
@@ -619,6 +632,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         self.audioPlayer.stop()
+        self.quizPlayer.removeAllItems()
         if segue.identifier == "toHomefromQuiz" {
             
             let vc = segue.destination as! HomeViewController

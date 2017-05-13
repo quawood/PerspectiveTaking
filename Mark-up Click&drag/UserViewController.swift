@@ -67,7 +67,7 @@ class UserViewController: AudioViewController{
         // 3. Grab the value from the text field, and print it when the user clicks OK.
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
             let textField = alert?.textFields?[0] // Force unwrapping because we know it exists.
-
+            textField?.autocapitalizationType = UITextAutocapitalizationType.words
             if textField?.text != ""{
                 
                 let components = self.calendar.dateComponents([.month,.day,.year], from: self.date)
@@ -90,11 +90,21 @@ class UserViewController: AudioViewController{
                     user.addToScores(score1)
                 }
                 
-                user.addToScores(score1)
                 
                 DatabaseController.saveContext()
                 alert?.dismiss(animated: true, completion: nil)
                 self.loadData()
+                // First figure out how many sections there are
+                let lastSectionIndex = self.collectionView!.numberOfSections - 1
+                
+                // Then grab the number of rows in the last section
+                let lastRowIndex = self.collectionView!.numberOfItems(inSection: lastSectionIndex) - 1
+                
+                // Now just construct the index path
+                let pathToLastRow = NSIndexPath(row: lastRowIndex, section: lastSectionIndex)
+                
+                // Make the last row visible
+                self.collectionView.scrollToItem(at: pathToLastRow as IndexPath, at: UICollectionViewScrollPosition.left, animated: true)
 
             }else {
                 textField?.text = "You need a user name or that user name is already taken"
@@ -181,7 +191,6 @@ extension UserViewController : UICollectionViewDataSource, UICollectionViewDeleg
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! UserCollectionViewCell
-        print(users.count)
         cell.user = users[indexPath.row]
         cell.layer.cornerRadius = 5
         

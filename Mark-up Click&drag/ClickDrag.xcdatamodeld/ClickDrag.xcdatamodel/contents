@@ -7,6 +7,7 @@
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="progresses" inverseEntity="User" syncable="YES"/>
     </entity>
     <entity name="Score" representedClassName="Score" syncable="YES" codeGenerationType="class">
+        <attribute name="attempt" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="place" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="program" optional="YES" attributeType="String" syncable="YES"/>
@@ -22,7 +23,7 @@
     </entity>
     <elements>
         <element name="Progress" positionX="-288" positionY="-9" width="128" height="105"/>
-        <element name="Score" positionX="-36" positionY="36" width="128" height="118"/>
+        <element name="Score" positionX="-36" positionY="36" width="128" height="135"/>
         <element name="User" positionX="-495" positionY="138" width="128" height="120"/>
     </elements>
 </model>

@@ -168,12 +168,14 @@
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="P18a.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Ws2-tC-BgJ">
                                                 <rect key="frame" x="0.0" y="-2" width="644" height="303"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.63921568630000003" green="0.90980392160000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="1" green="0.99607843139999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="2j6-F3-SVF">
-                                                <rect key="frame" x="8" y="256" width="56" height="36"/>
+                                                <rect key="frame" x="0.0" y="264" width="56" height="37"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="TeXGyreSchola-Regular" family="TeX Gyre Schola" pointSize="27"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -283,13 +285,6 @@
                                         <color key="textColor" red="0.9454694390296936" green="0.77977448701858521" blue="0.4777795672416687" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Press NEXT to continue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbM-zM-QeR">
-                                        <rect key="frame" x="276" y="483" width="199" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="18"/>
-                                        <color key="textColor" red="0.89946831597222221" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NE5-Oa-Gzx">
                                         <rect key="frame" x="750" y="456" width="90" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -316,6 +311,13 @@
                                             <action selector="nextQuestionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5co-1Z-dgI"/>
                                         </connections>
                                     </button>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Press NEXT to continue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbM-zM-QeR">
+                                        <rect key="frame" x="138" y="483" width="474" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="18"/>
+                                        <color key="textColor" red="0.89946831597222221" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </view>
                         </subviews>
@@ -591,7 +593,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="jgT-LB-dgF" kind="unwind" unwindAction="unwindToUsers:" id="lrR-yw-wfq"/>
+                                    <segue destination="Lwh-yw-5pO" kind="showDetail" customClass="CustomSegue" customModule="Mark_up_Click_drag" customModuleProvider="target" id="Whu-pq-rPA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38w-9H-eK4">
@@ -606,7 +608,6 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DbX-f4-JZN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="jgT-LB-dgF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4287.890625" y="827.96486090775977"/>
         </scene>
@@ -678,7 +679,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="40"/>
                                 <state key="normal" title="Scores">
-                                    <color key="titleColor" red="0.14117647059999999" green="0.28235294119999998" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.80711454149999995" green="0.43180590870000002" blue="0.19754233960000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MC.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="2I8-7Z-6Mg">
@@ -831,7 +832,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="40"/>
                                 <state key="normal" title="Home">
-                                    <color key="titleColor" red="0.14117647059999999" green="0.28235294119999998" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.80711454149999995" green="0.43180590870000002" blue="0.19754233960000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fF4-nc-5xU">
@@ -884,7 +885,7 @@
                                 <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="40"/>
                                 <state key="normal" title="Scores"/>
                                 <connections>
-                                    <segue destination="kK3-iv-YIB" kind="presentation" customClass="CustomSegue" customModule="Mark_up_Click_drag" customModuleProvider="target" modalPresentationStyle="overCurrentContext" id="eli-mw-sa0"/>
+                                    <segue destination="kK3-iv-YIB" kind="presentation" identifier="toScoresView" customClass="CustomSegue" customModule="Mark_up_Click_drag" customModuleProvider="target" modalPresentationStyle="overCurrentContext" id="eli-mw-sa0"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1198,7 +1199,7 @@
         <image name="thoughtwt.png" width="300" height="255"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="NYT-Ap-xaS"/>
-        <segue reference="hCa-Rd-w3w"/>
+        <segue reference="Whu-pq-rPA"/>
+        <segue reference="Rzu-RC-Pty"/>
     </inferredMetricsTieBreakers>
 </document>
