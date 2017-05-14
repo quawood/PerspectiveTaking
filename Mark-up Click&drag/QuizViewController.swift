@@ -27,7 +27,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
     @IBOutlet weak var finishButton: UIButton!
     @IBOutlet weak var currentScore: UILabel!
   //  @IBOutlet weak var helpButton: UIButton!
-    var quizPlayer: AVQueuePlayer!
+    var quizPlayer = AVQueuePlayer()
     @IBOutlet weak var homeButton: UIButton!
     @IBOutlet weak var nextToContLbl: UILabel!
     var source: HomeViewController!
@@ -445,8 +445,8 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
     }
     
     @IBAction func checkAns(sender: AnyObject) {
-        let goodAudios:[String] = ["Great job","Perfect","Wow. Super job. ","You are good at this"]
-        let badAudios:[String] = ["Take another look","That's okay. Try again.", "That's okay"]
+        let goodAudios:[String] = ["Great job","Perfect","Wow Super job","You are good at this"]
+        let badAudios:[String] = ["Take another look","That's okay Try again", "That's okay"]
         let neutral:[String] = ["correctSound", "wrongSound"]
         if viewPlace == correctAnss {
             let randomIndex = Int(arc4random_uniform(UInt32(goodAudios.count)))
@@ -585,15 +585,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
         
     }
     @IBAction func saveScore(sender: AnyObject) {
-        var scoresArray: [Score]! = []
-        var holderArray: [Score]! = []
-        for score in currentUs.scores! as! Set<Score> {
-            if score.program == prog {
-                scoresArray.append(score)
-            } else {
-                holderArray.append(score)
-            }
-        }
+        var usedC: Int! = 1
        
         let components = calendar.dateComponents([.month,.day,.year], from: date as Date)
         let score: Score = NSEntityDescription.insertNewObject(forEntityName: "Score", into: DatabaseController.getContext()) as! Score
@@ -601,6 +593,20 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
         score.date = "\(components.month!)/\(components.day!)/\(components.year!)"
         score.program = prog
         score.place = placeString
+        
+        var scoresArray: [Score]! = []
+        var holderArray: [Score]! = []
+        for score in currentUs.scores! as! Set<Score> {
+            if score.program == prog {
+                scoresArray.append(score)
+                if score.place == placeString {
+                    usedC = usedC + 1
+                }
+            } else {
+                holderArray.append(score)
+            }
+        }
+        score.attempt = Int16(usedC)
         
         if scoresArray.count == 5 {
             scoresArray = scoresArray.rotate(shift: 1)
@@ -632,7 +638,9 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         self.audioPlayer.stop()
-        self.quizPlayer.removeAllItems()
+        if self.quizPlayer.isPlaying{
+            self.quizPlayer.removeAllItems()
+        }
         if segue.identifier == "toHomefromQuiz" {
             
             let vc = segue.destination as! HomeViewController
@@ -646,3 +654,8 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
 }
 
 
+extension AVPlayer {
+    var isPlaying: Bool {
+        return rate != 0 && error == nil
+    }
+}

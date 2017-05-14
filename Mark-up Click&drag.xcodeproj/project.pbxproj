@@ -684,14 +684,14 @@
 		A5AC34E51E90AB030066D073 /* Press go to begin.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34CE1E90AB030066D073 /* Press go to begin.wav */; };
 		A5AC34E61E90AB030066D073 /* School Rules 1.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34CF1E90AB030066D073 /* School Rules 1.wav */; };
 		A5AC34E81E90AB030066D073 /* Take another look.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34D11E90AB030066D073 /* Take another look.wav */; };
-		A5AC34E91E90AB030066D073 /* That's okay. Try again..wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34D21E90AB030066D073 /* That's okay. Try again..wav */; };
+		A5AC34E91E90AB030066D073 /* That's okay Try again.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34D21E90AB030066D073 /* That's okay Try again.wav */; };
 		A5AC34EA1E90AB030066D073 /* This app allows....wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34D31E90AB030066D073 /* This app allows....wav */; };
 		A5AC34EB1E90AB030066D073 /* To create a new user.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34D41E90AB030066D073 /* To create a new user.wav */; };
 		A5AC34EC1E90AB030066D073 /* To delete or edit a user.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34D51E90AB030066D073 /* To delete or edit a user.wav */; };
 		A5AC34ED1E90AB030066D073 /* Users will learn to....wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34D61E90AB030066D073 /* Users will learn to....wav */; };
 		A5AC34EE1E90AB030066D073 /* UserScreenCAT.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34D71E90AB030066D073 /* UserScreenCAT.wav */; };
 		A5AC34EF1E90AB030066D073 /* Welcome.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34D81E90AB030066D073 /* Welcome.wav */; };
-		A5AC34F11E90AB030066D073 /* Wow. Super job. .wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34DA1E90AB030066D073 /* Wow. Super job. .wav */; };
+		A5AC34F11E90AB030066D073 /* Wow Super job.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34DA1E90AB030066D073 /* Wow Super job.wav */; };
 		A5AC34F21E90AB030066D073 /* You are good at this.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34DB1E90AB030066D073 /* You are good at this.wav */; };
 		A5AC3AC91EA866D900790812 /* That's okay.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC3AC81EA866D900790812 /* That's okay.wav */; };
 		A5B4D6E41D7FADC90054D4C8 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B4D6E31D7FADC90054D4C8 /* UserViewController.swift */; };
@@ -1420,7 +1420,7 @@
 		A5AC34CF1E90AB030066D073 /* School Rules 1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "School Rules 1.wav"; sourceTree = "<group>"; };
 		A5AC34D01E90AB030066D073 /* School Rules 2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "School Rules 2.wav"; sourceTree = "<group>"; };
 		A5AC34D11E90AB030066D073 /* Take another look.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Take another look.wav"; sourceTree = "<group>"; };
-		A5AC34D21E90AB030066D073 /* That's okay. Try again..wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "That's okay. Try again..wav"; sourceTree = "<group>"; };
+		A5AC34D21E90AB030066D073 /* That's okay Try again.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "That's okay Try again.wav"; sourceTree = "<group>"; };
 		A5AC34D31E90AB030066D073 /* This app allows....wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "This app allows....wav"; sourceTree = "<group>"; };
 		A5AC34D41E90AB030066D073 /* To create a new user.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "To create a new user.wav"; sourceTree = "<group>"; };
 		A5AC34D51E90AB030066D073 /* To delete or edit a user.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "To delete or edit a user.wav"; sourceTree = "<group>"; };
@@ -1428,7 +1428,7 @@
 		A5AC34D71E90AB030066D073 /* UserScreenCAT.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = UserScreenCAT.wav; sourceTree = "<group>"; };
 		A5AC34D81E90AB030066D073 /* Welcome.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Welcome.wav; sourceTree = "<group>"; };
 		A5AC34D91E90AB030066D073 /* WelcomeCAT.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = WelcomeCAT.wav; sourceTree = "<group>"; };
-		A5AC34DA1E90AB030066D073 /* Wow. Super job. .wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Wow. Super job. .wav"; sourceTree = "<group>"; };
+		A5AC34DA1E90AB030066D073 /* Wow Super job.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Wow Super job.wav"; sourceTree = "<group>"; };
 		A5AC34DB1E90AB030066D073 /* You are good at this.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "You are good at this.wav"; sourceTree = "<group>"; };
 		A5AC3AC81EA866D900790812 /* That's okay.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "That's okay.wav"; sourceTree = "<group>"; };
 		A5B4D6E31D7FADC90054D4C8 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
@@ -2255,7 +2255,7 @@
 				A562FEBA1E93AAF000CC4984 /* WelcomeCAT.wav */,
 				A5AC34D01E90AB030066D073 /* School Rules 2.wav */,
 				A5AC34D11E90AB030066D073 /* Take another look.wav */,
-				A5AC34D21E90AB030066D073 /* That's okay. Try again..wav */,
+				A5AC34D21E90AB030066D073 /* That's okay Try again.wav */,
 				A5AC34D31E90AB030066D073 /* This app allows....wav */,
 				A5AC34D41E90AB030066D073 /* To create a new user.wav */,
 				A5AC34D51E90AB030066D073 /* To delete or edit a user.wav */,
@@ -2263,7 +2263,7 @@
 				A5AC34D71E90AB030066D073 /* UserScreenCAT.wav */,
 				A5AC34D81E90AB030066D073 /* Welcome.wav */,
 				A5AC34D91E90AB030066D073 /* WelcomeCAT.wav */,
-				A5AC34DA1E90AB030066D073 /* Wow. Super job. .wav */,
+				A5AC34DA1E90AB030066D073 /* Wow Super job.wav */,
 				A5AC34DB1E90AB030066D073 /* You are good at this.wav */,
 				A5C137811E77A34A00D78344 /* CnDInstructions.wav */,
 				A5C137821E77A34A00D78344 /* correctSound.wav */,
@@ -2465,7 +2465,7 @@
 				A59B2A1A1EACF21200922C8A /* Selections Within Category.png in Resources */,
 				A56F7B471E770A6F00B34BB8 /* R1010040.jpg in Resources */,
 				A56F7B671E770A7000B34BB8 /* R1010065H.jpg in Resources */,
-				A5AC34E91E90AB030066D073 /* That's okay. Try again..wav in Resources */,
+				A5AC34E91E90AB030066D073 /* That's okay Try again.wav in Resources */,
 				A56F7AE91E770A6F00B34BB8 /* PICK4general2.jpg in Resources */,
 				A56F7BCA1E770A7000B34BB8 /* RL1010071.jpg in Resources */,
 				A56F79C71E770A6F00B34BB8 /* appclass2.jpg in Resources */,
@@ -2940,7 +2940,7 @@
 				A56F7A121E770A6F00B34BB8 /* inapplunch.jpg in Resources */,
 				A56F7A0B1E770A6F00B34BB8 /* image45.jpg in Resources */,
 				A56F7A731E770A6F00B34BB8 /* P1010052.jpg in Resources */,
-				A5AC34F11E90AB030066D073 /* Wow. Super job. .wav in Resources */,
+				A5AC34F11E90AB030066D073 /* Wow Super job.wav in Resources */,
 				A52727511E9A5EE200D5779E /* SSBAppintro.mp3 in Resources */,
 				A56F7A3E1E770A6F00B34BB8 /* notsharingchips.jpg in Resources */,
 				A56F7BCD1E770A7000B34BB8 /* RR1010053.jpg in Resources */,

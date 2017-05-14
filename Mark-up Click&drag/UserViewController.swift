@@ -87,6 +87,7 @@ class UserViewController: AudioViewController{
                     score1.value = 0
                     score1.place = ""
                     score1.program = String(i)
+                    score1.attempt = Int16(0)
                     user.addToScores(score1)
                 }
                 

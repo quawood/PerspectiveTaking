@@ -32,13 +32,26 @@ class ScoreTableViewCell: UITableViewCell {
     }
     //MARK: - Private
     
+    @IBOutlet weak var attemptLabel: UILabel!
     @IBOutlet weak var placeNameLabel: UILabel!
     @IBOutlet weak var scoreNameLabel: UILabel!
     @IBOutlet weak var dateNameLabel: UILabel!
     func updateUI() {
-        placeNameLabel.text = score.place
-        scoreNameLabel.text = String(describing: score.value) + "/5"
-        dateNameLabel.text = score.date
+        
+        if score.place != "" {
+            placeNameLabel.text = score.place
+            scoreNameLabel.text = String(describing: score.value) + "/5"
+            attemptLabel.text = String(describing: score.attempt)
+            dateNameLabel.text = score.date
+        } else {
+            scoreNameLabel.text = ""
+            attemptLabel.text = ""
+            placeNameLabel.text = ""
+            dateNameLabel.text = ""
+        }
+        
+        
+        
     }
     
 }
