@@ -52,7 +52,7 @@ class ScoresViewController: UIViewController, MFMailComposeViewControllerDelegat
         for score in scores as! Set<Score> {
             if score.program! == prog {
                 if score.date != "" {
-                    valueScores.append("\(score.date!) \(String(score.place!)!): \(Int(score.value))")
+                    valueScores.append("\(score.date!) \(String(score.place!)!): \(Int(score.value))/5")
                 }
                 
             }
