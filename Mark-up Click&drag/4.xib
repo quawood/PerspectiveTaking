@@ -14,11 +14,11 @@
             <rect key="frame" x="0.0" y="0.0" width="1024" height="792"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Txn-Wf-1R2" customClass="ChoosePlaceView" customModule="Mark_up_Click_drag" customModuleProvider="target">
-                    <rect key="frame" x="355" y="623" width="324" height="59"/>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="knV-Zw-Y8O" customClass="ChoosePlaceView" customModule="Mark_up_Click_drag" customModuleProvider="target">
+                    <rect key="frame" x="125" y="256" width="324" height="59"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Gabbing at Lunch"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Getting My Lunch"/>
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3nK-SZ-hkC" customClass="ChoosePlaceView" customModule="Mark_up_Click_drag" customModuleProvider="target">
@@ -28,13 +28,6 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="title" value="Social Chit Chat"/>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WxO-jW-COA" customClass="ChoosePlaceView" customModule="Mark_up_Click_drag" customModuleProvider="target">
-                    <rect key="frame" x="576" y="445" width="324" height="59"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Locker"/>
-                    </userDefinedRuntimeAttributes>
-                </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jRB-IM-XAj" customClass="ChoosePlaceView" customModule="Mark_up_Click_drag" customModuleProvider="target">
                     <rect key="frame" x="125" y="445" width="324" height="59"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -42,11 +35,18 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="title" value="Hanging Out"/>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="knV-Zw-Y8O" customClass="ChoosePlaceView" customModule="Mark_up_Click_drag" customModuleProvider="target">
-                    <rect key="frame" x="125" y="256" width="324" height="59"/>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WxO-jW-COA" customClass="ChoosePlaceView" customModule="Mark_up_Click_drag" customModuleProvider="target">
+                    <rect key="frame" x="576" y="445" width="324" height="59"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Getting My Lunch"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Locker"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Txn-Wf-1R2" customClass="ChoosePlaceView" customModule="Mark_up_Click_drag" customModuleProvider="target">
+                    <rect key="frame" x="355" y="623" width="324" height="59"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Gabbing at Lunch"/>
                     </userDefinedRuntimeAttributes>
                 </view>
             </subviews>

@@ -461,11 +461,11 @@
                               ],
                   "image": "P27.jpg",
                   "startails": [
-                                0, 0, 1
+                                1, 0, 1
                                 ],
                   "stars": [
                             [
-                             99,
+                             40,
                              124
                              ],
                             [
@@ -633,7 +633,7 @@
                               "No, son. It is sold out. We will have to come back.",
                               "Look at him, what's his problem.",
                               "You're my friend.",
-                              "PLEASE...Can we see the later movie? "
+                              "PLEASE...Can we see the later movie?"
                               ],
                   "bubbles": [
                               "s",
@@ -1440,7 +1440,7 @@
                   }, {
                   "answers": [
                               "She is such a good friend.",
-                              "She is making me uncomfortable.",
+                              "She's making me \nfeel uncomfortable.",
                               "I wish mom would pack me chips for lunch.",
                               "I hate chips.",
                               ""
@@ -1737,7 +1737,7 @@
                   }],
             "3": [{
                   "answers": [
-                              "These kids always mess around in line ",
+                              "These kids always mess around in line.",
                               "Do you know what's for lunch?",
                               "Get back in your space!",
                               "I wonder how I am doing in math?",
@@ -1770,7 +1770,7 @@
                               ]
                   }, {
                   "answers": [
-                              "I know the answer",
+                              "I know the answer.",
                               "You are NOT taking my space in line!",
                               "They always fight for the front of the line!",
                               "I like your new glasses.",
@@ -2029,9 +2029,9 @@
                               ]
                   }, {
                   "answers": [
-                              "I am so disappointed in my class' behavior in the hall",
+                              "I am so disappointed in my class' behavior in the hall.",
                               "I am proud of my class.",
-                              "I know it is expected to stay quiet and still while waiting in line",
+                              "I know it is expected to stay quiet and still while waiting in line.",
                               "Do you like my new book?",
                               ""
                               ],
@@ -2229,7 +2229,7 @@
                   "image": "R1010004.jpg",
                   "answers": [
                               "He gives such a good report!",
-                              "He needs to look at the class",
+                              "He needs to look at the class.",
                               "This is soooo boring!",
                               "I'm having the best time ever!",
                               ""
@@ -2297,8 +2297,8 @@
                   "image": "R1010121.jpg",
                   "answers": [
                               "You guys are a good team!",
-                              "Come join our group",
-                              "I like to work alone",
+                              "Come join our group.",
+                              "I like to work alone.",
                               "Excuse me, why are you not with your group?",
                               ""
                               ],
@@ -2409,7 +2409,7 @@
                   "image": "R1010040.jpg",
                   "answers": [
                               "He is such a good player.",
-                              "I don't want to be on their team",
+                              "I don't want to be on their team.",
                               "I hope we get him on our team.",
                               "What's for lunch.",
                               ""
@@ -2442,7 +2442,7 @@
                   "image": "R1010038.jpg",
                   "answers": [
                               "He is a real loser!",
-                              "He is so nice.  ",
+                              "He is so nice.",
                               "I feel sorry for him.",
                               "Why do they always pick on me?",
                               ""
@@ -3294,7 +3294,7 @@
                   "image": "R1010080.jpg",
                   "answers": [
                               "What is that kid doing?",
-                              "This is cool.  ",
+                              "This is cool.",
                               "i am upset.",
                               "",
                               ""
@@ -3359,9 +3359,9 @@
                   }, {
                   "image": "R1010111.jpg",
                   "answers": [
-                              "I used to be on T.V.",
-                              "That sounds strange",
-                              "Do you want some juice?  ",
+                              "I used to be on T.V..",
+                              "That sounds strange.",
+                              "Do you want some juice?",
                               "I can't believe it!",
                               ""
                               ],

@@ -91,7 +91,7 @@ class HomeViewController: AudioViewController{
     func clearOrResume() {
         if randomNum > 1  {
         let alertConrtoller = UIAlertController(title: "Start Quiz", message: "Start over or resume from where you left off.", preferredStyle: .alert)
-        alertConrtoller.addAction(UIAlertAction(title: "Start Over", style: .cancel, handler: { (action: UIAlertAction!) in
+        alertConrtoller.addAction(UIAlertAction(title: "Start Over", style: .default, handler: { (action: UIAlertAction!) in
             self.randomNum = 1
             self.startOver()
             self.activityIndicator.startAnimating()
@@ -107,6 +107,10 @@ class HomeViewController: AudioViewController{
             }
             
         }))
+            alertConrtoller.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction) in
+                alertConrtoller.dismiss(animated: true, completion: nil)
+            
+            }))
         present(alertConrtoller, animated: true, completion: nil)
         } else if randomNum == 1 {
             activityIndicator.startAnimating()
