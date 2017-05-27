@@ -241,7 +241,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
     
     
     @IBAction func gotToHome(_ sender: AnyObject) {
-        let alertConrtoller = UIAlertController(title: "Go Home", message: "Go to home? Your progress will be saved.", preferredStyle: .alert)
+        let alertConrtoller = UIAlertController(title: "Go Home", message: "Go to home? Your progress will be saved, but the score will not be reported.", preferredStyle: .alert)
         alertConrtoller.addAction(UIAlertAction(title: "No", style: .cancel, handler: { (action: UIAlertAction!) in
             alertConrtoller.dismiss(animated: true, completion: nil)
         }))
@@ -596,9 +596,9 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
         
         var scoresArray: [Score]! = []
         var holderArray: [Score]! = []
-        for score in currentUs.scores! as! Set<Score> {
+        for scorec in currentUs.scores! as! Set<Score> {
             if score.program == prog {
-                scoresArray.append(score)
+                scoresArray.append(scorec)
                 if score.place == placeString {
                     usedC = usedC + 1
                 }
@@ -611,6 +611,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
         if scoresArray.count == 5 {
             scoresArray = scoresArray.rotate(shift: 1)
             scoresArray[scoresArray.count-1] = score
+
         }
         else if scoresArray.count == 1 && Int(scoresArray[0].value) == 0{
             scoresArray[0] = score
@@ -625,10 +626,8 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
         
         
         DatabaseController.saveContext()
-        
-        
-
         self.performSegue(withIdentifier: "toHomefromQuiz", sender: self)
+        //self.performSegue(withIdentifier: "toHomefromQuiz", sender: self)
     }
 
     

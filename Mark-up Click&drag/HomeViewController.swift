@@ -10,6 +10,7 @@ import UIKit
 var prog: String!
 class HomeViewController: AudioViewController{
     
+    @IBOutlet weak var warningScoreLabel: UILabel!
     @IBOutlet var buttons: [UIButton]!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var graphicImage: UIImageView!
@@ -82,6 +83,8 @@ class HomeViewController: AudioViewController{
     }
     override func viewWillDisappear(_ animated: Bool) {
         goNextButton.isHidden = true
+        warningScoreLabel.isHidden = true
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

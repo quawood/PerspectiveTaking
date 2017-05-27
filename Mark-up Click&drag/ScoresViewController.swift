@@ -16,7 +16,6 @@ class ScoresViewController: UIViewController, MFMailComposeViewControllerDelegat
     
     @IBOutlet var buttons: [UIButton]!
     @IBOutlet weak var imageIcon: UIImageView!
-    @IBOutlet weak var backButton: UIButton!
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var realView: UIView!
@@ -25,7 +24,7 @@ class ScoresViewController: UIViewController, MFMailComposeViewControllerDelegat
     override func viewDidLoad() {
         backgroundGraphic.image = UIImage(named: "Scores-\(imageNames[Int(prog)!-1])")
         imageIcon.image = UIImage(named: imageNames[Int(prog)!-1])
-        backButton.layer.cornerRadius = 5
+        
 
     }
     
@@ -52,7 +51,7 @@ class ScoresViewController: UIViewController, MFMailComposeViewControllerDelegat
         for score in scores as! Set<Score> {
             if score.program! == prog {
                 if score.date != "" {
-                    valueScores.append("\(score.date!) \(String(score.place!)!): \(Int(score.value))/5")
+                    valueScores.append("\(score.date!) \(String(score.place!)!) \(String(score.attempt)): \(Int(score.value))/5")
                 }
                 
             }

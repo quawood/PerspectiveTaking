@@ -86,6 +86,19 @@ class ProgramViewController : UIViewController {
 
         
     }
+    func checkNumScores() -> Int {
+        var scoresArray: [Score]! = []
+        var holderArray: [Score]! = []
+        for scorec in currentUs.scores! as! Set<Score> {
+            if scorec.program == prog {
+                scoresArray.append(scorec)
+
+            } else {
+                holderArray.append(scorec)
+            }
+        }
+        return scoresArray.count
+    }
     
     override func viewWillDisappear(_ animated: Bool) {
          customView.removeFromSuperview()
@@ -123,6 +136,9 @@ class ProgramViewController : UIViewController {
         
         
         container.goNextButton.isHidden = false
+        if checkNumScores() == 5 {
+            container.warningScoreLabel.isHidden = false
+        }
         //container.goNextButton.center = CGPoint(x: sender.center.x, y: sender.center.y+80)
     }
     
