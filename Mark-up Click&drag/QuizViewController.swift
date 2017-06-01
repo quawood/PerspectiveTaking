@@ -597,13 +597,13 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
         var scoresArray: [Score]! = []
         var holderArray: [Score]! = []
         for scorec in currentUs.scores! as! Set<Score> {
-            if score.program == prog {
+            if scorec.program == prog {
                 scoresArray.append(scorec)
-                if score.place == placeString {
+                if scorec.place == placeString {
                     usedC = usedC + 1
                 }
             } else {
-                holderArray.append(score)
+                holderArray.append(scorec)
             }
         }
         score.attempt = Int16(usedC)
