@@ -23,7 +23,7 @@ class InfoPageControllerViewController: UIViewController, MFMailComposeViewContr
         // Dispose of any resources that can be recreated.
     }
     @IBAction func rateThisApp(_ sender: Any) {
-        rateApp(appId: "id1139973594") { success in
+        rateApp(appId: "id1245016102") { success in
             print("RateApp \(success)")
         }
     }

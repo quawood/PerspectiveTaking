@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -18,35 +18,35 @@
                     <rect key="frame" x="125" y="256" width="324" height="59"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Getting My Lunch"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Locker"/>
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3nK-SZ-hkC" customClass="ChoosePlaceView" customModule="Mark_up_Click_drag" customModuleProvider="target">
                     <rect key="frame" x="576" y="256" width="324" height="59"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Social Chit Chat"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Gettin' My Lunch"/>
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jRB-IM-XAj" customClass="ChoosePlaceView" customModule="Mark_up_Click_drag" customModuleProvider="target">
                     <rect key="frame" x="125" y="445" width="324" height="59"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Hanging Out"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Gabbing at Lunch"/>
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WxO-jW-COA" customClass="ChoosePlaceView" customModule="Mark_up_Click_drag" customModuleProvider="target">
                     <rect key="frame" x="576" y="445" width="324" height="59"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Locker"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Social Chit Chat"/>
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Txn-Wf-1R2" customClass="ChoosePlaceView" customModule="Mark_up_Click_drag" customModuleProvider="target">
                     <rect key="frame" x="355" y="623" width="324" height="59"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Gabbing at Lunch"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Hanging Out"/>
                     </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
