@@ -1198,6 +1198,7 @@
         <image name="thoughtwt.png" width="300" height="255"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="eli-mw-sa0"/>
         <segue reference="Rzu-RC-Pty"/>
         <segue reference="Whu-pq-rPA"/>
     </inferredMetricsTieBreakers>
