@@ -268,7 +268,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
         let config = URLSessionConfiguration.default
         let session = URLSession(configuration: config)
         var jsonResult: [String : AnyObject]!
-        
+        print(url)
         let task : URLSessionDataTask = session.dataTask(with: request as URLRequest, completionHandler: {(data, response, error) in
           //  var error: AutoreleasingUnsafeMutablePointer<NSError?>? = nil
             do {
@@ -337,6 +337,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
        // self.view.isUserInteractionEnabled = true
         currentScore.text = String(randomNum)
         starLocations = []
+        SetHomeContent()
         let questions = json["questions"] as! [String:AnyObject]
         let currentProgram = questions[currentProg] as! [String: AnyObject]
         let currentSpot = currentProgram[currentPlace] as! [AnyObject]
@@ -549,7 +550,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
         }
     }
     
-    func timerAction() {
+    @objc func timerAction() {
         timer.invalidate()
         animation.removeFromSuperview()
     }
@@ -594,6 +595,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
         score.program = prog
         score.place = placeString
         
+        
         var scoresArray: [Score]! = []
         var holderArray: [Score]! = []
         for scorec in currentUs.scores! as! Set<Score> {
@@ -606,6 +608,8 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
                 holderArray.append(scorec)
             }
         }
+        score.id = Int16(scoresArray.count)
+        scoresArray = scoresArray.sorted(by: {$0.id < $1.id})
         score.attempt = Int16(usedC)
         
         if scoresArray.count == 15 {

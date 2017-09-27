@@ -25,7 +25,7 @@ class MoreAppsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    func goToApp(_ sender: UIButton) {
+    @objc func goToApp(_ sender: UIButton) {
         UIApplication.shared.openURL(NSURL(string: urls[sender.tag])! as URL)
     }
     override func didReceiveMemoryWarning() {

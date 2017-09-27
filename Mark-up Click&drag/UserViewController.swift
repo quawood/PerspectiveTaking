@@ -124,7 +124,7 @@ class UserViewController: AudioViewController{
         self.present(alert, animated: true, completion: nil)
     }
     
-    func textChanged(_ sender: Any) {
+    @objc func textChanged(_ sender: Any) {
         var isNameOriginal = true
 
         let tf = sender as! UITextField

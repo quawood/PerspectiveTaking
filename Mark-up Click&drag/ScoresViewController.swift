@@ -34,7 +34,8 @@ class ScoresViewController: UIViewController, MFMailComposeViewControllerDelegat
     }
     
     override func viewDidLayoutSubviews(){
-        scoresTableView.frame = CGRect(x: scoresTableView.frame.origin.x, y: scoresTableView.frame.origin.y, width: scoresTableView.frame.size.width, height: scoresTableView.contentSize.height)
+       /** scoresTableView.frame = CGRect(x: scoresTableView.frame.origin.x, y: scoresTableView.frame.origin.y, width: scoresTableView.frame.size.width, height: scoresTableView.contentSize.height)**/
+        scoresTableView.isScrollEnabled = true
         scoresTableView.reloadData()
         styleScene()
     }
@@ -51,7 +52,7 @@ class ScoresViewController: UIViewController, MFMailComposeViewControllerDelegat
         for score in scores as! Set<Score> {
             if score.program! == prog {
                 if score.date != "" {
-                    valueScores.append("\(score.date!) \(String(score.place!)!) \(String(score.attempt)): \(Int(score.value))/5")
+                    valueScores.append("\(score.date!) \(String(score.place!)) \(String(score.attempt)): \(Int(score.value))/5")
                 }
                 
             }
@@ -135,6 +136,7 @@ extension ScoresViewController:UITableViewDataSource, UITableViewDelegate {
                 scoresArray.append(score)
             }
         }
+        scoresArray = scoresArray.sorted(by: {$0.id < $1.id})
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")! as! ScoreTableViewCell
         cell.score = scoresArray[scoresArray.count - indexPath.item - 1]
         

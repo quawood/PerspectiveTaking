@@ -104,7 +104,7 @@ class ProgramViewController : UIViewController {
          customView.removeFromSuperview()
     }
     
-    func choosePlace(_ sender: UIButton) {
+    @objc func choosePlace(_ sender: UIButton) {
      
         container.place = String(sender.tag)
         container.placeString = sender.titleLabel?.text
@@ -136,7 +136,7 @@ class ProgramViewController : UIViewController {
         
         
         container.goNextButton.isHidden = false
-        if checkNumScores() == 5 {
+        if checkNumScores() == 15 {
             container.warningScoreLabel.isHidden = false
         }
         //container.goNextButton.center = CGPoint(x: sender.center.x, y: sender.center.y+80)

@@ -69,7 +69,7 @@ class ChooseProgramViewController: AudioViewController {
         performSegue(withIdentifier: "back", sender: self)
     }
     
-    func highlighta(_ sender: UIButton) {
+    @objc func highlighta(_ sender: UIButton) {
         let tagNum = sender.tag - 1
         self.playAudio(fileName: names[tagNum])
         for button in chooseButtons {

@@ -2411,7 +2411,7 @@
 					A5F483171D130F8100AA4E85 = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = 4S6L6R5269;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0900;
 					};
 					A5F4832E1D130F8100AA4E85 = {
 						CreatedOnToolsVersion = 7.0;
@@ -3353,7 +3353,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "d3455128-233d-4b97-85ea-712c99fe5c59";
 				PROVISIONING_PROFILE_SPECIFIER = "SSB Perspective Taking App Store Distribution";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
@@ -3374,7 +3375,8 @@
 				PROVISIONING_PROFILE = "d3455128-233d-4b97-85ea-712c99fe5c59";
 				PROVISIONING_PROFILE_SPECIFIER = "SSB Perspective Taking App Store Distribution";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;

@@ -698,30 +698,30 @@
                                 <rect key="frame" x="132" y="575" width="754" height="559"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" pagingEnabled="YES" dataMode="prototypes" style="plain" separatorStyle="none" sectionIndexMinimumDisplayRowCount="15" rowHeight="77" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z6c-ZJ-VXT">
-                                        <rect key="frame" x="102" y="30" width="551" height="498"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" pagingEnabled="YES" dataMode="prototypes" style="plain" separatorStyle="none" sectionIndexMinimumDisplayRowCount="5" rowHeight="77" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z6c-ZJ-VXT">
+                                        <rect key="frame" x="102" y="30" width="550" height="498"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="77" id="evc-9K-2sp" customClass="ScoreTableViewCell" customModule="Mark_up_Click_drag" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="551" height="77"/>
+                                                <rect key="frame" x="0.0" y="28" width="550" height="77"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="evc-9K-2sp" id="o3g-4m-8ys">
-                                                    <rect key="frame" x="0.0" y="0.0" width="551" height="77"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="550" height="77"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yZP-9u-ept">
-                                                            <rect key="frame" x="0.0" y="0.0" width="554" height="71"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="553" height="71"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                             <subviews>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ScoresCell.png" translatesAutoresizingMaskIntoConstraints="NO" id="VWr-NP-9JV">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="550" height="71"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="538" height="71"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Community" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="m0e-zU-c5u">
-                                                                    <rect key="frame" x="143" y="-1" width="268" height="31"/>
+                                                                    <rect key="frame" x="143" y="-1" width="267" height="31"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                                     <color key="tintColor" red="1" green="0.99607843137254903" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="20"/>
@@ -729,7 +729,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="VwJ-PO-0kZ">
-                                                                    <rect key="frame" x="228" y="34" width="88" height="27"/>
+                                                                    <rect key="frame" x="228" y="34" width="87" height="27"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                                     <color key="tintColor" red="1" green="0.99607843137254903" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <fontDescription key="fontDescription" name="Ainslie-NorReg" family="Ainslie" pointSize="23"/>
@@ -737,7 +737,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1.5.16" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="7ee-Kv-Kti">
-                                                                    <rect key="frame" x="410" y="-1" width="73" height="31"/>
+                                                                    <rect key="frame" x="409" y="-1" width="73" height="31"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                                     <color key="tintColor" red="1" green="0.99607843137254903" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <fontDescription key="fontDescription" name="Ainslie-NorReg" family="Ainslie" pointSize="20"/>
@@ -809,7 +809,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="trV-Ce-L4Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="FQp-zJ-5Sg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="6566" y="-1908"/>
+            <point key="canvasLocation" x="6565.4296875" y="-1908.0527086383599"/>
         </scene>
         <!--Home-->
         <scene sceneID="hzp-CU-7iX">
@@ -880,7 +880,7 @@
                                     <segue destination="kK3-iv-YIB" kind="presentation" identifier="toScoresView" customClass="CustomSegue" customModule="Mark_up_Click_drag" customModuleProvider="target" modalPresentationStyle="overCurrentContext" id="eli-mw-sa0"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Record your latest 5 scores by pressing SCORES below or lose data." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TMd-Y5-8P3">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Record your latest 15 scores by pressing SCORES below or lose data." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TMd-Y5-8P3">
                                 <rect key="frame" x="26" y="1184" width="978" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Ainslie-NorBol" family="Ainslie" pointSize="21"/>
@@ -1198,7 +1198,6 @@
         <image name="thoughtwt.png" width="300" height="255"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eli-mw-sa0"/>
         <segue reference="Rzu-RC-Pty"/>
         <segue reference="Whu-pq-rPA"/>
     </inferredMetricsTieBreakers>

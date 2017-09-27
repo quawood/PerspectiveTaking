@@ -42,7 +42,7 @@ class EditProfileViewController: UIViewController,UINavigationControllerDelegate
         }
     }
     
-    func keyboardWillShow(notification: NSNotification) {
+    @objc func keyboardWillShow(notification: NSNotification) {
         
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if view.frame.origin.y == 0{
@@ -55,7 +55,7 @@ class EditProfileViewController: UIViewController,UINavigationControllerDelegate
         
     }
     
-    func keyboardWillHide(notification: NSNotification) {
+    @objc func keyboardWillHide(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if view.frame.origin.y != 0 {
                 self.view.frame.origin.y += keyboardSize.height
@@ -78,7 +78,7 @@ class EditProfileViewController: UIViewController,UINavigationControllerDelegate
 
 
     
-    func dismissKeyboard() {
+    @objc func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
     }
@@ -136,7 +136,7 @@ class EditProfileViewController: UIViewController,UINavigationControllerDelegate
         
     }
 
-    func toggleAudio(_ sender: UIButton) {
+    @objc func toggleAudio(_ sender: UIButton) {
         currentUs.isAudioEnabled = !currentUs.isAudioEnabled
         
         DatabaseController.saveContext()
