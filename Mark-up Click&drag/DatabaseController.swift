@@ -33,6 +33,9 @@ class DatabaseController {
             let url = applicationDocumentsDirectory.appendingPathComponent("SingleViewCoreData.sqlite")
             var failureReason = "There was an error creating or loading the application's saved data."
             do {
+                let options = [ NSInferMappingModelAutomaticallyOption : true,
+                                NSMigratePersistentStoresAutomaticallyOption : true]
+                
                 try coordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: url, options: nil)
             } catch {
                 // Report any error we got.

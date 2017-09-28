@@ -16,7 +16,6 @@
 		A527274F1E9A5E9500D5779E /* WelcomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A527274E1E9A5E9500D5779E /* WelcomeScreenViewController.swift */; };
 		A52727511E9A5EE200D5779E /* SSBAppintro.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A52727501E9A5EE200D5779E /* SSBAppintro.mp3 */; };
 		A52727531E9A65CA00D5779E /* DeleteUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52727521E9A65CA00D5779E /* DeleteUsersViewController.swift */; };
-		A529E7E41EB9B40500F77C65 /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = A529E7E31EB9B40500F77C65 /* questions.json */; };
 		A52E3D461DD3D949001491E3 /* ChooseProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52E3D451DD3D949001491E3 /* ChooseProgramViewController.swift */; };
 		A52EAB4D1E8F671E00682C1B /* bottomnavbar.png in Resources */ = {isa = PBXBuildFile; fileRef = A52EAB171E8F671E00682C1B /* bottomnavbar.png */; };
 		A52EAB4E1E8F671E00682C1B /* boy.png in Resources */ = {isa = PBXBuildFile; fileRef = A52EAB181E8F671E00682C1B /* boy.png */; };
@@ -64,6 +63,10 @@
 		A52EAB811E8F671E00682C1B /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = A52EAB4B1E8F671E00682C1B /* user.png */; };
 		A551E1FA1EC6E128000C1E97 /* cthoughttail0.png in Resources */ = {isa = PBXBuildFile; fileRef = A551E1F81EC6E128000C1E97 /* cthoughttail0.png */; };
 		A551E1FB1EC6E128000C1E97 /* cthoughttail1.png in Resources */ = {isa = PBXBuildFile; fileRef = A551E1F91EC6E128000C1E97 /* cthoughttail1.png */; };
+		A559AB4C1F7D2CA400B0CF0D /* MappingModelv1.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = A559AB4B1F7D2CA400B0CF0D /* MappingModelv1.xcmappingmodel */; };
+		A55BE90E1F7B60E3002BFC3C /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = A55BE9121F7B60E3002BFC3C /* questions.json */; };
+		A55BE90F1F7B60E3002BFC3C /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = A55BE9121F7B60E3002BFC3C /* questions.json */; };
+		A55BE9101F7B60E3002BFC3C /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = A55BE9121F7B60E3002BFC3C /* questions.json */; };
 		A55C1DF81EA85075000E542C /* School Rules 2.wav in Resources */ = {isa = PBXBuildFile; fileRef = A55C1DF41EA85075000E542C /* School Rules 2.wav */; };
 		A55C1DFF1EA8570C000E542C /* SSB Lite.JPG in Resources */ = {isa = PBXBuildFile; fileRef = A55C1DFE1EA8570C000E542C /* SSB Lite.JPG */; };
 		A55C1E011EA85714000E542C /* SD Intermediate.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A55C1E001EA85714000E542C /* SD Intermediate.jpg */; };
@@ -749,7 +752,6 @@
 		A527274E1E9A5E9500D5779E /* WelcomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeScreenViewController.swift; sourceTree = "<group>"; };
 		A52727501E9A5EE200D5779E /* SSBAppintro.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SSBAppintro.mp3; sourceTree = "<group>"; };
 		A52727521E9A65CA00D5779E /* DeleteUsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteUsersViewController.swift; sourceTree = "<group>"; };
-		A529E7E31EB9B40500F77C65 /* questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = questions.json; sourceTree = "<group>"; };
 		A52E3D451DD3D949001491E3 /* ChooseProgramViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseProgramViewController.swift; sourceTree = "<group>"; };
 		A52EAB171E8F671E00682C1B /* bottomnavbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottomnavbar.png; sourceTree = "<group>"; };
 		A52EAB181E8F671E00682C1B /* boy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boy.png; sourceTree = "<group>"; };
@@ -797,6 +799,9 @@
 		A52EAB4B1E8F671E00682C1B /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
 		A551E1F81EC6E128000C1E97 /* cthoughttail0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cthoughttail0.png; sourceTree = "<group>"; };
 		A551E1F91EC6E128000C1E97 /* cthoughttail1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cthoughttail1.png; sourceTree = "<group>"; };
+		A559AB461F7D24D000B0CF0D /* ClickDrag 2v1.1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "ClickDrag 2v1.1.xcdatamodel"; sourceTree = "<group>"; };
+		A559AB4B1F7D2CA400B0CF0D /* MappingModelv1.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = MappingModelv1.xcmappingmodel; sourceTree = "<group>"; };
+		A55BE9111F7B60E3002BFC3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/questions.json; sourceTree = "<group>"; };
 		A55C1DF31EA85075000E542C /* School Rules 1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "School Rules 1.wav"; sourceTree = "<group>"; };
 		A55C1DF41EA85075000E542C /* School Rules 2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "School Rules 2.wav"; sourceTree = "<group>"; };
 		A55C1DFD1EA854C8000E542C /* AinslieNorBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AinslieNorBold.otf; sourceTree = "<group>"; };
@@ -2309,10 +2314,11 @@
 		A5F4831A1D130F8100AA4E85 /* Mark-up Click&drag */ = {
 			isa = PBXGroup;
 			children = (
+				A559AB4B1F7D2CA400B0CF0D /* MappingModelv1.xcmappingmodel */,
 				A52EAB151E8F671200682C1B /* Images */,
 				A5F548CC1E2D9F3C007169A9 /* DatabaseController.swift */,
 				A5F4831B1D130F8100AA4E85 /* AppDelegate.swift */,
-				A529E7E31EB9B40500F77C65 /* questions.json */,
+				A55BE9121F7B60E3002BFC3C /* questions.json */,
 				A5F4831F1D130F8100AA4E85 /* Main.storyboard */,
 				A5F483251D130F8100AA4E85 /* Assets.xcassets */,
 				A56F777A1E770A6E00B34BB8 /* Collection */,
@@ -2412,6 +2418,7 @@
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = 4S6L6R5269;
 						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
 					};
 					A5F4832E1D130F8100AA4E85 = {
 						CreatedOnToolsVersion = 7.0;
@@ -2832,7 +2839,7 @@
 				A52EAB631E8F671E00682C1B /* Menu.png in Resources */,
 				A56F7BDB1E770A7000B34BB8 /* RR1010074.jpg in Resources */,
 				A56F7B071E770A6F00B34BB8 /* R1010002S.jpg in Resources */,
-				A529E7E41EB9B40500F77C65 /* questions.json in Resources */,
+				A55BE90E1F7B60E3002BFC3C /* questions.json in Resources */,
 				A56F7ABF1E770A6F00B34BB8 /* P1010128.jpg in Resources */,
 				A56F7A851E770A6F00B34BB8 /* P1010070.jpg in Resources */,
 				A56F7A021E770A6F00B34BB8 /* generallunch3.jpg in Resources */,
@@ -3147,6 +3154,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A55BE90F1F7B60E3002BFC3C /* questions.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3154,6 +3162,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A55BE9101F7B60E3002BFC3C /* questions.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3179,6 +3188,7 @@
 				A5DBA24A1DA4A07400C15EDE /* UIImage+Gif.swift in Sources */,
 				A527274F1E9A5E9500D5779E /* WelcomeScreenViewController.swift in Sources */,
 				A5A8B6DE1D80C289009560D7 /* EditProfileViewController.swift in Sources */,
+				A559AB4C1F7D2CA400B0CF0D /* MappingModelv1.xcmappingmodel in Sources */,
 				A59DFC581DC3DF6800B1CF8D /* ScoresViewController.swift in Sources */,
 				A50F2A641EC15F4F0082B7EA /* ToggleView.swift in Sources */,
 				A5B4D6E61D7FB1BF0054D4C8 /* CollectionCells.swift in Sources */,
@@ -3220,6 +3230,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		A55BE9121F7B60E3002BFC3C /* questions.json */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A55BE9111F7B60E3002BFC3C /* Base */,
+			);
+			name = questions.json;
+			sourceTree = "<group>";
+		};
 		A5F4831F1D130F8100AA4E85 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -3344,15 +3362,17 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Social Skill Builder, Inc. (4S6L6R5269)";
-				DEVELOPMENT_TEAM = 4S6L6R5269;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Mark-up Click&drag/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LINK_WITH_STANDARD_LIBRARIES = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.SocialSkillBuilder.SSBPerspectiveTaking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d3455128-233d-4b97-85ea-712c99fe5c59";
-				PROVISIONING_PROFILE_SPECIFIER = "SSB Perspective Taking App Store Distribution";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -3365,15 +3385,17 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Social Skill Builder, Inc. (4S6L6R5269)";
-				DEVELOPMENT_TEAM = 4S6L6R5269;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Mark-up Click&drag/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LINK_WITH_STANDARD_LIBRARIES = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.SocialSkillBuilder.SSBPerspectiveTaking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d3455128-233d-4b97-85ea-712c99fe5c59";
-				PROVISIONING_PROFILE_SPECIFIER = "SSB Perspective Taking App Store Distribution";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
@@ -3480,9 +3502,10 @@
 		A5F548CE1E2DEA40007169A9 /* ClickDrag.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				A559AB461F7D24D000B0CF0D /* ClickDrag 2v1.1.xcdatamodel */,
 				A5F548CF1E2DEA40007169A9 /* ClickDrag.xcdatamodel */,
 			);
-			currentVersion = A5F548CF1E2DEA40007169A9 /* ClickDrag.xcdatamodel */;
+			currentVersion = A559AB461F7D24D000B0CF0D /* ClickDrag 2v1.1.xcdatamodel */;
 			path = ClickDrag.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
