@@ -137,6 +137,16 @@ extension ScoresViewController:UITableViewDataSource, UITableViewDelegate {
             }
         }
         scoresArray = scoresArray.sorted(by: {$0.id < $1.id})
+        for i in 0..<scoresArray.count {
+            if scoresArray[i].id == 0 {
+                currentUs.scores?.forEach({
+                    if $0 as! Score == scoresArray[i] {
+                        ($0 as! Score).id = Int16(i)
+                    }
+                })
+            }
+        }
+        DatabaseController.saveContext()
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")! as! ScoreTableViewCell
         cell.score = scoresArray[scoresArray.count - indexPath.item - 1]
         

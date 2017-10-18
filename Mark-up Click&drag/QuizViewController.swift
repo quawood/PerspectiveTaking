@@ -615,7 +615,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
         
         if scoresArray.count == 15 {
             scoresArray = scoresArray.rotate(shift: 1)
-            score.id = Int16(scoresArray.count-1)
+            score.id = Int16(scoresArray.count)
             scoresArray[scoresArray.count-1] = score
 
         }

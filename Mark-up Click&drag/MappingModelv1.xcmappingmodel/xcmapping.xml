@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" standalone="yes"?>
 <!DOCTYPE database SYSTEM "file:///System/Library/DTDs/CoreData.dtd">
 
 <database>
@@ -109,6 +109,9 @@ cBIAAYagrxECAAAHAAgAFwAzADQANQBBAEIAQwBEAF8AYABhAGcAaAB0AIoAiwCMAI0AjgCPAJAAkQCS
         <relationship name="entitymapping" type="1/1" destination="XDDEVENTITYMAPPING" idrefs="z120"></relationship>
     </object>
     <object type="XDDEVATTRIBUTEMAPPING" id="z114">
+        <attribute name="valueexpressiondata" type="binary">YnBsaXN0MDDUAQIDBAUGFxhYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoKQH
+CA8QVSRudWxs0wkKCwwNDl8QD05TQ29uc3RhbnRWYWx1ZV8QEE5TRXhwcmVzc2lvblR5cGVWJGNsYXNzgAIQAIADEADSERITFFokY2xhc3NuYW1lWCRjbGFzc2VzXxAZTlNDb25zdGFudFZhbHVlRXhwcmVzc2lvbqMTFRZcTlNFeHByZXNzaW9uWE5TT2JqZWN0XxAPTlNLZXllZEFyY2hpdmVy0RkaVHJvb3SAAQgRGiMtMjc8QklbbnV3eXt9go2WsrbDzN7h5gAAAAAAAAEBAAAAAAAAABsAAAAAAAAAAAAAAAAAAADo
+</attribute>
         <attribute name="name" type="string">id</attribute>
         <relationship name="entitymapping" type="1/1" destination="XDDEVENTITYMAPPING" idrefs="z120"></relationship>
     </object>
