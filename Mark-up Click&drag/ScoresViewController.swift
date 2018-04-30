@@ -17,6 +17,30 @@ class ScoresViewController: UIViewController, MFMailComposeViewControllerDelegat
     @IBOutlet var buttons: [UIButton]!
     @IBOutlet weak var imageIcon: UIImageView!
     
+    @IBAction func uploadData(_ sender: Any) {
+        let request = NSMutableURLRequest(url: NSURL(string: "https://quiet-hollows-94770.herokuapp.com/share.php")! as URL)
+        request.httpMethod = "POST"
+        
+        let postString = "a=3&b=3"
+        
+        request.httpBody = postString.data(using: String.Encoding.utf8)
+        
+        let task = URLSession.shared.dataTask(with: request as URLRequest) {
+            data, response, error in
+            
+            if error != nil {
+                print("error=\(error)")
+                return
+            }
+            
+            print("response = \(response)")
+            
+            let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
+            print("responseString = \(responseString)")
+        }
+        task.resume()
+        
+    }
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var realView: UIView!
     @IBOutlet weak var backgroundGraphic: UIImageView!

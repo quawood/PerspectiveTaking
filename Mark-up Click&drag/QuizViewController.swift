@@ -35,6 +35,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
     let date = NSDate()
     let calendar = NSCalendar.current
     var counter = 0
+    
     var timer = Timer()
     var correct:Int = 0
     
@@ -63,7 +64,10 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
     var xRat: Float!
     var stars: [UIImageView] = []
     
-
+    
+    //collecting data
+    var globalTimer = Timer()
+    var timeCounter: Float = 0
 
     //Touch controllers
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -450,6 +454,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
         let goodAudios:[String] = ["Great job","Perfect","Wow Super job","You are good at this"]
         let badAudios:[String] = ["Take another look","That's okay Try again", "That's okay"]
         let neutral:[String] = ["correctSound", "wrongSound"]
+        globalTimer.invalidate()
         if viewPlace == correctAnss {
             let randomIndex = Int(arc4random_uniform(UInt32(goodAudios.count)))
             playInSequence(soundsArray:[neutral[0], goodAudios[randomIndex]])
@@ -587,6 +592,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
         
     }
     @IBAction func saveScore(sender: AnyObject) {
+        
         var usedC: Int! = 1
        
         let components = calendar.dateComponents([.month,.day,.year], from: date as Date)
@@ -634,8 +640,28 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
         DatabaseController.saveContext()
         self.performSegue(withIdentifier: "toHomefromQuiz", sender: self)
         //self.performSegue(withIdentifier: "toHomefromQuiz", sender: self)
+        
+        
+        
+        let total_time = timeCounter
+        let star_num = stars.count
+        let average_time = timeCounter/Float(star_num)
+        
+        
     }
-
+    func startcollectData() {
+        
+        //start timer
+        globalTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+        var starsnum = stars.count
+        
+    }
+    
+    func updateTimer() {
+        timeCounter = timeCounter + 0.1
+    }
+    
+    
     
     @IBAction func menuPopover(sender: AnyObject) {
         self.performSegue(withIdentifier: "showMenu", sender: self)
