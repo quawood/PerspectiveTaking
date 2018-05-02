@@ -41,6 +41,7 @@ class ScoresViewController: UIViewController, MFMailComposeViewControllerDelegat
         task.resume()
         
     }
+    
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var realView: UIView!
     @IBOutlet weak var backgroundGraphic: UIImageView!

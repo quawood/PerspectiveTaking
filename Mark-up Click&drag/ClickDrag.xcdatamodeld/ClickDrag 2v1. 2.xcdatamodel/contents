@@ -20,12 +20,13 @@
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="isAudioEnabled" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="server_id" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="progresses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Progress" inverseName="user" inverseEntity="Progress" syncable="YES"/>
         <relationship name="scores" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Score" inverseName="user" inverseEntity="Score" syncable="YES"/>
     </entity>
     <elements>
         <element name="Progress" positionX="-288" positionY="-9" width="128" height="105"/>
         <element name="Score" positionX="-36" positionY="36" width="128" height="150"/>
-        <element name="User" positionX="-495" positionY="138" width="128" height="135"/>
+        <element name="User" positionX="-495" positionY="138" width="128" height="150"/>
     </elements>
 </model>

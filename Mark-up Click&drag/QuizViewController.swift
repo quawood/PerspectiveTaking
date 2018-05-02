@@ -661,6 +661,30 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
         timeCounter = timeCounter + 0.1
     }
     
+    func uploadData(_ sender: Any) {
+        let request = NSMutableURLRequest(url: NSURL(string: "https://quiet-hollows-94770.herokuapp.com/share.php")! as URL)
+        request.httpMethod = "POST"
+        
+        let postString = "a=3&b=3"
+        
+        request.httpBody = postString.data(using: String.Encoding.utf8)
+        
+        let task = URLSession.shared.dataTask(with: request as URLRequest) {
+            data, response, error in
+            
+            if error != nil {
+                print("error=\(error)")
+                return
+            }
+            
+            print("response = \(response)")
+            
+            let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
+            print("responseString = \(responseString)")
+        }
+        task.resume()
+        
+    }
     
     
     @IBAction func menuPopover(sender: AnyObject) {

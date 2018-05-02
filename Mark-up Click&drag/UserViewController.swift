@@ -74,6 +74,7 @@ class UserViewController: AudioViewController{
                 let user: User = NSEntityDescription.insertNewObject(forEntityName: "User", into: DatabaseController.getContext()) as! User
                 
                 user.name = textField?.text
+                user.server_id = randomString(20)
                 user.dateCreated = "\(components.month!)/\(components.day!)/\(components.year!)"
                 user.isAudioEnabled = true
                 let score1: Score = NSEntityDescription.insertNewObject(forEntityName: "Score", into: DatabaseController.getContext()) as! Score
@@ -122,6 +123,22 @@ class UserViewController: AudioViewController{
         // 4. Present the alert.
         alert.actions[0].isEnabled = false
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func randomString(length: Int) -> String {
+        
+        let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        let len = UInt32(letters.length)
+        
+        var randomString = ""
+        
+        for _ in 0 ..< length {
+            let rand = arc4random_uniform(len)
+            var nextChar = letters.character(at: Int(rand))
+            randomString += NSString(characters: &nextChar, length: 1) as String
+        }
+        
+        return randomString
     }
     
     @objc func textChanged(_ sender: Any) {
@@ -185,7 +202,9 @@ extension UserViewController : UICollectionViewDataSource, UICollectionViewDeleg
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         cellNum = indexPath.row
         currentUs = users[cellNum]
-        
+        if currentUs.server_id == "replace" {
+            currentUs.server_id = randomString(length: 20)
+        }
         performSegue(withIdentifier: "toNext", sender: self)
         
     }
@@ -202,3 +221,4 @@ extension UserViewController : UICollectionViewDataSource, UICollectionViewDeleg
         return cell
     }
 }
+

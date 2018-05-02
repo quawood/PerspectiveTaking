@@ -674,6 +674,7 @@
 		A59B2A221EAD76FF00922C8A /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59B2A211EAD76FF00922C8A /* Answer.swift */; };
 		A59B2A241EAD771400922C8A /* AnswerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A59B2A231EAD771400922C8A /* AnswerView.xib */; };
 		A59DFC581DC3DF6800B1CF8D /* ScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59DFC571DC3DF6800B1CF8D /* ScoresViewController.swift */; };
+		A5A176542096E21900363919 /* MappingModelv2.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = A5A176532096E21900363919 /* MappingModelv2.xcmappingmodel */; };
 		A5A8B6DE1D80C289009560D7 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A8B6DD1D80C289009560D7 /* EditProfileViewController.swift */; };
 		A5AC34DC1E90AB030066D073 /* Choose a program to play (alt option).wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34C51E90AB030066D073 /* Choose a program to play (alt option).wav */; };
 		A5AC34DD1E90AB030066D073 /* Choose a title to play.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34C61E90AB030066D073 /* Choose a title to play.wav */; };
@@ -1411,6 +1412,8 @@
 		A59B2A211EAD76FF00922C8A /* Answer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		A59B2A231EAD771400922C8A /* AnswerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnswerView.xib; sourceTree = "<group>"; };
 		A59DFC571DC3DF6800B1CF8D /* ScoresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoresViewController.swift; sourceTree = "<group>"; };
+		A5A176502096DFD300363919 /* ClickDrag 2v1. 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "ClickDrag 2v1. 2.xcdatamodel"; sourceTree = "<group>"; };
+		A5A176532096E21900363919 /* MappingModelv2.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; name = MappingModelv2.xcmappingmodel; path = "Mark-up Click&drag/MappingModelv2.xcmappingmodel"; sourceTree = "<group>"; };
 		A5A8B6DD1D80C289009560D7 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		A5AC34C51E90AB030066D073 /* Choose a program to play (alt option).wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Choose a program to play (alt option).wav"; sourceTree = "<group>"; };
 		A5AC34C61E90AB030066D073 /* Choose a title to play.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Choose a title to play.wav"; sourceTree = "<group>"; };
@@ -2293,6 +2296,7 @@
 		A5F4830F1D130F8000AA4E85 = {
 			isa = PBXGroup;
 			children = (
+				A5A176532096E21900363919 /* MappingModelv2.xcmappingmodel */,
 				A5C137801E77A34A00D78344 /* Sounds */,
 				A5F4831A1D130F8100AA4E85 /* Mark-up Click&drag */,
 				A5F483321D130F8100AA4E85 /* Mark-up Click&dragTests */,
@@ -3184,6 +3188,7 @@
 				A5BA1CDF1DB7014300608BE8 /* ProgramViewController.swift in Sources */,
 				A523733B1E79A32800D3DE50 /* ChoosePlaceView.swift in Sources */,
 				A5F548D01E2DEA40007169A9 /* ClickDrag.xcdatamodeld in Sources */,
+				A5A176542096E21900363919 /* MappingModelv2.xcmappingmodel in Sources */,
 				A50D0BB81DFFDEE800AE2978 /* InfoPageControllerViewController.swift in Sources */,
 				A5DBA24A1DA4A07400C15EDE /* UIImage+Gif.swift in Sources */,
 				A527274F1E9A5E9500D5779E /* WelcomeScreenViewController.swift in Sources */,
@@ -3502,10 +3507,11 @@
 		A5F548CE1E2DEA40007169A9 /* ClickDrag.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				A5A176502096DFD300363919 /* ClickDrag 2v1. 2.xcdatamodel */,
 				A559AB461F7D24D000B0CF0D /* ClickDrag 2v1.1.xcdatamodel */,
 				A5F548CF1E2DEA40007169A9 /* ClickDrag.xcdatamodel */,
 			);
-			currentVersion = A559AB461F7D24D000B0CF0D /* ClickDrag 2v1.1.xcdatamodel */;
+			currentVersion = A5A176502096DFD300363919 /* ClickDrag 2v1. 2.xcdatamodel */;
 			path = ClickDrag.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
