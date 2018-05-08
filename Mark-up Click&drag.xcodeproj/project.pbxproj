@@ -673,7 +673,9 @@
 		A59B2A221EAD76FF00922C8A /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59B2A211EAD76FF00922C8A /* Answer.swift */; };
 		A59B2A241EAD771400922C8A /* AnswerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A59B2A231EAD771400922C8A /* AnswerView.xib */; };
 		A59DFC581DC3DF6800B1CF8D /* ScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59DFC571DC3DF6800B1CF8D /* ScoresViewController.swift */; };
-		A5A1765820A1D20300363919 /* MappingModelv2.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = A5A1765720A1D20300363919 /* MappingModelv2.xcmappingmodel */; };
+		A5A1765A20A1EF2B00363919 /* ClutserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A1765920A1EF2B00363919 /* ClutserViewController.swift */; };
+		A5A1765C20A1F98700363919 /* QuestionMigration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A1765B20A1F98700363919 /* QuestionMigration.swift */; };
+		A5A1765E20A1FB9500363919 /* MappingModelv2v3.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = A5A1765D20A1FB9500363919 /* MappingModelv2v3.xcmappingmodel */; };
 		A5A8B6DE1D80C289009560D7 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A8B6DD1D80C289009560D7 /* EditProfileViewController.swift */; };
 		A5AC34DC1E90AB030066D073 /* Choose a program to play (alt option).wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34C51E90AB030066D073 /* Choose a program to play (alt option).wav */; };
 		A5AC34DD1E90AB030066D073 /* Choose a title to play.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34C61E90AB030066D073 /* Choose a title to play.wav */; };
@@ -1411,7 +1413,9 @@
 		A59B2A231EAD771400922C8A /* AnswerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnswerView.xib; sourceTree = "<group>"; };
 		A59DFC571DC3DF6800B1CF8D /* ScoresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoresViewController.swift; sourceTree = "<group>"; };
 		A5A176502096DFD300363919 /* ClickDrag 2v1. 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "ClickDrag 2v1. 2.xcdatamodel"; sourceTree = "<group>"; };
-		A5A1765720A1D20300363919 /* MappingModelv2.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; name = MappingModelv2.xcmappingmodel; path = "Mark-up Click&drag/MappingModelv2.xcmappingmodel"; sourceTree = "<group>"; };
+		A5A1765920A1EF2B00363919 /* ClutserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClutserViewController.swift; sourceTree = "<group>"; };
+		A5A1765B20A1F98700363919 /* QuestionMigration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionMigration.swift; sourceTree = "<group>"; };
+		A5A1765D20A1FB9500363919 /* MappingModelv2v3.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = MappingModelv2v3.xcmappingmodel; sourceTree = "<group>"; };
 		A5A8B6DD1D80C289009560D7 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		A5AC34C51E90AB030066D073 /* Choose a program to play (alt option).wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Choose a program to play (alt option).wav"; sourceTree = "<group>"; };
 		A5AC34C61E90AB030066D073 /* Choose a title to play.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Choose a title to play.wav"; sourceTree = "<group>"; };
@@ -2231,6 +2235,7 @@
 		A5B4D6EA1D7FB5560054D4C8 /* Home Screen */ = {
 			isa = PBXGroup;
 			children = (
+				A5A1765920A1EF2B00363919 /* ClutserViewController.swift */,
 				A5A8B6DD1D80C289009560D7 /* EditProfileViewController.swift */,
 				A58943CF1D710410005456A2 /* HomeViewController.swift */,
 				A59DFC571DC3DF6800B1CF8D /* ScoresViewController.swift */,
@@ -2294,7 +2299,6 @@
 		A5F4830F1D130F8000AA4E85 = {
 			isa = PBXGroup;
 			children = (
-				A5A1765720A1D20300363919 /* MappingModelv2.xcmappingmodel */,
 				A5C137801E77A34A00D78344 /* Sounds */,
 				A5F4831A1D130F8100AA4E85 /* Mark-up Click&drag */,
 				A5F483321D130F8100AA4E85 /* Mark-up Click&dragTests */,
@@ -2316,6 +2320,8 @@
 		A5F4831A1D130F8100AA4E85 /* Mark-up Click&drag */ = {
 			isa = PBXGroup;
 			children = (
+				A5A1765D20A1FB9500363919 /* MappingModelv2v3.xcmappingmodel */,
+				A5A1765B20A1F98700363919 /* QuestionMigration.swift */,
 				A52EAB151E8F671200682C1B /* Images */,
 				A5F548CC1E2D9F3C007169A9 /* DatabaseController.swift */,
 				A5F4831B1D130F8100AA4E85 /* AppDelegate.swift */,
@@ -3190,12 +3196,14 @@
 				A527274F1E9A5E9500D5779E /* WelcomeScreenViewController.swift in Sources */,
 				A5A8B6DE1D80C289009560D7 /* EditProfileViewController.swift in Sources */,
 				A59DFC581DC3DF6800B1CF8D /* ScoresViewController.swift in Sources */,
-				A5A1765820A1D20300363919 /* MappingModelv2.xcmappingmodel in Sources */,
 				A50F2A641EC15F4F0082B7EA /* ToggleView.swift in Sources */,
 				A5B4D6E61D7FB1BF0054D4C8 /* CollectionCells.swift in Sources */,
 				A5F4831C1D130F8100AA4E85 /* AppDelegate.swift in Sources */,
+				A5A1765E20A1FB9500363919 /* MappingModelv2v3.xcmappingmodel in Sources */,
+				A5A1765C20A1F98700363919 /* QuestionMigration.swift in Sources */,
 				A57F6C131E6ED329000C1C77 /* MoreAppsViewController.swift in Sources */,
 				A5EFC1661E10F4A80071F4DE /* CustomSegue.swift in Sources */,
+				A5A1765A20A1EF2B00363919 /* ClutserViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

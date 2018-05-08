@@ -1026,6 +1026,14 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pVY-Uj-s2D">
+                                        <rect key="frame" x="756" y="12" width="32" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Data"/>
+                                        <connections>
+                                            <segue destination="E5O-G4-1t0" kind="showDetail" id="Ksd-Sw-TUZ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.3135790228843689" green="0.71675080060958862" blue="0.82187420129776001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -1052,7 +1060,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sfo-Ny-Ng6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="yOR-Yl-j95" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="5512" y="-1769"/>
+            <point key="canvasLocation" x="5280" y="-1764"/>
+        </scene>
+        <!--Cluster View Controller-->
+        <scene sceneID="1g0-66-7gP">
+            <objects>
+                <viewController id="E5O-G4-1t0" customClass="ClusterViewController" customModule="Mark_up_Click_drag" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="R4o-4M-gm0"/>
+                        <viewControllerLayoutGuide type="bottom" id="acS-gv-Ssh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="urV-uO-Xwc" customClass="ClusterViewController">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJu-jd-zTz">
+                                <rect key="frame" x="271" y="581" width="498" height="205"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="testLabel" destination="KJu-jd-zTz" id="YFV-Z8-hpp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0QH-m0-oF3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5311.5234375" y="-2408.3455344070276"/>
         </scene>
         <!--Program View Controller-->
         <scene sceneID="cM1-3N-xKD">

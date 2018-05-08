@@ -7,7 +7,7 @@
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="progresses" inverseEntity="User" syncable="YES"/>
     </entity>
     <entity name="Question" representedClassName="Question" syncable="YES" codeGenerationType="class">
-        <attribute name="accuracy" optional="YES" attributeType="Float" defaultValueString="2" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="accuracy" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="attempts" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="qid" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="totalt" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
@@ -28,7 +28,7 @@
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="isAudioEnabled" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="server_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="server_id" optional="YES" attributeType="String" defaultValueString="replace" syncable="YES"/>
         <relationship name="progresses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Progress" inverseName="user" inverseEntity="Progress" syncable="YES"/>
         <relationship name="questions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Question" inverseName="user" inverseEntity="Question" syncable="YES"/>
         <relationship name="scores" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Score" inverseName="user" inverseEntity="Score" syncable="YES"/>

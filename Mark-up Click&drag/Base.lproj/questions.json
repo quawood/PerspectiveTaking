@@ -2,7 +2,6 @@
     "questions": {
         "1": {
             "1": [{
-                  "qid":"MC_1_1",
                   "answers": [
                               "You are waiting so well.",
                               "He's so embarrassing.",
@@ -41,7 +40,6 @@
                               3
                               ]
                   }, {
-                  "qid":"MC_1_2",
                   "answers": [
                               "Are we next on the list?",
                               "Sure you can see the list. ",
@@ -75,7 +73,6 @@
                               1
                               ]
                   }, {
-                  "qid":"MC_1_3",
                   "answers": [
                               "He is hurting my ears.",
                               "Where's the bathroom?",
@@ -114,7 +111,6 @@
                               5
                               ]
                   }, {
-                  "qid":"MC_1_4",
                   "answers": [
                               "Oh, I found it.",
                               "Where is it?",
@@ -143,7 +139,6 @@
                               2, 4
                               ]
                   }, {
-                  "qid":"MC_1_5",
                   "answers": [
                               "What are you doing?",
                               "You are so rude.",
@@ -182,7 +177,6 @@
                               ]
                   }],
             "2": [{
-                  "qid":"MC_2_1",
                   "answers": [
                               "She is too quiet.",
                               "WHAT TIME ARE YOU COMING OVER?",
@@ -216,7 +210,6 @@
                               2
                               ]
                   }, {
-                  "qid":"MC_P_2",
                   "answers": [
                               "Dad, can I go over to a friend's house?",
                               "I am hungry.",
@@ -254,7 +247,6 @@
                               1
                               ]
                   }, {
-                  "qid":"MC_P_3",
                   "answers": [
                               "Dude, What's up?",
                               "I am so proud of you.",
@@ -288,7 +280,6 @@
                               4
                               ]
                   }, {
-                  "qid":"MC_P_4",
                   "answers": [
                               "I am so proud of you.",
                               "I got an 'A' on my math test.",
@@ -322,7 +313,6 @@
                               1
                               ]
                   }, {
-                  "qid":"MC_P_5",
                   "answers": [
                               "What? This isn't a pizza restaurant!",
                               "Mom, I am hungry.",
@@ -357,7 +347,6 @@
                               ]
                   }],
             "3": [{
-                  "qid":"MC_S_1",
                   "answers": [
                               "Go and have a good time.",
                               "It is such a nice day.",
@@ -391,7 +380,6 @@
                               3
                               ]
                   }, {
-                  "qid":"MC_S_2",
                   "answers": [
                               "I will hold the basket to stay close by.",
                               "Great job holding my hand in the street.",
@@ -425,7 +413,6 @@
                               1
                               ]
                   }, {
-                  "qid":"MC_S_3",
                   "answers": [
                               "Stop! We need to cross the street together.",
                               "Can you go fast?",
@@ -458,7 +445,6 @@
                               4
                               ]
                   }, {
-                  "qid":"MC_S_4",
                   "answers": [
                               "That is funny.",
                               "I want to go NOW!",
@@ -497,7 +483,6 @@
                               3
                               ]
                   }, {
-                  "qid":"MC_S_5",
                   "answers": [
                               "Get out of my way!",
                               "Oh no! Come back here!",
@@ -536,7 +521,6 @@
                               ]
                   }],
             "4": [{
-                  "qid":"MC_M_1",
                   "answers": [
                               "Excuse me.",
                               "I need to follow my dad.",
@@ -574,7 +558,6 @@
                               1
                               ]
                   }, {
-                  "qid":"MC_M_2",
                   "answers": [
                               "SHHH.",
                               "It's quiet in here.",
@@ -608,7 +591,6 @@
                               4
                               ]
                   }, {
-                  "qid":"MC_M_3",
                   "answers": [
                               "I love this movie.",
                               "I did not want to see this movie.",
@@ -646,7 +628,6 @@
                               1
                               ]
                   }, {
-                  "qid":"MC_M_4",
                   "answers": [
                               "Can't wait to see the movie with you.",
                               "No, son. It is sold out. We will have to come back.",
@@ -685,7 +666,6 @@
                               2
                               ]
                   }, {
-                  "qid":"MC_M_5",
                   "answers": [
                               "What else do you want to see?",
                               "I am so bummed the movie is sold out.",
@@ -720,7 +700,6 @@
                               ]
                   }],
             "5": [{
-                  "qid":"MC_G_1",
                   "answers": [
                               "The answer is NO!",
                               "That girl is being so good.",
@@ -759,7 +738,6 @@
                               3
                               ]
                   }, {
-                  "qid":"MC_G_2",
                   "answers": [
                               "She is rude.",
                               "Thank you.",
@@ -797,7 +775,6 @@
                               3
                               ]
                   }, {
-                  "qid":"MC_G_3",
                   "answers": [
                               "Sure, you can have those.",
                               "You are not getting these.",
@@ -831,7 +808,6 @@
                               2
                               ]
                   }, {
-                  "qid":"MC_G_4",
                   "answers": [
                               "Can I PLEASE have them?",
                               "We can get them next time.",
@@ -865,7 +841,6 @@
                               3
                               ]
                   }, {
-                  "qid":"MC_G_5",
                   "answers": [
                               "Oh no! I can't believe it!",
                               "It's O.K.",
@@ -900,7 +875,6 @@
                               ]
                   }],
             "6": [{
-                  "qid":"MC_D_1",
                   "answers": [
                               "I want to play with that truck.",
                               "Look at that nice kid.",
@@ -939,7 +913,6 @@
                               1
                               ]
                   }, {
-                  "qid":"MC_D_2",
                   "answers": [
                               "It's your turn.",
                               "He is such a nice boy.",
@@ -978,7 +951,6 @@
                               5
                               ]
                   }, {
-                  "qid":"MC_D_3",
                   "answers": [
                               "This is cool.",
                               "You are being good.",
@@ -1012,7 +984,6 @@
                               1
                               ]
                   }, {
-                  "qid":"MC_D_4",
                   "answers": [
                               "I can't wait.",
                               "I will do this quickly.",
@@ -1051,7 +1022,6 @@
                               2
                               ]
                   }, {
-                  "qid":"MC_D_5",
                   "answers": [
                               "Excuse me, that's mine.",
                               "This kid is so nice.",
@@ -1091,7 +1061,6 @@
                               ]
                   }],
             "7": [{
-                  "qid":"MC_C_1",
                   "answers": [
                               "This is MY seat!",
                               "I wish he would move over!",
@@ -1130,7 +1099,6 @@
                               2
                               ]
                   }, {
-                  "qid":"MC_C_2",
                   "answers": [
                               "Is this O.K.?",
                               "I'm ready, let's go!",
@@ -1164,7 +1132,6 @@
                               2
                               ]
                   }, {
-                  "qid":"MC_C_3",
                   "answers": [
                               "He is a good friend.",
                               "Give me some!",
@@ -1198,7 +1165,6 @@
                               2
                               ]
                   }, {
-                  "qid":"MC_C_4",
                   "answers": [
                               "Try these.",
                               "Leave me alone.",
@@ -1232,7 +1198,6 @@
                               3
                               ]
                   }, {
-                  "qid":"MC_C_5",
                   "answers": [
                               "It's a nice day.",
                               "Don't push me!",
@@ -1267,7 +1232,6 @@
                               ]
                   }],
             "8": [{
-                  "qid":"MC_F_1",
                   "answers": [
                               "Do you want a glass of water?",
                               "What are you doing?",
@@ -1301,7 +1265,6 @@
                               4
                               ]
                   }, {
-                  "qid":"MC_F_2",
                   "answers": [
                               "I want to go home.",
                               "Want to play?",
@@ -1335,7 +1298,6 @@
                               3
                               ]
                   }, {
-                  "qid":"MC_F_3",
                   "answers": [
                               "I am bored sitting here.",
                               "We make a good team.",
@@ -1370,7 +1332,6 @@
                               1
                               ]
                   }, {
-                  "qid":"MC_F_4",
                   "answers": [
                               "Sure, you can have it.",
                               "Is that my card?",
@@ -1404,7 +1365,6 @@
                               4
                               ]
                   }, {
-                  "qid":"MC_F_5",
                   "answers": [
                               "Want some lunch boys?",
                               "Clean up this mess.",
@@ -3836,3 +3796,4 @@
         }
     }
 }
+

@@ -63,7 +63,8 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
     var startails: [Float]!
     var xRat: Float!
     var stars: [UIImageView] = []
-    
+    var qID: String = ""
+    var firstCorrect: Float! = 0
     
     //collecting data
     var globalTimer = Timer()
@@ -301,7 +302,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        startcollectData()
         ProgramLabel.text = progName
         
         xRat  = Float(self.view.bounds.width)/469
@@ -328,6 +329,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
     //Question controllers
 
     func nextQuestion() {
+        startcollectData()
         isSceneEnabled = true
         checkAnsBtn.isThisEnabled = false
 
@@ -347,6 +349,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
         let currentProgram = questions[currentProg] as! [String: AnyObject]
         let currentSpot = currentProgram[currentPlace] as! [AnyObject]
         let numm = currentSpot[randomNum-1] as! [String:AnyObject]
+        qID = "\(currentProgram)_\(currentPlace)_\(randomNum)"
            if let label = numm["answers"] as? [String] , let stars = numm["stars"] as? [[Int]] , let correct = numm["correct"] as? [Int], let bubbles = numm["bubbles"] as? [String], let image = numm["image"] as? String {
             
              startails = numm["startails"] as? [Float]
@@ -455,12 +458,14 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
         let badAudios:[String] = ["Take another look","That's okay Try again", "That's okay"]
         let neutral:[String] = ["correctSound", "wrongSound"]
         
-        stopCollection()
+        
 
         if viewPlace == correctAnss {
+            
             let randomIndex = Int(arc4random_uniform(UInt32(goodAudios.count)))
             playInSequence(soundsArray:[neutral[0], goodAudios[randomIndex]])
             if turn == 1 {
+                firstCorrect = 1
                 let random = numbers[Int(arc4random_uniform(UInt32(numbers.count)) + 1) - 1]
                 numbers.remove(at: numbers.index(of: random)!)
                 animation = UIImageView(image:UIImage.gif(name: "emoji\(random)"))
@@ -556,6 +561,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
                 })
             }
         }
+        stopCollection()
     }
     
     @objc func timerAction() {
@@ -666,6 +672,27 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
         let total_time = timeCounter
         let star_num = stars.count
         let average_time = timeCounter/Float(star_num)
+        
+        if let currentQ = currentUs.questions?.first(where: {($0 as! Question).qid! == qID}) as? Question {
+            let attempts = Float(currentQ.attempts)
+            let adjustacc = currentQ.accuracy*(attempts/(attempts+1))
+            
+            currentQ.accuracy = adjustacc + (firstCorrect/(attempts+1))
+            currentQ.attempts = currentQ.attempts + 1
+            currentQ.totalt = total_time
+            currentQ.tperbox = average_time
+            
+        } else {
+            let question: Question = NSEntityDescription.insertNewObject(forEntityName: "Question", into: DatabaseController.getContext()) as! Question
+            question.qid = qID
+            question.accuracy = firstCorrect
+            question.attempts = 1
+            question.totalt = total_time
+            question.tperbox = average_time
+            currentUs.addToQuestions(question)
+        }
+        
+        DatabaseController.saveContext()
         
     }
     

@@ -91,13 +91,9 @@ class UserViewController: AudioViewController{
                     score1.attempt = Int16(0)
                     user.addToScores(score1)
                 }
-                for i in 1...110 {
-                    let question: Question = NSEntityDescription.insertNewObject(forEntityName: "Question", into: DatabaseController.getContext()) as! Question
-                    question.qid = "\(i)"
-                    question.accuracy = 2
-                    user.addToQuestions(question)
-                }
                 
+                
+ 
                 DatabaseController.saveContext()
                 alert?.dismiss(animated: true, completion: nil)
                 self.loadData()
@@ -207,9 +203,7 @@ extension UserViewController : UICollectionViewDataSource, UICollectionViewDeleg
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         cellNum = indexPath.row
         currentUs = users[cellNum]
-        if currentUs.server_id == "replace" {
-            currentUs.server_id = randomString(length: 20)
-        }
+     
         performSegue(withIdentifier: "toNext", sender: self)
         
     }
