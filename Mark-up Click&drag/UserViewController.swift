@@ -74,7 +74,7 @@ class UserViewController: AudioViewController{
                 let user: User = NSEntityDescription.insertNewObject(forEntityName: "User", into: DatabaseController.getContext()) as! User
                 
                 user.name = textField?.text
-                user.server_id = randomString(20)
+                user.server_id = self.randomString(length: 20)
                 user.dateCreated = "\(components.month!)/\(components.day!)/\(components.year!)"
                 user.isAudioEnabled = true
                 let score1: Score = NSEntityDescription.insertNewObject(forEntityName: "Score", into: DatabaseController.getContext()) as! Score
@@ -91,7 +91,12 @@ class UserViewController: AudioViewController{
                     score1.attempt = Int16(0)
                     user.addToScores(score1)
                 }
-                
+                for i in 1...110 {
+                    let question: Question = NSEntityDescription.insertNewObject(forEntityName: "Question", into: DatabaseController.getContext()) as! Question
+                    question.qid = "\(i)"
+                    question.accuracy = 2
+                    user.addToQuestions(question)
+                }
                 
                 DatabaseController.saveContext()
                 alert?.dismiss(animated: true, completion: nil)

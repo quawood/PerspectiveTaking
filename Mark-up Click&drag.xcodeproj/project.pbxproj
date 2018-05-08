@@ -63,7 +63,6 @@
 		A52EAB811E8F671E00682C1B /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = A52EAB4B1E8F671E00682C1B /* user.png */; };
 		A551E1FA1EC6E128000C1E97 /* cthoughttail0.png in Resources */ = {isa = PBXBuildFile; fileRef = A551E1F81EC6E128000C1E97 /* cthoughttail0.png */; };
 		A551E1FB1EC6E128000C1E97 /* cthoughttail1.png in Resources */ = {isa = PBXBuildFile; fileRef = A551E1F91EC6E128000C1E97 /* cthoughttail1.png */; };
-		A559AB4C1F7D2CA400B0CF0D /* MappingModelv1.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = A559AB4B1F7D2CA400B0CF0D /* MappingModelv1.xcmappingmodel */; };
 		A55BE90E1F7B60E3002BFC3C /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = A55BE9121F7B60E3002BFC3C /* questions.json */; };
 		A55BE90F1F7B60E3002BFC3C /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = A55BE9121F7B60E3002BFC3C /* questions.json */; };
 		A55BE9101F7B60E3002BFC3C /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = A55BE9121F7B60E3002BFC3C /* questions.json */; };
@@ -674,7 +673,7 @@
 		A59B2A221EAD76FF00922C8A /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59B2A211EAD76FF00922C8A /* Answer.swift */; };
 		A59B2A241EAD771400922C8A /* AnswerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A59B2A231EAD771400922C8A /* AnswerView.xib */; };
 		A59DFC581DC3DF6800B1CF8D /* ScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59DFC571DC3DF6800B1CF8D /* ScoresViewController.swift */; };
-		A5A176542096E21900363919 /* MappingModelv2.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = A5A176532096E21900363919 /* MappingModelv2.xcmappingmodel */; };
+		A5A1765820A1D20300363919 /* MappingModelv2.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = A5A1765720A1D20300363919 /* MappingModelv2.xcmappingmodel */; };
 		A5A8B6DE1D80C289009560D7 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A8B6DD1D80C289009560D7 /* EditProfileViewController.swift */; };
 		A5AC34DC1E90AB030066D073 /* Choose a program to play (alt option).wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34C51E90AB030066D073 /* Choose a program to play (alt option).wav */; };
 		A5AC34DD1E90AB030066D073 /* Choose a title to play.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AC34C61E90AB030066D073 /* Choose a title to play.wav */; };
@@ -801,7 +800,6 @@
 		A551E1F81EC6E128000C1E97 /* cthoughttail0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cthoughttail0.png; sourceTree = "<group>"; };
 		A551E1F91EC6E128000C1E97 /* cthoughttail1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cthoughttail1.png; sourceTree = "<group>"; };
 		A559AB461F7D24D000B0CF0D /* ClickDrag 2v1.1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "ClickDrag 2v1.1.xcdatamodel"; sourceTree = "<group>"; };
-		A559AB4B1F7D2CA400B0CF0D /* MappingModelv1.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = MappingModelv1.xcmappingmodel; sourceTree = "<group>"; };
 		A55BE9111F7B60E3002BFC3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/questions.json; sourceTree = "<group>"; };
 		A55C1DF31EA85075000E542C /* School Rules 1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "School Rules 1.wav"; sourceTree = "<group>"; };
 		A55C1DF41EA85075000E542C /* School Rules 2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "School Rules 2.wav"; sourceTree = "<group>"; };
@@ -1413,7 +1411,7 @@
 		A59B2A231EAD771400922C8A /* AnswerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnswerView.xib; sourceTree = "<group>"; };
 		A59DFC571DC3DF6800B1CF8D /* ScoresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoresViewController.swift; sourceTree = "<group>"; };
 		A5A176502096DFD300363919 /* ClickDrag 2v1. 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "ClickDrag 2v1. 2.xcdatamodel"; sourceTree = "<group>"; };
-		A5A176532096E21900363919 /* MappingModelv2.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; name = MappingModelv2.xcmappingmodel; path = "Mark-up Click&drag/MappingModelv2.xcmappingmodel"; sourceTree = "<group>"; };
+		A5A1765720A1D20300363919 /* MappingModelv2.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; name = MappingModelv2.xcmappingmodel; path = "Mark-up Click&drag/MappingModelv2.xcmappingmodel"; sourceTree = "<group>"; };
 		A5A8B6DD1D80C289009560D7 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		A5AC34C51E90AB030066D073 /* Choose a program to play (alt option).wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Choose a program to play (alt option).wav"; sourceTree = "<group>"; };
 		A5AC34C61E90AB030066D073 /* Choose a title to play.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Choose a title to play.wav"; sourceTree = "<group>"; };
@@ -2296,7 +2294,7 @@
 		A5F4830F1D130F8000AA4E85 = {
 			isa = PBXGroup;
 			children = (
-				A5A176532096E21900363919 /* MappingModelv2.xcmappingmodel */,
+				A5A1765720A1D20300363919 /* MappingModelv2.xcmappingmodel */,
 				A5C137801E77A34A00D78344 /* Sounds */,
 				A5F4831A1D130F8100AA4E85 /* Mark-up Click&drag */,
 				A5F483321D130F8100AA4E85 /* Mark-up Click&dragTests */,
@@ -2318,7 +2316,6 @@
 		A5F4831A1D130F8100AA4E85 /* Mark-up Click&drag */ = {
 			isa = PBXGroup;
 			children = (
-				A559AB4B1F7D2CA400B0CF0D /* MappingModelv1.xcmappingmodel */,
 				A52EAB151E8F671200682C1B /* Images */,
 				A5F548CC1E2D9F3C007169A9 /* DatabaseController.swift */,
 				A5F4831B1D130F8100AA4E85 /* AppDelegate.swift */,
@@ -3188,13 +3185,12 @@
 				A5BA1CDF1DB7014300608BE8 /* ProgramViewController.swift in Sources */,
 				A523733B1E79A32800D3DE50 /* ChoosePlaceView.swift in Sources */,
 				A5F548D01E2DEA40007169A9 /* ClickDrag.xcdatamodeld in Sources */,
-				A5A176542096E21900363919 /* MappingModelv2.xcmappingmodel in Sources */,
 				A50D0BB81DFFDEE800AE2978 /* InfoPageControllerViewController.swift in Sources */,
 				A5DBA24A1DA4A07400C15EDE /* UIImage+Gif.swift in Sources */,
 				A527274F1E9A5E9500D5779E /* WelcomeScreenViewController.swift in Sources */,
 				A5A8B6DE1D80C289009560D7 /* EditProfileViewController.swift in Sources */,
-				A559AB4C1F7D2CA400B0CF0D /* MappingModelv1.xcmappingmodel in Sources */,
 				A59DFC581DC3DF6800B1CF8D /* ScoresViewController.swift in Sources */,
+				A5A1765820A1D20300363919 /* MappingModelv2.xcmappingmodel in Sources */,
 				A50F2A641EC15F4F0082B7EA /* ToggleView.swift in Sources */,
 				A5B4D6E61D7FB1BF0054D4C8 /* CollectionCells.swift in Sources */,
 				A5F4831C1D130F8100AA4E85 /* AppDelegate.swift in Sources */,

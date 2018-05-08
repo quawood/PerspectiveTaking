@@ -454,7 +454,9 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
         let goodAudios:[String] = ["Great job","Perfect","Wow Super job","You are good at this"]
         let badAudios:[String] = ["Take another look","That's okay Try again", "That's okay"]
         let neutral:[String] = ["correctSound", "wrongSound"]
-        globalTimer.invalidate()
+        
+        stopCollection()
+
         if viewPlace == correctAnss {
             let randomIndex = Int(arc4random_uniform(UInt32(goodAudios.count)))
             playInSequence(soundsArray:[neutral[0], goodAudios[randomIndex]])
@@ -643,9 +645,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
         
         
         
-        let total_time = timeCounter
-        let star_num = stars.count
-        let average_time = timeCounter/Float(star_num)
+        
         
         
     }
@@ -659,6 +659,14 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
     
     func updateTimer() {
         timeCounter = timeCounter + 0.1
+    }
+    
+    func stopCollection() {
+        globalTimer.invalidate()
+        let total_time = timeCounter
+        let star_num = stars.count
+        let average_time = timeCounter/Float(star_num)
+        
     }
     
     func uploadData(_ sender: Any) {
