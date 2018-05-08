@@ -302,7 +302,6 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        startcollectData()
         ProgramLabel.text = progName
         
         xRat  = Float(self.view.bounds.width)/469
