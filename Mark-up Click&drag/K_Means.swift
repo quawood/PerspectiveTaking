@@ -1,13 +1,26 @@
 import Foundation
-
-func elbow_method(data: Matrix, max_n: Int) -> dataTuple{
+typealias dataTuple = [(x:Double, y: Double)]
+func elbow_method(data: Matrix, max_n: Int) -> Int{
     var errors: dataTuple = []
-    for n in 1..<max_n {
+    
+    var r = max_n
+    if data.rows < max_n {
+        r = data.rows
+    }
+    for n in 1...r {
         let belongings = k_means(n: n, data: data, max_iter: 2000)
         let error = total_error(data: data, to_centroids: belongings.1, centroids: belongings.0)
+        
         errors.append((x: Double(n), y: error))
+        if n > 1 {
+            if (errors[n-2].y - errors[n-1].y)/(errors[0].y - errors[n-1].y) < 0.2{
+                break
+            }
+        }
+
     }
-    return errors
+    
+    return Int(errors[errors.count-1].x)
 }
 
 func total_error(data: Matrix, to_centroids: [Int], centroids: [[Double]]) -> Double {

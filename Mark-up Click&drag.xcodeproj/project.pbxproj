@@ -12,7 +12,7 @@
 		A50F2A601EBFA83A0082B7EA /* SD Intermediate-Large High Resolution.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A50F2A5F1EBFA83A0082B7EA /* SD Intermediate-Large High Resolution.jpg */; };
 		A50F2A621EC15E6C0082B7EA /* ToggleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A50F2A611EC15E6C0082B7EA /* ToggleView.xib */; };
 		A50F2A641EC15F4F0082B7EA /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50F2A631EC15F4F0082B7EA /* ToggleView.swift */; };
-		A518A74920B3F1120034EDA1 /* K_Means copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A518A74820B3F1120034EDA1 /* K_Means copy.swift */; };
+		A518A74920B3F1120034EDA1 /* K_Means.swift in Sources */ = {isa = PBXBuildFile; fileRef = A518A74820B3F1120034EDA1 /* K_Means.swift */; };
 		A523733B1E79A32800D3DE50 /* ChoosePlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A523733A1E79A32800D3DE50 /* ChoosePlaceView.swift */; };
 		A527274F1E9A5E9500D5779E /* WelcomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A527274E1E9A5E9500D5779E /* WelcomeScreenViewController.swift */; };
 		A52727511E9A5EE200D5779E /* SSBAppintro.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A52727501E9A5EE200D5779E /* SSBAppintro.mp3 */; };
@@ -715,6 +715,10 @@
 		A5E43BEC1D73D6B300339C66 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E43BEB1D73D6B300339C66 /* User.swift */; };
 		A5EAB4521EC28E3700A9E2C9 /* ScoresCell.png in Resources */ = {isa = PBXBuildFile; fileRef = A5EAB4511EC28E3700A9E2C9 /* ScoresCell.png */; };
 		A5EFC1661E10F4A80071F4DE /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EFC1651E10F4A80071F4DE /* CustomSegue.swift */; };
+		A5F4273320B3F4EF0073B8EE /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F4273220B3F4EE0073B8EE /* Matrix.swift */; };
+		A5F4273620B3F5320073B8EE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F4273520B3F5310073B8EE /* Extensions.swift */; };
+		A5F4273820B417310073B8EE /* Plot.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F4273720B417310073B8EE /* Plot.swift */; };
+		A5F4273A20B4173C0073B8EE /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F4273920B4173C0073B8EE /* Graph.swift */; };
 		A5F4831C1D130F8100AA4E85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F4831B1D130F8100AA4E85 /* AppDelegate.swift */; };
 		A5F483211D130F8100AA4E85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5F4831F1D130F8100AA4E85 /* Main.storyboard */; };
 		A5F483261D130F8100AA4E85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5F483251D130F8100AA4E85 /* Assets.xcassets */; };
@@ -750,7 +754,7 @@
 		A50F2A5F1EBFA83A0082B7EA /* SD Intermediate-Large High Resolution.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "SD Intermediate-Large High Resolution.jpg"; sourceTree = "<group>"; };
 		A50F2A611EC15E6C0082B7EA /* ToggleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ToggleView.xib; sourceTree = "<group>"; };
 		A50F2A631EC15F4F0082B7EA /* ToggleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleView.swift; sourceTree = "<group>"; };
-		A518A74820B3F1120034EDA1 /* K_Means copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "K_Means copy.swift"; sourceTree = "<group>"; };
+		A518A74820B3F1120034EDA1 /* K_Means.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = K_Means.swift; sourceTree = "<group>"; };
 		A523733A1E79A32800D3DE50 /* ChoosePlaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoosePlaceView.swift; sourceTree = "<group>"; };
 		A527274E1E9A5E9500D5779E /* WelcomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeScreenViewController.swift; sourceTree = "<group>"; };
 		A52727501E9A5EE200D5779E /* SSBAppintro.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SSBAppintro.mp3; sourceTree = "<group>"; };
@@ -1458,6 +1462,10 @@
 		A5E43BEB1D73D6B300339C66 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A5EAB4511EC28E3700A9E2C9 /* ScoresCell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScoresCell.png; sourceTree = "<group>"; };
 		A5EFC1651E10F4A80071F4DE /* CustomSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSegue.swift; sourceTree = "<group>"; };
+		A5F4273220B3F4EE0073B8EE /* Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
+		A5F4273520B3F5310073B8EE /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		A5F4273720B417310073B8EE /* Plot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plot.swift; sourceTree = "<group>"; };
+		A5F4273920B4173C0073B8EE /* Graph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
 		A5F483181D130F8100AA4E85 /* Mark-up Click&drag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mark-up Click&drag.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5F4831B1D130F8100AA4E85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5F483201D130F8100AA4E85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -2235,7 +2243,7 @@
 		A5B4D6EA1D7FB5560054D4C8 /* Home Screen */ = {
 			isa = PBXGroup;
 			children = (
-				A518A74820B3F1120034EDA1 /* K_Means copy.swift */,
+				A5F4273420B3F4F70073B8EE /* clustering */,
 				A5A1765920A1EF2B00363919 /* ClutserViewController.swift */,
 				A5A8B6DD1D80C289009560D7 /* EditProfileViewController.swift */,
 				A58943CF1D710410005456A2 /* HomeViewController.swift */,
@@ -2295,6 +2303,18 @@
 				A5DCF8D21DC17B340082F7EA /* 4.xib */,
 			);
 			name = Program;
+			sourceTree = "<group>";
+		};
+		A5F4273420B3F4F70073B8EE /* clustering */ = {
+			isa = PBXGroup;
+			children = (
+				A5F4273920B4173C0073B8EE /* Graph.swift */,
+				A5F4273720B417310073B8EE /* Plot.swift */,
+				A5F4273520B3F5310073B8EE /* Extensions.swift */,
+				A518A74820B3F1120034EDA1 /* K_Means.swift */,
+				A5F4273220B3F4EE0073B8EE /* Matrix.swift */,
+			);
+			name = clustering;
 			sourceTree = "<group>";
 		};
 		A5F4830F1D130F8000AA4E85 = {
@@ -3181,12 +3201,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5F548CD1E2D9F3C007169A9 /* DatabaseController.swift in Sources */,
+				A5F4273320B3F4EF0073B8EE /* Matrix.swift in Sources */,
 				A5B5F2441D4D722800A51F81 /* QuizViewController.swift in Sources */,
 				A5B4D6E41D7FADC90054D4C8 /* UserViewController.swift in Sources */,
 				A59B2A221EAD76FF00922C8A /* Answer.swift in Sources */,
 				A58943D01D710410005456A2 /* HomeViewController.swift in Sources */,
 				A5E43BEC1D73D6B300339C66 /* User.swift in Sources */,
-				A518A74920B3F1120034EDA1 /* K_Means copy.swift in Sources */,
+				A5F4273820B417310073B8EE /* Plot.swift in Sources */,
+				A518A74920B3F1120034EDA1 /* K_Means.swift in Sources */,
 				A52E3D461DD3D949001491E3 /* ChooseProgramViewController.swift in Sources */,
 				A52727531E9A65CA00D5779E /* DeleteUsersViewController.swift in Sources */,
 				A5BA1CDF1DB7014300608BE8 /* ProgramViewController.swift in Sources */,
@@ -3194,12 +3216,14 @@
 				A5F548D01E2DEA40007169A9 /* ClickDrag.xcdatamodeld in Sources */,
 				A50D0BB81DFFDEE800AE2978 /* InfoPageControllerViewController.swift in Sources */,
 				A5DBA24A1DA4A07400C15EDE /* UIImage+Gif.swift in Sources */,
+				A5F4273A20B4173C0073B8EE /* Graph.swift in Sources */,
 				A527274F1E9A5E9500D5779E /* WelcomeScreenViewController.swift in Sources */,
 				A5A8B6DE1D80C289009560D7 /* EditProfileViewController.swift in Sources */,
 				A59DFC581DC3DF6800B1CF8D /* ScoresViewController.swift in Sources */,
 				A50F2A641EC15F4F0082B7EA /* ToggleView.swift in Sources */,
 				A5B4D6E61D7FB1BF0054D4C8 /* CollectionCells.swift in Sources */,
 				A5F4831C1D130F8100AA4E85 /* AppDelegate.swift in Sources */,
+				A5F4273620B3F5320073B8EE /* Extensions.swift in Sources */,
 				A5A1765E20A1FB9500363919 /* MappingModelv2v3.xcmappingmodel in Sources */,
 				A57F6C131E6ED329000C1C77 /* MoreAppsViewController.swift in Sources */,
 				A5EFC1661E10F4A80071F4DE /* CustomSegue.swift in Sources */,

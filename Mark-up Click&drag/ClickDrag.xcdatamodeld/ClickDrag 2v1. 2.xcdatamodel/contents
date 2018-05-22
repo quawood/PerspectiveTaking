@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="16G1314" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17E202" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Progress" representedClassName="Progress" syncable="YES" codeGenerationType="class">
         <attribute name="place" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="program" optional="YES" attributeType="String" syncable="YES"/>
@@ -9,6 +9,7 @@
     <entity name="Question" representedClassName="Question" syncable="YES" codeGenerationType="class">
         <attribute name="accuracy" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="attempts" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="cluster" optional="YES" attributeType="Integer 16" defaultValueString="1" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="qid" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="totalt" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="tperbox" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
@@ -24,6 +25,7 @@
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="scores" inverseEntity="User" syncable="YES"/>
     </entity>
     <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
+        <attribute name="clusters" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="dateCreated" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="isAudioEnabled" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
@@ -35,8 +37,8 @@
     </entity>
     <elements>
         <element name="Progress" positionX="-288" positionY="-9" width="128" height="105"/>
+        <element name="Question" positionX="-279" positionY="135" width="128" height="150"/>
         <element name="Score" positionX="-36" positionY="36" width="128" height="150"/>
-        <element name="User" positionX="-495" positionY="138" width="128" height="165"/>
-        <element name="Question" positionX="-279" positionY="135" width="128" height="135"/>
+        <element name="User" positionX="-495" positionY="138" width="128" height="180"/>
     </elements>
 </model>

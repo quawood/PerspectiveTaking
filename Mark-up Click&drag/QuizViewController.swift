@@ -70,6 +70,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
     var globalTimer = Timer()
     var timeCounter: Float = 0
 
+    var isClusterQuiz: Bool! = false
     //Touch controllers
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if isSceneEnabled {
@@ -412,7 +413,48 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
     @IBAction func clearAnswers(sender: AnyObject) {
         replaceAnswers()
     }
-    
+    func chooseqid() {
+        var rand = Double.random
+        var badcluster: Int16? = 0
+        if let badq = currentUs.questions?.min(by: {($0 as! Question).accuracy < ($1 as! Question).accuracy}) as! Question? {
+            badcluster = badq.cluster
+        } else {
+            rand = 1
+        }
+        var nextq: String! = ""
+        
+        
+        if rand < 0.7 {
+            let relatedq = currentUs.questions?.filter({($0 as! Question).cluster == badcluster!}).first as! Question
+            nextq = relatedq.qid!
+        } else if rand > 0.7 && rand < 0.9 {
+            let relatedq = currentUs.questions?.first(where: {_ in true}) as! Question
+            nextq = relatedq.qid!
+        } else {
+            let rand1 = arc4random_uniform(4) + 1
+            let rand3 = arc4random_uniform(5) + 1
+            var rand2 = 0
+            switch rand1 {
+            case 1:
+                rand2 = Int(arc4random_uniform(8) + 1)
+            case 2:
+                rand2 = Int(arc4random_uniform(4) + 1)
+            case 3:
+                rand2 = Int(arc4random_uniform(5) + 1)
+            case 4:
+                rand2 = Int(arc4random_uniform(5) + 1)
+            default:
+                rand2 = 1
+            }
+            nextq = "\(rand1)_\(rand2)_\(rand3)"
+            
+        }
+        let indexes = nextq.components(separatedBy: "_")
+        currentProg = indexes[0]
+        currentPlace = indexes[1]
+        randomNum = Int(indexes[2])!
+        
+    }
     @IBAction func nextQuestion(sender: AnyObject) {
         removeStars()
         turn = 1
@@ -428,6 +470,10 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
         viewPlace = [0,0,0,0,0]
         
         checkAnsBtn.isThisEnabled = false
+        if isClusterQuiz {
+           chooseqid()
+        }
+        
         if animation != nil {
             animation.removeFromSuperview()
         }
@@ -704,16 +750,40 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
             question.tperbox = average_time
             currentUs.addToQuestions(question)
         }
+        DispatchQueue.global(qos: .background).async {
+            print("This is run on the background queue")
+            self.kcluster()
+        }
+
+        DatabaseController.saveContext()
+    }
+    
+    func kcluster() {
+        
+        var data2Darray: [[Double]]! = []
+        var idarray: [String]! = []
+        currentUs.questions?.forEach({q in
+            let question = q as! Question
+            let featureArray = [Double(question.accuracy),Double(question.attempts),Double(question.totalt),Double(question.tperbox)];
+            data2Darray.append(featureArray)
+            idarray.append(question.qid!)
+        })
+        let nclusters = elbow_method(data: Matrix(data2Darray), max_n: 5)
+        let belongings = k_means(n: nclusters, data: Matrix(data2Darray), max_iter: 10000).1
+        for i in 0..<idarray.count {
+            let relquestion = currentUs.questions?.first(where: {($0 as! Question).qid! == idarray[i]}) as! Question
+            relquestion.cluster = Int16(belongings[i])
+        }
+        currentUs.clusters = Int16(nclusters) + 1
         
         DatabaseController.saveContext()
-        
     }
     
     func uploadData(_ sender: Any) {
         let request = NSMutableURLRequest(url: NSURL(string: "https://quiet-hollows-94770.herokuapp.com/share.php")! as URL)
         request.httpMethod = "POST"
         
-        let postString = "a=3&b=3"
+        let postString = "userid=\(currentUs.id)&qid=\(qID)&"
         
         request.httpBody = postString.data(using: String.Encoding.utf8)
         

@@ -147,12 +147,22 @@ class HomeViewController: AudioViewController{
         clearOrResume()
     }
 
+    @IBAction func clustredQuiz(_ sender: Any) {
+        alert = UIAlertController(title: nil, message: "Please wait...", preferredStyle: .alert)
+        
+        alert.view.tintColor = UIColor.black
+        self.activityIndicator.startAnimating()
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "toClusterQuiz", sender: self)
+        }
+        
+        
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier != "openProgram" {
             self.audioPlayer.stop()
         }
-        if segue.identifier == "toQuiz"
-        {
+        if segue.identifier == "toQuiz" {
             
             let destinationVC = segue.destination as! QuizViewController
             destinationVC.currentProg = program
@@ -160,6 +170,13 @@ class HomeViewController: AudioViewController{
             destinationVC.placeString = placeString
             destinationVC.randomNum = randomNum
             destinationVC.progName = programTitle
+            activityIndicator.stopAnimating()
+        }
+        if segue.identifier == "toClusterQuiz" {
+            let destinationVC = segue.destination as! QuizViewController
+            destinationVC.chooseqid()
+            destinationVC.progName = "study"
+            destinationVC.placeString = "study"
             activityIndicator.stopAnimating()
         }
     }
