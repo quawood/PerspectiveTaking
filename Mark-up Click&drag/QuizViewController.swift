@@ -92,7 +92,6 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
         if isSceneEnabled {
             if currentA.frame.contains(touch.previousLocation(in: self.view)) {
                 currentA.center = CGPoint(x: touch.location(in: self.view).x-deltaX, y: touch.location(in: self.view).y-deltaY)
-                
                 for i in 0...stars.count-1 {
                     let starframe = CGRect(x: stars[i].frame.origin.x + scenarioView.frame.origin.x - 25 , y: stars[i].frame.origin.y +
                         scenarioView.frame.origin.y - 25, width: 75 * self.view.bounds.width/469 , height: 75 * self.view.bounds.width/469)
@@ -112,7 +111,6 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
                         
                     }
                     else {
-                        
                         currentA.answerImage.isHighlighted = false
                         if viewPlace[i] == 0 {
                             stars[i].isHidden = false
@@ -197,23 +195,20 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
         
     }
     func genStars() {
-        var i = 0
-        for starLoc in starLocations {
-            i = i + 1
-            let star = UIImageView()
-            star.frame = CGRect(x: starLoc.x  , y: starLoc.y, width: CGFloat(19 * xRat), height: CGFloat(19 * xRat))
+            var i = 0
+            for starLoc in self.starLocations {
+                i = i + 1
+                
+                let star = UIImageView()
+                star.frame = CGRect(x: starLoc.x  , y: starLoc.y, width: CGFloat(19 * self.self.xRat), height: CGFloat(19 * self.xRat))
+                
+                star.tag = 1
+                star.layer.zPosition = 9
+                star.image = UIImage(named: "smallblue.png")
+                self.stars.append(star)
+                self.scenarioView.addSubview(star)
+            }
 
-            star.tag = 1
-            star.layer.zPosition = 9
-            star.image = UIImage(named: "smallblue.png")
-            stars.append(star)
-            scenarioView.addSubview(star)
-            
-            
-            
-            
-            
-        }
     }
     
     func replaceAnswers() {
@@ -267,28 +262,30 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
     
     func GetHomeData(completionHandler: ((NSDictionary) -> Void)?)
     {
+        
         let file = Bundle.main.path(forResource: "questions", ofType: "json")
         let url = NSURL(fileURLWithPath: file!)
         let request: NSURLRequest = NSURLRequest(url:url as URL)
         let config = URLSessionConfiguration.default
         let session = URLSession(configuration: config)
         var jsonResult: [String : AnyObject]!
-        print(url)
         
         let task : URLSessionDataTask = session.dataTask(with: request as URLRequest, completionHandler: {(data, response, error) in
           //  var error: AutoreleasingUnsafeMutablePointer<NSError?>? = nil
             do {
                 jsonResult =  try JSONSerialization.jsonObject(with: (data)!, options: .allowFragments) as! [String : AnyObject]
+            
             } catch {
                 print("error")
             }
             
             
             // then on complete I call the completionHandler...
+            
             completionHandler?(jsonResult as NSDictionary);
         });
         task.resume()
-    }
+    }  
     
     func SetHomeContent()
     {
@@ -297,7 +294,14 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
     
     func resultHandler(jsonResult:NSDictionary!)
     {
-        json = jsonResult as! [String : AnyObject]!
+        
+        
+        DispatchQueue.main.async { [unowned self] in
+            self.json = jsonResult as! [String : AnyObject]?
+            self.setupQuestion()
+            
+        }
+
     }
 
     override func viewDidLoad() {
@@ -310,24 +314,80 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
         //source.alert.dismiss(animated: true, completion: nil)
         placeLabel.text = placeString
 
-        
         nextQuestion()
-        if answers[4].answerText.text == "" {
-            answers[4].isHidden = true
-        }
-        else {
-            answers[4].isHidden = false
-        }
-        replaceAnswers()
-        stylesScene()
+
         
     }
     
+    func setupQuestion() {
+
+        var minimumFont: CGFloat = 100
+        let questions = self.json["questions"] as! [String:AnyObject]
+        let currentProgram = questions[self.currentProg] as! [String: AnyObject]
+        let currentSpot = currentProgram[self.currentPlace] as! [AnyObject]
+        let numm = currentSpot[self.randomNum-1] as! [String:AnyObject]
+            self.qID = "\(self.currentProg!)_\(self.currentPlace!)_\(self.randomNum!)"
+        if let label = numm["answers"] as? [String] , let stars = numm["stars"] as? [[Int]] , let correctset = numm["correct"] as? [Int], let bubbles = numm["bubbles"] as? [String], let image = numm["image"] as? String {
+            
+
+                self.startails = numm["startails"] as? [Float]
+                for i in 0...self.answers.count-1 {
+                    self.answers[i].answerText.text = label[i]
+                    
+                    self.answers[i].layer.zPosition = 10
+                    if self.answers[i].answerText.text == "" {
+                        self.answers[i].isHidden = true
+                        
+                    }
+                    else {
+                        self.answers[i].isHidden = false
+                    }
+                    
+                    if bubbles[i] == "s" {
+                       self.answers[i].answerImage.image = UIImage(named: "speech.png")
+                        self.answers[i].answerImage.tag = 0
+                    }
+                    else if bubbles[i] == "t" {
+                        self.answers[i].answerImage.image = UIImage(named: "thought.png")
+                        self.answers[i].answerImage.tag = 1
+                    }
+                }
+                for j in 0...stars.count-1 {
+                    
+                    self.starLocations.append(CGPoint(x: stars[j][0] * Int(self.scenarioView.bounds.width) / 719, y: stars[j][1] * Int(self.scenarioView.bounds.height) / 469))
+                }
+            
+
+            self.correctAnss = correctset
+            self.genStars()
+            self.scenarioImg.image = UIImage(named: image)
+            self.viewPlace = [Int](repeating:0, count:self.correctAnss.count)
+            
+        }
+            for lab in self.answers {
+            if lab.answerText.font.pointSize < minimumFont {
+                minimumFont = lab.answerText.font.pointSize
+            }
+        }
+            for lab in self.self.answers {
+            lab.answerText.font = lab.answerText.font.withSize(minimumFont)
+        }
+        
+            if self.self.answers[4].answerText.text == "" {
+            self.answers[4].isHidden = true
+        }
+        else {
+            self.answers[4].isHidden = false
+        }
+            self.replaceAnswers()
+            self.stylesScene()
+    }
 
 
     //Question controllers
 
     func nextQuestion() {
+        
         startcollectData()
         isSceneEnabled = true
         checkAnsBtn.isThisEnabled = false
@@ -339,57 +399,12 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
         }
         stars=[]
         viewPlace = [0,0,0,0,0]
-        var minimumFont: CGFloat = 100
+        
        // self.view.isUserInteractionEnabled = true
         currentScore.text = String(randomNum)
         starLocations = []
-        SetHomeContent()
-        let questions = json["questions"] as! [String:AnyObject]
-        let currentProgram = questions[currentProg] as! [String: AnyObject]
-        let currentSpot = currentProgram[currentPlace] as! [AnyObject]
-        let numm = currentSpot[randomNum-1] as! [String:AnyObject]
-        qID = "\(currentProgram)_\(currentPlace)_\(randomNum)"
-           if let label = numm["answers"] as? [String] , let stars = numm["stars"] as? [[Int]] , let correct = numm["correct"] as? [Int], let bubbles = numm["bubbles"] as? [String], let image = numm["image"] as? String {
-            
-             startails = numm["startails"] as? [Float]
-                for i in 0...answers.count-1 {
-                    answers[i].answerText.text = label[i]
-                    
-                    answers[i].layer.zPosition = 10
-                    if answers[i].answerText.text == "" {
-                        answers[i].isHidden = true
-                        
-                    }
-                    else {
-                        answers[i].isHidden = false
-                    }
-                    
-                    if bubbles[i] == "s" {
-                        answers[i].answerImage.image = UIImage(named: "speech.png")
-                        answers[i].answerImage.tag = 0
-                    }
-                    else if bubbles[i] == "t" {
-                        answers[i].answerImage.image = UIImage(named: "thought.png")
-                        answers[i].answerImage.tag = 1
-                    }
-                }
-                for j in 0...stars.count-1 {
-                    
-                    starLocations.append(CGPoint(x: stars[j][0] * Int(scenarioView.bounds.width) / 719, y: stars[j][1] * Int(scenarioView.bounds.height) / 469))
-                }
-                correctAnss = correct
-                genStars()
-                scenarioImg.image = UIImage(named: image)
-                viewPlace = [Int](repeating:0, count:correctAnss.count)
-            }
-        for lab in answers {
-            if lab.answerText.font.pointSize < minimumFont {
-                minimumFont = lab.answerText.font.pointSize
-            }
-        }
-        for lab in answers {
-            lab.answerText.font = lab.answerText.font.withSize(minimumFont)
-        }
+
+        self.SetHomeContent()
         
     }
     
@@ -460,11 +475,11 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
         
 
         if viewPlace == correctAnss {
-            
+            firstCorrect = 1
             let randomIndex = Int(arc4random_uniform(UInt32(goodAudios.count)))
             playInSequence(soundsArray:[neutral[0], goodAudios[randomIndex]])
             if turn == 1 {
-                firstCorrect = 1
+                
                 let random = numbers[Int(arc4random_uniform(UInt32(numbers.count)) + 1) - 1]
                 numbers.remove(at: numbers.index(of: random)!)
                 animation = UIImageView(image:UIImage.gif(name: "emoji\(random)"))
@@ -658,11 +673,10 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
         
         //start timer
         globalTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
-        var starsnum = stars.count
         
     }
     
-    func updateTimer() {
+    @objc func updateTimer() {
         timeCounter = timeCounter + 0.1
     }
     
@@ -707,14 +721,14 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
             data, response, error in
             
             if error != nil {
-                print("error=\(error)")
+                print("error=\(String(describing: error))")
                 return
             }
             
-            print("response = \(response)")
+            print("response = \(String(describing: response))")
             
             let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
-            print("responseString = \(responseString)")
+            print("responseString = \(String(describing: responseString))")
         }
         task.resume()
         

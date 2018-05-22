@@ -29,14 +29,14 @@ class ScoresViewController: UIViewController, MFMailComposeViewControllerDelegat
             data, response, error in
             
             if error != nil {
-                print("error=\(error)")
+                print("error=\(String(describing: error))")
                 return
             }
             
-            print("response = \(response)")
+            print("response = \(String(describing: response))")
             
             let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
-            print("responseString = \(responseString)")
+            print("responseString = \(String(describing: responseString))")
         }
         task.resume()
         

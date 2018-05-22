@@ -12,6 +12,7 @@
 		A50F2A601EBFA83A0082B7EA /* SD Intermediate-Large High Resolution.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A50F2A5F1EBFA83A0082B7EA /* SD Intermediate-Large High Resolution.jpg */; };
 		A50F2A621EC15E6C0082B7EA /* ToggleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A50F2A611EC15E6C0082B7EA /* ToggleView.xib */; };
 		A50F2A641EC15F4F0082B7EA /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50F2A631EC15F4F0082B7EA /* ToggleView.swift */; };
+		A518A74920B3F1120034EDA1 /* K_Means copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A518A74820B3F1120034EDA1 /* K_Means copy.swift */; };
 		A523733B1E79A32800D3DE50 /* ChoosePlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A523733A1E79A32800D3DE50 /* ChoosePlaceView.swift */; };
 		A527274F1E9A5E9500D5779E /* WelcomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A527274E1E9A5E9500D5779E /* WelcomeScreenViewController.swift */; };
 		A52727511E9A5EE200D5779E /* SSBAppintro.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A52727501E9A5EE200D5779E /* SSBAppintro.mp3 */; };
@@ -749,6 +750,7 @@
 		A50F2A5F1EBFA83A0082B7EA /* SD Intermediate-Large High Resolution.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "SD Intermediate-Large High Resolution.jpg"; sourceTree = "<group>"; };
 		A50F2A611EC15E6C0082B7EA /* ToggleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ToggleView.xib; sourceTree = "<group>"; };
 		A50F2A631EC15F4F0082B7EA /* ToggleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleView.swift; sourceTree = "<group>"; };
+		A518A74820B3F1120034EDA1 /* K_Means copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "K_Means copy.swift"; sourceTree = "<group>"; };
 		A523733A1E79A32800D3DE50 /* ChoosePlaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoosePlaceView.swift; sourceTree = "<group>"; };
 		A527274E1E9A5E9500D5779E /* WelcomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeScreenViewController.swift; sourceTree = "<group>"; };
 		A52727501E9A5EE200D5779E /* SSBAppintro.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SSBAppintro.mp3; sourceTree = "<group>"; };
@@ -2233,6 +2235,7 @@
 		A5B4D6EA1D7FB5560054D4C8 /* Home Screen */ = {
 			isa = PBXGroup;
 			children = (
+				A518A74820B3F1120034EDA1 /* K_Means copy.swift */,
 				A5A1765920A1EF2B00363919 /* ClutserViewController.swift */,
 				A5A8B6DD1D80C289009560D7 /* EditProfileViewController.swift */,
 				A58943CF1D710410005456A2 /* HomeViewController.swift */,
@@ -2415,7 +2418,7 @@
 		A5F483101D130F8000AA4E85 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Pushbox, LLC'";
 				TargetAttributes = {
 					A5F483171D130F8100AA4E85 = {
@@ -3183,6 +3186,7 @@
 				A59B2A221EAD76FF00922C8A /* Answer.swift in Sources */,
 				A58943D01D710410005456A2 /* HomeViewController.swift in Sources */,
 				A5E43BEC1D73D6B300339C66 /* User.swift in Sources */,
+				A518A74920B3F1120034EDA1 /* K_Means copy.swift in Sources */,
 				A52E3D461DD3D949001491E3 /* ChooseProgramViewController.swift in Sources */,
 				A52727531E9A65CA00D5779E /* DeleteUsersViewController.swift in Sources */,
 				A5BA1CDF1DB7014300608BE8 /* ProgramViewController.swift in Sources */,
@@ -3274,12 +3278,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -3327,12 +3333,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -3370,6 +3378,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
+				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = "Mark-up Click&drag/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -3378,6 +3387,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -3393,6 +3403,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
+				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = "Mark-up Click&drag/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -3401,7 +3412,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 2;
