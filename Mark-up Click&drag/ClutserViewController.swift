@@ -18,7 +18,7 @@ class ClusterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        testlabel1.text = "user id: \(currentUs.server_id!)"
+      /**  testlabel1.text = "user id: \(currentUs.server_id!)"
         testlabel2.text = "number of questions: \(currentUs.questions?.count)"
         
         let firstQuestion = currentUs.questions?.first(where: {_ in true}) as! Question
@@ -48,7 +48,7 @@ class ClusterViewController: UIViewController {
         testgraph.y_label = "random y"
         testgraph.addLabels()
         testgraph.addLegend()
-        skscene.addChild(testgraph)
+        skscene.addChild(testgraph)**/
         
     }
     

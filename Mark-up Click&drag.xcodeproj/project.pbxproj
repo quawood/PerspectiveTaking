@@ -717,8 +717,6 @@
 		A5EFC1661E10F4A80071F4DE /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EFC1651E10F4A80071F4DE /* CustomSegue.swift */; };
 		A5F4273320B3F4EF0073B8EE /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F4273220B3F4EE0073B8EE /* Matrix.swift */; };
 		A5F4273620B3F5320073B8EE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F4273520B3F5310073B8EE /* Extensions.swift */; };
-		A5F4273820B417310073B8EE /* Plot.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F4273720B417310073B8EE /* Plot.swift */; };
-		A5F4273A20B4173C0073B8EE /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F4273920B4173C0073B8EE /* Graph.swift */; };
 		A5F4831C1D130F8100AA4E85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F4831B1D130F8100AA4E85 /* AppDelegate.swift */; };
 		A5F483211D130F8100AA4E85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5F4831F1D130F8100AA4E85 /* Main.storyboard */; };
 		A5F483261D130F8100AA4E85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5F483251D130F8100AA4E85 /* Assets.xcassets */; };
@@ -1464,8 +1462,6 @@
 		A5EFC1651E10F4A80071F4DE /* CustomSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSegue.swift; sourceTree = "<group>"; };
 		A5F4273220B3F4EE0073B8EE /* Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
 		A5F4273520B3F5310073B8EE /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		A5F4273720B417310073B8EE /* Plot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plot.swift; sourceTree = "<group>"; };
-		A5F4273920B4173C0073B8EE /* Graph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
 		A5F483181D130F8100AA4E85 /* Mark-up Click&drag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mark-up Click&drag.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5F4831B1D130F8100AA4E85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5F483201D130F8100AA4E85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -2308,8 +2304,6 @@
 		A5F4273420B3F4F70073B8EE /* clustering */ = {
 			isa = PBXGroup;
 			children = (
-				A5F4273920B4173C0073B8EE /* Graph.swift */,
-				A5F4273720B417310073B8EE /* Plot.swift */,
 				A5F4273520B3F5310073B8EE /* Extensions.swift */,
 				A518A74820B3F1120034EDA1 /* K_Means.swift */,
 				A5F4273220B3F4EE0073B8EE /* Matrix.swift */,
@@ -3207,7 +3201,6 @@
 				A59B2A221EAD76FF00922C8A /* Answer.swift in Sources */,
 				A58943D01D710410005456A2 /* HomeViewController.swift in Sources */,
 				A5E43BEC1D73D6B300339C66 /* User.swift in Sources */,
-				A5F4273820B417310073B8EE /* Plot.swift in Sources */,
 				A518A74920B3F1120034EDA1 /* K_Means.swift in Sources */,
 				A52E3D461DD3D949001491E3 /* ChooseProgramViewController.swift in Sources */,
 				A52727531E9A65CA00D5779E /* DeleteUsersViewController.swift in Sources */,
@@ -3216,7 +3209,6 @@
 				A5F548D01E2DEA40007169A9 /* ClickDrag.xcdatamodeld in Sources */,
 				A50D0BB81DFFDEE800AE2978 /* InfoPageControllerViewController.swift in Sources */,
 				A5DBA24A1DA4A07400C15EDE /* UIImage+Gif.swift in Sources */,
-				A5F4273A20B4173C0073B8EE /* Graph.swift in Sources */,
 				A527274F1E9A5E9500D5779E /* WelcomeScreenViewController.swift in Sources */,
 				A5A8B6DE1D80C289009560D7 /* EditProfileViewController.swift in Sources */,
 				A59DFC581DC3DF6800B1CF8D /* ScoresViewController.swift in Sources */,

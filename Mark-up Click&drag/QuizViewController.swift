@@ -64,7 +64,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
     var xRat: Float!
     var stars: [UIImageView] = []
     var qID: String = ""
-    var firstCorrect: Float! = 0
+    var firstCorrect: Float! = 0.0
     
     //collecting data
     var globalTimer = Timer()
@@ -412,6 +412,8 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
     
     @IBAction func clearAnswers(sender: AnyObject) {
         replaceAnswers()
+        timeCounter = 0
+        startcollectData()
     }
     func chooseqid() {
         var rand = Double.random
@@ -479,6 +481,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
         }
         if randomNum != 6 {
             nextQuestion()
+            
         }
         if answers[4].answerText.text == "" {
             answers[4].isHidden = true
@@ -732,23 +735,43 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
         let star_num = stars.count
         let average_time = timeCounter/Float(star_num)
         
+        
+        var accuracy: Float! = 0.0
+        var attempts: Int! = 0
+        var totalt: Float! = 0.0
+        var tperbox: Float! = 0.0
+        
         if let currentQ = currentUs.questions?.first(where: {($0 as! Question).qid! == qID}) as? Question {
-            let attempts = Float(currentQ.attempts)
-            let adjustacc = currentQ.accuracy*(attempts/(attempts+1))
+            print("here1")
+            attempts = Int(currentQ.attempts)
+            let adjustacc = currentQ.accuracy*Float((attempts/(attempts+1)))
+            accuracy = adjustacc + (firstCorrect/(Float(attempts+1)))
+            attempts = attempts + 1
+            totalt = total_time
+            tperbox = average_time
             
-            currentQ.accuracy = adjustacc + (firstCorrect/(attempts+1))
-            currentQ.attempts = currentQ.attempts + 1
-            currentQ.totalt = total_time
-            currentQ.tperbox = average_time
+            currentQ.accuracy = accuracy
+            currentQ.attempts = Int16(attempts)
+            currentQ.totalt = totalt
+            currentQ.tperbox = tperbox
+            
             
         } else {
+            print("here2")
             let question: Question = NSEntityDescription.insertNewObject(forEntityName: "Question", into: DatabaseController.getContext()) as! Question
+            accuracy = Float(firstCorrect)
+            attempts = 1
+            totalt = total_time
+            tperbox = average_time
+        
             question.qid = qID
-            question.accuracy = firstCorrect
-            question.attempts = 1
+            question.accuracy = accuracy
+            question.attempts = Int16(attempts)
             question.totalt = total_time
             question.tperbox = average_time
             currentUs.addToQuestions(question)
+            
+
         }
         DispatchQueue.global(qos: .background).async {
             print("This is run on the background queue")
@@ -756,6 +779,7 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
         }
 
         DatabaseController.saveContext()
+        uploadData(accuracy: accuracy, attempts: attempts, totalt: totalt, tperbox: tperbox)
     }
     
     func kcluster() {
@@ -779,11 +803,17 @@ class QuizViewController: AudioViewController, UIPopoverPresentationControllerDe
         DatabaseController.saveContext()
     }
     
-    func uploadData(_ sender: Any) {
+    func uploadData(accuracy: Float!, attempts: Int!, totalt: Float!, tperbox: Float!) {
+        
+        print(attempts)
+        print(accuracy)
+        print(totalt)
+        print(tperbox)
+        
         let request = NSMutableURLRequest(url: NSURL(string: "https://quiet-hollows-94770.herokuapp.com/share.php")! as URL)
         request.httpMethod = "POST"
         
-        let postString = "userid=\(currentUs.id)&qid=\(qID)&"
+        let postString = "qid=\(qID)&accuracy=\(accuracy)&attempts=\(attempts)&totalt=\(totalt)&tperbox=\(tperbox)"
         
         request.httpBody = postString.data(using: String.Encoding.utf8)
         
